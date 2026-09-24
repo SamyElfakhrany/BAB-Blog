@@ -1,0 +1,18 @@
+---
+import type { Language } from '../lib/content';
+import { ui, withBase } from '../lib/content';
+interface Props { lang?: Language; }
+const { lang = 'en' } = Astro.props as Props;
+const strings = ui[lang];
+---
+<section class="search-panel" aria-labelledby="search-title">
+  <div>
+    <span class="eyebrow">{strings.search}</span>
+    <h2 id="search-title">{lang === 'en' ? 'Find the idea you need next.' : 'ابحث عن الفكرة التي تحتاجها.'}</h2>
+  </div>
+  <form class="search-form" action={withBase(`/${lang}/search/`)} method="get">
+    <label class="sr-only" for="q">{strings.searchPlaceholder}</label>
+    <input id="q" name="q" type="search" placeholder={strings.searchPlaceholder} autocomplete="off" />
+    <button type="submit">{lang === 'en' ? 'Search' : 'بحث'}</button>
+  </form>
+</section>

@@ -1,0 +1,6 @@
+---
+interface Props { src: string; alt: string; caption?: string; }
+import { withBase } from '../lib/content';
+const { src, alt, caption } = Astro.props;
+---
+<figure class="diagram-card"><img src={withBase(src)} alt={alt} loading="lazy" />{caption && <figcaption>{caption}</figcaption>}</figure>

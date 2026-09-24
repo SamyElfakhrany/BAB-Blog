@@ -1,0 +1,8 @@
+---
+interface Props { title?: string; lang?: 'en' | 'ar'; }
+const { title, lang = 'en' } = Astro.props;
+---
+<section class="template-block" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <div class="block-label">{title || (lang === 'en' ? 'Reusable template' : 'قالب قابل لإعادة الاستخدام')}</div>
+  <div class="block-content"><slot /></div>
+</section>

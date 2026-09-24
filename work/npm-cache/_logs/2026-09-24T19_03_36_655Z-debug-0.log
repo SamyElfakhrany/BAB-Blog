@@ -1,0 +1,1597 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.8
+2 info using node@v22.23.1
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\ssamy\Documents\Codex\2026-09-24\cre\.npmrc
+5 silly config load:file:C:\Users\ssamy\.npmrc
+6 silly config load:file:C:\Users\ssamy\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:C:\Users\ssamy\Documents\Codex\2026-09-24\cre\work\npm-cache\_logs\2026-09-24T19_03_36_655Z-
+10 verbose logfile C:\Users\ssamy\Documents\Codex\2026-09-24\cre\work\npm-cache\_logs\2026-09-24T19_03_36_655Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly fetch manifest @astrojs/check@latest
+15 silly packumentCache full:https://registry.npmjs.org/@astrojs%2fcheck cache-miss
+16 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+17 http fetch GET 200 https://registry.npmjs.org/@astrojs%2fcheck 333ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/@astrojs%2fcheck set size:undefined disposed:false
+19 silly fetch manifest typescript@^6.0.0
+20 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+21 http cache https://registry.npmjs.org/typescript 41ms (cache hit)
+22 silly packumentCache full:https://registry.npmjs.org/typescript set size:15714892 disposed:false
+23 silly placeDep ROOT @astrojs/check@0.9.10 OK for: bac9-blog@0.1.0 want: latest
+24 silly fetch manifest kleur@^4.1.5
+25 silly packumentCache full:https://registry.npmjs.org/kleur cache-miss
+26 silly fetch manifest yargs@^18.0.0
+27 silly packumentCache full:https://registry.npmjs.org/yargs cache-miss
+28 silly fetch manifest chokidar@^4.0.3
+29 silly packumentCache full:https://registry.npmjs.org/chokidar cache-miss
+30 silly fetch manifest @astrojs/language-server@^2.16.7
+31 silly packumentCache full:https://registry.npmjs.org/@astrojs%2flanguage-server cache-miss
+32 http fetch GET 200 https://registry.npmjs.org/kleur 84ms (cache miss)
+33 silly packumentCache full:https://registry.npmjs.org/kleur set size:undefined disposed:false
+34 http fetch GET 200 https://registry.npmjs.org/chokidar 294ms (cache revalidated)
+35 silly packumentCache full:https://registry.npmjs.org/chokidar set size:255902 disposed:false
+36 http fetch GET 200 https://registry.npmjs.org/@astrojs%2flanguage-server 330ms (cache miss)
+37 silly packumentCache full:https://registry.npmjs.org/@astrojs%2flanguage-server set size:undefined disposed:false
+38 http fetch GET 200 https://registry.npmjs.org/yargs 346ms (cache miss)
+39 silly packumentCache full:https://registry.npmjs.org/yargs set size:undefined disposed:false
+40 silly fetch manifest prettier@^3.0.0
+41 silly packumentCache full:https://registry.npmjs.org/prettier cache-miss
+42 http fetch GET 200 https://registry.npmjs.org/prettier 140ms (cache miss)
+43 silly packumentCache full:https://registry.npmjs.org/prettier set size:undefined disposed:false
+44 silly fetch manifest prettier-plugin-astro@>=0.11.0
+45 silly packumentCache full:https://registry.npmjs.org/prettier-plugin-astro cache-miss
+46 http fetch GET 200 https://registry.npmjs.org/prettier-plugin-astro 306ms (cache miss)
+47 silly packumentCache full:https://registry.npmjs.org/prettier-plugin-astro set size:undefined disposed:false
+48 silly placeDep ROOT @astrojs/language-server@2.17.1 OK for: @astrojs/check@0.9.10 want: ^2.16.7
+49 silly placeDep node_modules/@astrojs/check chokidar@4.0.3 OK for: @astrojs/check@0.9.10 want: ^4.0.3
+50 silly placeDep ROOT kleur@4.1.5 OK for: @astrojs/check@0.9.10 want: ^4.1.5
+51 silly placeDep ROOT yargs@18.2.0 OK for: @astrojs/check@0.9.10 want: ^18.0.0
+52 silly fetch manifest @volar/kit@~2.4.28
+53 silly packumentCache full:https://registry.npmjs.org/@volar%2fkit cache-miss
+54 silly fetch manifest vscode-uri@^3.2.0
+55 silly packumentCache full:https://registry.npmjs.org/vscode-uri cache-miss
+56 silly fetch manifest muggle-string@^0.4.1
+57 silly packumentCache full:https://registry.npmjs.org/muggle-string cache-miss
+58 silly fetch manifest @astrojs/yaml2ts@^0.2.4
+59 silly packumentCache full:https://registry.npmjs.org/@astrojs%2fyaml2ts cache-miss
+60 silly fetch manifest volar-service-css@0.0.71
+61 silly packumentCache full:https://registry.npmjs.org/volar-service-css cache-miss
+62 silly fetch manifest @astrojs/astro2tsx@^0.1.0
+63 silly packumentCache full:https://registry.npmjs.org/@astrojs%2fastro2tsx cache-miss
+64 silly fetch manifest volar-service-html@0.0.71
+65 silly packumentCache full:https://registry.npmjs.org/volar-service-html cache-miss
+66 http fetch GET 200 https://registry.npmjs.org/muggle-string 102ms (cache miss)
+67 silly packumentCache full:https://registry.npmjs.org/muggle-string set size:undefined disposed:false
+68 silly fetch manifest volar-service-yaml@0.0.71
+69 silly packumentCache full:https://registry.npmjs.org/volar-service-yaml cache-miss
+70 http fetch GET 200 https://registry.npmjs.org/vscode-uri 112ms (cache miss)
+71 silly packumentCache full:https://registry.npmjs.org/vscode-uri set size:undefined disposed:false
+72 silly fetch manifest volar-service-emmet@0.0.71
+73 silly packumentCache full:https://registry.npmjs.org/volar-service-emmet cache-miss
+74 http fetch GET 200 https://registry.npmjs.org/volar-service-emmet 241ms (cache miss)
+75 silly packumentCache full:https://registry.npmjs.org/volar-service-emmet set size:undefined disposed:false
+76 silly fetch manifest @volar/language-core@~2.4.28
+77 silly packumentCache full:https://registry.npmjs.org/@volar%2flanguage-core cache-miss
+78 http fetch GET 200 https://registry.npmjs.org/volar-service-yaml 270ms (cache miss)
+79 silly packumentCache full:https://registry.npmjs.org/volar-service-yaml set size:undefined disposed:false
+80 silly fetch manifest @volar/language-server@~2.4.28
+81 silly packumentCache full:https://registry.npmjs.org/@volar%2flanguage-server cache-miss
+82 http fetch GET 200 https://registry.npmjs.org/volar-service-html 430ms (cache miss)
+83 silly packumentCache full:https://registry.npmjs.org/volar-service-html set size:undefined disposed:false
+84 silly fetch manifest volar-service-prettier@0.0.71
+85 silly packumentCache full:https://registry.npmjs.org/volar-service-prettier cache-miss
+86 http fetch GET 200 https://registry.npmjs.org/volar-service-css 435ms (cache miss)
+87 silly packumentCache full:https://registry.npmjs.org/volar-service-css set size:undefined disposed:false
+88 silly fetch manifest @volar/language-service@~2.4.28
+89 silly packumentCache full:https://registry.npmjs.org/@volar%2flanguage-service cache-miss
+90 http fetch GET 200 https://registry.npmjs.org/@astrojs%2fyaml2ts 475ms (cache miss)
+91 silly packumentCache full:https://registry.npmjs.org/@astrojs%2fyaml2ts set size:undefined disposed:false
+92 silly fetch manifest volar-service-typescript@0.0.71
+93 silly packumentCache full:https://registry.npmjs.org/volar-service-typescript cache-miss
+94 http fetch GET 200 https://registry.npmjs.org/@volar%2flanguage-core 160ms (cache miss)
+95 silly packumentCache full:https://registry.npmjs.org/@volar%2flanguage-core set size:undefined disposed:false
+96 silly fetch manifest vscode-html-languageservice@^5.6.2
+97 silly packumentCache full:https://registry.npmjs.org/vscode-html-languageservice cache-miss
+98 http fetch GET 200 https://registry.npmjs.org/@volar%2fkit 540ms (cache miss)
+99 silly packumentCache full:https://registry.npmjs.org/@volar%2fkit set size:undefined disposed:false
+100 silly fetch manifest volar-service-typescript-twoslash-queries@0.0.71
+101 silly packumentCache full:https://registry.npmjs.org/volar-service-typescript-twoslash-queries cache-miss
+102 http fetch GET 200 https://registry.npmjs.org/@astrojs%2fastro2tsx 606ms (cache miss)
+103 silly packumentCache full:https://registry.npmjs.org/@astrojs%2fastro2tsx set size:undefined disposed:false
+104 silly fetch manifest readdirp@^4.0.1
+105 silly packumentCache full:https://registry.npmjs.org/readdirp cache-miss
+106 http fetch GET 200 https://registry.npmjs.org/readdirp 73ms (cache revalidated)
+107 silly packumentCache full:https://registry.npmjs.org/readdirp set size:110119 disposed:false
+108 silly fetch manifest y18n@^5.0.5
+109 silly packumentCache full:https://registry.npmjs.org/y18n cache-miss
+110 http fetch GET 200 https://registry.npmjs.org/volar-service-prettier 252ms (cache miss)
+111 silly packumentCache full:https://registry.npmjs.org/volar-service-prettier set size:undefined disposed:false
+112 silly fetch manifest cliui@^9.0.1
+113 silly packumentCache full:https://registry.npmjs.org/cliui cache-miss
+114 http fetch GET 200 https://registry.npmjs.org/volar-service-typescript 265ms (cache miss)
+115 silly packumentCache full:https://registry.npmjs.org/volar-service-typescript set size:undefined disposed:false
+116 silly fetch manifest escalade@^3.1.1
+117 silly packumentCache full:https://registry.npmjs.org/escalade cache-miss
+118 http fetch GET 200 https://registry.npmjs.org/cliui 85ms (cache miss)
+119 silly packumentCache full:https://registry.npmjs.org/cliui set size:undefined disposed:false
+120 silly fetch manifest string-width@^8.2.1
+121 silly packumentCache full:https://registry.npmjs.org/string-width cache-miss
+122 http fetch GET 200 https://registry.npmjs.org/y18n 92ms (cache miss)
+123 silly packumentCache full:https://registry.npmjs.org/y18n set size:undefined disposed:false
+124 silly fetch manifest get-caller-file@^2.0.5
+125 silly packumentCache full:https://registry.npmjs.org/get-caller-file cache-miss
+126 http fetch GET 200 https://registry.npmjs.org/volar-service-typescript-twoslash-queries 248ms (cache miss)
+127 silly packumentCache full:https://registry.npmjs.org/volar-service-typescript-twoslash-queries set size:undefined disposed:false
+128 http fetch GET 200 https://registry.npmjs.org/vscode-html-languageservice 302ms (cache miss)
+129 silly packumentCache full:https://registry.npmjs.org/vscode-html-languageservice set size:undefined disposed:false
+130 http fetch GET 200 https://registry.npmjs.org/escalade 93ms (cache miss)
+131 silly packumentCache full:https://registry.npmjs.org/escalade set size:undefined disposed:false
+132 http fetch GET 200 https://registry.npmjs.org/@volar%2flanguage-server 496ms (cache miss)
+133 silly packumentCache full:https://registry.npmjs.org/@volar%2flanguage-server set size:undefined disposed:false
+134 http fetch GET 200 https://registry.npmjs.org/string-width 118ms (cache miss)
+135 silly packumentCache full:https://registry.npmjs.org/string-width set size:undefined disposed:false
+136 http fetch GET 200 https://registry.npmjs.org/get-caller-file 121ms (cache miss)
+137 silly packumentCache full:https://registry.npmjs.org/get-caller-file set size:undefined disposed:false
+138 http fetch GET 200 https://registry.npmjs.org/@volar%2flanguage-service 523ms (cache miss)
+139 silly packumentCache full:https://registry.npmjs.org/@volar%2flanguage-service set size:undefined disposed:false
+140 silly fetch manifest typescript@*
+141 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+142 http cache https://registry.npmjs.org/typescript 80ms (cache hit)
+143 silly packumentCache full:https://registry.npmjs.org/typescript set size:15714892 disposed:false
+144 silly placeDep ROOT @astrojs/astro2tsx@0.1.1 OK for: @astrojs/language-server@2.17.1 want: ^0.1.0
+145 silly placeDep ROOT @astrojs/yaml2ts@0.2.4 OK for: @astrojs/language-server@2.17.1 want: ^0.2.4
+146 silly placeDep ROOT @volar/kit@2.4.28 OK for: @astrojs/language-server@2.17.1 want: ~2.4.28
+147 silly placeDep ROOT @volar/language-core@2.4.28 OK for: @astrojs/language-server@2.17.1 want: ~2.4.28
+148 silly placeDep ROOT @volar/language-server@2.4.28 OK for: @astrojs/language-server@2.17.1 want: ~2.4.28
+149 silly placeDep ROOT @volar/language-service@2.4.28 OK for: @astrojs/language-server@2.17.1 want: ~2.4.28
+150 silly placeDep ROOT muggle-string@0.4.1 OK for: @astrojs/language-server@2.17.1 want: ^0.4.1
+151 silly placeDep ROOT volar-service-css@0.0.71 OK for: @astrojs/language-server@2.17.1 want: 0.0.71
+152 silly placeDep ROOT volar-service-emmet@0.0.71 OK for: @astrojs/language-server@2.17.1 want: 0.0.71
+153 silly placeDep ROOT volar-service-html@0.0.71 OK for: @astrojs/language-server@2.17.1 want: 0.0.71
+154 silly placeDep ROOT volar-service-prettier@0.0.71 OK for: @astrojs/language-server@2.17.1 want: 0.0.71
+155 silly placeDep ROOT volar-service-typescript@0.0.71 OK for: @astrojs/language-server@2.17.1 want: 0.0.71
+156 silly placeDep ROOT volar-service-typescript-twoslash-queries@0.0.71 OK for: @astrojs/language-server@2.17.1 want: 0.0.71
+157 silly placeDep ROOT volar-service-yaml@0.0.71 OK for: @astrojs/language-server@2.17.1 want: 0.0.71
+158 silly placeDep ROOT vscode-html-languageservice@5.6.2 OK for: @astrojs/language-server@2.17.1 want: ^5.6.2
+159 silly placeDep ROOT vscode-uri@3.2.0 OK for: @astrojs/language-server@2.17.1 want: ^3.2.0
+160 silly fetch manifest yaml@^2.8.3
+161 silly packumentCache full:https://registry.npmjs.org/yaml cache-miss
+162 silly fetch manifest @volar/language-service@2.4.28
+163 silly packumentCache full:https://registry.npmjs.org/@volar%2flanguage-service cache-miss
+164 silly fetch manifest @volar/typescript@2.4.28
+165 silly packumentCache full:https://registry.npmjs.org/@volar%2ftypescript cache-miss
+166 silly fetch manifest typesafe-path@^0.2.2
+167 silly packumentCache full:https://registry.npmjs.org/typesafe-path cache-miss
+168 silly fetch manifest vscode-languageserver-textdocument@^1.0.11
+169 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-textdocument cache-miss
+170 silly fetch manifest vscode-uri@^3.0.8
+171 silly packumentCache full:https://registry.npmjs.org/vscode-uri cache-miss
+172 silly fetch manifest @volar/source-map@2.4.28
+173 silly packumentCache full:https://registry.npmjs.org/@volar%2fsource-map cache-miss
+174 http cache https://registry.npmjs.org/vscode-uri 25ms (cache hit)
+175 silly packumentCache full:https://registry.npmjs.org/vscode-uri set size:81109 disposed:false
+176 silly fetch manifest @volar/language-service@2.4.28
+177 silly packumentCache full:https://registry.npmjs.org/@volar%2flanguage-service cache-miss
+178 http cache https://registry.npmjs.org/@volar%2flanguage-service 32ms (cache hit)
+179 silly packumentCache full:https://registry.npmjs.org/@volar%2flanguage-service set size:493688 disposed:false
+180 silly fetch manifest @volar/typescript@2.4.28
+181 silly packumentCache full:https://registry.npmjs.org/@volar%2ftypescript cache-miss
+182 http cache https://registry.npmjs.org/@volar%2flanguage-service 19ms (cache hit)
+183 silly packumentCache full:https://registry.npmjs.org/@volar%2flanguage-service set size:493688 disposed:false
+184 silly packumentCache full:https://registry.npmjs.org/@volar%2flanguage-service dispose
+185 silly fetch manifest path-browserify@^1.0.1
+186 silly packumentCache full:https://registry.npmjs.org/path-browserify cache-miss
+187 http fetch GET 200 https://registry.npmjs.org/yaml 93ms (cache revalidated)
+188 silly packumentCache full:https://registry.npmjs.org/yaml set size:386415 disposed:false
+189 silly fetch manifest request-light@^0.7.0
+190 silly packumentCache full:https://registry.npmjs.org/request-light cache-miss
+191 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-textdocument 113ms (cache miss)
+192 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-textdocument set size:undefined disposed:false
+193 silly fetch manifest vscode-languageserver@^9.0.1
+194 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver cache-miss
+195 http fetch GET 200 https://registry.npmjs.org/@volar%2ftypescript 173ms (cache miss)
+196 silly packumentCache full:https://registry.npmjs.org/@volar%2ftypescript set size:undefined disposed:false
+197 silly fetch manifest vscode-languageserver-protocol@^3.17.5
+198 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-protocol cache-miss
+199 http fetch GET 200 https://registry.npmjs.org/path-browserify 125ms (cache miss)
+200 silly packumentCache full:https://registry.npmjs.org/path-browserify set size:undefined disposed:false
+201 silly fetch manifest vscode-languageserver-protocol@^3.17.5
+202 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-protocol cache-miss
+203 http fetch GET 200 https://registry.npmjs.org/@volar%2ftypescript 259ms (cache miss)
+204 silly packumentCache full:https://registry.npmjs.org/@volar%2ftypescript set size:undefined disposed:false
+205 silly fetch manifest vscode-css-languageservice@^6.3.0
+206 silly packumentCache full:https://registry.npmjs.org/vscode-css-languageservice cache-miss
+207 http fetch GET 200 https://registry.npmjs.org/typesafe-path 311ms (cache miss)
+208 silly packumentCache full:https://registry.npmjs.org/typesafe-path set size:undefined disposed:false
+209 silly fetch manifest @emmetio/css-parser@^0.4.1
+210 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fcss-parser cache-miss
+211 http fetch GET 200 https://registry.npmjs.org/@volar%2fsource-map 324ms (cache miss)
+212 silly packumentCache full:https://registry.npmjs.org/@volar%2fsource-map set size:undefined disposed:false
+213 silly fetch manifest @emmetio/html-matcher@^1.3.0
+214 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fhtml-matcher cache-miss
+215 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-protocol 184ms (cache miss)
+216 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-protocol set size:undefined disposed:false
+217 silly fetch manifest @vscode/emmet-helper@^2.9.3
+218 silly packumentCache full:https://registry.npmjs.org/@vscode%2femmet-helper cache-miss
+219 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-protocol 257ms (cache miss)
+220 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-protocol set size:undefined disposed:false
+221 silly fetch manifest vscode-html-languageservice@^5.3.0
+222 silly packumentCache full:https://registry.npmjs.org/vscode-html-languageservice cache-miss
+223 http fetch GET 200 https://registry.npmjs.org/request-light 396ms (cache miss)
+224 silly packumentCache full:https://registry.npmjs.org/request-light set size:undefined disposed:false
+225 silly fetch manifest typescript-auto-import-cache@^0.3.5
+226 silly packumentCache full:https://registry.npmjs.org/typescript-auto-import-cache cache-miss
+227 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver 396ms (cache miss)
+228 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver set size:undefined disposed:false
+229 silly fetch manifest vscode-nls@^5.2.0
+230 silly packumentCache full:https://registry.npmjs.org/vscode-nls cache-miss
+231 http cache https://registry.npmjs.org/vscode-html-languageservice 101ms (cache hit)
+232 silly packumentCache full:https://registry.npmjs.org/vscode-html-languageservice set size:526362 disposed:false
+233 silly fetch manifest yaml-language-server@~1.23.0
+234 silly packumentCache full:https://registry.npmjs.org/yaml-language-server cache-miss
+235 http fetch GET 200 https://registry.npmjs.org/vscode-css-languageservice 337ms (cache miss)
+236 silly packumentCache full:https://registry.npmjs.org/vscode-css-languageservice set size:undefined disposed:false
+237 silly fetch manifest vscode-uri@^3.1.0
+238 silly packumentCache full:https://registry.npmjs.org/vscode-uri cache-hit
+239 silly fetch manifest @vscode/l10n@^0.0.18
+240 silly packumentCache full:https://registry.npmjs.org/@vscode%2fl10n cache-miss
+241 http fetch GET 200 https://registry.npmjs.org/typescript-auto-import-cache 262ms (cache miss)
+242 silly packumentCache full:https://registry.npmjs.org/typescript-auto-import-cache set size:undefined disposed:false
+243 silly fetch manifest vscode-languageserver-types@^3.17.5
+244 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-types cache-miss
+245 http fetch GET 200 https://registry.npmjs.org/@emmetio%2fhtml-matcher 433ms (cache miss)
+246 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fhtml-matcher set size:undefined disposed:false
+247 silly fetch manifest vscode-languageserver-textdocument@^1.0.12
+248 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-textdocument cache-miss
+249 http fetch GET 200 https://registry.npmjs.org/@emmetio%2fcss-parser 459ms (cache miss)
+250 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fcss-parser set size:undefined disposed:false
+251 http fetch GET 200 https://registry.npmjs.org/vscode-nls 266ms (cache miss)
+252 silly packumentCache full:https://registry.npmjs.org/vscode-nls set size:undefined disposed:false
+253 http fetch GET 200 https://registry.npmjs.org/@vscode%2femmet-helper 474ms (cache miss)
+254 silly packumentCache full:https://registry.npmjs.org/@vscode%2femmet-helper set size:undefined disposed:false
+255 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-types 129ms (cache miss)
+256 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-types set size:undefined disposed:false
+257 http fetch GET 200 https://registry.npmjs.org/@vscode%2fl10n 290ms (cache miss)
+258 silly packumentCache full:https://registry.npmjs.org/@vscode%2fl10n set size:undefined disposed:false
+259 http fetch GET 200 https://registry.npmjs.org/yaml-language-server 462ms (cache miss)
+260 silly packumentCache full:https://registry.npmjs.org/yaml-language-server set size:undefined disposed:false
+261 http cache https://registry.npmjs.org/vscode-languageserver-textdocument 457ms (cache hit)
+262 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-textdocument set size:76241 disposed:false
+263 silly placeDep ROOT yaml@2.9.1 OK for: @astrojs/yaml2ts@0.2.4 want: ^2.8.3
+264 silly placeDep ROOT @volar/typescript@2.4.28 OK for: @volar/kit@2.4.28 want: 2.4.28
+265 silly placeDep ROOT typesafe-path@0.2.2 OK for: @volar/kit@2.4.28 want: ^0.2.2
+266 silly placeDep ROOT vscode-languageserver-textdocument@1.0.15 OK for: @volar/kit@2.4.28 want: ^1.0.11
+267 silly placeDep ROOT @volar/source-map@2.4.28 OK for: @volar/language-core@2.4.28 want: 2.4.28
+268 silly placeDep ROOT path-browserify@1.0.1 OK for: @volar/language-server@2.4.28 want: ^1.0.1
+269 silly placeDep ROOT request-light@0.7.0 OK for: @volar/language-server@2.4.28 want: ^0.7.0
+270 silly placeDep ROOT vscode-languageserver@9.0.1 OK for: @volar/language-server@2.4.28 want: ^9.0.1
+271 silly placeDep ROOT vscode-languageserver-protocol@3.18.3 OK for: @volar/language-server@2.4.28 want: ^3.17.5
+272 silly fetch manifest vscode-languageserver-protocol@3.17.5
+273 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-protocol cache-miss
+274 silly fetch manifest vscode-jsonrpc@9.0.2
+275 silly packumentCache full:https://registry.npmjs.org/vscode-jsonrpc cache-miss
+276 silly fetch manifest vscode-languageserver-types@3.18.3
+277 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-types cache-miss
+278 http cache https://registry.npmjs.org/vscode-languageserver-types 17ms (cache hit)
+279 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-types set size:318170 disposed:false
+280 http cache https://registry.npmjs.org/vscode-languageserver-protocol 40ms (cache hit)
+281 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-protocol set size:515001 disposed:false
+282 http fetch GET 200 https://registry.npmjs.org/vscode-jsonrpc 103ms (cache miss)
+283 silly packumentCache full:https://registry.npmjs.org/vscode-jsonrpc set size:undefined disposed:false
+284 silly placeDep ROOT vscode-css-languageservice@6.3.10 OK for: volar-service-css@0.0.71 want: ^6.3.0
+285 silly fetch manifest vscode-languageserver-types@3.17.5
+286 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-types cache-hit
+287 silly placeDep ROOT @emmetio/css-parser@0.4.1 OK for: volar-service-emmet@0.0.71 want: ^0.4.1
+288 silly placeDep ROOT @emmetio/html-matcher@1.3.0 OK for: volar-service-emmet@0.0.71 want: ^1.3.0
+289 silly placeDep ROOT @vscode/emmet-helper@2.11.0 OK for: volar-service-emmet@0.0.71 want: ^2.9.3
+290 silly fetch manifest @emmetio/stream-reader@^2.2.0
+291 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fstream-reader cache-miss
+292 silly fetch manifest @emmetio/stream-reader-utils@^0.1.0
+293 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fstream-reader-utils cache-miss
+294 silly fetch manifest @emmetio/scanner@^1.0.0
+295 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fscanner cache-miss
+296 silly fetch manifest emmet@^2.4.3
+297 silly packumentCache full:https://registry.npmjs.org/emmet cache-miss
+298 silly fetch manifest jsonc-parser@^2.3.0
+299 silly packumentCache full:https://registry.npmjs.org/jsonc-parser cache-miss
+300 silly fetch manifest vscode-languageserver-types@^3.15.1
+301 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-types cache-hit
+302 http fetch GET 200 https://registry.npmjs.org/jsonc-parser 95ms (cache revalidated)
+303 silly packumentCache full:https://registry.npmjs.org/jsonc-parser set size:102715 disposed:false
+304 http fetch GET 200 https://registry.npmjs.org/emmet 269ms (cache miss)
+305 silly packumentCache full:https://registry.npmjs.org/emmet set size:undefined disposed:false
+306 http fetch GET 200 https://registry.npmjs.org/@emmetio%2fscanner 453ms (cache miss)
+307 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fscanner set size:undefined disposed:false
+308 http fetch GET 200 https://registry.npmjs.org/@emmetio%2fstream-reader-utils 457ms (cache miss)
+309 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fstream-reader-utils set size:undefined disposed:false
+310 http fetch GET 200 https://registry.npmjs.org/@emmetio%2fstream-reader 459ms (cache miss)
+311 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fstream-reader set size:undefined disposed:false
+312 silly placeDep ROOT @emmetio/stream-reader@2.2.0 OK for: @emmetio/css-parser@0.4.1 want: ^2.2.0
+313 silly placeDep ROOT @emmetio/stream-reader-utils@0.1.0 OK for: @emmetio/css-parser@0.4.1 want: ^0.1.0
+314 silly placeDep ROOT @emmetio/scanner@1.0.4 OK for: @emmetio/html-matcher@1.3.0 want: ^1.0.0
+315 silly placeDep ROOT emmet@2.4.11 OK for: @vscode/emmet-helper@2.11.0 want: ^2.4.3
+316 silly placeDep node_modules/@vscode/emmet-helper jsonc-parser@2.3.1 OK for: @vscode/emmet-helper@2.11.0 want: ^2.3.0
+317 silly placeDep ROOT vscode-languageserver-types@3.18.3 OK for: @vscode/emmet-helper@2.11.0 want: ^3.15.1
+318 silly fetch manifest @emmetio/abbreviation@^2.3.3
+319 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fabbreviation cache-miss
+320 silly fetch manifest @emmetio/css-abbreviation@^2.1.8
+321 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fcss-abbreviation cache-miss
+322 http fetch GET 200 https://registry.npmjs.org/@emmetio%2fcss-abbreviation 458ms (cache miss)
+323 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fcss-abbreviation set size:undefined disposed:false
+324 http fetch GET 200 https://registry.npmjs.org/@emmetio%2fabbreviation 466ms (cache miss)
+325 silly packumentCache full:https://registry.npmjs.org/@emmetio%2fabbreviation set size:undefined disposed:false
+326 silly placeDep ROOT @emmetio/abbreviation@2.3.3 OK for: emmet@2.4.11 want: ^2.3.3
+327 silly placeDep ROOT @emmetio/css-abbreviation@2.1.8 OK for: emmet@2.4.11 want: ^2.1.8
+328 silly placeDep ROOT typescript-auto-import-cache@0.3.6 OK for: volar-service-typescript@0.0.71 want: ^0.3.5
+329 silly placeDep ROOT vscode-nls@5.2.0 OK for: volar-service-typescript@0.0.71 want: ^5.2.0
+330 silly placeDep ROOT yaml-language-server@1.23.0 OK for: volar-service-yaml@0.0.71 want: ~1.23.0
+331 silly fetch manifest ajv@^8.17.1
+332 silly packumentCache full:https://registry.npmjs.org/ajv cache-miss
+333 silly fetch manifest yaml@2.8.3
+334 silly packumentCache full:https://registry.npmjs.org/yaml cache-hit
+335 silly fetch manifest ajv-i18n@^4.2.0
+336 silly packumentCache full:https://registry.npmjs.org/ajv-i18n cache-miss
+337 silly fetch manifest prettier@^3.8.1
+338 silly packumentCache full:https://registry.npmjs.org/prettier cache-miss
+339 silly fetch manifest ajv-draft-04@^1.0.0
+340 silly packumentCache full:https://registry.npmjs.org/ajv-draft-04 cache-miss
+341 silly fetch manifest request-light@^0.5.7
+342 silly packumentCache full:https://registry.npmjs.org/request-light cache-miss
+343 silly fetch manifest vscode-json-languageservice@4.1.8
+344 silly packumentCache full:https://registry.npmjs.org/vscode-json-languageservice cache-miss
+345 http cache https://registry.npmjs.org/prettier 17ms (cache hit)
+346 silly packumentCache full:https://registry.npmjs.org/prettier set size:734412 disposed:false
+347 http cache https://registry.npmjs.org/request-light 26ms (cache hit)
+348 silly packumentCache full:https://registry.npmjs.org/request-light set size:72869 disposed:false
+349 http fetch GET 200 https://registry.npmjs.org/ajv-draft-04 79ms (cache miss)
+350 silly packumentCache full:https://registry.npmjs.org/ajv-draft-04 set size:undefined disposed:false
+351 http fetch GET 200 https://registry.npmjs.org/ajv 176ms (cache miss)
+352 silly packumentCache full:https://registry.npmjs.org/ajv set size:undefined disposed:false
+353 http fetch GET 200 https://registry.npmjs.org/vscode-json-languageservice 197ms (cache miss)
+354 silly packumentCache full:https://registry.npmjs.org/vscode-json-languageservice set size:undefined disposed:false
+355 http fetch GET 200 https://registry.npmjs.org/ajv-i18n 267ms (cache miss)
+356 silly packumentCache full:https://registry.npmjs.org/ajv-i18n set size:undefined disposed:false
+357 silly placeDep ROOT @vscode/l10n@0.0.18 OK for: vscode-css-languageservice@6.3.10 want: ^0.0.18
+358 silly placeDep node_modules/vscode-css-languageservice vscode-languageserver-types@3.17.5 OK for: vscode-css-languageservice@6.3.10 want: 3.17.5
+359 silly placeDep node_modules/vscode-languageserver vscode-languageserver-protocol@3.17.5 OK for: vscode-languageserver@9.0.1 want: 3.17.5
+360 silly fetch manifest vscode-jsonrpc@8.2.0
+361 silly packumentCache full:https://registry.npmjs.org/vscode-jsonrpc cache-miss
+362 http cache https://registry.npmjs.org/vscode-jsonrpc 7ms (cache hit)
+363 silly packumentCache full:https://registry.npmjs.org/vscode-jsonrpc set size:400356 disposed:false
+364 silly placeDep ROOT vscode-jsonrpc@9.0.2 OK for: vscode-languageserver-protocol@3.18.3 want: 9.0.2
+365 silly placeDep ROOT ajv@8.20.0 OK for: yaml-language-server@1.23.0 want: ^8.17.1
+366 silly placeDep ROOT ajv-draft-04@1.0.0 OK for: yaml-language-server@1.23.0 want: ^1.0.0
+367 silly placeDep ROOT ajv-i18n@4.2.0 OK for: yaml-language-server@1.23.0 want: ^4.2.0
+368 silly placeDep ROOT prettier@3.9.9 OK for: yaml-language-server@1.23.0 want: ^3.8.1
+369 silly placeDep node_modules/yaml-language-server request-light@0.5.8 OK for: yaml-language-server@1.23.0 want: ^0.5.7
+370 silly placeDep ROOT vscode-json-languageservice@4.1.8 OK for: yaml-language-server@1.23.0 want: 4.1.8
+371 silly placeDep node_modules/yaml-language-server yaml@2.8.3 OK for: yaml-language-server@1.23.0 want: 2.8.3
+372 silly fetch manifest fast-deep-equal@^3.1.3
+373 silly packumentCache full:https://registry.npmjs.org/fast-deep-equal cache-miss
+374 silly fetch manifest fast-uri@^3.0.1
+375 silly packumentCache full:https://registry.npmjs.org/fast-uri cache-miss
+376 silly fetch manifest json-schema-traverse@^1.0.0
+377 silly packumentCache full:https://registry.npmjs.org/json-schema-traverse cache-miss
+378 silly fetch manifest require-from-string@^2.0.2
+379 silly packumentCache full:https://registry.npmjs.org/require-from-string cache-miss
+380 http fetch GET 200 https://registry.npmjs.org/require-from-string 83ms (cache miss)
+381 silly packumentCache full:https://registry.npmjs.org/require-from-string set size:undefined disposed:false
+382 http fetch GET 200 https://registry.npmjs.org/fast-deep-equal 85ms (cache miss)
+383 silly packumentCache full:https://registry.npmjs.org/fast-deep-equal set size:undefined disposed:false
+384 http fetch GET 200 https://registry.npmjs.org/json-schema-traverse 90ms (cache miss)
+385 silly packumentCache full:https://registry.npmjs.org/json-schema-traverse set size:undefined disposed:false
+386 http fetch GET 200 https://registry.npmjs.org/fast-uri 91ms (cache miss)
+387 silly packumentCache full:https://registry.npmjs.org/fast-uri set size:undefined disposed:false
+388 silly placeDep ROOT fast-deep-equal@3.1.3 OK for: ajv@8.20.0 want: ^3.1.3
+389 silly placeDep ROOT fast-uri@3.1.8 OK for: ajv@8.20.0 want: ^3.0.1
+390 silly placeDep ROOT json-schema-traverse@1.0.0 OK for: ajv@8.20.0 want: ^1.0.0
+391 silly placeDep ROOT require-from-string@2.0.2 OK for: ajv@8.20.0 want: ^2.0.2
+392 silly placeDep ROOT cliui@9.0.1 OK for: yargs@18.2.0 want: ^9.0.1
+393 silly placeDep ROOT escalade@3.2.0 OK for: yargs@18.2.0 want: ^3.1.1
+394 silly placeDep ROOT get-caller-file@2.0.5 OK for: yargs@18.2.0 want: ^2.0.5
+395 silly placeDep ROOT string-width@8.3.0 OK for: yargs@18.2.0 want: ^8.2.1
+396 silly placeDep ROOT y18n@5.0.8 OK for: yargs@18.2.0 want: ^5.0.5
+397 silly fetch manifest string-width@^7.2.0
+398 silly packumentCache full:https://registry.npmjs.org/string-width cache-miss
+399 silly fetch manifest strip-ansi@^7.1.0
+400 silly packumentCache full:https://registry.npmjs.org/strip-ansi cache-miss
+401 silly fetch manifest wrap-ansi@^9.0.0
+402 silly packumentCache full:https://registry.npmjs.org/wrap-ansi cache-miss
+403 silly fetch manifest strip-ansi@^7.1.2
+404 silly packumentCache full:https://registry.npmjs.org/strip-ansi cache-miss
+405 silly fetch manifest get-east-asian-width@^1.5.0
+406 silly packumentCache full:https://registry.npmjs.org/get-east-asian-width cache-miss
+407 http cache https://registry.npmjs.org/string-width 15ms (cache hit)
+408 silly packumentCache full:https://registry.npmjs.org/string-width set size:74702 disposed:false
+409 http fetch GET 200 https://registry.npmjs.org/strip-ansi 78ms (cache miss)
+410 silly packumentCache full:https://registry.npmjs.org/strip-ansi set size:undefined disposed:false
+411 http fetch GET 200 https://registry.npmjs.org/get-east-asian-width 85ms (cache miss)
+412 silly packumentCache full:https://registry.npmjs.org/get-east-asian-width set size:undefined disposed:false
+413 http fetch GET 200 https://registry.npmjs.org/strip-ansi 89ms (cache miss)
+414 silly packumentCache full:https://registry.npmjs.org/strip-ansi set size:undefined disposed:false
+415 http fetch GET 200 https://registry.npmjs.org/wrap-ansi 93ms (cache miss)
+416 silly packumentCache full:https://registry.npmjs.org/wrap-ansi set size:undefined disposed:false
+417 silly placeDep node_modules/cliui string-width@7.2.0 OK for: cliui@9.0.1 want: ^7.2.0
+418 silly placeDep ROOT strip-ansi@7.2.0 OK for: cliui@9.0.1 want: ^7.1.0
+419 silly placeDep ROOT wrap-ansi@9.0.2 OK for: cliui@9.0.1 want: ^9.0.0
+420 silly fetch manifest emoji-regex@^10.3.0
+421 silly packumentCache full:https://registry.npmjs.org/emoji-regex cache-miss
+422 silly fetch manifest get-east-asian-width@^1.0.0
+423 silly packumentCache full:https://registry.npmjs.org/get-east-asian-width cache-miss
+424 silly fetch manifest ansi-regex@^6.2.2
+425 silly packumentCache full:https://registry.npmjs.org/ansi-regex cache-miss
+426 silly fetch manifest ansi-styles@^6.2.1
+427 silly packumentCache full:https://registry.npmjs.org/ansi-styles cache-miss
+428 silly fetch manifest string-width@^7.0.0
+429 silly packumentCache full:https://registry.npmjs.org/string-width cache-hit
+430 http cache https://registry.npmjs.org/get-east-asian-width 9ms (cache hit)
+431 silly packumentCache full:https://registry.npmjs.org/get-east-asian-width set size:22908 disposed:false
+432 http fetch GET 200 https://registry.npmjs.org/emoji-regex 75ms (cache miss)
+433 silly packumentCache full:https://registry.npmjs.org/emoji-regex set size:undefined disposed:false
+434 http fetch GET 200 https://registry.npmjs.org/ansi-styles 84ms (cache miss)
+435 silly packumentCache full:https://registry.npmjs.org/ansi-styles set size:undefined disposed:false
+436 http fetch GET 200 https://registry.npmjs.org/ansi-regex 94ms (cache miss)
+437 silly packumentCache full:https://registry.npmjs.org/ansi-regex set size:undefined disposed:false
+438 silly placeDep ROOT get-east-asian-width@1.7.0 OK for: string-width@8.3.0 want: ^1.5.0
+439 silly placeDep ROOT ansi-regex@6.3.0 OK for: strip-ansi@7.2.0 want: ^6.2.2
+440 silly placeDep ROOT ansi-styles@6.2.3 OK for: wrap-ansi@9.0.2 want: ^6.2.1
+441 silly placeDep node_modules/wrap-ansi string-width@7.2.0 OK for: wrap-ansi@9.0.2 want: ^7.0.0
+442 silly placeDep node_modules/@astrojs/check readdirp@4.1.2 OK for: chokidar@4.0.3 want: ^4.0.1
+443 silly placeDep ROOT emoji-regex@10.6.0 OK for: string-width@7.2.0 want: ^10.3.0
+444 silly placeDep node_modules/vscode-languageserver vscode-jsonrpc@8.2.0 OK for: vscode-languageserver-protocol@3.17.5 want: 8.2.0
+445 silly placeDep node_modules/vscode-languageserver vscode-languageserver-types@3.17.5 OK for: vscode-languageserver-protocol@3.17.5 want: 3.17.5
+446 silly reify moves {}
+447 silly audit bulk request {
+447 silly audit   '@astrojs/compiler-binding': [ '0.5.0' ],
+447 silly audit   '@astrojs/compiler-binding-android-arm64': [ '0.5.0' ],
+447 silly audit   '@astrojs/compiler-binding-darwin-arm64': [ '0.5.0' ],
+447 silly audit   '@astrojs/compiler-binding-darwin-x64': [ '0.5.0' ],
+447 silly audit   '@astrojs/compiler-binding-linux-arm64-gnu': [ '0.5.0' ],
+447 silly audit   '@astrojs/compiler-binding-linux-arm64-musl': [ '0.5.0' ],
+447 silly audit   '@astrojs/compiler-binding-linux-x64-gnu': [ '0.5.0' ],
+447 silly audit   '@astrojs/compiler-binding-linux-x64-musl': [ '0.5.0' ],
+447 silly audit   '@astrojs/compiler-binding-wasm32-wasi': [ '0.5.0' ],
+447 silly audit   '@astrojs/compiler-binding-win32-arm64-msvc': [ '0.5.0' ],
+447 silly audit   '@astrojs/compiler-binding-win32-x64-msvc': [ '0.5.0' ],
+447 silly audit   '@astrojs/compiler-rs': [ '0.5.0' ],
+447 silly audit   '@astrojs/internal-helpers': [ '0.11.0' ],
+447 silly audit   '@astrojs/markdown-satteri': [ '0.4.2' ],
+447 silly audit   '@astrojs/mdx': [ '8.0.2' ],
+447 silly audit   '@astrojs/prism': [ '4.0.2' ],
+447 silly audit   '@astrojs/rss': [ '4.0.19' ],
+447 silly audit   '@astrojs/sitemap': [ '3.7.4' ],
+447 silly audit   '@astrojs/telemetry': [ '3.3.3' ],
+447 silly audit   '@babel/helper-string-parser': [ '7.29.7' ],
+447 silly audit   '@babel/helper-validator-identifier': [ '7.29.7' ],
+447 silly audit   '@babel/parser': [ '7.29.9' ],
+447 silly audit   '@babel/types': [ '7.29.8' ],
+447 silly audit   '@bruits/satteri-darwin-arm64': [ '0.10.5' ],
+447 silly audit   '@bruits/satteri-darwin-x64': [ '0.10.5' ],
+447 silly audit   '@bruits/satteri-linux-arm64-gnu': [ '0.10.5' ],
+447 silly audit   '@bruits/satteri-linux-arm64-musl': [ '0.10.5' ],
+447 silly audit   '@bruits/satteri-linux-x64-gnu': [ '0.10.5' ],
+447 silly audit   '@bruits/satteri-linux-x64-musl': [ '0.10.5' ],
+447 silly audit   '@bruits/satteri-wasm32-wasi': [ '0.10.5' ],
+447 silly audit   '@emnapi/core': [ '1.11.1', '1.11.3' ],
+447 silly audit   '@emnapi/runtime': [ '1.11.1', '1.11.3' ],
+447 silly audit   '@emnapi/wasi-threads': [ '1.2.2', '1.2.3' ],
+447 silly audit   '@bruits/satteri-win32-arm64-msvc': [ '0.10.5' ],
+447 silly audit   '@bruits/satteri-win32-x64-msvc': [ '0.10.5' ],
+447 silly audit   '@capsizecss/unpack': [ '4.0.1' ],
+447 silly audit   '@clack/core': [ '1.5.1' ],
+447 silly audit   '@clack/prompts': [ '1.8.1' ],
+447 silly audit   '@esbuild/aix-ppc64': [ '0.28.2' ],
+447 silly audit   '@esbuild/android-arm': [ '0.28.2' ],
+447 silly audit   '@esbuild/android-arm64': [ '0.28.2' ],
+447 silly audit   '@esbuild/android-x64': [ '0.28.2' ],
+447 silly audit   '@esbuild/darwin-arm64': [ '0.28.2' ],
+447 silly audit   '@esbuild/darwin-x64': [ '0.28.2' ],
+447 silly audit   '@esbuild/freebsd-arm64': [ '0.28.2' ],
+447 silly audit   '@esbuild/freebsd-x64': [ '0.28.2' ],
+447 silly audit   '@esbuild/linux-arm': [ '0.28.2' ],
+447 silly audit   '@esbuild/linux-arm64': [ '0.28.2' ],
+447 silly audit   '@esbuild/linux-ia32': [ '0.28.2' ],
+447 silly audit   '@esbuild/linux-loong64': [ '0.28.2' ],
+447 silly audit   '@esbuild/linux-mips64el': [ '0.28.2' ],
+447 silly audit   '@esbuild/linux-ppc64': [ '0.28.2' ],
+447 silly audit   '@esbuild/linux-riscv64': [ '0.28.2' ],
+447 silly audit   '@esbuild/linux-s390x': [ '0.28.2' ],
+447 silly audit   '@esbuild/linux-x64': [ '0.28.2' ],
+447 silly audit   '@esbuild/netbsd-arm64': [ '0.28.2' ],
+447 silly audit   '@esbuild/netbsd-x64': [ '0.28.2' ],
+447 silly audit   '@esbuild/openbsd-arm64': [ '0.28.2' ],
+447 silly audit   '@esbuild/openbsd-x64': [ '0.28.2' ],
+447 silly audit   '@esbuild/openharmony-arm64': [ '0.28.2' ],
+447 silly audit   '@esbuild/sunos-x64': [ '0.28.2' ],
+447 silly audit   '@esbuild/win32-arm64': [ '0.28.2' ],
+447 silly audit   '@esbuild/win32-ia32': [ '0.28.2' ],
+447 silly audit   '@esbuild/win32-x64': [ '0.28.2' ],
+447 silly audit   '@img/colour': [ '1.1.0' ],
+447 silly audit   '@img/sharp-darwin-arm64': [ '0.35.4' ],
+447 silly audit   '@img/sharp-darwin-x64': [ '0.35.4' ],
+447 silly audit   '@img/sharp-freebsd-wasm32': [ '0.35.4' ],
+447 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.3.3' ],
+447 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.3.3' ],
+447 silly audit   '@img/sharp-libvips-linux-arm': [ '1.3.3' ],
+447 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.3.3' ],
+447 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.3.3' ],
+447 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.3.3' ],
+447 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.3.3' ],
+447 silly audit   '@img/sharp-libvips-linux-x64': [ '1.3.3' ],
+447 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.3.3' ],
+447 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.3.3' ],
+447 silly audit   '@img/sharp-linux-arm': [ '0.35.4' ],
+447 silly audit   '@img/sharp-linux-arm64': [ '0.35.4' ],
+447 silly audit   '@img/sharp-linux-ppc64': [ '0.35.4' ],
+447 silly audit   '@img/sharp-linux-riscv64': [ '0.35.4' ],
+447 silly audit   '@img/sharp-linux-s390x': [ '0.35.4' ],
+447 silly audit   '@img/sharp-linux-x64': [ '0.35.4' ],
+447 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.35.4' ],
+447 silly audit   '@img/sharp-linuxmusl-x64': [ '0.35.4' ],
+447 silly audit   '@img/sharp-wasm32': [ '0.35.4' ],
+447 silly audit   '@img/sharp-webcontainers-wasm32': [ '0.35.4' ],
+447 silly audit   '@img/sharp-win32-arm64': [ '0.35.4' ],
+447 silly audit   '@img/sharp-win32-ia32': [ '0.35.4' ],
+447 silly audit   '@img/sharp-win32-x64': [ '0.35.4' ],
+447 silly audit   '@jridgewell/sourcemap-codec': [ '1.6.0' ],
+447 silly audit   '@napi-rs/wasm-runtime': [ '1.2.4' ],
+447 silly audit   '@nodable/entities': [ '3.0.0' ],
+447 silly audit   '@oslojs/encoding': [ '1.1.0' ],
+447 silly audit   '@oxc-project/types': [ '0.151.0' ],
+447 silly audit   '@rolldown/binding-android-arm-eabi': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-android-arm64': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-darwin-arm64': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-darwin-x64': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-freebsd-x64': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-linux-arm-gnueabihf': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-linux-arm64-gnu': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-linux-arm64-musl': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-linux-ppc64-gnu': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-linux-s390x-gnu': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-linux-x64-gnu': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-linux-x64-musl': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-openharmony-arm64': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-win32-arm64-msvc': [ '1.2.11' ],
+447 silly audit   '@rolldown/binding-win32-x64-msvc': [ '1.2.11' ],
+447 silly audit   '@rolldown/pluginutils': [ '1.0.1' ],
+447 silly audit   '@shikijs/core': [ '4.4.3' ],
+447 silly audit   '@shikijs/engine-javascript': [ '4.4.3' ],
+447 silly audit   '@shikijs/engine-oniguruma': [ '4.4.3' ],
+447 silly audit   '@shikijs/langs': [ '4.4.3' ],
+447 silly audit   '@shikijs/primitive': [ '4.4.3' ],
+447 silly audit   '@shikijs/themes': [ '4.4.3' ],
+447 silly audit   '@shikijs/types': [ '4.4.3' ],
+447 silly audit   '@shikijs/vscode-textmate': [ '10.0.2' ],
+447 silly audit   '@tybys/wasm-util': [ '0.10.4' ],
+447 silly audit   '@types/estree': [ '1.0.9' ],
+447 silly audit   '@types/estree-jsx': [ '1.0.5' ],
+447 silly audit   '@types/hast': [ '3.0.5' ],
+447 silly audit   '@types/mdast': [ '4.0.4' ],
+447 silly audit   '@types/nlcst': [ '2.0.3' ],
+447 silly audit   '@types/node': [ '24.13.6' ],
+447 silly audit   '@types/sax': [ '1.2.7' ],
+447 silly audit   '@types/unist': [ '3.0.3' ],
+447 silly audit   '@ungap/structured-clone': [ '1.4.0' ],
+447 silly audit   'am-i-vibing': [ '0.4.0' ],
+447 silly audit   anymatch: [ '3.1.3' ],
+447 silly audit   picomatch: [ '2.3.2', '4.0.7' ],
+447 silly audit   anynum: [ '1.0.1' ],
+447 silly audit   arg: [ '5.0.2' ],
+447 silly audit   argparse: [ '2.0.1' ],
+447 silly audit   'aria-query': [ '5.3.2' ],
+447 silly audit   astro: [ '7.3.5' ],
+447 silly audit   'axobject-query': [ '4.1.0' ],
+447 silly audit   bail: [ '2.0.2' ],
+447 silly audit   boolbase: [ '1.0.0' ],
+447 silly audit   ccount: [ '2.0.1' ],
+447 silly audit   'character-entities-html4': [ '2.1.0' ],
+447 silly audit   'character-entities-legacy': [ '3.0.0' ],
+447 silly audit   chokidar: [ '5.0.0', '4.0.3' ],
+447 silly audit   'ci-info': [ '4.4.0' ],
+447 silly audit   clsx: [ '2.1.1' ],
+447 silly audit   'comma-separated-tokens': [ '2.0.3' ],
+447 silly audit   commander: [ '11.1.0' ],
+447 silly audit   'common-ancestor-path': [ '2.0.0' ],
+447 silly audit   cookie: [ '2.0.1' ],
+447 silly audit   'cookie-es': [ '1.2.3' ],
+447 silly audit   crossws: [ '0.3.5' ],
+447 silly audit   'css-select': [ '6.0.0' ],
+447 silly audit   'css-tree': [ '3.2.1', '2.2.1' ],
+447 silly audit   'css-what': [ '7.0.0' ],
+447 silly audit   csso: [ '5.0.5' ],
+447 silly audit   'mdn-data': [ '2.0.28', '2.27.1' ],
+447 silly audit   defu: [ '6.1.7' ],
+447 silly audit   dequal: [ '2.0.3' ],
+447 silly audit   destr: [ '2.0.5' ],
+447 silly audit   'detect-libc': [ '2.1.2' ],
+447 silly audit   devalue: [ '5.9.4' ],
+447 silly audit   devlop: [ '1.1.0' ],
+447 silly audit   diff: [ '9.0.0' ],
+447 silly audit   'dom-serializer': [ '2.0.0' ],
+447 silly audit   domelementtype: [ '2.3.0' ],
+447 silly audit   domhandler: [ '5.0.3' ],
+447 silly audit   domutils: [ '3.2.2' ],
+447 silly audit   dset: [ '3.1.4' ],
+447 silly audit   entities: [ '4.5.0' ],
+447 silly audit   'es-module-lexer': [ '2.3.2' ],
+447 silly audit   esbuild: [ '0.28.2' ],
+447 silly audit   eventemitter3: [ '5.0.4' ],
+447 silly audit   extend: [ '3.0.2' ],
+447 silly audit   'fast-string-truncated-width': [ '3.0.3' ],
+447 silly audit   'fast-string-width': [ '3.0.2' ],
+447 silly audit   'fast-wrap-ansi': [ '0.2.2' ],
+447 silly audit   'fast-xml-builder': [ '1.3.1' ],
+447 silly audit   'fast-xml-parser': [ '5.11.1' ],
+447 silly audit   fdir: [ '6.5.0' ],
+447 silly audit   'find-proc': [ '0.2.0' ],
+447 silly audit   flattie: [ '1.1.1' ],
+447 silly audit   fontace: [ '0.4.1' ],
+447 silly audit   fontkitten: [ '1.0.3' ],
+447 silly audit   fsevents: [ '2.3.3' ],
+447 silly audit   'get-tsconfig': [ '5.0.0-beta.4' ],
+447 silly audit   'github-slugger': [ '2.0.0' ],
+447 silly audit   h3: [ '1.15.11' ],
+447 silly audit   'hast-util-to-html': [ '9.0.5' ],
+447 silly audit   'hast-util-whitespace': [ '3.0.0' ],
+447 silly audit   'html-escaper': [ '3.0.3' ],
+447 silly audit   'html-void-elements': [ '3.0.0' ],
+447 silly audit   'http-cache-semantics': [ '4.2.0' ],
+447 silly audit   'iron-webcrypto': [ '1.2.1' ],
+447 silly audit   'is-docker': [ '4.0.0' ],
+447 silly audit   'is-plain-obj': [ '4.1.0' ],
+447 silly audit   'is-unsafe': [ '2.0.2' ],
+447 silly audit   'js-yaml': [ '4.3.2' ],
+447 silly audit   'jsonc-parser': [ '3.3.1', '2.3.1' ],
+447 silly audit   lightningcss: [ '1.33.0' ],
+447 silly audit   'lightningcss-android-arm64': [ '1.33.0' ],
+447 silly audit   'lightningcss-darwin-arm64': [ '1.33.0' ],
+447 silly audit   'lightningcss-darwin-x64': [ '1.33.0' ],
+447 silly audit   'lightningcss-freebsd-x64': [ '1.33.0' ],
+447 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.33.0' ],
+447 silly audit   'lightningcss-linux-arm64-gnu': [ '1.33.0' ],
+447 silly audit   'lightningcss-linux-arm64-musl': [ '1.33.0' ],
+447 silly audit   'lightningcss-linux-x64-gnu': [ '1.33.0' ],
+447 silly audit   'lightningcss-linux-x64-musl': [ '1.33.0' ],
+447 silly audit   'lightningcss-win32-arm64-msvc': [ '1.33.0' ],
+447 silly audit   'lightningcss-win32-x64-msvc': [ '1.33.0' ],
+447 silly audit   'lru-cache': [ '11.5.3' ],
+447 silly audit   'magic-string': [ '1.4.2' ],
+447 silly audit   magicast: [ '0.5.5' ],
+447 silly audit   'mdast-util-to-hast': [ '13.2.1' ],
+447 silly audit   'micromark-util-character': [ '2.1.1' ],
+447 silly audit   'micromark-util-encode': [ '2.0.1' ],
+447 silly audit   'micromark-util-sanitize-uri': [ '2.0.1' ],
+447 silly audit   'micromark-util-symbol': [ '2.0.1' ],
+447 silly audit   'micromark-util-types': [ '2.0.2' ],
+447 silly audit   mrmime: [ '2.0.1' ],
+447 silly audit   nanoid: [ '3.3.19' ],
+447 silly audit   neotraverse: [ '1.0.1' ],
+447 silly audit   'nlcst-to-string': [ '4.0.0' ],
+447 silly audit   'node-fetch-native': [ '1.6.7' ],
+447 silly audit   'node-mock-http': [ '1.0.5' ],
+447 silly audit   'normalize-path': [ '3.0.0' ],
+447 silly audit   'nth-check': [ '2.1.1' ],
+447 silly audit   obug: [ '3.0.0' ],
+447 silly audit   ofetch: [ '1.5.1' ],
+447 silly audit   ohash: [ '2.0.12' ],
+447 silly audit   'oniguruma-parser': [ '0.12.2' ],
+447 silly audit   'oniguruma-to-es': [ '4.3.6' ],
+447 silly audit   'p-limit': [ '7.3.3' ],
+447 silly audit   'p-queue': [ '9.3.3' ],
+447 silly audit   'p-timeout': [ '7.0.2' ],
+447 silly audit   'package-manager-detector': [ '1.8.0' ],
+447 silly audit   'path-expression-matcher': [ '1.6.2' ],
+447 silly audit   piccolore: [ '0.1.3' ],
+447 silly audit   picocolors: [ '1.1.1' ],
+447 silly audit   postcss: [ '8.5.28' ],
+447 silly audit   prismjs: [ '1.30.0' ],
+447 silly audit   'process-ancestry': [ '0.1.0' ],
+447 silly audit   'property-information': [ '7.2.0' ],
+447 silly audit   radix3: [ '1.1.2' ],
+447 silly audit   readdirp: [ '5.1.1', '4.1.2' ],
+447 silly audit   regex: [ '6.1.0' ],
+447 silly audit   'regex-recursion': [ '6.0.2' ],
+447 silly audit   'regex-utilities': [ '2.3.0' ],
+447 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+447 silly audit   'retext-smartypants': [ '6.2.0' ],
+447 silly audit   rolldown: [ '1.2.11' ],
+447 silly audit   satteri: [ '0.10.5' ],
+447 silly audit   sax: [ '1.6.1' ],
+447 silly audit   semver: [ '7.8.5' ],
+447 silly audit   sharp: [ '0.35.4' ],
+447 silly audit   shiki: [ '4.4.3' ],
+447 silly audit   sisteransi: [ '1.0.5' ],
+447 silly audit   sitemap: [ '9.0.1' ],
+447 silly audit   'smol-toml': [ '1.9.0' ],
+447 silly audit   'source-map-js': [ '1.2.1' ],
+447 silly audit   'space-separated-tokens': [ '2.0.2' ],
+447 silly audit   'stringify-entities': [ '4.0.4' ],
+447 silly audit   strnum: [ '2.4.2' ],
+447 silly audit   svgo: [ '4.1.0' ],
+447 silly audit   'tiny-inflate': [ '1.0.3' ],
+447 silly audit   tinyclip: [ '1.0.3' ],
+447 silly audit   tinyexec: [ '1.3.1' ],
+447 silly audit   tinyglobby: [ '0.2.17' ],
+447 silly audit   'trim-lines': [ '3.0.1' ],
+447 silly audit   trough: [ '2.2.0' ],
+447 silly audit   tslib: [ '2.8.1' ],
+447 silly audit   typescript: [ '6.0.3' ],
+447 silly audit   ufo: [ '1.6.4' ],
+447 silly audit   ultrahtml: [ '1.7.0' ],
+447 silly audit   uncrypto: [ '0.1.3' ],
+447 silly audit   undici: [ '8.11.2' ],
+447 silly audit   'undici-types': [ '7.18.2' ],
+447 silly audit   unified: [ '11.0.5' ],
+447 silly audit   unifont: [ '0.7.5' ],
+447 silly audit   'unist-util-is': [ '6.0.1' ],
+447 silly audit   'unist-util-position': [ '5.0.0' ],
+447 silly audit   'unist-util-stringify-position': [ '4.0.0' ],
+447 silly audit   'unist-util-visit': [ '5.1.0' ],
+447 silly audit   'unist-util-visit-parents': [ '6.0.2' ],
+447 silly audit   unstorage: [ '1.17.5' ],
+447 silly audit   verkit: [ '0.4.1' ],
+447 silly audit   vfile: [ '6.0.3' ],
+447 silly audit   'vfile-message': [ '4.0.3' ],
+447 silly audit   vite: [ '8.3.1' ],
+447 silly audit   vitefu: [ '1.1.3' ],
+447 silly audit   'xml-naming': [ '0.3.0' ],
+447 silly audit   'xxhash-wasm': [ '1.1.0' ],
+447 silly audit   'yargs-parser': [ '22.0.0' ],
+447 silly audit   'yocto-queue': [ '1.2.2' ],
+447 silly audit   zod: [ '4.6.5' ],
+447 silly audit   zwitch: [ '2.0.4' ],
+447 silly audit   '@astrojs/check': [ '0.9.10' ],
+447 silly audit   '@astrojs/language-server': [ '2.17.1' ],
+447 silly audit   kleur: [ '4.1.5' ],
+447 silly audit   yargs: [ '18.2.0' ],
+447 silly audit   '@astrojs/astro2tsx': [ '0.1.1' ],
+447 silly audit   '@astrojs/yaml2ts': [ '0.2.4' ],
+447 silly audit   '@volar/kit': [ '2.4.28' ],
+447 silly audit   '@volar/language-core': [ '2.4.28' ],
+447 silly audit   '@volar/language-server': [ '2.4.28' ],
+447 silly audit   '@volar/language-service': [ '2.4.28' ],
+447 silly audit   'muggle-string': [ '0.4.1' ],
+447 silly audit   'volar-service-css': [ '0.0.71' ],
+447 silly audit   'volar-service-emmet': [ '0.0.71' ],
+447 silly audit   'volar-service-html': [ '0.0.71' ],
+447 silly audit   'volar-service-prettier': [ '0.0.71' ],
+447 silly audit   'volar-service-typescript': [ '0.0.71' ],
+447 silly audit   'volar-service-typescript-twoslash-queries': [ '0.0.71' ],
+447 silly audit   'volar-service-yaml': [ '0.0.71' ],
+447 silly audit   'vscode-html-languageservice': [ '5.6.2' ],
+447 silly audit   'vscode-uri': [ '3.2.0' ],
+447 silly audit   yaml: [ '2.9.1', '2.8.3' ],
+447 silly audit   '@volar/typescript': [ '2.4.28' ],
+447 silly audit   'typesafe-path': [ '0.2.2' ],
+447 silly audit   'vscode-languageserver-textdocument': [ '1.0.15' ],
+447 silly audit   '@volar/source-map': [ '2.4.28' ],
+447 silly audit   'path-browserify': [ '1.0.1' ],
+447 silly audit   'request-light': [ '0.7.0', '0.5.8' ],
+447 silly audit   'vscode-languageserver': [ '9.0.1' ],
+447 silly audit   'vscode-languageserver-protocol': [ '3.18.3', '3.17.5' ],
+447 silly audit   'vscode-css-languageservice': [ '6.3.10' ],
+447 silly audit   '@emmetio/css-parser': [ '0.4.1' ],
+447 silly audit   '@emmetio/html-matcher': [ '1.3.0' ],
+447 silly audit   '@vscode/emmet-helper': [ '2.11.0' ],
+447 silly audit   '@emmetio/stream-reader': [ '2.2.0' ],
+447 silly audit   '@emmetio/stream-reader-utils': [ '0.1.0' ],
+447 silly audit   '@emmetio/scanner': [ '1.0.4' ],
+447 silly audit   emmet: [ '2.4.11' ],
+447 silly audit   'vscode-languageserver-types': [ '3.18.3', '3.17.5' ],
+447 silly audit   '@emmetio/abbreviation': [ '2.3.3' ],
+447 silly audit   '@emmetio/css-abbreviation': [ '2.1.8' ],
+447 silly audit   'typescript-auto-import-cache': [ '0.3.6' ],
+447 silly audit   'vscode-nls': [ '5.2.0' ],
+447 silly audit   'yaml-language-server': [ '1.23.0' ],
+447 silly audit   '@vscode/l10n': [ '0.0.18' ],
+447 silly audit   'vscode-jsonrpc': [ '9.0.2', '8.2.0' ],
+447 silly audit   ajv: [ '8.20.0' ],
+447 silly audit   'ajv-draft-04': [ '1.0.0' ],
+447 silly audit   'ajv-i18n': [ '4.2.0' ],
+447 silly audit   prettier: [ '3.9.9' ],
+447 silly audit   'vscode-json-languageservice': [ '4.1.8' ],
+447 silly audit   'fast-deep-equal': [ '3.1.3' ],
+447 silly audit   'fast-uri': [ '3.1.8' ],
+447 silly audit   'json-schema-traverse': [ '1.0.0' ],
+447 silly audit   'require-from-string': [ '2.0.2' ],
+447 silly audit   cliui: [ '9.0.1' ],
+447 silly audit   escalade: [ '3.2.0' ],
+447 silly audit   'get-caller-file': [ '2.0.5' ],
+447 silly audit   'string-width': [ '8.3.0', '7.2.0' ],
+447 silly audit   y18n: [ '5.0.8' ],
+447 silly audit   'strip-ansi': [ '7.2.0' ],
+447 silly audit   'wrap-ansi': [ '9.0.2' ],
+447 silly audit   'get-east-asian-width': [ '1.7.0' ],
+447 silly audit   'ansi-regex': [ '6.3.0' ],
+447 silly audit   'ansi-styles': [ '6.2.3' ],
+447 silly audit   'emoji-regex': [ '10.6.0' ]
+447 silly audit }
+448 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-win32-arm64-msvc
+449 silly reify mark deleted [
+449 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-win32-arm64-msvc'
+449 silly reify ]
+450 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-linux-x64-musl
+451 silly reify mark deleted [
+451 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-linux-x64-musl'
+451 silly reify ]
+452 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-linux-x64-gnu
+453 silly reify mark deleted [
+453 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-linux-x64-gnu'
+453 silly reify ]
+454 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-linux-arm64-musl
+455 silly reify mark deleted [
+455 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-linux-arm64-musl'
+455 silly reify ]
+456 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-linux-arm64-gnu
+457 silly reify mark deleted [
+457 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-linux-arm64-gnu'
+457 silly reify ]
+458 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-linux-arm-gnueabihf
+459 silly reify mark deleted [
+459 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-linux-arm-gnueabihf'
+459 silly reify ]
+460 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-freebsd-x64
+461 silly reify mark deleted [
+461 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-freebsd-x64'
+461 silly reify ]
+462 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-darwin-x64
+463 silly reify mark deleted [
+463 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-darwin-x64'
+463 silly reify ]
+464 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-darwin-arm64
+465 silly reify mark deleted [
+465 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-darwin-arm64'
+465 silly reify ]
+466 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-android-arm64
+467 silly reify mark deleted [
+467 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-android-arm64'
+467 silly reify ]
+468 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\fsevents
+469 silly reify mark deleted [
+469 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\fsevents'
+469 silly reify ]
+470 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-win32-arm64-msvc
+471 silly reify mark deleted [
+471 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-win32-arm64-msvc'
+471 silly reify ]
+472 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-openharmony-arm64
+473 silly reify mark deleted [
+473 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-openharmony-arm64'
+473 silly reify ]
+474 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-x64-musl
+475 silly reify mark deleted [
+475 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-x64-musl'
+475 silly reify ]
+476 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-x64-gnu
+477 silly reify mark deleted [
+477 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-x64-gnu'
+477 silly reify ]
+478 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-s390x-gnu
+479 silly reify mark deleted [
+479 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-s390x-gnu'
+479 silly reify ]
+480 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-ppc64-gnu
+481 silly reify mark deleted [
+481 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-ppc64-gnu'
+481 silly reify ]
+482 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-arm64-musl
+483 silly reify mark deleted [
+483 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-arm64-musl'
+483 silly reify ]
+484 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-arm64-gnu
+485 silly reify mark deleted [
+485 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-arm64-gnu'
+485 silly reify ]
+486 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-arm-gnueabihf
+487 silly reify mark deleted [
+487 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-arm-gnueabihf'
+487 silly reify ]
+488 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-freebsd-x64
+489 silly reify mark deleted [
+489 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-freebsd-x64'
+489 silly reify ]
+490 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-darwin-x64
+491 silly reify mark deleted [
+491 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-darwin-x64'
+491 silly reify ]
+492 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-darwin-arm64
+493 silly reify mark deleted [
+493 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-darwin-arm64'
+493 silly reify ]
+494 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-android-arm64
+495 silly reify mark deleted [
+495 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-android-arm64'
+495 silly reify ]
+496 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-android-arm-eabi
+497 silly reify mark deleted [
+497 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-android-arm-eabi'
+497 silly reify ]
+498 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-win32-ia32
+499 silly reify mark deleted [
+499 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-win32-ia32'
+499 silly reify ]
+500 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-win32-arm64
+501 silly reify mark deleted [
+501 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-win32-arm64'
+501 silly reify ]
+502 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-webcontainers-wasm32
+503 silly reify mark deleted [
+503 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-webcontainers-wasm32'
+503 silly reify ]
+504 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linuxmusl-x64
+505 silly reify mark deleted [
+505 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linuxmusl-x64'
+505 silly reify ]
+506 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linuxmusl-arm64
+507 silly reify mark deleted [
+507 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linuxmusl-arm64'
+507 silly reify ]
+508 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linux-x64
+509 silly reify mark deleted [
+509 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linux-x64'
+509 silly reify ]
+510 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linux-s390x
+511 silly reify mark deleted [
+511 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linux-s390x'
+511 silly reify ]
+512 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linux-riscv64
+513 silly reify mark deleted [
+513 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linux-riscv64'
+513 silly reify ]
+514 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linux-ppc64
+515 silly reify mark deleted [
+515 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linux-ppc64'
+515 silly reify ]
+516 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linux-arm64
+517 silly reify mark deleted [
+517 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linux-arm64'
+517 silly reify ]
+518 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linux-arm
+519 silly reify mark deleted [
+519 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linux-arm'
+519 silly reify ]
+520 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linuxmusl-x64
+521 silly reify mark deleted [
+521 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+521 silly reify ]
+522 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linuxmusl-arm64
+523 silly reify mark deleted [
+523 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+523 silly reify ]
+524 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linux-x64
+525 silly reify mark deleted [
+525 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linux-x64'
+525 silly reify ]
+526 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linux-s390x
+527 silly reify mark deleted [
+527 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linux-s390x'
+527 silly reify ]
+528 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linux-riscv64
+529 silly reify mark deleted [
+529 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linux-riscv64'
+529 silly reify ]
+530 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linux-ppc64
+531 silly reify mark deleted [
+531 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linux-ppc64'
+531 silly reify ]
+532 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linux-arm64
+533 silly reify mark deleted [
+533 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linux-arm64'
+533 silly reify ]
+534 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linux-arm
+535 silly reify mark deleted [
+535 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linux-arm'
+535 silly reify ]
+536 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-darwin-x64
+537 silly reify mark deleted [
+537 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-darwin-x64'
+537 silly reify ]
+538 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-darwin-arm64
+539 silly reify mark deleted [
+539 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+539 silly reify ]
+540 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-freebsd-wasm32
+541 silly reify mark deleted [
+541 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-freebsd-wasm32'
+541 silly reify ]
+542 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-darwin-x64
+543 silly reify mark deleted [
+543 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-darwin-x64'
+543 silly reify ]
+544 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-darwin-arm64
+545 silly reify mark deleted [
+545 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-darwin-arm64'
+545 silly reify ]
+546 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\win32-ia32
+547 silly reify mark deleted [
+547 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\win32-ia32'
+547 silly reify ]
+548 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\win32-arm64
+549 silly reify mark deleted [
+549 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\win32-arm64'
+549 silly reify ]
+550 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\sunos-x64
+551 silly reify mark deleted [
+551 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\sunos-x64'
+551 silly reify ]
+552 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\openharmony-arm64
+553 silly reify mark deleted [
+553 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\openharmony-arm64'
+553 silly reify ]
+554 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\openbsd-x64
+555 silly reify mark deleted [
+555 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\openbsd-x64'
+555 silly reify ]
+556 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\openbsd-arm64
+557 silly reify mark deleted [
+557 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\openbsd-arm64'
+557 silly reify ]
+558 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\netbsd-x64
+559 silly reify mark deleted [
+559 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\netbsd-x64'
+559 silly reify ]
+560 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\netbsd-arm64
+561 silly reify mark deleted [
+561 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\netbsd-arm64'
+561 silly reify ]
+562 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-x64
+563 silly reify mark deleted [
+563 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-x64'
+563 silly reify ]
+564 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-s390x
+565 silly reify mark deleted [
+565 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-s390x'
+565 silly reify ]
+566 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-riscv64
+567 silly reify mark deleted [
+567 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-riscv64'
+567 silly reify ]
+568 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-ppc64
+569 silly reify mark deleted [
+569 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-ppc64'
+569 silly reify ]
+570 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-mips64el
+571 silly reify mark deleted [
+571 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-mips64el'
+571 silly reify ]
+572 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-loong64
+573 silly reify mark deleted [
+573 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-loong64'
+573 silly reify ]
+574 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-ia32
+575 silly reify mark deleted [
+575 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-ia32'
+575 silly reify ]
+576 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-arm64
+577 silly reify mark deleted [
+577 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-arm64'
+577 silly reify ]
+578 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-arm
+579 silly reify mark deleted [
+579 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-arm'
+579 silly reify ]
+580 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\freebsd-x64
+581 silly reify mark deleted [
+581 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\freebsd-x64'
+581 silly reify ]
+582 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\freebsd-arm64
+583 silly reify mark deleted [
+583 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\freebsd-arm64'
+583 silly reify ]
+584 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\darwin-x64
+585 silly reify mark deleted [
+585 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\darwin-x64'
+585 silly reify ]
+586 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\darwin-arm64
+587 silly reify mark deleted [
+587 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\darwin-arm64'
+587 silly reify ]
+588 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\android-x64
+589 silly reify mark deleted [
+589 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\android-x64'
+589 silly reify ]
+590 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\android-arm64
+591 silly reify mark deleted [
+591 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\android-arm64'
+591 silly reify ]
+592 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\android-arm
+593 silly reify mark deleted [
+593 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\android-arm'
+593 silly reify ]
+594 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\aix-ppc64
+595 silly reify mark deleted [
+595 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\aix-ppc64'
+595 silly reify ]
+596 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-win32-arm64-msvc
+597 silly reify mark deleted [
+597 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-win32-arm64-msvc'
+597 silly reify ]
+598 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-wasm32-wasi
+599 silly reify mark deleted [
+599 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-wasm32-wasi'
+599 silly reify ]
+600 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-wasm32-wasi\node_modules\@emnapi\core
+601 silly reify mark deleted [
+601 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-wasm32-wasi\\node_modules\\@emnapi\\core'
+601 silly reify ]
+602 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-wasm32-wasi\node_modules\@emnapi\runtime
+603 silly reify mark deleted [
+603 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-wasm32-wasi\\node_modules\\@emnapi\\runtime'
+603 silly reify ]
+604 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-wasm32-wasi\node_modules\@emnapi\wasi-threads
+605 silly reify mark deleted [
+605 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-wasm32-wasi\\node_modules\\@emnapi\\wasi-threads'
+605 silly reify ]
+606 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-linux-x64-musl
+607 silly reify mark deleted [
+607 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-linux-x64-musl'
+607 silly reify ]
+608 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-linux-x64-gnu
+609 silly reify mark deleted [
+609 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-linux-x64-gnu'
+609 silly reify ]
+610 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-linux-arm64-musl
+611 silly reify mark deleted [
+611 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-linux-arm64-musl'
+611 silly reify ]
+612 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-linux-arm64-gnu
+613 silly reify mark deleted [
+613 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-linux-arm64-gnu'
+613 silly reify ]
+614 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-darwin-x64
+615 silly reify mark deleted [
+615 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-darwin-x64'
+615 silly reify ]
+616 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-darwin-arm64
+617 silly reify mark deleted [
+617 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-darwin-arm64'
+617 silly reify ]
+618 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-win32-arm64-msvc
+619 silly reify mark deleted [
+619 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-win32-arm64-msvc'
+619 silly reify ]
+620 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-wasm32-wasi
+621 silly reify mark deleted [
+621 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-wasm32-wasi'
+621 silly reify ]
+622 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-linux-x64-musl
+623 silly reify mark deleted [
+623 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-linux-x64-musl'
+623 silly reify ]
+624 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-linux-x64-gnu
+625 silly reify mark deleted [
+625 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-linux-x64-gnu'
+625 silly reify ]
+626 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-linux-arm64-musl
+627 silly reify mark deleted [
+627 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-linux-arm64-musl'
+627 silly reify ]
+628 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-linux-arm64-gnu
+629 silly reify mark deleted [
+629 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-linux-arm64-gnu'
+629 silly reify ]
+630 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-darwin-x64
+631 silly reify mark deleted [
+631 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-darwin-x64'
+631 silly reify ]
+632 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-darwin-arm64
+633 silly reify mark deleted [
+633 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-darwin-arm64'
+633 silly reify ]
+634 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-android-arm64
+635 silly reify mark deleted [
+635 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-android-arm64'
+635 silly reify ]
+636 http cache emoji-regex@https://registry.npmjs.org/emoji-regex/-/emoji-regex-10.6.0.tgz 0ms (cache hit)
+637 http cache ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz 0ms (cache hit)
+638 http cache ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.3.0.tgz 0ms (cache hit)
+639 http cache get-east-asian-width@https://registry.npmjs.org/get-east-asian-width/-/get-east-asian-width-1.7.0.tgz 0ms (cache hit)
+640 http cache wrap-ansi@https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-9.0.2.tgz 0ms (cache hit)
+641 http cache strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.2.0.tgz 0ms (cache hit)
+642 http cache string-width@https://registry.npmjs.org/string-width/-/string-width-8.3.0.tgz 0ms (cache hit)
+643 http cache y18n@https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz 0ms (cache hit)
+644 http cache escalade@https://registry.npmjs.org/escalade/-/escalade-3.2.0.tgz 0ms (cache hit)
+645 http cache get-caller-file@https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz 0ms (cache hit)
+646 http cache cliui@https://registry.npmjs.org/cliui/-/cliui-9.0.1.tgz 0ms (cache hit)
+647 http cache require-from-string@https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz 0ms (cache hit)
+648 http cache json-schema-traverse@https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz 0ms (cache hit)
+649 http cache fast-deep-equal@https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz 0ms (cache hit)
+650 http cache fast-uri@https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.8.tgz 0ms (cache hit)
+651 http cache vscode-json-languageservice@https://registry.npmjs.org/vscode-json-languageservice/-/vscode-json-languageservice-4.1.8.tgz 0ms (cache hit)
+652 http cache ajv-i18n@https://registry.npmjs.org/ajv-i18n/-/ajv-i18n-4.2.0.tgz 0ms (cache hit)
+653 http cache prettier@https://registry.npmjs.org/prettier/-/prettier-3.9.9.tgz 0ms (cache hit)
+654 http cache ajv-draft-04@https://registry.npmjs.org/ajv-draft-04/-/ajv-draft-04-1.0.0.tgz 0ms (cache hit)
+655 http cache vscode-jsonrpc@https://registry.npmjs.org/vscode-jsonrpc/-/vscode-jsonrpc-9.0.2.tgz 0ms (cache hit)
+656 http cache @vscode/l10n@https://registry.npmjs.org/@vscode/l10n/-/l10n-0.0.18.tgz 0ms (cache hit)
+657 http cache ajv@https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz 0ms (cache hit)
+658 http cache vscode-nls@https://registry.npmjs.org/vscode-nls/-/vscode-nls-5.2.0.tgz 0ms (cache hit)
+659 http cache typescript-auto-import-cache@https://registry.npmjs.org/typescript-auto-import-cache/-/typescript-auto-import-cache-0.3.6.tgz 0ms (cache hit)
+660 http cache @emmetio/css-abbreviation@https://registry.npmjs.org/@emmetio/css-abbreviation/-/css-abbreviation-2.1.8.tgz 0ms (cache hit)
+661 http cache @emmetio/abbreviation@https://registry.npmjs.org/@emmetio/abbreviation/-/abbreviation-2.3.3.tgz 0ms (cache hit)
+662 http cache yaml-language-server@https://registry.npmjs.org/yaml-language-server/-/yaml-language-server-1.23.0.tgz 0ms (cache hit)
+663 http cache emmet@https://registry.npmjs.org/emmet/-/emmet-2.4.11.tgz 0ms (cache hit)
+664 http cache @emmetio/stream-reader-utils@https://registry.npmjs.org/@emmetio/stream-reader-utils/-/stream-reader-utils-0.1.0.tgz 0ms (cache hit)
+665 http cache @emmetio/stream-reader@https://registry.npmjs.org/@emmetio/stream-reader/-/stream-reader-2.2.0.tgz 0ms (cache hit)
+666 http cache @emmetio/scanner@https://registry.npmjs.org/@emmetio/scanner/-/scanner-1.0.4.tgz 0ms (cache hit)
+667 http cache @emmetio/html-matcher@https://registry.npmjs.org/@emmetio/html-matcher/-/html-matcher-1.3.0.tgz 0ms (cache hit)
+668 http cache vscode-css-languageservice@https://registry.npmjs.org/vscode-css-languageservice/-/vscode-css-languageservice-6.3.10.tgz 0ms (cache hit)
+669 http cache @vscode/emmet-helper@https://registry.npmjs.org/@vscode/emmet-helper/-/emmet-helper-2.11.0.tgz 0ms (cache hit)
+670 http cache vscode-languageserver-protocol@https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.18.3.tgz 0ms (cache hit)
+671 http cache request-light@https://registry.npmjs.org/request-light/-/request-light-0.7.0.tgz 0ms (cache hit)
+672 http cache vscode-languageserver@https://registry.npmjs.org/vscode-languageserver/-/vscode-languageserver-9.0.1.tgz 0ms (cache hit)
+673 http cache @volar/source-map@https://registry.npmjs.org/@volar/source-map/-/source-map-2.4.28.tgz 0ms (cache hit)
+674 http cache @emmetio/css-parser@https://registry.npmjs.org/@emmetio/css-parser/-/css-parser-0.4.1.tgz 0ms (cache hit)
+675 http cache vscode-languageserver-textdocument@https://registry.npmjs.org/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.15.tgz 0ms (cache hit)
+676 http cache path-browserify@https://registry.npmjs.org/path-browserify/-/path-browserify-1.0.1.tgz 0ms (cache hit)
+677 http cache @volar/typescript@https://registry.npmjs.org/@volar/typescript/-/typescript-2.4.28.tgz 0ms (cache hit)
+678 http cache yaml@https://registry.npmjs.org/yaml/-/yaml-2.9.1.tgz 0ms (cache hit)
+679 http cache vscode-uri@https://registry.npmjs.org/vscode-uri/-/vscode-uri-3.2.0.tgz 0ms (cache hit)
+680 http cache vscode-html-languageservice@https://registry.npmjs.org/vscode-html-languageservice/-/vscode-html-languageservice-5.6.2.tgz 0ms (cache hit)
+681 http cache volar-service-typescript-twoslash-queries@https://registry.npmjs.org/volar-service-typescript-twoslash-queries/-/volar-service-typescript-twoslash-queries-0.0.71.tgz 0ms (cache hit)
+682 http cache typesafe-path@https://registry.npmjs.org/typesafe-path/-/typesafe-path-0.2.2.tgz 0ms (cache hit)
+683 http cache volar-service-typescript@https://registry.npmjs.org/volar-service-typescript/-/volar-service-typescript-0.0.71.tgz 0ms (cache hit)
+684 http cache volar-service-yaml@https://registry.npmjs.org/volar-service-yaml/-/volar-service-yaml-0.0.71.tgz 0ms (cache hit)
+685 http cache volar-service-html@https://registry.npmjs.org/volar-service-html/-/volar-service-html-0.0.71.tgz 0ms (cache hit)
+686 http cache volar-service-emmet@https://registry.npmjs.org/volar-service-emmet/-/volar-service-emmet-0.0.71.tgz 0ms (cache hit)
+687 http cache @volar/language-service@https://registry.npmjs.org/@volar/language-service/-/language-service-2.4.28.tgz 0ms (cache hit)
+688 http cache volar-service-css@https://registry.npmjs.org/volar-service-css/-/volar-service-css-0.0.71.tgz 0ms (cache hit)
+689 http cache muggle-string@https://registry.npmjs.org/muggle-string/-/muggle-string-0.4.1.tgz 0ms (cache hit)
+690 http cache @volar/language-server@https://registry.npmjs.org/@volar/language-server/-/language-server-2.4.28.tgz 0ms (cache hit)
+691 http cache @volar/kit@https://registry.npmjs.org/@volar/kit/-/kit-2.4.28.tgz 0ms (cache hit)
+692 http cache @volar/language-core@https://registry.npmjs.org/@volar/language-core/-/language-core-2.4.28.tgz 0ms (cache hit)
+693 http cache @astrojs/astro2tsx@https://registry.npmjs.org/@astrojs/astro2tsx/-/astro2tsx-0.1.1.tgz 0ms (cache hit)
+694 http cache @astrojs/yaml2ts@https://registry.npmjs.org/@astrojs/yaml2ts/-/yaml2ts-0.2.4.tgz 0ms (cache hit)
+695 http cache yargs@https://registry.npmjs.org/yargs/-/yargs-18.2.0.tgz 1ms (cache hit)
+696 http cache kleur@https://registry.npmjs.org/kleur/-/kleur-4.1.5.tgz 0ms (cache hit)
+697 http cache @astrojs/check@https://registry.npmjs.org/@astrojs/check/-/check-0.9.10.tgz 0ms (cache hit)
+698 http cache @astrojs/language-server@https://registry.npmjs.org/@astrojs/language-server/-/language-server-2.17.1.tgz 0ms (cache hit)
+699 http cache string-width@https://registry.npmjs.org/string-width/-/string-width-7.2.0.tgz 0ms (cache hit)
+700 http cache string-width@https://registry.npmjs.org/string-width/-/string-width-7.2.0.tgz 0ms (cache hit)
+701 http cache yaml@https://registry.npmjs.org/yaml/-/yaml-2.8.3.tgz 0ms (cache hit)
+702 http cache request-light@https://registry.npmjs.org/request-light/-/request-light-0.5.8.tgz 0ms (cache hit)
+703 http cache jsonc-parser@https://registry.npmjs.org/jsonc-parser/-/jsonc-parser-2.3.1.tgz 0ms (cache hit)
+704 http cache volar-service-prettier@https://registry.npmjs.org/volar-service-prettier/-/volar-service-prettier-0.0.71.tgz 0ms (cache hit)
+705 http cache vscode-languageserver-types@https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.17.5.tgz 0ms (cache hit)
+706 http cache vscode-languageserver-types@https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.17.5.tgz 0ms (cache hit)
+707 http cache vscode-languageserver-protocol@https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.5.tgz 0ms (cache hit)
+708 http cache readdirp@https://registry.npmjs.org/readdirp/-/readdirp-4.1.2.tgz 0ms (cache hit)
+709 http cache vscode-jsonrpc@https://registry.npmjs.org/vscode-jsonrpc/-/vscode-jsonrpc-8.2.0.tgz 0ms (cache hit)
+710 http cache chokidar@https://registry.npmjs.org/chokidar/-/chokidar-4.0.3.tgz 0ms (cache hit)
+711 http cache @emnapi/wasi-threads@https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.2.2.tgz 0ms (cache hit)
+712 http cache vscode-languageserver-types@https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.18.3.tgz 0ms (cache hit)
+713 silly tarball no local data for emoji-regex@https://registry.npmjs.org/emoji-regex/-/emoji-regex-10.6.0.tgz. Extracting by manifest.
+714 silly tarball no local data for ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz. Extracting by manifest.
+715 http cache @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.11.1.tgz 0ms (cache hit)
+716 silly tarball no local data for ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.3.0.tgz. Extracting by manifest.
+717 silly tarball no local data for get-east-asian-width@https://registry.npmjs.org/get-east-asian-width/-/get-east-asian-width-1.7.0.tgz. Extracting by manifest.
+718 silly tarball no local data for wrap-ansi@https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-9.0.2.tgz. Extracting by manifest.
+719 silly tarball no local data for strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.2.0.tgz. Extracting by manifest.
+720 silly tarball no local data for string-width@https://registry.npmjs.org/string-width/-/string-width-8.3.0.tgz. Extracting by manifest.
+721 http cache @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-1.11.1.tgz 0ms (cache hit)
+722 silly tarball no local data for y18n@https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz. Extracting by manifest.
+723 silly tarball no local data for escalade@https://registry.npmjs.org/escalade/-/escalade-3.2.0.tgz. Extracting by manifest.
+724 silly tarball no local data for get-caller-file@https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz. Extracting by manifest.
+725 silly tarball no local data for cliui@https://registry.npmjs.org/cliui/-/cliui-9.0.1.tgz. Extracting by manifest.
+726 silly tarball no local data for require-from-string@https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz. Extracting by manifest.
+727 silly tarball no local data for json-schema-traverse@https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz. Extracting by manifest.
+728 silly tarball no local data for fast-deep-equal@https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz. Extracting by manifest.
+729 silly tarball no local data for fast-uri@https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.8.tgz. Extracting by manifest.
+730 silly tarball no local data for vscode-json-languageservice@https://registry.npmjs.org/vscode-json-languageservice/-/vscode-json-languageservice-4.1.8.tgz. Extracting by manifest.
+731 silly tarball no local data for ajv-i18n@https://registry.npmjs.org/ajv-i18n/-/ajv-i18n-4.2.0.tgz. Extracting by manifest.
+732 silly tarball no local data for prettier@https://registry.npmjs.org/prettier/-/prettier-3.9.9.tgz. Extracting by manifest.
+733 silly tarball no local data for ajv-draft-04@https://registry.npmjs.org/ajv-draft-04/-/ajv-draft-04-1.0.0.tgz. Extracting by manifest.
+734 silly tarball no local data for vscode-jsonrpc@https://registry.npmjs.org/vscode-jsonrpc/-/vscode-jsonrpc-9.0.2.tgz. Extracting by manifest.
+735 silly tarball no local data for @vscode/l10n@https://registry.npmjs.org/@vscode/l10n/-/l10n-0.0.18.tgz. Extracting by manifest.
+736 silly tarball no local data for ajv@https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz. Extracting by manifest.
+737 silly tarball no local data for vscode-nls@https://registry.npmjs.org/vscode-nls/-/vscode-nls-5.2.0.tgz. Extracting by manifest.
+738 silly tarball no local data for typescript-auto-import-cache@https://registry.npmjs.org/typescript-auto-import-cache/-/typescript-auto-import-cache-0.3.6.tgz. Extracting by manifest.
+739 silly tarball no local data for @emmetio/css-abbreviation@https://registry.npmjs.org/@emmetio/css-abbreviation/-/css-abbreviation-2.1.8.tgz. Extracting by manifest.
+740 silly tarball no local data for @emmetio/abbreviation@https://registry.npmjs.org/@emmetio/abbreviation/-/abbreviation-2.3.3.tgz. Extracting by manifest.
+741 silly tarball no local data for yaml-language-server@https://registry.npmjs.org/yaml-language-server/-/yaml-language-server-1.23.0.tgz. Extracting by manifest.
+742 silly tarball no local data for emmet@https://registry.npmjs.org/emmet/-/emmet-2.4.11.tgz. Extracting by manifest.
+743 silly tarball no local data for @emmetio/stream-reader-utils@https://registry.npmjs.org/@emmetio/stream-reader-utils/-/stream-reader-utils-0.1.0.tgz. Extracting by manifest.
+744 silly tarball no local data for @emmetio/stream-reader@https://registry.npmjs.org/@emmetio/stream-reader/-/stream-reader-2.2.0.tgz. Extracting by manifest.
+745 silly tarball no local data for @emmetio/scanner@https://registry.npmjs.org/@emmetio/scanner/-/scanner-1.0.4.tgz. Extracting by manifest.
+746 silly tarball no local data for @emmetio/html-matcher@https://registry.npmjs.org/@emmetio/html-matcher/-/html-matcher-1.3.0.tgz. Extracting by manifest.
+747 silly tarball no local data for vscode-css-languageservice@https://registry.npmjs.org/vscode-css-languageservice/-/vscode-css-languageservice-6.3.10.tgz. Extracting by manifest.
+748 silly tarball no local data for @vscode/emmet-helper@https://registry.npmjs.org/@vscode/emmet-helper/-/emmet-helper-2.11.0.tgz. Extracting by manifest.
+749 silly tarball no local data for vscode-languageserver-protocol@https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.18.3.tgz. Extracting by manifest.
+750 silly tarball no local data for request-light@https://registry.npmjs.org/request-light/-/request-light-0.7.0.tgz. Extracting by manifest.
+751 silly tarball no local data for vscode-languageserver@https://registry.npmjs.org/vscode-languageserver/-/vscode-languageserver-9.0.1.tgz. Extracting by manifest.
+752 silly tarball no local data for @volar/source-map@https://registry.npmjs.org/@volar/source-map/-/source-map-2.4.28.tgz. Extracting by manifest.
+753 silly tarball no local data for @emmetio/css-parser@https://registry.npmjs.org/@emmetio/css-parser/-/css-parser-0.4.1.tgz. Extracting by manifest.
+754 silly tarball no local data for vscode-languageserver-textdocument@https://registry.npmjs.org/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.15.tgz. Extracting by manifest.
+755 silly tarball no local data for path-browserify@https://registry.npmjs.org/path-browserify/-/path-browserify-1.0.1.tgz. Extracting by manifest.
+756 silly tarball no local data for @volar/typescript@https://registry.npmjs.org/@volar/typescript/-/typescript-2.4.28.tgz. Extracting by manifest.
+757 silly tarball no local data for yaml@https://registry.npmjs.org/yaml/-/yaml-2.9.1.tgz. Extracting by manifest.
+758 silly tarball no local data for vscode-uri@https://registry.npmjs.org/vscode-uri/-/vscode-uri-3.2.0.tgz. Extracting by manifest.
+759 silly tarball no local data for vscode-html-languageservice@https://registry.npmjs.org/vscode-html-languageservice/-/vscode-html-languageservice-5.6.2.tgz. Extracting by manifest.
+760 silly tarball no local data for volar-service-typescript-twoslash-queries@https://registry.npmjs.org/volar-service-typescript-twoslash-queries/-/volar-service-typescript-twoslash-queries-0.0.71.tgz. Extracting by manifest.
+761 silly tarball no local data for typesafe-path@https://registry.npmjs.org/typesafe-path/-/typesafe-path-0.2.2.tgz. Extracting by manifest.
+762 silly tarball no local data for volar-service-typescript@https://registry.npmjs.org/volar-service-typescript/-/volar-service-typescript-0.0.71.tgz. Extracting by manifest.
+763 silly tarball no local data for volar-service-yaml@https://registry.npmjs.org/volar-service-yaml/-/volar-service-yaml-0.0.71.tgz. Extracting by manifest.
+764 silly tarball no local data for volar-service-html@https://registry.npmjs.org/volar-service-html/-/volar-service-html-0.0.71.tgz. Extracting by manifest.
+765 silly tarball no local data for volar-service-emmet@https://registry.npmjs.org/volar-service-emmet/-/volar-service-emmet-0.0.71.tgz. Extracting by manifest.
+766 silly tarball no local data for @volar/language-service@https://registry.npmjs.org/@volar/language-service/-/language-service-2.4.28.tgz. Extracting by manifest.
+767 silly tarball no local data for volar-service-css@https://registry.npmjs.org/volar-service-css/-/volar-service-css-0.0.71.tgz. Extracting by manifest.
+768 silly tarball no local data for muggle-string@https://registry.npmjs.org/muggle-string/-/muggle-string-0.4.1.tgz. Extracting by manifest.
+769 silly tarball no local data for @volar/language-server@https://registry.npmjs.org/@volar/language-server/-/language-server-2.4.28.tgz. Extracting by manifest.
+770 silly tarball no local data for @volar/kit@https://registry.npmjs.org/@volar/kit/-/kit-2.4.28.tgz. Extracting by manifest.
+771 silly tarball no local data for @volar/language-core@https://registry.npmjs.org/@volar/language-core/-/language-core-2.4.28.tgz. Extracting by manifest.
+772 silly tarball no local data for @astrojs/astro2tsx@https://registry.npmjs.org/@astrojs/astro2tsx/-/astro2tsx-0.1.1.tgz. Extracting by manifest.
+773 silly tarball no local data for @astrojs/yaml2ts@https://registry.npmjs.org/@astrojs/yaml2ts/-/yaml2ts-0.2.4.tgz. Extracting by manifest.
+774 silly tarball no local data for yargs@https://registry.npmjs.org/yargs/-/yargs-18.2.0.tgz. Extracting by manifest.
+775 silly tarball no local data for kleur@https://registry.npmjs.org/kleur/-/kleur-4.1.5.tgz. Extracting by manifest.
+776 silly tarball no local data for @astrojs/check@https://registry.npmjs.org/@astrojs/check/-/check-0.9.10.tgz. Extracting by manifest.
+777 silly tarball no local data for @astrojs/language-server@https://registry.npmjs.org/@astrojs/language-server/-/language-server-2.17.1.tgz. Extracting by manifest.
+778 silly tarball no local data for string-width@https://registry.npmjs.org/string-width/-/string-width-7.2.0.tgz. Extracting by manifest.
+779 silly tarball no local data for string-width@https://registry.npmjs.org/string-width/-/string-width-7.2.0.tgz. Extracting by manifest.
+780 silly tarball no local data for yaml@https://registry.npmjs.org/yaml/-/yaml-2.8.3.tgz. Extracting by manifest.
+781 silly tarball no local data for request-light@https://registry.npmjs.org/request-light/-/request-light-0.5.8.tgz. Extracting by manifest.
+782 silly tarball no local data for jsonc-parser@https://registry.npmjs.org/jsonc-parser/-/jsonc-parser-2.3.1.tgz. Extracting by manifest.
+783 silly tarball no local data for volar-service-prettier@https://registry.npmjs.org/volar-service-prettier/-/volar-service-prettier-0.0.71.tgz. Extracting by manifest.
+784 silly tarball no local data for vscode-languageserver-types@https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.17.5.tgz. Extracting by manifest.
+785 silly tarball no local data for vscode-languageserver-types@https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.17.5.tgz. Extracting by manifest.
+786 silly tarball no local data for vscode-languageserver-protocol@https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.5.tgz. Extracting by manifest.
+787 silly tarball no local data for readdirp@https://registry.npmjs.org/readdirp/-/readdirp-4.1.2.tgz. Extracting by manifest.
+788 silly tarball no local data for vscode-jsonrpc@https://registry.npmjs.org/vscode-jsonrpc/-/vscode-jsonrpc-8.2.0.tgz. Extracting by manifest.
+789 silly tarball no local data for chokidar@https://registry.npmjs.org/chokidar/-/chokidar-4.0.3.tgz. Extracting by manifest.
+790 silly tarball no local data for vscode-languageserver-types@https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.18.3.tgz. Extracting by manifest.
+791 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 289ms
+792 silly audit report {}
+793 http fetch GET 200 https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz 266ms (cache miss)
+794 http fetch GET 200 https://registry.npmjs.org/get-east-asian-width/-/get-east-asian-width-1.7.0.tgz 265ms (cache miss)
+795 http fetch GET 200 https://registry.npmjs.org/emoji-regex/-/emoji-regex-10.6.0.tgz 267ms (cache miss)
+796 http fetch GET 200 https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-9.0.2.tgz 265ms (cache miss)
+797 http fetch GET 200 https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.2.0.tgz 278ms (cache miss)
+798 http fetch GET 200 https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.3.0.tgz 283ms (cache miss)
+799 http fetch GET 200 https://registry.npmjs.org/ajv-draft-04/-/ajv-draft-04-1.0.0.tgz 353ms (cache miss)
+800 http fetch GET 200 https://registry.npmjs.org/string-width/-/string-width-8.3.0.tgz 451ms (cache miss)
+801 http fetch GET 200 https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz 585ms (cache miss)
+802 http fetch GET 200 https://registry.npmjs.org/@vscode/l10n/-/l10n-0.0.18.tgz 579ms (cache miss)
+803 http fetch GET 200 https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz 594ms (cache miss)
+804 http fetch GET 200 https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz 665ms (cache miss)
+805 http fetch GET 200 https://registry.npmjs.org/@emmetio/scanner/-/scanner-1.0.4.tgz 679ms (cache miss)
+806 http fetch GET 200 https://registry.npmjs.org/@emmetio/stream-reader-utils/-/stream-reader-utils-0.1.0.tgz 689ms (cache miss)
+807 http fetch GET 200 https://registry.npmjs.org/escalade/-/escalade-3.2.0.tgz 735ms (cache miss)
+808 http fetch GET 200 https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz 770ms (cache miss)
+809 http fetch GET 200 https://registry.npmjs.org/cliui/-/cliui-9.0.1.tgz 775ms (cache miss)
+810 http fetch GET 200 https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz 830ms (cache miss)
+811 http fetch GET 200 https://registry.npmjs.org/@volar/source-map/-/source-map-2.4.28.tgz 931ms (cache miss)
+812 http fetch GET 200 https://registry.npmjs.org/request-light/-/request-light-0.7.0.tgz 1099ms (cache miss)
+813 http fetch GET 200 https://registry.npmjs.org/@emmetio/stream-reader/-/stream-reader-2.2.0.tgz 1124ms (cache miss)
+814 http fetch GET 200 https://registry.npmjs.org/@emmetio/css-parser/-/css-parser-0.4.1.tgz 1134ms (cache miss)
+815 http fetch GET 200 https://registry.npmjs.org/@emmetio/html-matcher/-/html-matcher-1.3.0.tgz 1141ms (cache miss)
+816 http fetch GET 200 https://registry.npmjs.org/volar-service-typescript-twoslash-queries/-/volar-service-typescript-twoslash-queries-0.0.71.tgz 1162ms (cache miss)
+817 http fetch GET 200 https://registry.npmjs.org/@emmetio/css-abbreviation/-/css-abbreviation-2.1.8.tgz 1235ms (cache miss)
+818 http fetch GET 200 https://registry.npmjs.org/typesafe-path/-/typesafe-path-0.2.2.tgz 1280ms (cache miss)
+819 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.15.tgz 1291ms (cache miss)
+820 http fetch GET 200 https://registry.npmjs.org/volar-service-yaml/-/volar-service-yaml-0.0.71.tgz 1362ms (cache miss)
+821 http fetch GET 200 https://registry.npmjs.org/volar-service-html/-/volar-service-html-0.0.71.tgz 1373ms (cache miss)
+822 http fetch GET 200 https://registry.npmjs.org/muggle-string/-/muggle-string-0.4.1.tgz 1452ms (cache miss)
+823 http fetch GET 200 https://registry.npmjs.org/volar-service-css/-/volar-service-css-0.0.71.tgz 1504ms (cache miss)
+824 http fetch GET 200 https://registry.npmjs.org/@volar/language-core/-/language-core-2.4.28.tgz 1568ms (cache miss)
+825 http fetch GET 200 https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.8.tgz 1599ms (cache miss)
+826 http fetch GET 200 https://registry.npmjs.org/@emmetio/abbreviation/-/abbreviation-2.3.3.tgz 1595ms (cache miss)
+827 http fetch GET 200 https://registry.npmjs.org/@astrojs/check/-/check-0.9.10.tgz 1595ms (cache miss)
+828 http fetch GET 200 https://registry.npmjs.org/string-width/-/string-width-7.2.0.tgz 1604ms (cache miss)
+829 http fetch GET 200 https://registry.npmjs.org/@volar/kit/-/kit-2.4.28.tgz 1616ms (cache miss)
+830 http fetch GET 200 https://registry.npmjs.org/string-width/-/string-width-7.2.0.tgz 1633ms (cache miss)
+831 http fetch GET 200 https://registry.npmjs.org/path-browserify/-/path-browserify-1.0.1.tgz 1658ms (cache miss)
+832 http fetch GET 200 https://registry.npmjs.org/@astrojs/yaml2ts/-/yaml2ts-0.2.4.tgz 1665ms (cache miss)
+833 http fetch GET 200 https://registry.npmjs.org/kleur/-/kleur-4.1.5.tgz 1684ms (cache miss)
+834 http fetch GET 200 https://registry.npmjs.org/request-light/-/request-light-0.5.8.tgz 1753ms (cache miss)
+835 http fetch GET 200 https://registry.npmjs.org/volar-service-prettier/-/volar-service-prettier-0.0.71.tgz 1758ms (cache miss)
+836 http fetch GET 200 https://registry.npmjs.org/vscode-nls/-/vscode-nls-5.2.0.tgz 1870ms (cache miss)
+837 http fetch GET 200 https://registry.npmjs.org/readdirp/-/readdirp-4.1.2.tgz 1895ms (cache miss)
+838 http fetch GET 200 https://registry.npmjs.org/vscode-uri/-/vscode-uri-3.2.0.tgz 1962ms (cache miss)
+839 http fetch GET 200 https://registry.npmjs.org/volar-service-emmet/-/volar-service-emmet-0.0.71.tgz 1971ms (cache miss)
+840 http fetch GET 200 https://registry.npmjs.org/vscode-jsonrpc/-/vscode-jsonrpc-9.0.2.tgz 2064ms (cache miss)
+841 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.17.5.tgz 2084ms (cache miss)
+842 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.17.5.tgz 2118ms (cache miss)
+843 http fetch GET 200 https://registry.npmjs.org/chokidar/-/chokidar-4.0.3.tgz 2132ms (cache miss)
+844 http fetch GET 200 https://registry.npmjs.org/@astrojs/astro2tsx/-/astro2tsx-0.1.1.tgz 2190ms (cache miss)
+845 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.18.3.tgz 2198ms (cache miss)
+846 http fetch GET 200 https://registry.npmjs.org/jsonc-parser/-/jsonc-parser-2.3.1.tgz 2250ms (cache miss)
+847 http fetch GET 200 https://registry.npmjs.org/@vscode/emmet-helper/-/emmet-helper-2.11.0.tgz 2276ms (cache miss)
+848 http fetch GET 200 https://registry.npmjs.org/vscode-json-languageservice/-/vscode-json-languageservice-4.1.8.tgz 2376ms (cache miss)
+849 http fetch GET 200 https://registry.npmjs.org/typescript-auto-import-cache/-/typescript-auto-import-cache-0.3.6.tgz 2438ms (cache miss)
+850 http fetch GET 200 https://registry.npmjs.org/emmet/-/emmet-2.4.11.tgz 2455ms (cache miss)
+851 http fetch GET 200 https://registry.npmjs.org/@volar/typescript/-/typescript-2.4.28.tgz 2524ms (cache miss)
+852 http fetch GET 200 https://registry.npmjs.org/@volar/language-server/-/language-server-2.4.28.tgz 2534ms (cache miss)
+853 http fetch GET 200 https://registry.npmjs.org/volar-service-typescript/-/volar-service-typescript-0.0.71.tgz 2546ms (cache miss)
+854 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver/-/vscode-languageserver-9.0.1.tgz 2671ms (cache miss)
+855 http fetch GET 200 https://registry.npmjs.org/vscode-jsonrpc/-/vscode-jsonrpc-8.2.0.tgz 2719ms (cache miss)
+856 http fetch GET 200 https://registry.npmjs.org/yargs/-/yargs-18.2.0.tgz 2751ms (cache miss)
+857 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.18.3.tgz 2785ms (cache miss)
+858 http fetch GET 200 https://registry.npmjs.org/ajv-i18n/-/ajv-i18n-4.2.0.tgz 2924ms (cache miss)
+859 http fetch GET 200 https://registry.npmjs.org/@astrojs/language-server/-/language-server-2.17.1.tgz 2924ms (cache miss)
+860 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.5.tgz 2953ms (cache miss)
+861 http fetch GET 200 https://registry.npmjs.org/@volar/language-service/-/language-service-2.4.28.tgz 3088ms (cache miss)
+862 http fetch GET 200 https://registry.npmjs.org/vscode-html-languageservice/-/vscode-html-languageservice-5.6.2.tgz 3096ms (cache miss)
+863 http fetch GET 200 https://registry.npmjs.org/prettier/-/prettier-3.9.9.tgz 3162ms (cache miss)
+864 http fetch GET 200 https://registry.npmjs.org/vscode-css-languageservice/-/vscode-css-languageservice-6.3.10.tgz 3372ms (cache miss)
+865 http fetch GET 200 https://registry.npmjs.org/yaml/-/yaml-2.9.1.tgz 3932ms (cache miss)
+866 http fetch GET 200 https://registry.npmjs.org/yaml/-/yaml-2.8.3.tgz 3962ms (cache miss)
+867 http fetch GET 200 https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz 4867ms (cache miss)
+868 http fetch GET 200 https://registry.npmjs.org/yaml-language-server/-/yaml-language-server-1.23.0.tgz 6562ms (cache miss)
+869 silly ADD node_modules/emoji-regex
+870 silly ADD node_modules/ansi-styles
+871 silly ADD node_modules/ansi-regex
+872 silly ADD node_modules/get-east-asian-width
+873 silly ADD node_modules/wrap-ansi
+874 silly ADD node_modules/wrap-ansi/node_modules/string-width
+875 silly ADD node_modules/strip-ansi
+876 silly ADD node_modules/y18n
+877 silly ADD node_modules/string-width
+878 silly ADD node_modules/get-caller-file
+879 silly ADD node_modules/escalade
+880 silly ADD node_modules/cliui
+881 silly ADD node_modules/cliui/node_modules/string-width
+882 silly ADD node_modules/require-from-string
+883 silly ADD node_modules/json-schema-traverse
+884 silly ADD node_modules/fast-uri
+885 silly ADD node_modules/fast-deep-equal
+886 silly ADD node_modules/vscode-json-languageservice
+887 silly ADD node_modules/prettier
+888 silly ADD node_modules/ajv-i18n
+889 silly ADD node_modules/ajv-draft-04
+890 silly ADD node_modules/ajv
+891 silly ADD node_modules/vscode-jsonrpc
+892 silly ADD node_modules/@vscode/l10n
+893 silly ADD node_modules/yaml-language-server
+894 silly ADD node_modules/yaml-language-server/node_modules/yaml
+895 silly ADD node_modules/yaml-language-server/node_modules/request-light
+896 silly ADD node_modules/vscode-nls
+897 silly ADD node_modules/typescript-auto-import-cache
+898 silly ADD node_modules/@emmetio/css-abbreviation
+899 silly ADD node_modules/@emmetio/abbreviation
+900 silly ADD node_modules/vscode-languageserver-types
+901 silly ADD node_modules/emmet
+902 silly ADD node_modules/@emmetio/scanner
+903 silly ADD node_modules/@emmetio/stream-reader-utils
+904 silly ADD node_modules/@emmetio/stream-reader
+905 silly ADD node_modules/@vscode/emmet-helper
+906 silly ADD node_modules/@vscode/emmet-helper/node_modules/jsonc-parser
+907 silly ADD node_modules/@emmetio/html-matcher
+908 silly ADD node_modules/@emmetio/css-parser
+909 silly ADD node_modules/vscode-css-languageservice
+910 silly ADD node_modules/vscode-css-languageservice/node_modules/vscode-languageserver-types
+911 silly ADD node_modules/vscode-languageserver-protocol
+912 silly ADD node_modules/vscode-languageserver
+913 silly ADD node_modules/vscode-languageserver/node_modules/vscode-languageserver-types
+914 silly ADD node_modules/vscode-languageserver/node_modules/vscode-jsonrpc
+915 silly ADD node_modules/vscode-languageserver/node_modules/vscode-languageserver-protocol
+916 silly ADD node_modules/request-light
+917 silly ADD node_modules/path-browserify
+918 silly ADD node_modules/@volar/source-map
+919 silly ADD node_modules/vscode-languageserver-textdocument
+920 silly ADD node_modules/typesafe-path
+921 silly ADD node_modules/@volar/typescript
+922 silly ADD node_modules/yaml
+923 silly ADD node_modules/vscode-uri
+924 silly ADD node_modules/vscode-html-languageservice
+925 silly ADD node_modules/volar-service-yaml
+926 silly ADD node_modules/volar-service-typescript-twoslash-queries
+927 silly ADD node_modules/volar-service-typescript
+928 silly ADD node_modules/volar-service-prettier
+929 silly ADD node_modules/volar-service-html
+930 silly ADD node_modules/volar-service-emmet
+931 silly ADD node_modules/volar-service-css
+932 silly ADD node_modules/muggle-string
+933 silly ADD node_modules/@volar/language-service
+934 silly ADD node_modules/@volar/language-server
+935 silly ADD node_modules/@volar/language-core
+936 silly ADD node_modules/@volar/kit
+937 silly ADD node_modules/@astrojs/yaml2ts
+938 silly ADD node_modules/@astrojs/astro2tsx
+939 silly ADD node_modules/yargs
+940 silly ADD node_modules/kleur
+941 silly ADD node_modules/@astrojs/language-server
+942 silly ADD node_modules/@astrojs/check
+943 silly ADD node_modules/@astrojs/check/node_modules/readdirp
+944 silly ADD node_modules/@astrojs/check/node_modules/chokidar
+945 silly ADD
+946 silly ADD
+947 silly ADD
+948 silly ADD
+949 silly ADD
+950 silly ADD
+951 silly ADD
+952 silly ADD
+953 silly ADD
+954 silly ADD
+955 silly ADD
+956 silly ADD
+957 silly ADD
+958 silly ADD
+959 silly ADD
+960 silly ADD
+961 silly ADD
+962 silly ADD
+963 silly ADD
+964 silly ADD
+965 silly ADD
+966 silly ADD
+967 silly ADD
+968 silly ADD
+969 silly ADD
+970 silly ADD
+971 silly ADD
+972 silly ADD
+973 silly ADD
+974 silly ADD
+975 silly ADD
+976 silly ADD
+977 silly ADD
+978 silly ADD
+979 silly ADD
+980 silly ADD
+981 silly ADD
+982 silly ADD
+983 silly ADD
+984 silly ADD
+985 silly ADD
+986 silly ADD
+987 silly ADD
+988 silly ADD
+989 silly ADD
+990 silly ADD
+991 silly ADD
+992 silly ADD
+993 silly ADD
+994 silly ADD
+995 silly ADD
+996 silly ADD
+997 silly ADD
+998 silly ADD
+999 silly ADD
+1000 silly ADD
+1001 silly ADD
+1002 silly ADD
+1003 silly ADD
+1004 silly ADD
+1005 silly ADD
+1006 silly ADD
+1007 silly ADD
+1008 silly ADD
+1009 silly ADD
+1010 silly ADD
+1011 silly ADD
+1012 silly ADD
+1013 silly ADD
+1014 silly ADD
+1015 silly ADD
+1016 silly ADD
+1017 silly ADD
+1018 silly ADD
+1019 silly ADD
+1020 silly ADD
+1021 silly ADD node_modules/@emnapi/wasi-threads
+1022 silly ADD node_modules/@emnapi/runtime
+1023 silly ADD node_modules/@emnapi/core
+1024 silly ADD
+1025 silly ADD
+1026 silly ADD
+1027 silly ADD
+1028 silly ADD
+1029 silly ADD
+1030 silly ADD
+1031 silly ADD
+1032 silly ADD
+1033 silly ADD
+1034 silly ADD
+1035 silly ADD
+1036 silly ADD
+1037 silly ADD
+1038 silly ADD
+1039 verbose cwd C:\Users\ssamy\Documents\Codex\2026-09-24\cre
+1040 verbose os Windows_NT 10.0.26100
+1041 verbose node v22.23.1
+1042 verbose npm  v10.9.8
+1043 verbose exit 0
+1044 info ok

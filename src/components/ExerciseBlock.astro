@@ -1,0 +1,8 @@
+---
+interface Props { title?: string; lang?: 'en' | 'ar'; }
+const { title, lang = 'en' } = Astro.props;
+---
+<aside class="exercise-block" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <div class="block-label">{title || (lang === 'en' ? 'Try it yourself' : 'جرّب بنفسك')}</div>
+  <div class="block-content"><slot /></div>
+</aside>

@@ -1,0 +1,13 @@
+---
+import { getLanguage, ui, withBase } from '../../../lib/content';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { getCollection } from 'astro:content';
+const lang = getLanguage(Astro.params.lang || 'en');
+const strings = ui[lang];
+export function getStaticPaths() { return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }]; }
+const entries = await getCollection('tutorials', ({ data }) => data.lang === lang && !data.draft);
+---
+<SiteLayout lang={lang} title={strings.navTemplates} description={lang === 'en' ? 'Reusable templates and exercises from BAC9 tutorials.' : 'قوالب وتمارين قابلة لإعادة الاستخدام من دروس BAC9.'} canonicalPath={`/${lang}/templates/`}>
+  <section class="simple-hero shell"><span class="eyebrow">BAC9 / {strings.navTemplates}</span><h1>{lang === 'en' ? 'Take the useful part with you.' : 'خذ الجزء المفيد معك.'}</h1><p>{lang === 'en' ? 'Every tutorial ends with an artifact you can adapt to a real conversation or project.' : 'ينتهي كل درس بمخرج يمكنك تكييفه مع محادثة أو مشروع حقيقي.'}</p></section>
+  <section class="shell resource-list">{entries.map((entry) => <a class="resource-row" href={withBase(`/${lang}/${entry.data.category}/${entry.data.id}/`)}><span class={`category-chip category-${entry.data.category}`}>{entry.data.category}</span><strong>{entry.data.title}</strong><span>↗</span></a>)}</section>
+</SiteLayout>

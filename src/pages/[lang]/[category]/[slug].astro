@@ -1,0 +1,31 @@
+---
+import { getCollection, render } from 'astro:content';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import TutorialCard from '../../../components/TutorialCard.astro';
+import { categoryLabels, getLanguage, getEntryUrl, getSlug, ui, withBase } from '../../../lib/content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('tutorials', ({ data }) => !data.draft);
+  return entries.map((entry) => ({ params: { lang: entry.data.lang, category: entry.data.category, slug: getSlug(entry) }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const lang = getLanguage(entry.data.lang);
+const strings = ui[lang];
+const { Content, headings } = await render(entry);
+const all = await getCollection('tutorials', ({ data }) => !data.draft);
+const related = all.filter((item) => item.data.lang === lang && entry.data.related.includes(item.data.id));
+const counterpart = all.find((item) => item.data.translationId === entry.data.translationId && item.data.lang !== lang);
+const languagePath = counterpart ? getEntryUrl(counterpart) : `/${lang}/`;
+---
+<SiteLayout lang={lang} title={entry.data.title} description={entry.data.description} canonicalPath={getEntryUrl(entry)} image={entry.data.heroImage}>
+  <article class="article-page shell">
+    <div class="article-topline"><a class="back-link" href={withBase(`/${lang}/${entry.data.category}/`)}>← {categoryLabels[entry.data.category][lang]}</a><a class="language-pill" href={withBase(languagePath)}>{strings.language} ↗</a></div>
+    <header class="article-header"><div class="article-labels"><span class={`category-chip category-${entry.data.category}`}>{categoryLabels[entry.data.category][lang]}</span><span>{entry.data.difficulty === 'beginner' ? strings.beginner : entry.data.difficulty === 'intermediate' ? strings.intermediate : strings.advanced}</span><span>{entry.data.readTime} {strings.minRead}</span></div><h1>{entry.data.title}</h1><p>{entry.data.description}</p><div class="article-date">{new Intl.DateTimeFormat(lang === 'ar' ? 'ar-EG' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' }).format(entry.data.updated)}</div></header>
+    <div class="article-grid">
+      <aside class="article-sidebar"><div class="toc"><span class="eyebrow">{lang === 'en' ? 'In this tutorial' : 'في هذا الدرس'}</span><ol>{headings.filter((heading) => heading.depth <= 2).map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol></div><div class="sidebar-image"><img src={withBase(entry.data.heroImage)} alt="" /></div></aside>
+      <div class="article-body prose"><Content /></div>
+    </div>
+  </article>
+  {related.length > 0 && <section class="shell related-section"><div class="section-heading"><div><span class="eyebrow">{strings.related}</span><h2>{lang === 'en' ? 'Put the idea to work.' : 'حوّل الفكرة إلى ممارسة.'}</h2></div></div><div class="tutorial-grid">{related.map((item) => <TutorialCard entry={item} lang={lang} compact />)}</div></section>}
+</SiteLayout>

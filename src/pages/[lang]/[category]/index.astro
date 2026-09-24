@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import TutorialCard from '../../../components/TutorialCard.astro';
+import { categoryDescriptions, categoryLabels, getLanguage, ui, withBase } from '../../../lib/content';
+
+export async function getStaticPaths() {
+  return ['en', 'ar'].flatMap((lang) => ['business', 'technical', 'ai'].map((category) => ({ params: { lang, category } })));
+}
+
+const lang = getLanguage(Astro.params.lang || 'en');
+const category = (Astro.params.category || 'business') as 'business' | 'technical' | 'ai';
+const strings = ui[lang];
+const entries = (await getCollection('tutorials', ({ data }) => data.lang === lang && data.category === category && !data.draft)).sort((a, b) => a.data.published.valueOf() - b.data.published.valueOf());
+---
+<SiteLayout lang={lang} title={categoryLabels[category][lang]} description={categoryDescriptions[category][lang]} canonicalPath={`/${lang}/${category}/`}>
+  <section class={`category-hero category-hero-${category}`}>
+    <div class="shell category-hero-inner"><a class="back-link" href={withBase(`/${lang}/`)}>← {strings.backToLearn}</a><span class="eyebrow">{category === 'business' ? '01' : category === 'technical' ? '02' : '03'} / BAC9</span><h1>{categoryLabels[category][lang]}</h1><p>{categoryDescriptions[category][lang]}</p></div>
+  </section>
+  <section class="shell listing-section"><div class="listing-heading"><div><span class="eyebrow">{entries.length} {lang === 'en' ? 'tutorials' : 'دروس'}</span><h2>{lang === 'en' ? 'Choose your next practice.' : 'اختر تمرينك التالي.'}</h2></div><div class="language-pill">{lang === 'en' ? 'English' : 'العربية'} <span>·</span> <a href={withBase(`/${lang === 'en' ? 'ar' : 'en'}/${category}/`)}>{lang === 'en' ? 'switch language' : 'غيّر اللغة'}</a></div></div><div class="tutorial-grid">{entries.map((entry) => <TutorialCard entry={entry} lang={lang} />)}</div></section>
+</SiteLayout>

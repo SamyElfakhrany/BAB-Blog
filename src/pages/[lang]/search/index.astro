@@ -1,0 +1,31 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { getLanguage, ui, withBase } from '../../../lib/content';
+const lang = getLanguage(Astro.params.lang || 'en');
+const strings = ui[lang];
+const query = Astro.url.searchParams.get('q')?.trim() || '';
+const endpoint = withBase('/search-index.json');
+export function getStaticPaths() { return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }]; }
+---
+<SiteLayout lang={lang} title={strings.search} description={strings.searchPlaceholder} canonicalPath={`/${lang}/search/`}>
+  <section class="simple-hero shell search-hero"><span class="eyebrow">BAC9 / {strings.search}</span><h1>{lang === 'en' ? 'Find the next useful idea.' : 'اعثر على الفكرة المفيدة التالية.'}</h1><form class="search-form search-form-large" action="" method="get"><label class="sr-only" for="q">{strings.searchPlaceholder}</label><input id="q" name="q" type="search" value={query} placeholder={strings.searchPlaceholder} autofocus /><button type="submit">{lang === 'en' ? 'Search' : 'بحث'}</button></form></section>
+  <section class="shell search-results" data-search-root data-lang={lang} data-query={query} data-endpoint={endpoint}><p class="search-status">{query ? (lang === 'en' ? 'Searching…' : 'جارٍ البحث…') : (lang === 'en' ? 'Start with a concept, tool, or technique.' : 'ابدأ بمفهوم أو أداة أو تقنية.')}</p><div class="search-result-list"></div></section>
+  <script define:vars={{ endpoint, lang }}>
+    // @ts-nocheck
+    const root = document.querySelector('[data-search-root]');
+    const list = root?.querySelector('.search-result-list');
+    const status = root?.querySelector('.search-status');
+    const query = new URLSearchParams(window.location.search).get('q')?.trim() || '';
+    const input = document.querySelector('#q');
+    if (input) input.value = query;
+    const run = async () => {
+      if (!root || !list || !status || !query) return;
+      const records = await fetch(endpoint).then((response) => response.json());
+      const normalized = query.toLocaleLowerCase(lang === 'ar' ? 'ar' : 'en');
+      const matches = records.filter((record) => record.lang === lang && record.search.toLocaleLowerCase(lang === 'ar' ? 'ar' : 'en').includes(normalized));
+      status.textContent = matches.length ? `${matches.length} ${lang === 'en' ? 'result(s)' : 'نتيجة'}` : (lang === 'en' ? 'No tutorials match that search.' : 'لا توجد دروس تطابق هذا البحث.');
+      list.innerHTML = matches.map((record) => `<a class="search-result" href="${record.url}"><span class="eyebrow">${record.categoryLabel}</span><strong>${record.title}</strong><p>${record.description}</p></a>`).join('');
+    };
+    run();
+  </script>
+</SiteLayout>

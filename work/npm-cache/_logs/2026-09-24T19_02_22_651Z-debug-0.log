@@ -1,0 +1,821 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.8
+2 info using node@v22.23.1
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\ssamy\Documents\Codex\2026-09-24\cre\.npmrc
+5 silly config load:file:C:\Users\ssamy\.npmrc
+6 silly config load:file:C:\Users\ssamy\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:C:\Users\ssamy\Documents\Codex\2026-09-24\cre\work\npm-cache\_logs\2026-09-24T19_02_22_651Z-
+10 verbose logfile C:\Users\ssamy\Documents\Codex\2026-09-24\cre\work\npm-cache\_logs\2026-09-24T19_02_22_651Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly fetch manifest typescript@^6.0.0
+15 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/typescript 416ms (cache revalidated)
+17 silly packumentCache full:https://registry.npmjs.org/typescript set size:15714892 disposed:false
+18 silly placeDep ROOT typescript@6.0.3 REPLACE for: bac9-blog@0.1.0 want: ^6.0.0
+19 silly reify mark retired [
+19 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@typescript\\typescript-win32-x64'
+19 silly reify ]
+20 silly reify mark retired [
+20 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\typescript',
+20 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\.bin\\tsc',
+20 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\.bin\\tsc.cmd',
+20 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\.bin\\tsc.ps1'
+20 silly reify ]
+21 silly reify moves {
+21 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@typescript\\typescript-win32-x64': 'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@typescript\\.typescript-win32-x64-ia4u0dCq',
+21 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\typescript': 'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\.typescript-DLjvJPpY',
+21 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\.bin\\tsc': 'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\.bin\\.tsc-5zzKCu5Q',
+21 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\.bin\\tsc.cmd': 'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\.bin\\.tsc.cmd-vHHtHlB4',
+21 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\.bin\\tsc.ps1': 'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\.bin\\.tsc.ps1-6Tk3iuKb'
+21 silly reify }
+22 silly audit bulk request {
+22 silly audit   '@astrojs/compiler-binding': [ '0.5.0' ],
+22 silly audit   '@astrojs/compiler-binding-android-arm64': [ '0.5.0' ],
+22 silly audit   '@astrojs/compiler-binding-darwin-arm64': [ '0.5.0' ],
+22 silly audit   '@astrojs/compiler-binding-darwin-x64': [ '0.5.0' ],
+22 silly audit   '@astrojs/compiler-binding-linux-arm64-gnu': [ '0.5.0' ],
+22 silly audit   '@astrojs/compiler-binding-linux-arm64-musl': [ '0.5.0' ],
+22 silly audit   '@astrojs/compiler-binding-linux-x64-gnu': [ '0.5.0' ],
+22 silly audit   '@astrojs/compiler-binding-linux-x64-musl': [ '0.5.0' ],
+22 silly audit   '@astrojs/compiler-binding-wasm32-wasi': [ '0.5.0' ],
+22 silly audit   '@astrojs/compiler-binding-win32-arm64-msvc': [ '0.5.0' ],
+22 silly audit   '@astrojs/compiler-binding-win32-x64-msvc': [ '0.5.0' ],
+22 silly audit   '@astrojs/compiler-rs': [ '0.5.0' ],
+22 silly audit   '@astrojs/internal-helpers': [ '0.11.0' ],
+22 silly audit   '@astrojs/markdown-satteri': [ '0.4.2' ],
+22 silly audit   '@astrojs/mdx': [ '8.0.2' ],
+22 silly audit   '@astrojs/prism': [ '4.0.2' ],
+22 silly audit   '@astrojs/rss': [ '4.0.19' ],
+22 silly audit   '@astrojs/sitemap': [ '3.7.4' ],
+22 silly audit   '@astrojs/telemetry': [ '3.3.3' ],
+22 silly audit   '@babel/helper-string-parser': [ '7.29.7' ],
+22 silly audit   '@babel/helper-validator-identifier': [ '7.29.7' ],
+22 silly audit   '@babel/parser': [ '7.29.9' ],
+22 silly audit   '@babel/types': [ '7.29.8' ],
+22 silly audit   '@bruits/satteri-darwin-arm64': [ '0.10.5' ],
+22 silly audit   '@bruits/satteri-darwin-x64': [ '0.10.5' ],
+22 silly audit   '@bruits/satteri-linux-arm64-gnu': [ '0.10.5' ],
+22 silly audit   '@bruits/satteri-linux-arm64-musl': [ '0.10.5' ],
+22 silly audit   '@bruits/satteri-linux-x64-gnu': [ '0.10.5' ],
+22 silly audit   '@bruits/satteri-linux-x64-musl': [ '0.10.5' ],
+22 silly audit   '@bruits/satteri-wasm32-wasi': [ '0.10.5' ],
+22 silly audit   '@emnapi/core': [ '1.11.1', '1.11.3' ],
+22 silly audit   '@emnapi/runtime': [ '1.11.1', '1.11.3' ],
+22 silly audit   '@emnapi/wasi-threads': [ '1.2.2', '1.2.3' ],
+22 silly audit   '@bruits/satteri-win32-arm64-msvc': [ '0.10.5' ],
+22 silly audit   '@bruits/satteri-win32-x64-msvc': [ '0.10.5' ],
+22 silly audit   '@capsizecss/unpack': [ '4.0.1' ],
+22 silly audit   '@clack/core': [ '1.5.1' ],
+22 silly audit   '@clack/prompts': [ '1.8.1' ],
+22 silly audit   '@esbuild/aix-ppc64': [ '0.28.2' ],
+22 silly audit   '@esbuild/android-arm': [ '0.28.2' ],
+22 silly audit   '@esbuild/android-arm64': [ '0.28.2' ],
+22 silly audit   '@esbuild/android-x64': [ '0.28.2' ],
+22 silly audit   '@esbuild/darwin-arm64': [ '0.28.2' ],
+22 silly audit   '@esbuild/darwin-x64': [ '0.28.2' ],
+22 silly audit   '@esbuild/freebsd-arm64': [ '0.28.2' ],
+22 silly audit   '@esbuild/freebsd-x64': [ '0.28.2' ],
+22 silly audit   '@esbuild/linux-arm': [ '0.28.2' ],
+22 silly audit   '@esbuild/linux-arm64': [ '0.28.2' ],
+22 silly audit   '@esbuild/linux-ia32': [ '0.28.2' ],
+22 silly audit   '@esbuild/linux-loong64': [ '0.28.2' ],
+22 silly audit   '@esbuild/linux-mips64el': [ '0.28.2' ],
+22 silly audit   '@esbuild/linux-ppc64': [ '0.28.2' ],
+22 silly audit   '@esbuild/linux-riscv64': [ '0.28.2' ],
+22 silly audit   '@esbuild/linux-s390x': [ '0.28.2' ],
+22 silly audit   '@esbuild/linux-x64': [ '0.28.2' ],
+22 silly audit   '@esbuild/netbsd-arm64': [ '0.28.2' ],
+22 silly audit   '@esbuild/netbsd-x64': [ '0.28.2' ],
+22 silly audit   '@esbuild/openbsd-arm64': [ '0.28.2' ],
+22 silly audit   '@esbuild/openbsd-x64': [ '0.28.2' ],
+22 silly audit   '@esbuild/openharmony-arm64': [ '0.28.2' ],
+22 silly audit   '@esbuild/sunos-x64': [ '0.28.2' ],
+22 silly audit   '@esbuild/win32-arm64': [ '0.28.2' ],
+22 silly audit   '@esbuild/win32-ia32': [ '0.28.2' ],
+22 silly audit   '@esbuild/win32-x64': [ '0.28.2' ],
+22 silly audit   '@img/colour': [ '1.1.0' ],
+22 silly audit   '@img/sharp-darwin-arm64': [ '0.35.4' ],
+22 silly audit   '@img/sharp-darwin-x64': [ '0.35.4' ],
+22 silly audit   '@img/sharp-freebsd-wasm32': [ '0.35.4' ],
+22 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.3.3' ],
+22 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.3.3' ],
+22 silly audit   '@img/sharp-libvips-linux-arm': [ '1.3.3' ],
+22 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.3.3' ],
+22 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.3.3' ],
+22 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.3.3' ],
+22 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.3.3' ],
+22 silly audit   '@img/sharp-libvips-linux-x64': [ '1.3.3' ],
+22 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.3.3' ],
+22 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.3.3' ],
+22 silly audit   '@img/sharp-linux-arm': [ '0.35.4' ],
+22 silly audit   '@img/sharp-linux-arm64': [ '0.35.4' ],
+22 silly audit   '@img/sharp-linux-ppc64': [ '0.35.4' ],
+22 silly audit   '@img/sharp-linux-riscv64': [ '0.35.4' ],
+22 silly audit   '@img/sharp-linux-s390x': [ '0.35.4' ],
+22 silly audit   '@img/sharp-linux-x64': [ '0.35.4' ],
+22 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.35.4' ],
+22 silly audit   '@img/sharp-linuxmusl-x64': [ '0.35.4' ],
+22 silly audit   '@img/sharp-wasm32': [ '0.35.4' ],
+22 silly audit   '@img/sharp-webcontainers-wasm32': [ '0.35.4' ],
+22 silly audit   '@img/sharp-win32-arm64': [ '0.35.4' ],
+22 silly audit   '@img/sharp-win32-ia32': [ '0.35.4' ],
+22 silly audit   '@img/sharp-win32-x64': [ '0.35.4' ],
+22 silly audit   '@jridgewell/sourcemap-codec': [ '1.6.0' ],
+22 silly audit   '@napi-rs/wasm-runtime': [ '1.2.4' ],
+22 silly audit   '@nodable/entities': [ '3.0.0' ],
+22 silly audit   '@oslojs/encoding': [ '1.1.0' ],
+22 silly audit   '@oxc-project/types': [ '0.151.0' ],
+22 silly audit   '@rolldown/binding-android-arm-eabi': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-android-arm64': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-darwin-arm64': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-darwin-x64': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-freebsd-x64': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-linux-arm-gnueabihf': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-linux-arm64-gnu': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-linux-arm64-musl': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-linux-ppc64-gnu': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-linux-s390x-gnu': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-linux-x64-gnu': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-linux-x64-musl': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-openharmony-arm64': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-win32-arm64-msvc': [ '1.2.11' ],
+22 silly audit   '@rolldown/binding-win32-x64-msvc': [ '1.2.11' ],
+22 silly audit   '@rolldown/pluginutils': [ '1.0.1' ],
+22 silly audit   '@shikijs/core': [ '4.4.3' ],
+22 silly audit   '@shikijs/engine-javascript': [ '4.4.3' ],
+22 silly audit   '@shikijs/engine-oniguruma': [ '4.4.3' ],
+22 silly audit   '@shikijs/langs': [ '4.4.3' ],
+22 silly audit   '@shikijs/primitive': [ '4.4.3' ],
+22 silly audit   '@shikijs/themes': [ '4.4.3' ],
+22 silly audit   '@shikijs/types': [ '4.4.3' ],
+22 silly audit   '@shikijs/vscode-textmate': [ '10.0.2' ],
+22 silly audit   '@tybys/wasm-util': [ '0.10.4' ],
+22 silly audit   '@types/estree': [ '1.0.9' ],
+22 silly audit   '@types/estree-jsx': [ '1.0.5' ],
+22 silly audit   '@types/hast': [ '3.0.5' ],
+22 silly audit   '@types/mdast': [ '4.0.4' ],
+22 silly audit   '@types/nlcst': [ '2.0.3' ],
+22 silly audit   '@types/node': [ '24.13.6' ],
+22 silly audit   '@types/sax': [ '1.2.7' ],
+22 silly audit   '@types/unist': [ '3.0.3' ],
+22 silly audit   '@ungap/structured-clone': [ '1.4.0' ],
+22 silly audit   'am-i-vibing': [ '0.4.0' ],
+22 silly audit   anymatch: [ '3.1.3' ],
+22 silly audit   picomatch: [ '2.3.2', '4.0.7' ],
+22 silly audit   anynum: [ '1.0.1' ],
+22 silly audit   arg: [ '5.0.2' ],
+22 silly audit   argparse: [ '2.0.1' ],
+22 silly audit   'aria-query': [ '5.3.2' ],
+22 silly audit   astro: [ '7.3.5' ],
+22 silly audit   'axobject-query': [ '4.1.0' ],
+22 silly audit   bail: [ '2.0.2' ],
+22 silly audit   boolbase: [ '1.0.0' ],
+22 silly audit   ccount: [ '2.0.1' ],
+22 silly audit   'character-entities-html4': [ '2.1.0' ],
+22 silly audit   'character-entities-legacy': [ '3.0.0' ],
+22 silly audit   chokidar: [ '5.0.0' ],
+22 silly audit   'ci-info': [ '4.4.0' ],
+22 silly audit   clsx: [ '2.1.1' ],
+22 silly audit   'comma-separated-tokens': [ '2.0.3' ],
+22 silly audit   commander: [ '11.1.0' ],
+22 silly audit   'common-ancestor-path': [ '2.0.0' ],
+22 silly audit   cookie: [ '2.0.1' ],
+22 silly audit   'cookie-es': [ '1.2.3' ],
+22 silly audit   crossws: [ '0.3.5' ],
+22 silly audit   'css-select': [ '6.0.0' ],
+22 silly audit   'css-tree': [ '3.2.1', '2.2.1' ],
+22 silly audit   'css-what': [ '7.0.0' ],
+22 silly audit   csso: [ '5.0.5' ],
+22 silly audit   'mdn-data': [ '2.0.28', '2.27.1' ],
+22 silly audit   defu: [ '6.1.7' ],
+22 silly audit   dequal: [ '2.0.3' ],
+22 silly audit   destr: [ '2.0.5' ],
+22 silly audit   'detect-libc': [ '2.1.2' ],
+22 silly audit   devalue: [ '5.9.4' ],
+22 silly audit   devlop: [ '1.1.0' ],
+22 silly audit   diff: [ '9.0.0' ],
+22 silly audit   'dom-serializer': [ '2.0.0' ],
+22 silly audit   domelementtype: [ '2.3.0' ],
+22 silly audit   domhandler: [ '5.0.3' ],
+22 silly audit   domutils: [ '3.2.2' ],
+22 silly audit   dset: [ '3.1.4' ],
+22 silly audit   entities: [ '4.5.0' ],
+22 silly audit   'es-module-lexer': [ '2.3.2' ],
+22 silly audit   esbuild: [ '0.28.2' ],
+22 silly audit   eventemitter3: [ '5.0.4' ],
+22 silly audit   extend: [ '3.0.2' ],
+22 silly audit   'fast-string-truncated-width': [ '3.0.3' ],
+22 silly audit   'fast-string-width': [ '3.0.2' ],
+22 silly audit   'fast-wrap-ansi': [ '0.2.2' ],
+22 silly audit   'fast-xml-builder': [ '1.3.1' ],
+22 silly audit   'fast-xml-parser': [ '5.11.1' ],
+22 silly audit   fdir: [ '6.5.0' ],
+22 silly audit   'find-proc': [ '0.2.0' ],
+22 silly audit   flattie: [ '1.1.1' ],
+22 silly audit   fontace: [ '0.4.1' ],
+22 silly audit   fontkitten: [ '1.0.3' ],
+22 silly audit   fsevents: [ '2.3.3' ],
+22 silly audit   'get-tsconfig': [ '5.0.0-beta.4' ],
+22 silly audit   'github-slugger': [ '2.0.0' ],
+22 silly audit   h3: [ '1.15.11' ],
+22 silly audit   'hast-util-to-html': [ '9.0.5' ],
+22 silly audit   'hast-util-whitespace': [ '3.0.0' ],
+22 silly audit   'html-escaper': [ '3.0.3' ],
+22 silly audit   'html-void-elements': [ '3.0.0' ],
+22 silly audit   'http-cache-semantics': [ '4.2.0' ],
+22 silly audit   'iron-webcrypto': [ '1.2.1' ],
+22 silly audit   'is-docker': [ '4.0.0' ],
+22 silly audit   'is-plain-obj': [ '4.1.0' ],
+22 silly audit   'is-unsafe': [ '2.0.2' ],
+22 silly audit   'js-yaml': [ '4.3.2' ],
+22 silly audit   'jsonc-parser': [ '3.3.1' ],
+22 silly audit   lightningcss: [ '1.33.0' ],
+22 silly audit   'lightningcss-android-arm64': [ '1.33.0' ],
+22 silly audit   'lightningcss-darwin-arm64': [ '1.33.0' ],
+22 silly audit   'lightningcss-darwin-x64': [ '1.33.0' ],
+22 silly audit   'lightningcss-freebsd-x64': [ '1.33.0' ],
+22 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.33.0' ],
+22 silly audit   'lightningcss-linux-arm64-gnu': [ '1.33.0' ],
+22 silly audit   'lightningcss-linux-arm64-musl': [ '1.33.0' ],
+22 silly audit   'lightningcss-linux-x64-gnu': [ '1.33.0' ],
+22 silly audit   'lightningcss-linux-x64-musl': [ '1.33.0' ],
+22 silly audit   'lightningcss-win32-arm64-msvc': [ '1.33.0' ],
+22 silly audit   'lightningcss-win32-x64-msvc': [ '1.33.0' ],
+22 silly audit   'lru-cache': [ '11.5.3' ],
+22 silly audit   'magic-string': [ '1.4.2' ],
+22 silly audit   magicast: [ '0.5.5' ],
+22 silly audit   'mdast-util-to-hast': [ '13.2.1' ],
+22 silly audit   'micromark-util-character': [ '2.1.1' ],
+22 silly audit   'micromark-util-encode': [ '2.0.1' ],
+22 silly audit   'micromark-util-sanitize-uri': [ '2.0.1' ],
+22 silly audit   'micromark-util-symbol': [ '2.0.1' ],
+22 silly audit   'micromark-util-types': [ '2.0.2' ],
+22 silly audit   mrmime: [ '2.0.1' ],
+22 silly audit   nanoid: [ '3.3.19' ],
+22 silly audit   neotraverse: [ '1.0.1' ],
+22 silly audit   'nlcst-to-string': [ '4.0.0' ],
+22 silly audit   'node-fetch-native': [ '1.6.7' ],
+22 silly audit   'node-mock-http': [ '1.0.5' ],
+22 silly audit   'normalize-path': [ '3.0.0' ],
+22 silly audit   'nth-check': [ '2.1.1' ],
+22 silly audit   obug: [ '3.0.0' ],
+22 silly audit   ofetch: [ '1.5.1' ],
+22 silly audit   ohash: [ '2.0.12' ],
+22 silly audit   'oniguruma-parser': [ '0.12.2' ],
+22 silly audit   'oniguruma-to-es': [ '4.3.6' ],
+22 silly audit   'p-limit': [ '7.3.3' ],
+22 silly audit   'p-queue': [ '9.3.3' ],
+22 silly audit   'p-timeout': [ '7.0.2' ],
+22 silly audit   'package-manager-detector': [ '1.8.0' ],
+22 silly audit   'path-expression-matcher': [ '1.6.2' ],
+22 silly audit   piccolore: [ '0.1.3' ],
+22 silly audit   picocolors: [ '1.1.1' ],
+22 silly audit   postcss: [ '8.5.28' ],
+22 silly audit   prismjs: [ '1.30.0' ],
+22 silly audit   'process-ancestry': [ '0.1.0' ],
+22 silly audit   'property-information': [ '7.2.0' ],
+22 silly audit   radix3: [ '1.1.2' ],
+22 silly audit   readdirp: [ '5.1.1' ],
+22 silly audit   regex: [ '6.1.0' ],
+22 silly audit   'regex-recursion': [ '6.0.2' ],
+22 silly audit   'regex-utilities': [ '2.3.0' ],
+22 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+22 silly audit   'retext-smartypants': [ '6.2.0' ],
+22 silly audit   rolldown: [ '1.2.11' ],
+22 silly audit   satteri: [ '0.10.5' ],
+22 silly audit   sax: [ '1.6.1' ],
+22 silly audit   semver: [ '7.8.5' ],
+22 silly audit   sharp: [ '0.35.4' ],
+22 silly audit   shiki: [ '4.4.3' ],
+22 silly audit   sisteransi: [ '1.0.5' ],
+22 silly audit   sitemap: [ '9.0.1' ],
+22 silly audit   'smol-toml': [ '1.9.0' ],
+22 silly audit   'source-map-js': [ '1.2.1' ],
+22 silly audit   'space-separated-tokens': [ '2.0.2' ],
+22 silly audit   'stringify-entities': [ '4.0.4' ],
+22 silly audit   strnum: [ '2.4.2' ],
+22 silly audit   svgo: [ '4.1.0' ],
+22 silly audit   'tiny-inflate': [ '1.0.3' ],
+22 silly audit   tinyclip: [ '1.0.3' ],
+22 silly audit   tinyexec: [ '1.3.1' ],
+22 silly audit   tinyglobby: [ '0.2.17' ],
+22 silly audit   'trim-lines': [ '3.0.1' ],
+22 silly audit   trough: [ '2.2.0' ],
+22 silly audit   tslib: [ '2.8.1' ],
+22 silly audit   ufo: [ '1.6.4' ],
+22 silly audit   ultrahtml: [ '1.7.0' ],
+22 silly audit   uncrypto: [ '0.1.3' ],
+22 silly audit   undici: [ '8.11.2' ],
+22 silly audit   'undici-types': [ '7.18.2' ],
+22 silly audit   unified: [ '11.0.5' ],
+22 silly audit   unifont: [ '0.7.5' ],
+22 silly audit   'unist-util-is': [ '6.0.1' ],
+22 silly audit   'unist-util-position': [ '5.0.0' ],
+22 silly audit   'unist-util-stringify-position': [ '4.0.0' ],
+22 silly audit   'unist-util-visit': [ '5.1.0' ],
+22 silly audit   'unist-util-visit-parents': [ '6.0.2' ],
+22 silly audit   unstorage: [ '1.17.5' ],
+22 silly audit   verkit: [ '0.4.1' ],
+22 silly audit   vfile: [ '6.0.3' ],
+22 silly audit   'vfile-message': [ '4.0.3' ],
+22 silly audit   vite: [ '8.3.1' ],
+22 silly audit   vitefu: [ '1.1.3' ],
+22 silly audit   'xml-naming': [ '0.3.0' ],
+22 silly audit   'xxhash-wasm': [ '1.1.0' ],
+22 silly audit   'yargs-parser': [ '22.0.0' ],
+22 silly audit   'yocto-queue': [ '1.2.2' ],
+22 silly audit   zod: [ '4.6.5' ],
+22 silly audit   zwitch: [ '2.0.4' ],
+22 silly audit   typescript: [ '6.0.3' ]
+22 silly audit }
+23 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-win32-arm64-msvc
+24 silly reify mark deleted [
+24 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-win32-arm64-msvc'
+24 silly reify ]
+25 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-linux-x64-musl
+26 silly reify mark deleted [
+26 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-linux-x64-musl'
+26 silly reify ]
+27 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-linux-x64-gnu
+28 silly reify mark deleted [
+28 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-linux-x64-gnu'
+28 silly reify ]
+29 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-linux-arm64-musl
+30 silly reify mark deleted [
+30 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-linux-arm64-musl'
+30 silly reify ]
+31 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-linux-arm64-gnu
+32 silly reify mark deleted [
+32 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-linux-arm64-gnu'
+32 silly reify ]
+33 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-linux-arm-gnueabihf
+34 silly reify mark deleted [
+34 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-linux-arm-gnueabihf'
+34 silly reify ]
+35 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-freebsd-x64
+36 silly reify mark deleted [
+36 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-freebsd-x64'
+36 silly reify ]
+37 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-darwin-x64
+38 silly reify mark deleted [
+38 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-darwin-x64'
+38 silly reify ]
+39 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-darwin-arm64
+40 silly reify mark deleted [
+40 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-darwin-arm64'
+40 silly reify ]
+41 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\lightningcss-android-arm64
+42 silly reify mark deleted [
+42 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\lightningcss-android-arm64'
+42 silly reify ]
+43 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\fsevents
+44 silly reify mark deleted [
+44 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\fsevents'
+44 silly reify ]
+45 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-win32-arm64-msvc
+46 silly reify mark deleted [
+46 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-win32-arm64-msvc'
+46 silly reify ]
+47 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-openharmony-arm64
+48 silly reify mark deleted [
+48 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-openharmony-arm64'
+48 silly reify ]
+49 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-x64-musl
+50 silly reify mark deleted [
+50 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-x64-musl'
+50 silly reify ]
+51 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-x64-gnu
+52 silly reify mark deleted [
+52 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-x64-gnu'
+52 silly reify ]
+53 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-s390x-gnu
+54 silly reify mark deleted [
+54 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-s390x-gnu'
+54 silly reify ]
+55 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-ppc64-gnu
+56 silly reify mark deleted [
+56 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-ppc64-gnu'
+56 silly reify ]
+57 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-arm64-musl
+58 silly reify mark deleted [
+58 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-arm64-musl'
+58 silly reify ]
+59 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-arm64-gnu
+60 silly reify mark deleted [
+60 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-arm64-gnu'
+60 silly reify ]
+61 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-linux-arm-gnueabihf
+62 silly reify mark deleted [
+62 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-linux-arm-gnueabihf'
+62 silly reify ]
+63 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-freebsd-x64
+64 silly reify mark deleted [
+64 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-freebsd-x64'
+64 silly reify ]
+65 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-darwin-x64
+66 silly reify mark deleted [
+66 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-darwin-x64'
+66 silly reify ]
+67 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-darwin-arm64
+68 silly reify mark deleted [
+68 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-darwin-arm64'
+68 silly reify ]
+69 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-android-arm64
+70 silly reify mark deleted [
+70 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-android-arm64'
+70 silly reify ]
+71 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@rolldown\binding-android-arm-eabi
+72 silly reify mark deleted [
+72 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@rolldown\\binding-android-arm-eabi'
+72 silly reify ]
+73 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-win32-ia32
+74 silly reify mark deleted [
+74 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-win32-ia32'
+74 silly reify ]
+75 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-win32-arm64
+76 silly reify mark deleted [
+76 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-win32-arm64'
+76 silly reify ]
+77 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-webcontainers-wasm32
+78 silly reify mark deleted [
+78 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-webcontainers-wasm32'
+78 silly reify ]
+79 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linuxmusl-x64
+80 silly reify mark deleted [
+80 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linuxmusl-x64'
+80 silly reify ]
+81 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linuxmusl-arm64
+82 silly reify mark deleted [
+82 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linuxmusl-arm64'
+82 silly reify ]
+83 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linux-x64
+84 silly reify mark deleted [
+84 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linux-x64'
+84 silly reify ]
+85 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linux-s390x
+86 silly reify mark deleted [
+86 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linux-s390x'
+86 silly reify ]
+87 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linux-riscv64
+88 silly reify mark deleted [
+88 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linux-riscv64'
+88 silly reify ]
+89 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linux-ppc64
+90 silly reify mark deleted [
+90 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linux-ppc64'
+90 silly reify ]
+91 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linux-arm64
+92 silly reify mark deleted [
+92 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linux-arm64'
+92 silly reify ]
+93 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-linux-arm
+94 silly reify mark deleted [
+94 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-linux-arm'
+94 silly reify ]
+95 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linuxmusl-x64
+96 silly reify mark deleted [
+96 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+96 silly reify ]
+97 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linuxmusl-arm64
+98 silly reify mark deleted [
+98 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+98 silly reify ]
+99 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linux-x64
+100 silly reify mark deleted [
+100 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linux-x64'
+100 silly reify ]
+101 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linux-s390x
+102 silly reify mark deleted [
+102 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linux-s390x'
+102 silly reify ]
+103 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linux-riscv64
+104 silly reify mark deleted [
+104 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linux-riscv64'
+104 silly reify ]
+105 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linux-ppc64
+106 silly reify mark deleted [
+106 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linux-ppc64'
+106 silly reify ]
+107 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linux-arm64
+108 silly reify mark deleted [
+108 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linux-arm64'
+108 silly reify ]
+109 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-linux-arm
+110 silly reify mark deleted [
+110 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-linux-arm'
+110 silly reify ]
+111 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-darwin-x64
+112 silly reify mark deleted [
+112 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-darwin-x64'
+112 silly reify ]
+113 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-libvips-darwin-arm64
+114 silly reify mark deleted [
+114 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+114 silly reify ]
+115 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-freebsd-wasm32
+116 silly reify mark deleted [
+116 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-freebsd-wasm32'
+116 silly reify ]
+117 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-darwin-x64
+118 silly reify mark deleted [
+118 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-darwin-x64'
+118 silly reify ]
+119 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@img\sharp-darwin-arm64
+120 silly reify mark deleted [
+120 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@img\\sharp-darwin-arm64'
+120 silly reify ]
+121 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\win32-ia32
+122 silly reify mark deleted [
+122 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\win32-ia32'
+122 silly reify ]
+123 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\win32-arm64
+124 silly reify mark deleted [
+124 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\win32-arm64'
+124 silly reify ]
+125 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\sunos-x64
+126 silly reify mark deleted [
+126 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\sunos-x64'
+126 silly reify ]
+127 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\openharmony-arm64
+128 silly reify mark deleted [
+128 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\openharmony-arm64'
+128 silly reify ]
+129 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\openbsd-x64
+130 silly reify mark deleted [
+130 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\openbsd-x64'
+130 silly reify ]
+131 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\openbsd-arm64
+132 silly reify mark deleted [
+132 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\openbsd-arm64'
+132 silly reify ]
+133 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\netbsd-x64
+134 silly reify mark deleted [
+134 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\netbsd-x64'
+134 silly reify ]
+135 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\netbsd-arm64
+136 silly reify mark deleted [
+136 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\netbsd-arm64'
+136 silly reify ]
+137 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-x64
+138 silly reify mark deleted [
+138 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-x64'
+138 silly reify ]
+139 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-s390x
+140 silly reify mark deleted [
+140 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-s390x'
+140 silly reify ]
+141 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-riscv64
+142 silly reify mark deleted [
+142 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-riscv64'
+142 silly reify ]
+143 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-ppc64
+144 silly reify mark deleted [
+144 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-ppc64'
+144 silly reify ]
+145 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-mips64el
+146 silly reify mark deleted [
+146 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-mips64el'
+146 silly reify ]
+147 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-loong64
+148 silly reify mark deleted [
+148 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-loong64'
+148 silly reify ]
+149 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-ia32
+150 silly reify mark deleted [
+150 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-ia32'
+150 silly reify ]
+151 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-arm64
+152 silly reify mark deleted [
+152 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-arm64'
+152 silly reify ]
+153 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\linux-arm
+154 silly reify mark deleted [
+154 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\linux-arm'
+154 silly reify ]
+155 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\freebsd-x64
+156 silly reify mark deleted [
+156 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\freebsd-x64'
+156 silly reify ]
+157 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\freebsd-arm64
+158 silly reify mark deleted [
+158 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\freebsd-arm64'
+158 silly reify ]
+159 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\darwin-x64
+160 silly reify mark deleted [
+160 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\darwin-x64'
+160 silly reify ]
+161 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\darwin-arm64
+162 silly reify mark deleted [
+162 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\darwin-arm64'
+162 silly reify ]
+163 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\android-x64
+164 silly reify mark deleted [
+164 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\android-x64'
+164 silly reify ]
+165 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\android-arm64
+166 silly reify mark deleted [
+166 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\android-arm64'
+166 silly reify ]
+167 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\android-arm
+168 silly reify mark deleted [
+168 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\android-arm'
+168 silly reify ]
+169 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@esbuild\aix-ppc64
+170 silly reify mark deleted [
+170 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@esbuild\\aix-ppc64'
+170 silly reify ]
+171 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-win32-arm64-msvc
+172 silly reify mark deleted [
+172 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-win32-arm64-msvc'
+172 silly reify ]
+173 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-wasm32-wasi
+174 silly reify mark deleted [
+174 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-wasm32-wasi'
+174 silly reify ]
+175 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-wasm32-wasi\node_modules\@emnapi\core
+176 silly reify mark deleted [
+176 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-wasm32-wasi\\node_modules\\@emnapi\\core'
+176 silly reify ]
+177 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-wasm32-wasi\node_modules\@emnapi\runtime
+178 silly reify mark deleted [
+178 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-wasm32-wasi\\node_modules\\@emnapi\\runtime'
+178 silly reify ]
+179 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-wasm32-wasi\node_modules\@emnapi\wasi-threads
+180 silly reify mark deleted [
+180 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-wasm32-wasi\\node_modules\\@emnapi\\wasi-threads'
+180 silly reify ]
+181 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-linux-x64-musl
+182 silly reify mark deleted [
+182 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-linux-x64-musl'
+182 silly reify ]
+183 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-linux-x64-gnu
+184 silly reify mark deleted [
+184 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-linux-x64-gnu'
+184 silly reify ]
+185 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-linux-arm64-musl
+186 silly reify mark deleted [
+186 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-linux-arm64-musl'
+186 silly reify ]
+187 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-linux-arm64-gnu
+188 silly reify mark deleted [
+188 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-linux-arm64-gnu'
+188 silly reify ]
+189 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-darwin-x64
+190 silly reify mark deleted [
+190 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-darwin-x64'
+190 silly reify ]
+191 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@bruits\satteri-darwin-arm64
+192 silly reify mark deleted [
+192 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@bruits\\satteri-darwin-arm64'
+192 silly reify ]
+193 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-win32-arm64-msvc
+194 silly reify mark deleted [
+194 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-win32-arm64-msvc'
+194 silly reify ]
+195 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-wasm32-wasi
+196 silly reify mark deleted [
+196 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-wasm32-wasi'
+196 silly reify ]
+197 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-linux-x64-musl
+198 silly reify mark deleted [
+198 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-linux-x64-musl'
+198 silly reify ]
+199 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-linux-x64-gnu
+200 silly reify mark deleted [
+200 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-linux-x64-gnu'
+200 silly reify ]
+201 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-linux-arm64-musl
+202 silly reify mark deleted [
+202 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-linux-arm64-musl'
+202 silly reify ]
+203 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-linux-arm64-gnu
+204 silly reify mark deleted [
+204 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-linux-arm64-gnu'
+204 silly reify ]
+205 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-darwin-x64
+206 silly reify mark deleted [
+206 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-darwin-x64'
+206 silly reify ]
+207 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-darwin-arm64
+208 silly reify mark deleted [
+208 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-darwin-arm64'
+208 silly reify ]
+209 verbose reify failed optional dependency C:\Users\ssamy\Documents\Codex\2026-09-24\cre\node_modules\@astrojs\compiler-binding-android-arm64
+210 silly reify mark deleted [
+210 silly reify   'C:\\Users\\ssamy\\Documents\\Codex\\2026-09-24\\cre\\node_modules\\@astrojs\\compiler-binding-android-arm64'
+210 silly reify ]
+211 http cache typescript@https://registry.npmjs.org/typescript/-/typescript-6.0.3.tgz 0ms (cache hit)
+212 http cache @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.11.1.tgz 0ms (cache hit)
+213 silly tarball no local data for typescript@https://registry.npmjs.org/typescript/-/typescript-6.0.3.tgz. Extracting by manifest.
+214 http cache @emnapi/wasi-threads@https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.2.2.tgz 0ms (cache hit)
+215 http cache @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-1.11.1.tgz 0ms (cache hit)
+216 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 281ms
+217 silly audit report {}
+218 http fetch GET 200 https://registry.npmjs.org/typescript/-/typescript-6.0.3.tgz 2015ms (cache miss)
+219 silly ADD
+220 silly ADD
+221 silly ADD
+222 silly ADD
+223 silly ADD
+224 silly ADD
+225 silly ADD
+226 silly ADD
+227 silly ADD
+228 silly ADD
+229 silly ADD
+230 silly ADD
+231 silly ADD
+232 silly ADD
+233 silly ADD
+234 silly ADD
+235 silly ADD
+236 silly ADD
+237 silly ADD
+238 silly ADD
+239 silly ADD
+240 silly ADD
+241 silly ADD
+242 silly ADD
+243 silly ADD
+244 silly ADD
+245 silly ADD
+246 silly ADD
+247 silly ADD
+248 silly ADD
+249 silly ADD
+250 silly ADD
+251 silly ADD
+252 silly ADD
+253 silly ADD
+254 silly ADD
+255 silly ADD
+256 silly ADD
+257 silly ADD
+258 silly ADD
+259 silly ADD
+260 silly ADD
+261 silly ADD
+262 silly ADD
+263 silly ADD
+264 silly ADD
+265 silly ADD
+266 silly ADD
+267 silly ADD
+268 silly ADD
+269 silly ADD
+270 silly ADD
+271 silly ADD
+272 silly ADD
+273 silly ADD
+274 silly ADD
+275 silly ADD
+276 silly ADD
+277 silly ADD
+278 silly ADD
+279 silly ADD
+280 silly ADD
+281 silly ADD
+282 silly ADD
+283 silly ADD
+284 silly ADD
+285 silly ADD
+286 silly ADD
+287 silly ADD
+288 silly ADD
+289 silly ADD
+290 silly ADD
+291 silly ADD
+292 silly ADD
+293 silly ADD
+294 silly ADD
+295 silly ADD node_modules/@emnapi/wasi-threads
+296 silly ADD node_modules/@emnapi/runtime
+297 silly ADD node_modules/@emnapi/core
+298 silly ADD
+299 silly ADD
+300 silly ADD
+301 silly ADD
+302 silly ADD
+303 silly ADD
+304 silly ADD
+305 silly ADD
+306 silly ADD
+307 silly ADD
+308 silly ADD
+309 silly ADD
+310 silly ADD
+311 silly ADD
+312 silly ADD
+313 silly CHANGE node_modules/typescript
+314 silly REMOVE node_modules/@typescript/typescript-win32-x64
+315 verbose cwd C:\Users\ssamy\Documents\Codex\2026-09-24\cre
+316 verbose os Windows_NT 10.0.26100
+317 verbose node v22.23.1
+318 verbose npm  v10.9.8
+319 verbose exit 0
+320 info ok

@@ -1,0 +1,23 @@
+---
+import type { Tutorial, Language } from '../lib/content';
+import { categoryLabels, getEntryUrl, ui, withBase } from '../lib/content';
+
+interface Props { entry: Tutorial; lang: Language; compact?: boolean; }
+const { entry, lang, compact = false } = Astro.props;
+const strings = ui[lang];
+const data = entry.data;
+const title = data.title;
+const image = withBase(data.heroImage);
+---
+<article class:list={['tutorial-card', compact && 'tutorial-card--compact']} data-category={data.category}>
+  <a class="card-image" href={withBase(getEntryUrl(entry))}>
+    <img src={image} alt="" loading="lazy" />
+    <span class={`category-chip category-${data.category}`}>{categoryLabels[data.category][lang]}</span>
+  </a>
+  <div class="card-content">
+    <div class="card-meta"><span>{data.difficulty === 'beginner' ? strings.beginner : data.difficulty === 'intermediate' ? strings.intermediate : strings.advanced}</span><span>{data.readTime} {strings.minRead}</span></div>
+    <h3><a href={withBase(getEntryUrl(entry))}>{title}</a></h3>
+    {!compact && <p>{data.description}</p>}
+    <a class="text-link" href={withBase(getEntryUrl(entry))}>{strings.read} <span aria-hidden="true">↗</span></a>
+  </div>
+</article>

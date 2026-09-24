@@ -1,0 +1,6 @@
+---
+import { withBase } from '../lib/content';
+interface Props { href: string; }
+const { href } = Astro.props;
+---
+<a href={withBase(href)}><slot /></a>
