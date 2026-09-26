@@ -11,14 +11,10 @@
             "id": "876ce98673b0defa",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bussiness Concepts/AR/Prioritization_Techniques_Tutorial_AR.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Prioritization_Techniques_Tutorial_AR"
+              "title": "New tab"
             }
           }
         ]
@@ -99,7 +95,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bussiness Concepts/AR/Prioritization_Techniques_Tutorial_AR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +113,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bussiness Concepts/AR/Prioritization_Techniques_Tutorial_AR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +155,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bussiness Concepts/AR/Prioritization_Techniques_Tutorial_AR.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -189,5 +182,10 @@
     }
   },
   "active": "876ce98673b0defa",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Untitled 1.base",
+    "Untitled",
+    "Untitled.base",
+    "Bussiness Concepts/AR/Prioritization_Techniques_Tutorial_AR.md"
+  ]
 }

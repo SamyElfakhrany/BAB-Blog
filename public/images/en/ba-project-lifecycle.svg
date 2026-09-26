@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Business Analyst project lifecycle</title>
+  <desc id="desc">Seven connected stages show BA work from framing the need to measuring value, with learning returning to the need.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#4f46e5"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title{font:700 36px Inter,Segoe UI,Arial,sans-serif;fill:#0f172a}
+      .subtitle{font:400 20px Inter,Segoe UI,Arial,sans-serif;fill:#475569}
+      .n{font:700 18px Inter,Segoe UI,Arial,sans-serif;fill:#fff}
+      .stage{font:700 21px Inter,Segoe UI,Arial,sans-serif;fill:#172554}
+      .work{font:400 17px Inter,Segoe UI,Arial,sans-serif;fill:#334155}
+      .loop{font:600 17px Inter,Segoe UI,Arial,sans-serif;fill:#4338ca}
+    </style>
+  </defs>
+  <rect width="1280" height="760" rx="28" fill="url(#bg)"/>
+  <text class="title" x="640" y="62" text-anchor="middle">The BA keeps value connected through the lifecycle</text>
+  <text class="subtitle" x="640" y="96" text-anchor="middle">Need → decisions → requirements → delivery → evidence</text>
+
+  <g fill="none" stroke="#4f46e5" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M306 220H350"/>
+    <path d="M614 220H658"/>
+    <path d="M922 220H966"/>
+    <path d="M1098 304V370"/>
+    <path d="M966 456H922"/>
+    <path d="M658 456H614"/>
+    <path d="M482 528V626H174V304" stroke-dasharray="10 9"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(42 148)">
+      <rect width="264" height="144" rx="20" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+      <circle cx="34" cy="34" r="20" fill="#4f46e5"/><text class="n" x="34" y="41" text-anchor="middle">1</text>
+      <text class="stage" x="66" y="41">Frame the need</text>
+      <text class="work" x="24" y="84"><tspan x="24">Problem, evidence, people</tspan><tspan x="24" dy="27">and intended outcomes</tspan></text>
+    </g>
+    <g transform="translate(350 148)">
+      <rect width="264" height="144" rx="20" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+      <circle cx="34" cy="34" r="20" fill="#4f46e5"/><text class="n" x="34" y="41" text-anchor="middle">2</text>
+      <text class="stage" x="66" y="41">Set direction</text>
+      <text class="work" x="24" y="84"><tspan x="24">Scope, constraints,</tspan><tspan x="24" dy="27">options and decisions</tspan></text>
+    </g>
+    <g transform="translate(658 148)">
+      <rect width="264" height="144" rx="20" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+      <circle cx="34" cy="34" r="20" fill="#4f46e5"/><text class="n" x="34" y="41" text-anchor="middle">3</text>
+      <text class="stage" x="66" y="41">Plan analysis</text>
+      <text class="work" x="24" y="84"><tspan x="24">Engagement, detail,</tspan><tspan x="24" dy="27">traceability and change</tspan></text>
+    </g>
+    <g transform="translate(966 148)">
+      <rect width="264" height="144" rx="20" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+      <circle cx="34" cy="34" r="20" fill="#4f46e5"/><text class="n" x="34" y="41" text-anchor="middle">4</text>
+      <text class="stage" x="66" y="41">Shape the change</text>
+      <text class="work" x="24" y="84"><tspan x="24">Requirements, rules,</tspan><tspan x="24" dy="27">models and acceptance</tspan></text>
+    </g>
+    <g transform="translate(966 384)">
+      <rect width="264" height="144" rx="20" fill="#ffffff" stroke="#a7f3d0" stroke-width="2"/>
+      <circle cx="34" cy="34" r="20" fill="#059669"/><text class="n" x="34" y="41" text-anchor="middle">5</text>
+      <text class="stage" x="66" y="41">Support delivery</text>
+      <text class="work" x="24" y="84"><tspan x="24">Clarify, review, trace</tspan><tspan x="24" dy="27">and assess change</tspan></text>
+    </g>
+    <g transform="translate(658 384)">
+      <rect width="264" height="144" rx="20" fill="#ffffff" stroke="#a7f3d0" stroke-width="2"/>
+      <circle cx="34" cy="34" r="20" fill="#059669"/><text class="n" x="34" y="41" text-anchor="middle">6</text>
+      <text class="stage" x="66" y="41">Validate &amp; prepare</text>
+      <text class="work" x="24" y="84"><tspan x="24">Test outcomes, readiness</tspan><tspan x="24" dy="27">and exception paths</tspan></text>
+    </g>
+    <g transform="translate(350 384)">
+      <rect width="264" height="144" rx="20" fill="#ffffff" stroke="#fcd34d" stroke-width="2"/>
+      <circle cx="34" cy="34" r="20" fill="#d97706"/><text class="n" x="34" y="41" text-anchor="middle">7</text>
+      <text class="stage" x="66" y="41">Measure value</text>
+      <text class="work" x="24" y="84"><tspan x="24">Compare outcomes with</tspan><tspan x="24" dy="27">the baseline and learn</tspan></text>
+    </g>
+  </g>
+
+  <rect x="350" y="636" width="572" height="70" rx="35" fill="#e0e7ff" stroke="#a5b4fc" stroke-width="2"/>
+  <text class="loop" x="636" y="680" text-anchor="middle">Learning reveals the next need or changes the current one</text>
+</svg>

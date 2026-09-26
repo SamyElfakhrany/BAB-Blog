@@ -9,13 +9,14 @@
     "preview": "astro preview",
     "check": "astro check",
     "import:bac9": "node scripts/import-bac9.mjs",
-    "validate:content": "node scripts/validate-content.mjs"
+    "validate:content": "node scripts/validate-content.mjs",
+    "editor": "node scripts/editor-server.mjs"
   },
   "dependencies": {
-    "@astrojs/mdx": "latest",
     "@astrojs/rss": "latest",
     "@astrojs/sitemap": "latest",
-    "astro": "latest"
+    "astro": "latest",
+    "yaml": "^2.9.1"
   },
   "devDependencies": {
     "@astrojs/check": "latest",

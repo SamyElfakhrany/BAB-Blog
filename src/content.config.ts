@@ -2,7 +2,7 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const tutorials = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/tutorials' }),
+  loader: glob({ pattern: '**/*.md', base: './BAC9-tutorials' }),
   schema: z.object({
     id: z.string(),
     translationId: z.string(),

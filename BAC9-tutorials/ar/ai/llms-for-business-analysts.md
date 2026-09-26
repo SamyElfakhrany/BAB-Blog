@@ -14,8 +14,6 @@ heroImage: /images/ar/llm_ba_workflow_ar.png
 related: ["stakeholder-analysis","version-control-for-business-analysts"]
 draft: false
 ---
-import Diagram from '../../../../components/Diagram.astro';
-import AssetLink from '../../../../components/AssetLink.astro';
 
 # النماذج اللغوية الكبيرة (LLMs) 
 
@@ -50,9 +48,7 @@ import AssetLink from '../../../../components/AssetLink.astro';
 
 **النموذج العملي:** *مصادر → مسودة من الـ LLM → مراجعة الـ BA → تأكيد أصحاب المصلحة → مستند معتمد*. الأداة جزء من سير العمل، لكنها مش صاحبة القرار.
 
-<Diagram src={"/images/ar/llm_ba_workflow_ar.png"} alt={"سير عمل محلل الأعمال مع النموذج اللغوي"} />
-
-<AssetLink href={"/images/ar/llm_ba_workflow_ar.png"}>افتح صورة سير العمل</AssetLink>
+![سير عمل محلل الأعمال مع النموذج اللغوي](../../../public/images/ar/llm_ba_workflow_ar.png)
 
 ## 3. مثال عملي: إلغاء الطلب في تطبيق تسوق
 
@@ -156,9 +152,7 @@ import AssetLink from '../../../../components/AssetLink.astro';
 
 **RAG (Retrieval-Augmented Generation)** طريقة لتقديم أجزاء مناسبة من المستندات للنموذج. نظام البحث يسترجع أجزاء مرتبطة بالسؤال، والنموذج يستخدمها في صياغة الإجابة. ده ممكن يحسّن الاستناد للمصادر، لكن البحث ممكن يفوّت الملف الصح، أو يرجّع نسخة قديمة، أو يجيب نصًا غير مناسب. الـ BA يراجع **المصدر ورقم نسخته وهل يدعم الادعاء فعلًا**.
 
-<Diagram src={"/images/ar/llm_rag_for_ba_ar.png"} alt={"كيف يساعد الاسترجاع المعزز للتوليد في الإجابة عن سؤال BA"} />
-
-<AssetLink href={"/images/ar/llm_rag_for_ba_ar.png"}>افتح صورة RAG</AssetLink>
+![كيف يساعد الاسترجاع المعزز للتوليد في الإجابة عن سؤال BA](../../../public/images/ar/llm_rag_for_ba_ar.png)
 
 | السؤال | تدور على الإجابة فين؟ |
 |---|---|

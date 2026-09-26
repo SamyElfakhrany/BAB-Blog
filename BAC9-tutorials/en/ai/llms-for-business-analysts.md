@@ -1,6 +1,21 @@
+---
+id: llms-for-business-analysts
+translationId: llms-for-business-analysts
+lang: en
+title: "Large Language Models for Business Analysts"
+description: "Use LLMs responsibly for BA drafting, analysis, elicitation, gap finding, and stakeholder communication."
+category: ai
+tags: ["ai","llm","prompting","requirements"]
+difficulty: beginner
+published: 2026-09-24
+updated: 2026-09-24
+readTime: 13
+heroImage: /images/en/llm_ba_workflow.png
+related: ["stakeholder-analysis","version-control-for-business-analysts"]
+draft: false
+---
+
 # Large Language Models for Business Analysts: A Practical Tutorial
-
-
 
 ## 1. What is an LLM?
 
@@ -33,9 +48,7 @@ An LLM can speed up the *first pass* of work, but the BA still owns interpretati
 
 **The safe mental model:** *source material → LLM draft → BA verification → stakeholder validation → controlled artifact*. The LLM sits inside the workflow; it does not replace the decision maker.
 
-![BA workflow for working with an LLM](llm_ba_workflow.png)
-
-[Open the BA workflow diagram](llm_ba_workflow.png)
+![BA workflow for working with an LLM](../../../public/images/en/llm_ba_workflow.png)
 
 ## 3. Follow one practical example
 
@@ -139,9 +152,7 @@ An LLM's trained knowledge can be useful for general concepts. It does **not aut
 
 **RAG (retrieval-augmented generation)** is one way to bring relevant documents into a response. A search component retrieves passages, then the LLM uses those passages alongside the question. This can improve grounding, but retrieval can miss the right document, find an old version, or return irrelevant text. The BA still checks the **source, version, and exact claim**.
 
-![How retrieval-augmented generation supports a BA question](llm_rag_for_ba.png)
-
-[Open the RAG diagram](llm_rag_for_ba.png)
+![How retrieval-augmented generation supports a BA question](../../../public/images/en/llm_rag_for_ba.png)
 
 | Question | Where to look |
 |---|---|
@@ -209,5 +220,3 @@ For every line, require a reference to the source note. Then check whether the o
 - [IIBA: AI in business analysis and requirements work](https://www.iiba.org/business-analysis-blogs/enrich-business-analysis-experience-for-your-stakeholders-using-ai-tools/)
 - [NIST: Generative AI Risk Management Profile](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence)
 - [IBM: Context windows and tokens](https://www.ibm.com/think/topics/context-window)
-
-

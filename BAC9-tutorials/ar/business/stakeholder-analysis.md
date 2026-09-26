@@ -14,8 +14,6 @@ heroImage: /images/ar/stakeholder_power_interest_matrix_ar.png
 related: ["prioritization-techniques","version-control-for-business-analysts"]
 draft: false
 ---
-import Diagram from '../../../../components/Diagram.astro';
-import AssetLink from '../../../../components/AssetLink.astro';
 
 # تحليل أصحاب المصلحة (Stakeholder Analysis)
 
@@ -86,9 +84,7 @@ import AssetLink from '../../../../components/AssetLink.astro';
 
 للتقييم السريع، استخدم **مرتفع** أو **منخفض** بناءً على دليل. في التأثير، راجع صلاحية الموافقة والميزانية والمسؤولية عن التشغيل والاعتماد على جهة معينة. في الاهتمام، راجع حجم التأثر ومدى المشاركة. لو مش متأكد، اكتب إن التقييم محتاج تأكيد.
 
-<Diagram src={"/images/ar/stakeholder_power_interest_matrix_ar.png"} alt={"مصفوفة التأثير والاهتمام لمثال تطبيق التسوق"} />
-
-<AssetLink href={"/images/ar/stakeholder_power_interest_matrix_ar.png"}>افتح صورة المصفوفة</AssetLink>
+![مصفوفة التأثير والاهتمام لمثال تطبيق التسوق](../../../public/images/ar/stakeholder_power_interest_matrix_ar.png)
 
 | التأثير / الاهتمام | طريقة التعامل | أمثلة من تطبيق التسوق |
 |---|---|---|

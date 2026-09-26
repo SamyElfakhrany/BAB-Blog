@@ -14,8 +14,6 @@ heroImage: /images/ar/prioritization_value_effort_matrix_ar.png
 related: ["stakeholder-analysis","llms-for-business-analysts"]
 draft: false
 ---
-import Diagram from '../../../../components/Diagram.astro';
-import AssetLink from '../../../../components/AssetLink.astro';
 
 # ترتيب أولويات المتطلبات (Prioritization Techniques): دليل عملي للـ BA
 
@@ -68,9 +66,7 @@ import AssetLink from '../../../../components/AssetLink.astro';
 | الإرجاع من التطبيق | 7 | 6 | يسهّل الخدمة، ويحتاج ربطًا تشغيليًا |
 | توصيات مخصصة | 7 | 8 | فرصة محتملة مع تعقيد وبيانات أكثر |
 
-<Diagram src={"/images/ar/prioritization_value_effort_matrix_ar.png"} alt={"مصفوفة القيمة والمجهود لمثال تطبيق التسوق"} />
-
-<AssetLink href={"/images/ar/prioritization_value_effort_matrix_ar.png"}>افتح صورة المصفوفة</AssetLink>
+![مصفوفة القيمة والمجهود لمثال تطبيق التسوق](../../../public/images/ar/prioritization_value_effort_matrix_ar.png)
 
 | موقع العنصر | قرار مبدئي |
 |---|---|

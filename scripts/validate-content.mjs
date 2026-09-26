@@ -1,55 +1,66 @@
 // @ts-nocheck
-import { readdir, readFile } from 'node:fs/promises';
+import { readdir } from 'node:fs/promises';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
+import { parseMarkdownFile, validateArticle } from './lib/editor-content.mjs';
 
-const root = path.join(process.cwd(), 'src/content/tutorials');
-const required = ['id', 'translationId', 'lang', 'title', 'description', 'category', 'difficulty', 'published', 'updated', 'readTime', 'heroImage', 'related', 'draft'];
-const allowed = {
-  lang: new Set(['en', 'ar']),
-  category: new Set(['business', 'technical', 'ai']),
-  difficulty: new Set(['beginner', 'intermediate', 'advanced'])
-};
-
-async function files(dir) {
+export async function contentFiles(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
   const result = [];
   for (const entry of entries) {
     const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) result.push(...await files(full));
-    else if (entry.name.endsWith('.md') || entry.name.endsWith('.mdx')) result.push(full);
+    if (entry.isDirectory()) result.push(...await contentFiles(full));
+    else if (/\.(?:md|mdx)$/i.test(entry.name)) result.push(full);
   }
   return result;
 }
 
-const errors = [];
-const seenIds = new Set();
-const seenTranslations = new Map();
-for (const file of await files(root)) {
-  const text = await readFile(file, 'utf8');
-  const match = text.match(/^---\n([\s\S]*?)\n---/);
-  if (!match) {
-    errors.push(`${file}: missing frontmatter`);
-    continue;
+export async function validateContentRoot(root, projectRoot = process.cwd()) {
+  const errors = [];
+  const warnings = [];
+  const files = await contentFiles(root);
+  const articles = [];
+  const ids = new Set();
+  for (const file of files) {
+    let article;
+    try {
+      article = await parseMarkdownFile(file);
+    } catch (error) {
+      errors.push(`${file}: ${error.message}`);
+      continue;
+    }
+    article._file = file;
+    articles.push(article);
+    const scopedId = `${article.id}:${article.lang}`;
+    if (ids.has(scopedId)) errors.push(`${file}: duplicate id ${article.id} for ${article.lang}`);
+    ids.add(scopedId);
   }
-  const fields = Object.fromEntries(match[1].split('\n').filter(Boolean).map((line) => {
-    const index = line.indexOf(':');
-    return [line.slice(0, index), line.slice(index + 1).trim()];
-  }));
-  for (const name of required) if (!(name in fields)) errors.push(`${file}: missing ${name}`);
-  for (const name of ['lang', 'category', 'difficulty']) if (fields[name] && !allowed[name].has(fields[name])) errors.push(`${file}: invalid ${name}`);
-  const scopedId = fields.id && fields.lang ? `${fields.id}:${fields.lang}` : fields.id;
-  if (scopedId && seenIds.has(scopedId)) errors.push(`${file}: duplicate id ${fields.id} for ${fields.lang}`);
-  if (scopedId) seenIds.add(scopedId);
-  if (fields.translationId) {
-    const current = seenTranslations.get(fields.translationId) || new Set();
-    current.add(fields.lang);
-    seenTranslations.set(fields.translationId, current);
+  const knownIds = new Set(articles.map((article) => article.id));
+  for (const article of articles) {
+    const result = await validateArticle(article, { projectRoot, knownIds, allowDraft: false });
+    errors.push(...result.errors.map((message) => `${article._file}: ${message}`));
+    warnings.push(...result.warnings.map((message) => `${article._file}: ${message}`));
+    const expected = path.basename(article._file).replace(/\.(?:md|mdx)$/i, '');
+    if (article.id && article.id !== expected) errors.push(`${article._file}: filename must match id (${article.id})`);
   }
-  if (/!\[\[/.test(text)) errors.push(`${file}: Obsidian image wikilink remains`);
+  const translations = new Map();
+  for (const article of articles) {
+    const languages = translations.get(article.translationId) || new Set();
+    if (article.lang) languages.add(article.lang);
+    translations.set(article.translationId, languages);
+  }
+  for (const [translationId, languages] of translations) {
+    if (!languages.has('en') || !languages.has('ar') || languages.size !== 2) errors.push(`${translationId}: must have en and ar translations`);
+  }
+  return { errors, warnings, files, articles };
 }
-for (const [id, langs] of seenTranslations) if (langs.size !== 2 || !langs.has('en') || !langs.has('ar')) errors.push(`${id}: must have en and ar translations`);
-if (errors.length) {
-  console.error(errors.join('\n'));
-  process.exit(1);
+
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+  const root = path.join(process.cwd(), 'BAC9-tutorials');
+  const result = await validateContentRoot(root, process.cwd());
+  if (result.errors.length) {
+    console.error(result.errors.join('\n'));
+    process.exit(1);
+  }
+  console.log(`Validated ${result.files.length} localized tutorial files.`);
 }
-console.log(`Validated ${seenIds.size} localized tutorial files.`);

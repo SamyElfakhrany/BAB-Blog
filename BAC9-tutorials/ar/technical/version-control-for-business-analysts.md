@@ -1,6 +1,21 @@
+---
+id: version-control-for-business-analysts
+translationId: version-control-for-business-analysts
+lang: ar
+title: "Git وGitHub لمحلل الأعمال: توتوريال من البداية"
+description: "افهم Git وGitHub والفروع وطلبات الدمج وكيف يراجع محللو الأعمال تغييرات البرمجيات من غير كتابة كود."
+category: technical
+tags: ["git","github","technical-literacy"]
+difficulty: beginner
+published: 2026-09-24
+updated: 2026-09-24
+readTime: 14
+heroImage: /images/ar/git_branch_pull_request_ar.png
+related: ["stakeholder-analysis","llms-for-business-analysts"]
+draft: false
+---
+
 # Git وGitHub لمحلل الأعمال: توتوريال من البداية
-
-
 
 ## 1. الفكرة الأساسية
 
@@ -47,9 +62,7 @@
 
 ## 4. التغيير بيوصل لـ GitHub إزاي؟
 
-![رحلة التغيير من ملفات العمل إلى GitHub](git_workflow_local_remote_ar.png)
-
-[افتح صورة رحلة التغيير](git_workflow_local_remote_ar.png)
+![رحلة التغيير من ملفات العمل إلى GitHub](../../../public/images/ar/git_workflow_local_remote_ar.png)
 
 الخطوات المعتادة:
 
@@ -65,7 +78,7 @@
 
 **الفرع (Branch)** بيسمح لشخص يجهز تغييرًا ويجربه من غير ما يغير الفرع الأساسي فورًا. ممكن يعمل أكتر من Commit على فرعه، وبعدها يقترح النتيجة للمراجعة.
 
-![مسار الفرع وطلب الدمج](git_branch_pull_request_ar.png)
+![مسار الفرع وطلب الدمج](../../../public/images/ar/git_branch_pull_request_ar.png)
 
 في مثالنا، المطور بيعمل فرعًا اسمه `docs/free-shipping-rule`، ويعدّل القاعدة والكود، وبعدها يفتح PR باتجاه `main`. الـ BA وباقي المراجعين يناقشوا التغيير. بعد اكتمال المراجعات والفحوص المطلوبة، شخص مخوّل يعمل Merge. الفريق ممكن يحذف الفرع المؤقت بعد كده؛ تاريخ التغييرات المدمجة يفضل موجودًا.
 
@@ -89,7 +102,7 @@
 + Free shipping applies when the basket subtotal after discounts is at least $50.
 ```
 
-![مثال على فرق التغييرات وسؤال من محلل الأعمال](git_pull_request_diff_example_ar.png)
+![مثال على فرق التغييرات وسؤال من محلل الأعمال](../../../public/images/ar/git_pull_request_diff_example_ar.png)
 
 **تعليق مفيد من الـ BA:** «هل قيمة الـ 50 دولار لا تشمل الضريبة ورسوم التوصيل؟ ممكن نضيف مثالًا لسلة قيمتها 55 دولارًا وعليها خصم 10 دولارات؟» السؤال يحدد غموضًا في القاعدة ويقترح حالة قابلة للاختبار. تعليق زي «ده غلط» وحده مش كفاية علشان الفريق يعرف المطلوب.
 
@@ -173,5 +186,3 @@ git push -u origin docs/free-shipping-rule
 - [Git Book: تسجيل التغييرات ومساحة التجهيز](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
 - [GitHub Docs: طلبات الدمج](https://docs.github.com/en/pull-requests/get-started/about-pull-requests)
 - [GitHub Docs: مراجعة التغييرات المقترحة](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/reviewing-proposed-changes-in-a-pull-request)
-
-

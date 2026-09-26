@@ -14,8 +14,6 @@ heroImage: /images/en/git_branch_pull_request.png
 related: ["stakeholder-analysis","llms-for-business-analysts"]
 draft: false
 ---
-import Diagram from '../../../../components/Diagram.astro';
-import AssetLink from '../../../../components/AssetLink.astro';
 
 # Git and GitHub for Business Analysts
 
@@ -66,9 +64,7 @@ A **commit** records history; it does not send changes to GitHub by itself. A **
 
 ## 4. Picture the local-to-GitHub workflow
 
-<Diagram src={"/images/en/git_workflow_local_remote.png"} alt={"Git workflow from working files to GitHub"} />
-
-<AssetLink href={"/images/en/git_workflow_local_remote.png"}>Open the local-to-GitHub diagram</AssetLink>
+![Git workflow from working files to GitHub](../../../public/images/en/git_workflow_local_remote.png)
 
 The usual direction is:
 
@@ -84,7 +80,7 @@ Think of the staging area as a **packing table**: you select what belongs in the
 
 A **branch** lets someone work on a change without immediately changing the primary branch. The person can make several commits on the feature branch, then propose the result for review.
 
-<Diagram src={"/images/en/git_branch_pull_request.png"} alt={"Branch and pull request workflow"} />
+![Branch and pull request workflow](../../../public/images/en/git_branch_pull_request.png)
 
 In our example, the developer creates `docs/free-shipping-rule`, updates the rule and code, and opens a PR into `main`. The BA and other reviewers discuss the change. After the required checks and reviews, an authorized team member merges it. The team may then delete the short-lived branch; the merged history remains.
 
@@ -107,8 +103,6 @@ A **diff** commonly shows removed lines in red with `-` and added lines in green
 - Free shipping applies when the basket total is at least $50.
 + Free shipping applies when the basket subtotal after discounts is at least $50.
 ```
-
-<Diagram src={"/images/en/git_pull_request_diff_example.png"} alt={"Example of a pull request diff with a BA review question"} />
 
 **Good BA comment:** “Does the $50 threshold exclude tax and delivery fees? Please add an example for a $55 basket with a $10 discount.” This identifies an ambiguity and suggests an observable test case. A vague “Looks wrong” gives the team less to act on.
 

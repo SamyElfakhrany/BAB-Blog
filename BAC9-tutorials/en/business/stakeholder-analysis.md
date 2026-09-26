@@ -14,8 +14,6 @@ heroImage: /images/en/stakeholder_power_interest_matrix.png
 related: ["prioritization-techniques","version-control-for-business-analysts"]
 draft: false
 ---
-import Diagram from '../../../../components/Diagram.astro';
-import AssetLink from '../../../../components/AssetLink.astro';
 
 # Stakeholder Analysis
 
@@ -86,9 +84,7 @@ Gather evidence through interviews, observation, process walkthroughs, and proje
 
 A quick rating rule is to use **Low** or **High** based on evidence. For power, check formal approvals, budget, operational authority, and critical dependencies. For interest, check how strongly the stakeholder is affected and how actively they participate. Record uncertainty instead of presenting a guess as fact.
 
-<Diagram src={"/images/en/stakeholder_power_interest_matrix.png"} alt={"Power–interest matrix for the online shopping app"} />
-
-<AssetLink href={"/images/en/stakeholder_power_interest_matrix.png"}>Open the matrix image</AssetLink>
+![Power–interest matrix for the online shopping app](../../../public/images/en/stakeholder_power_interest_matrix.png)
 
 | Power / interest | Engagement approach | Online shopping app examples |
 |---|---|---|

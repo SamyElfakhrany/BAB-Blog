@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="bac9-editor-token" content="__BAC9_EDITOR_TOKEN__" />
+    <title>BAC9 Tutorial Editor</title>
+    <link rel="stylesheet" href="/editor.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">LOCAL WORKSPACE</p>
+        <h1>BAC9 Tutorial Editor</h1>
+        <p class="muted">Draft privately. Publish both translations when they are ready.</p>
+      </div>
+      <div class="top-actions">
+        <span class="local-pill"><span></span> localhost only</span>
+        <button class="button ghost" id="new-button">New tutorial</button>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="sidebar panel">
+        <div class="sidebar-heading">
+          <h2>Tutorials</h2>
+          <button class="icon-button" id="refresh-button" title="Refresh">↻</button>
+        </div>
+        <input class="search" id="article-search" placeholder="Find a tutorial…" />
+        <div class="article-list" id="article-list"></div>
+        <div class="sidebar-heading drafts-heading"><h2>Private drafts</h2></div>
+        <div class="draft-list" id="draft-list"></div>
+      </aside>
+
+      <section class="workspace">
+        <div class="panel editor-header">
+          <div>
+            <p class="eyebrow" id="mode-label">NEW TUTORIAL</p>
+            <h2 id="editor-title">Create a bilingual tutorial</h2>
+          </div>
+          <div class="header-actions">
+            <button class="button secondary" id="validate-button">Validate</button>
+            <button class="button secondary" id="draft-button">Save private draft</button>
+            <button class="button primary" id="publish-button">Publish to GitHub</button>
+          </div>
+        </div>
+
+        <div class="panel metadata-panel">
+          <div class="section-heading"><div><p class="eyebrow">SHARED METADATA</p><h3>Identity and publishing details</h3></div><span class="status-dot" id="save-state">Ready</span></div>
+          <div class="form-grid">
+            <label>Translation ID / slug<input id="translationId" autocomplete="off" placeholder="stakeholder-analysis" /></label>
+            <label>Category<select id="category"><option value="business">Business</option><option value="technical">Technical</option><option value="ai">AI</option></select></label>
+            <label>Difficulty<select id="difficulty"><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></label>
+            <label>Published date<input id="published" type="date" /></label>
+            <label>Updated date<input id="updated" type="date" /></label>
+            <label>Reading time (minutes)<input id="readTime" type="number" min="1" step="1" placeholder="10" /></label>
+            <label class="wide">Tags <span class="hint">comma separated</span><input id="tags" placeholder="requirements, elicitation" /></label>
+            <label class="wide">Related tutorial IDs <span class="hint">comma separated</span><input id="related" placeholder="prioritization-techniques" /></label>
+          </div>
+        </div>
+
+        <div class="language-tabs" role="tablist">
+          <button class="language-tab active" data-lang="en" role="tab">English <span id="en-status">●</span></button>
+          <button class="language-tab" data-lang="ar" role="tab">العربية <span id="ar-status">●</span></button>
+        </div>
+
+        <div class="panel language-panel">
+          <div class="language-toolbar">
+            <div><p class="eyebrow" id="language-eyebrow">ENGLISH VERSION</p><h3 id="language-heading">English tutorial</h3></div>
+            <label class="upload button secondary">Import .md<input type="file" id="upload" accept=".md,text/markdown" hidden /></label>
+          </div>
+          <div class="form-grid language-fields">
+            <label>Article ID / slug<input id="id" autocomplete="off" placeholder="stakeholder-analysis" /></label>
+            <label>Hero image path<input id="heroImage" placeholder="/images/en/example.png" /></label>
+            <label class="wide">Title<input id="title" placeholder="A clear tutorial title" /></label>
+            <label class="wide">Description<textarea id="description" rows="2" placeholder="One sentence that explains the value of this tutorial."></textarea></label>
+          </div>
+          <div class="editor-grid">
+            <div class="source-column"><div class="column-label">MARKDOWN SOURCE <span id="mdx-warning" class="warning-label"></span></div><textarea id="body" spellcheck="false" placeholder="# Start writing — use Markdown here."></textarea></div>
+            <div class="preview-column"><div class="column-label">SAFE PREVIEW</div><div id="preview" class="markdown-preview"></div></div>
+          </div>
+        </div>
+
+        <div class="panel feedback-panel" id="feedback-panel" hidden>
+          <div class="section-heading"><div><p class="eyebrow">CHECKS</p><h3 id="feedback-title">Validation results</h3></div><button class="icon-button" id="close-feedback">×</button></div>
+          <div id="feedback" class="feedback"></div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/editor.js"></script>
+  </body>
+</html>

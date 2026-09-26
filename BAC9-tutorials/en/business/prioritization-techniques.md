@@ -14,8 +14,6 @@ heroImage: /images/en/prioritization_value_effort_matrix_en.png
 related: ["stakeholder-analysis","llms-for-business-analysts"]
 draft: false
 ---
-import Diagram from '../../../../components/Diagram.astro';
-import AssetLink from '../../../../components/AssetLink.astro';
 
 # Prioritization Techniques: A Practical Tutorial for Business Analysts
 
@@ -68,9 +66,7 @@ A **value–effort matrix** plots expected value against implementation effort. 
 | Self-service returns | 7 | 6 | Improves service but needs operational integration |
 | Personalized recommendations | 7 | 8 | Potential value, with more data and complexity |
 
-<Diagram src={"/images/en/prioritization_value_effort_matrix_en.png"} alt={"Value–effort matrix for the online shopping app"} />
-
-<AssetLink href={"/images/en/prioritization_value_effort_matrix_en.png"}>Open the matrix image</AssetLink>
+![Value–effort matrix for the online shopping app](../../../public/images/en/prioritization_value_effort_matrix_en.png)
 
 | Position | Initial response |
 |---|---|
