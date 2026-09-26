@@ -11,7 +11,7 @@ published: 2026-09-24
 updated: 2026-09-24
 readTime: 13
 heroImage: /images/en/llm_ba_workflow.png
-related: ["stakeholder-analysis","version-control-for-business-analysts"]
+related: ["ai-agents-for-business-analysts","stakeholder-analysis","version-control-for-business-analysts"]
 draft: false
 ---
 

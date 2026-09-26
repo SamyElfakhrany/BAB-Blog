@@ -11,7 +11,7 @@ published: 2026-09-24
 updated: 2026-09-24
 readTime: 14
 heroImage: /images/en/git_branch_pull_request.png
-related: ["stakeholder-analysis","llms-for-business-analysts"]
+related: ["devops-for-business-analysts","stakeholder-analysis","llms-for-business-analysts"]
 draft: false
 ---
 

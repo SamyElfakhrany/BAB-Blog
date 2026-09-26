@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">خريطة معمارية لسيناريو إلغاء الطلب</title>
+  <desc id="desc">العميل وموظف الدعم يتعاملان مع منصة تسوق تحتوي على قنوات العميل وخدمة الطلبات وقاعدة بيانات الطلبات وعامل التكامل. تعتمد المنصة على نظامي الدفع والمخزن.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="600" y="58" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="30" font-weight="700" fill="#0f2942">اقرأ المعمارية من رحلة العمل</text>
+  <text x="600" y="88" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="16" fill="#475569">تتبّع القاعدة والبيانات المعتمدة والاعتمادات ونتيجة الفشل عبر حدود النظام.</text>
+
+  <rect x="1016" y="177" width="142" height="88" rx="14" fill="#ffffff" stroke="#64748b" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="1087" cy="202" r="7" fill="#f59e0b"/>
+  <text x="1087" y="226" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f2942">العميل</text>
+  <text x="1087" y="248" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="11" fill="#64748b">يطلب الإلغاء</text>
+
+  <rect x="1016" y="357" width="142" height="88" rx="14" fill="#ffffff" stroke="#64748b" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="1087" cy="382" r="7" fill="#38bdf8"/>
+  <text x="1087" y="406" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f2942">الدعم</text>
+  <text x="1087" y="428" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="11" fill="#64748b">يشرح النتيجة</text>
+
+  <rect x="315" y="125" width="665" height="430" rx="24" fill="#ecfeff" stroke="#0f766e" stroke-width="3" stroke-dasharray="10 7"/>
+  <text x="647" y="160" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="20" font-weight="700" fill="#115e59">منصة التسوق — حدود النظام</text>
+  <text x="647" y="184" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="13" fill="#0f766e">المسؤوليات داخل الحدود ما زالت تحتاج ملاكًا واضحين.</text>
+
+  <rect x="740" y="220" width="190" height="94" rx="14" fill="#ffffff" stroke="#0f766e" stroke-width="2" filter="url(#shadow)"/>
+  <text x="835" y="257" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f2942">قنوات العميل</text>
+  <text x="835" y="283" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="14" fill="#64748b">الويب والموبايل والدعم</text>
+
+  <rect x="500" y="220" width="190" height="94" rx="14" fill="#ffffff" stroke="#0f766e" stroke-width="2" filter="url(#shadow)"/>
+  <text x="595" y="257" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f2942">خدمة الطلبات</text>
+  <text x="595" y="283" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="14" fill="#64748b">الصلاحية والقواعد</text>
+
+  <rect x="500" y="387" width="190" height="94" rx="14" fill="#ffffff" stroke="#0f766e" stroke-width="2" filter="url(#shadow)"/>
+  <ellipse cx="595" cy="423" rx="34" ry="10" fill="#bae6fd" stroke="#0369a1" stroke-width="2"/>
+  <path d="M561 423v27c0 6 15 11 34 11s34-5 34-11v-27" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+  <text x="595" y="475" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f2942">قاعدة بيانات الطلبات</text>
+
+  <rect x="335" y="304" width="145" height="116" rx="14" fill="#ffffff" stroke="#0f766e" stroke-width="2" filter="url(#shadow)"/>
+  <text x="407" y="340" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f2942">عامل</text>
+  <text x="407" y="362" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="16" font-weight="700" fill="#0f2942">التكامل</text>
+  <text x="407" y="390" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="11" fill="#64748b">إعادة المحاولة والتكرار</text>
+  <text x="407" y="408" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="11" fill="#64748b">والمطابقة</text>
+
+  <rect x="50" y="190" width="205" height="100" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="152" y="230" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="18" font-weight="700" fill="#7c2d12">مزود الدفع</text>
+  <text x="152" y="258" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="14" fill="#9a3412">المتابعة المالية</text>
+
+  <rect x="50" y="390" width="205" height="100" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="152" y="430" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="18" font-weight="700" fill="#7c2d12">نظام المخزن</text>
+  <text x="152" y="458" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="14" fill="#9a3412">وقف التجهيز والتأكيد</text>
+
+  <path d="M1016 220 H930" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1016 398 H965 V290 H930" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M740 267 H698" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="719" y="253" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="11" fill="#0f766e">الطلب</text>
+  <path d="M595 314 V379" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="578" y="352" text-anchor="end" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="11" fill="#0f766e">الحالة المعتمدة</text>
+  <path d="M500 267 C400 245 365 240 263 240" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="380" y="225" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="11" fill="#0f766e">طلب مالي ونتيجته</text>
+  <path d="M500 285 C488 294 476 307 462 324" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M335 380 C302 401 278 429 263 438" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="90" y="602" width="1020" height="78" rx="18" fill="#0f2942"/>
+  <text x="600" y="634" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">مسار قراءة محلل الأعمال</text>
+  <text x="600" y="660" text-anchor="middle" direction="rtl" font-family="Cairo, Tahoma, Arial, sans-serif" font-size="15" fill="#bae6fd">قاعدة العمل ← الحدود ← المسؤولية ← المصدر المعتمد ← الاعتماد ← نتيجة الفشل ← دليل قابل للقياس</text>
+</svg>

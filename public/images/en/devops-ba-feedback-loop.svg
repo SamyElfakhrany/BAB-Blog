@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">DevOps feedback loop for a Business Analyst</title>
+  <desc id="desc">A change moves from plan to build, verify, release, and observe, then production evidence feeds the next plan. BA contributions and a rollback path are shown.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071827"/>
+      <stop offset="1" stop-color="#112a3d"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#020617" flood-opacity=".32"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L12 6L0 12Z" fill="#5eead4"/>
+    </marker>
+    <marker id="warnArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L12 6L0 12Z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" rx="28" fill="url(#bg)"/>
+  <text x="70" y="70" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">DevOps turns delivery into a learning loop</text>
+  <text x="70" y="106" fill="#99f6e4" font-family="Arial, sans-serif" font-size="19">The BA keeps the user outcome, evidence, and operating rules connected from idea to production.</text>
+
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <rect x="70" y="165" width="190" height="150" rx="18" fill="#163145" stroke="#5eead4" stroke-width="2"/>
+    <text x="165" y="205" text-anchor="middle" fill="#5eead4" font-size="17" font-weight="700">1 · PLAN</text>
+    <text x="165" y="242" text-anchor="middle" fill="#f8fafc" font-size="23" font-weight="700">Define value</text>
+    <text x="165" y="274" text-anchor="middle" fill="#cbd5e1" font-size="16">Rules · risks · measures</text>
+    <text x="165" y="297" text-anchor="middle" fill="#fbbf24" font-size="14" font-weight="700">BA: clarify outcomes</text>
+
+    <rect x="287" y="165" width="190" height="150" rx="18" fill="#163145" stroke="#5eead4" stroke-width="2"/>
+    <text x="382" y="205" text-anchor="middle" fill="#5eead4" font-size="17" font-weight="700">2 · BUILD</text>
+    <text x="382" y="242" text-anchor="middle" fill="#f8fafc" font-size="23" font-weight="700">Create change</text>
+    <text x="382" y="274" text-anchor="middle" fill="#cbd5e1" font-size="16">Small, traceable version</text>
+    <text x="382" y="297" text-anchor="middle" fill="#fbbf24" font-size="14" font-weight="700">BA: keep traceability</text>
+
+    <rect x="504" y="165" width="190" height="150" rx="18" fill="#163145" stroke="#5eead4" stroke-width="2"/>
+    <text x="599" y="205" text-anchor="middle" fill="#5eead4" font-size="17" font-weight="700">3 · VERIFY</text>
+    <text x="599" y="242" text-anchor="middle" fill="#f8fafc" font-size="23" font-weight="700">Check evidence</text>
+    <text x="599" y="274" text-anchor="middle" fill="#cbd5e1" font-size="16">Tests · security · rules</text>
+    <text x="599" y="297" text-anchor="middle" fill="#fbbf24" font-size="14" font-weight="700">BA: validate behavior</text>
+
+    <rect x="721" y="165" width="190" height="150" rx="18" fill="#163145" stroke="#5eead4" stroke-width="2"/>
+    <text x="816" y="205" text-anchor="middle" fill="#5eead4" font-size="17" font-weight="700">4 · RELEASE</text>
+    <text x="816" y="242" text-anchor="middle" fill="#f8fafc" font-size="23" font-weight="700">Control exposure</text>
+    <text x="816" y="274" text-anchor="middle" fill="#cbd5e1" font-size="16">Gate · flag · rollback</text>
+    <text x="816" y="297" text-anchor="middle" fill="#fbbf24" font-size="14" font-weight="700">BA: confirm readiness</text>
+
+    <rect x="938" y="165" width="190" height="150" rx="18" fill="#163145" stroke="#5eead4" stroke-width="2"/>
+    <text x="1033" y="205" text-anchor="middle" fill="#5eead4" font-size="17" font-weight="700">5 · OBSERVE</text>
+    <text x="1033" y="242" text-anchor="middle" fill="#f8fafc" font-size="23" font-weight="700">Learn from use</text>
+    <text x="1033" y="274" text-anchor="middle" fill="#cbd5e1" font-size="14">Health · outcomes · feedback</text>
+    <text x="1033" y="297" text-anchor="middle" fill="#fbbf24" font-size="14" font-weight="700">BA: compare results</text>
+  </g>
+
+  <g fill="none" stroke="#5eead4" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M260 240H278"/>
+    <path d="M477 240H495"/>
+    <path d="M694 240H712"/>
+    <path d="M911 240H929"/>
+    <path d="M1033 326V375C1033 405 1008 420 978 420H218C188 420 165 400 165 370V326"/>
+  </g>
+  <text x="599" y="405" text-anchor="middle" fill="#5eead4" font-family="Arial, sans-serif" font-size="17" font-weight="700">PRODUCTION EVIDENCE SHAPES THE NEXT PLAN</text>
+
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <rect x="200" y="475" width="800" height="125" rx="22" fill="#3b2f19" stroke="#fbbf24" stroke-width="2"/>
+    <circle cx="266" cy="537" r="36" fill="#fbbf24"/>
+    <path d="M266 515v28M266 556h.1" stroke="#111827" stroke-width="8" stroke-linecap="round"/>
+    <text x="325" y="515" fill="#fde68a" font-size="18" font-weight="700">WHEN THE AGREED THRESHOLD IS CROSSED</text>
+    <text x="325" y="549" fill="#f8fafc" font-size="19" font-weight="700">Pause release → disable or roll back → verify recovery → notify owner</text>
+    <text x="325" y="577" fill="#d6d3d1" font-size="14">Define the threshold, authority, customer message, and recovery proof before release.</text>
+  </g>
+  <path d="M816 326V462" fill="none" stroke="#fbbf24" stroke-width="4" stroke-dasharray="9 9" marker-end="url(#warnArrow)"/>
+  <text x="70" y="642" fill="#94a3b8" font-family="Arial, sans-serif" font-size="15">Illustrative flow — each organization defines its own controls, environments, and release authority.</text>
+</svg>

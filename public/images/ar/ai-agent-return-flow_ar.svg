@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">سير عمل وكيل ذكاء اصطناعي لطلب إرجاع</title>
+  <desc id="desc">حلقة تبدأ بهدف العميل ثم قراءة السياق والتخطيط واستخدام الأدوات ومراجعة النتيجة، مع بوابة موافقة بشرية قبل الإجراءات المؤثرة.</desc>
+  <defs>
+    <linearGradient id="bg" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#18233b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#020617" flood-opacity=".32"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L12 6L0 12Z" fill="#67e8f9"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" rx="28" fill="url(#bg)"/>
+  <text x="1130" y="72" text-anchor="start" direction="rtl" unicode-bidi="bidi-override" fill="#f8fafc" font-family="Arial, Tahoma, sans-serif" font-size="34" font-weight="700">حلقة آمنة لوكيل إرجاع الطلبات</text>
+  <text x="1130" y="108" text-anchor="start" direction="rtl" unicode-bidi="bidi-override" fill="#a5b4fc" font-family="Arial, Tahoma, sans-serif" font-size="19">الوكيل يكيّف خطوته التالية، لكن داخل أدوات وصلاحيات وقواعد موافقة محددة.</text>
+
+  <g filter="url(#shadow)" font-family="Arial, Tahoma, sans-serif">
+    <rect x="940" y="170" width="190" height="120" rx="18" fill="#1e293b" stroke="#67e8f9" stroke-width="2"/>
+    <text x="1035" y="210" text-anchor="middle" fill="#67e8f9" font-size="17" font-weight="700">١ · الهدف</text>
+    <text x="1035" y="244" text-anchor="middle" direction="rtl" unicode-bidi="bidi-override" fill="#f8fafc" font-size="21" font-weight="700">طلب إرجاع</text>
+    <text x="1035" y="270" text-anchor="middle" direction="rtl" unicode-bidi="bidi-override" fill="#cbd5e1" font-size="15">العميل يحدد النتيجة</text>
+
+    <rect x="710" y="170" width="190" height="120" rx="18" fill="#1e293b" stroke="#67e8f9" stroke-width="2"/>
+    <text x="805" y="210" text-anchor="middle" fill="#67e8f9" font-size="17" font-weight="700">٢ · السياق</text>
+    <text x="805" y="244" text-anchor="middle" direction="rtl" unicode-bidi="bidi-override" fill="#f8fafc" font-size="21" font-weight="700">قراءة حقائق موثوقة</text>
+    <text x="805" y="270" text-anchor="middle" direction="rtl" unicode-bidi="bidi-override" fill="#cbd5e1" font-size="15">الطلب والسياسة الحالية</text>
+
+    <rect x="480" y="170" width="190" height="120" rx="18" fill="#1e293b" stroke="#67e8f9" stroke-width="2"/>
+    <text x="575" y="210" text-anchor="middle" fill="#67e8f9" font-size="17" font-weight="700">٣ · القرار</text>
+    <text x="575" y="244" text-anchor="middle" direction="rtl" unicode-bidi="bidi-override" fill="#f8fafc" font-size="21" font-weight="700">اختيار الخطوة</text>
+    <text x="575" y="270" text-anchor="middle" direction="rtl" unicode-bidi="bidi-override" fill="#cbd5e1" font-size="15">تنفيذ أو إعادة أو تصعيد</text>
+
+    <rect x="250" y="170" width="190" height="120" rx="18" fill="#1e293b" stroke="#67e8f9" stroke-width="2"/>
+    <text x="345" y="210" text-anchor="middle" fill="#67e8f9" font-size="17" font-weight="700">٤ · التنفيذ</text>
+    <text x="345" y="244" text-anchor="middle" direction="rtl" unicode-bidi="bidi-override" fill="#f8fafc" font-size="21" font-weight="700">استخدام أداة</text>
+    <text x="345" y="270" text-anchor="middle" direction="rtl" unicode-bidi="bidi-override" fill="#cbd5e1" font-size="15">مسودة أو طلب موافقة</text>
+
+    <rect x="70" y="170" width="140" height="120" rx="18" fill="#1e293b" stroke="#67e8f9" stroke-width="2"/>
+    <text x="140" y="210" text-anchor="middle" fill="#67e8f9" font-size="17" font-weight="700">٥ · المراجعة</text>
+    <text x="140" y="244" text-anchor="middle" direction="rtl" unicode-bidi="bidi-override" fill="#f8fafc" font-size="21" font-weight="700">ملاحظة النتيجة</text>
+    <text x="140" y="270" text-anchor="middle" direction="rtl" unicode-bidi="bidi-override" fill="#cbd5e1" font-size="15">انتهى أم نكرر؟</text>
+  </g>
+
+  <g fill="none" stroke="#67e8f9" stroke-width="4" marker-end="url(#arrow)">
+    <path d="M940 230H908"/>
+    <path d="M710 230H678"/>
+    <path d="M480 230H448"/>
+    <path d="M250 230H218"/>
+    <path d="M140 298V350C140 380 165 395 195 395H525C560 395 575 372 575 340V300"/>
+  </g>
+  <text x="378" y="382" text-anchor="middle" direction="rtl" unicode-bidi="bidi-override" fill="#67e8f9" font-family="Arial, Tahoma, sans-serif" font-size="16" font-weight="700">الدليل الجديد يدخل في القرار التالي</text>
+
+  <g filter="url(#shadow)" font-family="Arial, Tahoma, sans-serif">
+    <rect x="200" y="460" width="800" height="130" rx="24" fill="#312e81" stroke="#a5b4fc" stroke-width="2"/>
+    <circle cx="928" cy="525" r="38" fill="#f59e0b"/>
+    <path d="M928 501v30M928 545h.1" stroke="#111827" stroke-width="8" stroke-linecap="round"/>
+    <text x="865" y="505" text-anchor="start" direction="rtl" unicode-bidi="bidi-override" fill="#fde68a" font-size="18" font-weight="700">بوابة موافقة بشرية</text>
+    <text x="865" y="539" text-anchor="start" direction="rtl" unicode-bidi="bidi-override" fill="#f8fafc" font-size="23" font-weight="700">توقّف قبل رد المبلغ أو تنفيذ تغيير مؤثر.</text>
+    <text x="865" y="567" text-anchor="start" direction="rtl" unicode-bidi="bidi-override" fill="#c7d2fe" font-size="16">الـ BA يحدد الحد والمسؤول والمهلة والدليل المعروض للمراجع.</text>
+  </g>
+  <path d="M345 298V445" fill="none" stroke="#f59e0b" stroke-width="4" stroke-dasharray="9 9" marker-end="url(#arrow)"/>
+  <text x="1130" y="640" text-anchor="start" direction="rtl" unicode-bidi="bidi-override" fill="#94a3b8" font-family="Arial, Tahoma, sans-serif" font-size="15">تصميم توضيحي — الصلاحيات وقواعد الإرجاع الفعلية لازم تعتمدها المؤسسة.</text>
+</svg>
