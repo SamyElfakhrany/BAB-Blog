@@ -1,0 +1,323 @@
+---
+import FollowResourceCard from '../../../components/FollowResourceCard.astro';
+import {
+  followResources,
+  followTopicLabels,
+  followTopicOrder,
+  type FollowResourceKind,
+  type FollowTopic
+} from '../../../data/follow-directory';
+import { getLanguage } from '../../../lib/content';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }];
+}
+
+const lang = getLanguage(Astro.params.lang || 'en');
+const resources = [...followResources].sort((a, b) => a.order - b.order);
+const people = resources.filter((resource) => resource.kind === 'person');
+const podcasts = resources.filter((resource) => resource.kind === 'podcast');
+const communities = resources.filter((resource) => resource.kind === 'community');
+const peopleByTopic = followTopicOrder.map((topic) => ({
+  topic,
+  resources: people.filter((resource) => resource.topics[0] === topic)
+}));
+
+const copy = lang === 'en'
+  ? {
+      title: 'Worth Following',
+      description: 'A curated bilingual directory of people, podcasts, and communities that help beginner Business Analysts stay useful and current.',
+      eyebrow: 'BAC9 / Your signal list',
+      intro: 'Follow fewer sources—and learn more from each one.',
+      lead: 'This list connects Business Analysis with product, software, design, and AI. Start small, notice the ideas that improve your questions, and bring one useful insight into your next project conversation.',
+      people: 'People & channels',
+      peopleIntro: 'Practitioners and educators who make useful ideas easier to understand and apply.',
+      podcasts: 'Podcasts to hear',
+      podcastsIntro: 'Longer conversations for commutes, walks, and deeper reflection.',
+      communities: 'Communities to join',
+      communitiesIntro: 'Places to meet peers, attend sessions, and learn through shared practice.',
+      resources: 'curated resources',
+      disciplines: 'connected disciplines',
+      reviewed: 'Last reviewed: September 2026',
+      habitEyebrow: 'A simple beginner habit',
+      habitTitle: 'Two sources. Thirty days. One applied idea.',
+      habitText: 'Choose one Arabic source and one international source. Follow both for 30 days, save only the insights that matter to your work, then apply one idea in a meeting, requirement, model, or decision.',
+      filtersTitle: 'Find the right signal',
+      filtersIntro: 'Filter the directory without losing the larger view.',
+      filterType: 'Resource type',
+      filterTopic: 'Topic',
+      filterLanguage: 'Content language',
+      all: 'All',
+      peopleFilter: 'People',
+      podcastsFilter: 'Podcasts',
+      communitiesFilter: 'Communities',
+      arabic: 'Arabic',
+      english: 'English',
+      reset: 'Reset filters',
+      resultTemplate: '{count} resources shown',
+      emptyTitle: 'No resources match this combination.',
+      emptyText: 'Reset the filters or widen one of your choices.',
+      noteTitle: 'Use the list as a starting point, not a scoreboard.',
+      noteText: 'This is an editorial selection, not a ranking or endorsement. External profiles and publishing habits can change, so judge every idea against evidence, context, and the needs of your project.'
+    }
+  : {
+      title: 'ناس ومصادر تستحق المتابعة',
+      description: 'دليل مختار بالعربي والإنجليزي لأشخاص وبودكاست ومجتمعات تساعد محلل الأعمال المبتدئ يفضل متابع ومفيد.',
+      eyebrow: 'BAC9 / قائمة الإشارات المهمة',
+      intro: 'تابع مصادر أقل—واستفيد من كل مصدر أكتر.',
+      lead: 'القائمة دي بتربط تحليل الأعمال بالمنتجات والبرمجيات والتصميم والـAI. ابدأ بهدوء، ولاحظ الأفكار اللي بتحسّن أسئلتك، وخد فكرة مفيدة واحدة لمحادثة مشروعك الجاية.',
+      people: 'أشخاص وقنوات',
+      peopleIntro: 'ممارسون ومعلّمون بيخلّوا الأفكار المفيدة أسهل في الفهم والتطبيق.',
+      podcasts: 'بودكاست تسمعه',
+      podcastsIntro: 'حوارات أطول للمشاوير والتمشية والتفكير بهدوء.',
+      communities: 'مجتمعات تنضم لها',
+      communitiesIntro: 'مساحات تقابل فيها ناس من المجال وتحضر جلسات وتتعلّم من الخبرات المشتركة.',
+      resources: 'مصدر مختار',
+      disciplines: 'مجالات مترابطة',
+      reviewed: 'آخر مراجعة: سبتمبر 2026',
+      habitEyebrow: 'عادة بسيطة للمبتدئ',
+      habitTitle: 'مصدران. 30 يومًا. فكرة واحدة تطبّقها.',
+      habitText: 'اختار مصدرًا عربيًا ومصدرًا عالميًا. تابع الاثنين لمدة 30 يومًا، واحفظ الأفكار المرتبطة بشغلك فقط، وبعدها طبّق فكرة واحدة في اجتماع أو متطلب أو نموذج أو قرار.',
+      filtersTitle: 'وصل للإشارة المناسبة',
+      filtersIntro: 'فلتر الدليل من غير ما تفقد الصورة الكبيرة.',
+      filterType: 'نوع المصدر',
+      filterTopic: 'المجال',
+      filterLanguage: 'لغة المحتوى',
+      all: 'الكل',
+      peopleFilter: 'أشخاص',
+      podcastsFilter: 'بودكاست',
+      communitiesFilter: 'مجتمعات',
+      arabic: 'عربي',
+      english: 'English',
+      reset: 'إلغاء الفلاتر',
+      resultTemplate: 'عرض {count} مصدرًا',
+      emptyTitle: 'مفيش مصادر مطابقة للاختيارات دي.',
+      emptyText: 'الغِ الفلاتر أو وسّع أحد اختياراتك.',
+      noteTitle: 'استخدم القائمة كنقطة بداية، مش كترتيب للأفضل.',
+      noteText: 'دي اختيارات تحريرية وليست ترتيبًا أو تزكية. الحسابات الخارجية وطريقة النشر ممكن تتغير، فقيّم كل فكرة حسب الدليل والسياق واحتياجات مشروعك.'
+    };
+
+const kindFilters: Array<{ value: 'all' | FollowResourceKind; label: string }> = [
+  { value: 'all', label: copy.all },
+  { value: 'person', label: copy.peopleFilter },
+  { value: 'podcast', label: copy.podcastsFilter },
+  { value: 'community', label: copy.communitiesFilter }
+];
+const topicFilters: Array<{ value: 'all' | FollowTopic; label: string }> = [
+  { value: 'all', label: copy.all },
+  ...followTopicOrder.map((topic) => ({ value: topic, label: followTopicLabels[topic][lang] }))
+];
+const languageFilters = [
+  { value: 'all', label: copy.all },
+  { value: 'ar', label: copy.arabic },
+  { value: 'en', label: copy.english }
+] as const;
+---
+
+<SiteLayout
+  lang={lang}
+  title={copy.title}
+  description={copy.description}
+  canonicalPath={`/${lang}/follow/`}
+  currentSection="follow"
+>
+  <section class="follow-hero shell">
+    <div class="follow-hero-copy">
+      <span class="eyebrow">{copy.eyebrow}</span>
+      <h1>{copy.intro}</h1>
+      <p>{copy.lead}</p>
+      <a class="button button-primary" href="#follow-filters">
+        {copy.filtersTitle} <span class="direction-icon" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <aside class="follow-signal-board" aria-label={copy.title}>
+      <div><strong>{resources.length}</strong><span>{copy.resources}</span></div>
+      <div><strong>{followTopicOrder.length}</strong><span>{copy.disciplines}</span></div>
+      <p>{copy.reviewed}</p>
+    </aside>
+  </section>
+
+  <section class="follow-habit shell" aria-labelledby="follow-habit-title">
+    <span class="follow-habit-number" aria-hidden="true">30</span>
+    <div>
+      <span class="eyebrow">{copy.habitEyebrow}</span>
+      <h2 id="follow-habit-title">{copy.habitTitle}</h2>
+      <p>{copy.habitText}</p>
+    </div>
+  </section>
+
+  <section
+    id="follow-filters"
+    class="follow-filter-panel shell"
+    data-follow-filters
+    aria-labelledby="follow-filter-title"
+  >
+    <div class="follow-filter-heading">
+      <div>
+        <span class="eyebrow">{copy.title}</span>
+        <h2 id="follow-filter-title">{copy.filtersTitle}</h2>
+      </div>
+      <p>{copy.filtersIntro}</p>
+    </div>
+
+    <div class="follow-filter-groups">
+      <div class="follow-filter-group" data-filter-group="kind">
+        <p>{copy.filterType}</p>
+        <div class="follow-filter-options">
+          {kindFilters.map((filter) => (
+            <button type="button" data-filter-value={filter.value} aria-pressed={filter.value === 'all' ? 'true' : 'false'}>{filter.label}</button>
+          ))}
+        </div>
+      </div>
+      <div class="follow-filter-group" data-filter-group="topic">
+        <p>{copy.filterTopic}</p>
+        <div class="follow-filter-options">
+          {topicFilters.map((filter) => (
+            <button type="button" data-filter-value={filter.value} aria-pressed={filter.value === 'all' ? 'true' : 'false'}>{filter.label}</button>
+          ))}
+        </div>
+      </div>
+      <div class="follow-filter-group" data-filter-group="language">
+        <p>{copy.filterLanguage}</p>
+        <div class="follow-filter-options">
+          {languageFilters.map((filter) => (
+            <button type="button" data-filter-value={filter.value} aria-pressed={filter.value === 'all' ? 'true' : 'false'}>{filter.label}</button>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="follow-filter-status">
+      <p role="status" aria-live="polite" data-result-status data-template={copy.resultTemplate}>
+        {copy.resultTemplate.replace('{count}', String(resources.length))}
+      </p>
+      <button type="button" class="follow-reset" data-reset-filters disabled>{copy.reset}</button>
+    </div>
+  </section>
+
+  <div class="follow-directory shell" data-follow-directory>
+    <section class="follow-section" data-resource-section aria-labelledby="follow-people-title">
+      <div class="follow-section-heading">
+        <div><span class="eyebrow">01</span><h2 id="follow-people-title">{copy.people}</h2></div>
+        <p>{copy.peopleIntro}</p>
+      </div>
+      <div class="follow-topic-groups">
+        {peopleByTopic.map(({ topic, resources: topicResources }) => (
+          <section class={`follow-topic-group topic-${topic}`} data-resource-group aria-labelledby={`follow-topic-${topic}`}>
+            <div class="follow-topic-heading">
+              <span class="follow-topic-index" aria-hidden="true">{String(followTopicOrder.indexOf(topic) + 1).padStart(2, '0')}</span>
+              <h3 id={`follow-topic-${topic}`}>{followTopicLabels[topic][lang]}</h3>
+              <span>{topicResources.length}</span>
+            </div>
+            <div class="follow-card-grid">
+              {topicResources.map((resource) => <FollowResourceCard resource={resource} lang={lang} headingLevel={4} />)}
+            </div>
+          </section>
+        ))}
+      </div>
+    </section>
+
+    <section class="follow-section" data-resource-section aria-labelledby="follow-podcasts-title">
+      <div class="follow-section-heading">
+        <div><span class="eyebrow">02</span><h2 id="follow-podcasts-title">{copy.podcasts}</h2></div>
+        <p>{copy.podcastsIntro}</p>
+      </div>
+      <div class="follow-card-grid">
+        {podcasts.map((resource) => <FollowResourceCard resource={resource} lang={lang} />)}
+      </div>
+    </section>
+
+    <section class="follow-section" data-resource-section aria-labelledby="follow-communities-title">
+      <div class="follow-section-heading">
+        <div><span class="eyebrow">03</span><h2 id="follow-communities-title">{copy.communities}</h2></div>
+        <p>{copy.communitiesIntro}</p>
+      </div>
+      <div class="follow-card-grid">
+        {communities.map((resource) => <FollowResourceCard resource={resource} lang={lang} />)}
+      </div>
+    </section>
+
+    <section class="follow-empty" data-empty-state hidden aria-live="polite">
+      <strong>{copy.emptyTitle}</strong>
+      <p>{copy.emptyText}</p>
+      <button type="button" class="button button-quiet" data-empty-reset>{copy.reset}</button>
+    </section>
+  </div>
+
+  <aside class="follow-editorial-note shell">
+    <span aria-hidden="true">i</span>
+    <div><strong>{copy.noteTitle}</strong><p>{copy.noteText}</p></div>
+  </aside>
+
+  <script>
+    const filterRoot = document.querySelector<HTMLElement>('[data-follow-filters]');
+    const directory = document.querySelector<HTMLElement>('[data-follow-directory]');
+
+    if (filterRoot && directory) {
+      type FilterKey = 'kind' | 'topic' | 'language';
+      const state: Record<FilterKey, string> = { kind: 'all', topic: 'all', language: 'all' };
+      const cards = Array.from(directory.querySelectorAll<HTMLElement>('[data-resource-card]'));
+      const sections = Array.from(directory.querySelectorAll<HTMLElement>('[data-resource-section]'));
+      const groups = Array.from(directory.querySelectorAll<HTMLElement>('[data-resource-group]'));
+      const status = filterRoot.querySelector<HTMLElement>('[data-result-status]');
+      const reset = filterRoot.querySelector<HTMLButtonElement>('[data-reset-filters]');
+      const emptyState = directory.querySelector<HTMLElement>('[data-empty-state]');
+      const emptyReset = directory.querySelector<HTMLButtonElement>('[data-empty-reset]');
+
+      const selectFilter = (key: FilterKey, value: string) => {
+        state[key] = value;
+        const group = filterRoot.querySelector<HTMLElement>(`[data-filter-group="${key}"]`);
+        group?.querySelectorAll<HTMLButtonElement>('[data-filter-value]').forEach((button) => {
+          button.setAttribute('aria-pressed', String(button.dataset.filterValue === value));
+        });
+      };
+
+      const applyFilters = () => {
+        let visibleCount = 0;
+        cards.forEach((card) => {
+          const topics = (card.dataset.topics || '').split(' ');
+          const languages = (card.dataset.languages || '').split(' ');
+          const matches = (state.kind === 'all' || card.dataset.kind === state.kind)
+            && (state.topic === 'all' || topics.includes(state.topic))
+            && (state.language === 'all' || languages.includes(state.language));
+          card.hidden = !matches;
+          if (matches) visibleCount += 1;
+        });
+
+        groups.forEach((group) => {
+          group.hidden = !group.querySelector('[data-resource-card]:not([hidden])');
+        });
+        sections.forEach((section) => {
+          section.hidden = !section.querySelector('[data-resource-card]:not([hidden])');
+        });
+
+        if (status) status.textContent = (status.dataset.template || '{count}').replace('{count}', String(visibleCount));
+        if (emptyState) emptyState.hidden = visibleCount !== 0;
+        if (reset) reset.disabled = Object.values(state).every((value) => value === 'all');
+      };
+
+      filterRoot.querySelectorAll<HTMLButtonElement>('[data-filter-value]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const group = button.closest<HTMLElement>('[data-filter-group]');
+          const key = group?.dataset.filterGroup as FilterKey | undefined;
+          if (!key) return;
+          selectFilter(key, button.dataset.filterValue || 'all');
+          applyFilters();
+        });
+      });
+
+      const resetFilters = () => {
+        (['kind', 'topic', 'language'] as FilterKey[]).forEach((key) => selectFilter(key, 'all'));
+        applyFilters();
+      };
+
+      reset?.addEventListener('click', resetFilters);
+      emptyReset?.addEventListener('click', () => {
+        resetFilters();
+        filterRoot.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+  </script>
+</SiteLayout>
+

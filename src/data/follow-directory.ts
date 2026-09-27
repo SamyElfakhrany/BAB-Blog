@@ -152,7 +152,10 @@ export const followResources: FollowResource[] = [
       ar: 'شرح عميق وواضح للـBackend وقواعد البيانات والشبكات والبروتوكولات والأداء وقرارات الـArchitecture.'
     },
     tags: { en: ['Backend', 'Databases', 'Architecture'], ar: ['الـBackend', 'قواعد البيانات', 'الـArchitecture'] },
-    links: [{ platform: 'youtube', url: 'https://www.youtube.com/@hnasr' }]
+    links: [
+      { platform: 'website', url: 'https://www.husseinnasser.com/p/about-hussein.html' },
+      { platform: 'youtube', url: 'https://www.youtube.com/@hnasr' }
+    ]
   },
   {
     id: 'fireship', order: 12, kind: 'person', topics: ['software-engineering'], contentLanguages: ['en'], mark: 'FS',
@@ -162,7 +165,10 @@ export const followResources: FollowResource[] = [
       ar: 'شروحات بصرية سريعة تساعد غير المتخصصين يعرفوا مفاهيم وأدوات وتغيّرات عالم البرمجيات.'
     },
     tags: { en: ['Tech explainers', 'Developer trends', 'Web technology'], ar: ['شرح تقني', 'اتجاهات التطوير', 'تقنيات الويب'] },
-    links: [{ platform: 'youtube', url: 'https://www.youtube.com/@Fireship' }]
+    links: [
+      { platform: 'website', url: 'https://fireship.dev/' },
+      { platform: 'youtube', url: 'https://www.youtube.com/@Fireship' }
+    ]
   },
   {
     id: 'nada-elnady', order: 13, kind: 'person', topics: ['design'], contentLanguages: ['ar', 'en'], mark: 'NE',

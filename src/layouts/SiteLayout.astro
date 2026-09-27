@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import { getDirection, getLanguage, localizePath, ui, withBase } from '../lib/content';
 
-type Section = 'start' | 'paths' | 'case-study' | 'templates' | 'search' | 'about';
+type Section = 'start' | 'paths' | 'case-study' | 'templates' | 'follow' | 'search' | 'about';
 
 interface Props {
   lang?: 'en' | 'ar';
@@ -31,6 +31,7 @@ const navigation: Array<{ id: Section; label: string; href: string }> = [
   { id: 'paths', label: strings.navPaths, href: `/${language}/learning-paths/` },
   { id: 'case-study', label: strings.navCaseStudy, href: `/${language}/case-study/` },
   { id: 'templates', label: strings.navTemplates, href: `/${language}/templates/` },
+  { id: 'follow', label: strings.navFollow, href: `/${language}/follow/` },
   { id: 'search', label: strings.navSearch, href: `/${language}/search/` },
   { id: 'about', label: strings.navAbout, href: `/${language}/about/` }
 ];
