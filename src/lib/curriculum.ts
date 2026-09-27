@@ -30,18 +30,18 @@ export const pathDefinitions: Record<Category, PathDefinition> = {
       en: {
         title: 'Business Analysis Foundations',
         shortTitle: 'Foundations',
-        purpose: 'Understand the BA role, the people affected by change, and how teams choose what matters first.',
+        purpose: 'Understand the BA role, requirements, delivery choices, flow, product decisions, and how teams learn from evidence.',
         audience: 'New and aspiring Business Analysts who want a practical starting point.',
-        outcome: 'Frame a change, map its stakeholders, and facilitate a transparent priority decision.',
+        outcome: 'Frame a change, model requirements, choose a delivery approach, prepare testable backlog work, and measure product learning.',
         prerequisite: 'No prior Business Analysis experience is required.',
         action: 'Start with the foundations'
       },
       ar: {
         title: 'أساسيات تحليل الأعمال',
         shortTitle: 'الأساسيات',
-        purpose: 'افهم دور محلل الأعمال، والأشخاص المتأثرين بالتغيير، وإزاي الفريق يحدد الأولويات.',
+        purpose: 'افهم دور محلل الأعمال والمتطلبات وأساليب التسليم والتدفق وقرارات المنتج وإزاي الفريق يتعلّم من الدليل.',
         audience: 'للمبتدئين والمهتمين ببدء مسار مهني في تحليل الأعمال.',
-        outcome: 'صِغ التغيير بوضوح، وحدد أصحاب المصلحة، وساعد الفريق على اتخاذ قرار أولوية مفهوم.',
+        outcome: 'صِغ التغيير، ومثّل المتطلبات، واختار أسلوب التسليم، وجهز Backlog قابلًا للاختبار، وقِس تعلّم المنتج.',
         prerequisite: 'مش محتاج خبرة سابقة في تحليل الأعمال.',
         action: 'ابدأ بالأساسيات'
       }
@@ -56,18 +56,18 @@ export const pathDefinitions: Record<Category, PathDefinition> = {
       en: {
         title: 'Technical Fluency for Business Analysts',
         shortTitle: 'Technical Fluency',
-        purpose: 'Learn how solutions are structured, store data, connect, run, change, and reach production.',
+        purpose: 'Learn how solutions are structured, store data, connect, run, change, reach production, and are accepted safely.',
         audience: 'BAs who collaborate with software, data, architecture, or delivery teams.',
-        outcome: 'Ask sharper technical questions and connect business requirements to solution and delivery decisions.',
+        outcome: 'Ask sharper technical questions and connect business requirements to solution, testing, and delivery decisions.',
         prerequisite: 'Business Analysis Foundations is recommended, but every lesson remains open.',
         action: 'Build technical fluency'
       },
       ar: {
         title: 'الفهم التقني لمحللي الأعمال',
         shortTitle: 'الفهم التقني',
-        purpose: 'اتعلّم إزاي الحلول بتتكوّن، وتخزن البيانات، وتتصل ببعض، وتتغير، وتوصل للإنتاج.',
+        purpose: 'اتعلّم إزاي الحلول بتتكوّن، وتخزن البيانات، وتتصل، وتتغير، وتوصل للإنتاج، ويتم قبولها بأمان.',
         audience: 'لمحللي الأعمال اللي بيتعاونوا مع فرق البرمجيات والبيانات والمعمارية والتسليم.',
-        outcome: 'اسأل أسئلة تقنية أدق واربط متطلبات العمل بقرارات الحل والتسليم.',
+        outcome: 'اسأل أسئلة تقنية أدق واربط متطلبات العمل بقرارات الحل والاختبار والتسليم.',
         prerequisite: 'يُفضّل إنهاء مسار الأساسيات، لكن كل الدروس متاحة من غير قفل.',
         action: 'طوّر فهمك التقني'
       }

@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-09-24
 updated: 2026-09-27
 readTime: 11
-order: 3
+order: 4
 prerequisites: ["stakeholder-analysis"]
 learningOutcomes:
   - "تختار طريقة ترتيب الأولويات المناسبة للقرار والأدلة المتاحة."
@@ -18,7 +18,7 @@ learningOutcomes:
   - "تدير نقاش الأولويات وتوثّق سبب القرار."
 practicalSkill: "إدارة وتوثيق قرار أولوية مبني على أدلة واضحة."
 heroImage: /images/ar/prioritization_value_effort_matrix_ar.png
-related: ["stakeholder-analysis","llms-for-business-analysts"]
+related: ["requirements-documents-and-models","agile-and-scrum-for-business-analysts","mvp-and-product-metrics"]
 draft: false
 ---
 

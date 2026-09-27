@@ -1,0 +1,61 @@
+---
+import type { Language } from '../lib/content';
+import { followTopicLabels, type FollowResource } from '../data/follow-directory';
+
+interface Props {
+  resource: FollowResource;
+  lang: Language;
+  headingLevel?: 3 | 4;
+}
+
+const { resource, lang, headingLevel = 3 } = Astro.props;
+const Heading = headingLevel === 4 ? 'h4' : 'h3';
+const primaryTopic = resource.topics[0];
+const platformLabels = {
+  en: { linkedin: 'LinkedIn', youtube: 'YouTube', website: 'Website', podcast: 'Listen' },
+  ar: { linkedin: 'LinkedIn', youtube: 'YouTube', website: 'الموقع', podcast: 'استمع' }
+} as const;
+const languageLabel = resource.contentLanguages.length === 2
+  ? (lang === 'en' ? 'Arabic + English' : 'عربي + English')
+  : resource.contentLanguages[0] === 'ar'
+    ? (lang === 'en' ? 'Arabic content' : 'محتوى عربي')
+    : (lang === 'en' ? 'English content' : 'محتوى English');
+const openLabel = lang === 'en' ? 'opens in a new tab' : 'يفتح في تبويب جديد';
+---
+
+<article
+  class={`follow-card topic-${primaryTopic}`}
+  data-resource-card
+  data-kind={resource.kind}
+  data-topics={resource.topics.join(' ')}
+  data-languages={resource.contentLanguages.join(' ')}
+>
+  <div class="follow-card-topline">
+    <span class="follow-mark" aria-hidden="true">{resource.mark}</span>
+    <span class="follow-topic-label">{followTopicLabels[primaryTopic][lang]}</span>
+  </div>
+  <div class="follow-card-copy">
+    <Heading>{resource.name}</Heading>
+    <p>{resource.description[lang]}</p>
+  </div>
+  <div class="follow-card-meta">
+    <span class="content-language">{languageLabel}</span>
+    <ul class="follow-tags" aria-label={lang === 'en' ? 'Topics' : 'الموضوعات'}>
+      {resource.tags[lang].map((tag) => <li>{tag}</li>)}
+    </ul>
+  </div>
+  <div class="follow-links">
+    {resource.links.map((link) => (
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${platformLabels[lang][link.platform]} — ${resource.name} (${openLabel})`}
+      >
+        <span>{platformLabels[lang][link.platform]}</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    ))}
+  </div>
+</article>
+

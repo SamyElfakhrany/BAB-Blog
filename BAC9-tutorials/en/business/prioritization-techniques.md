@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-09-24
 updated: 2026-09-27
 readTime: 11
-order: 3
+order: 4
 prerequisites: ["stakeholder-analysis"]
 learningOutcomes:
   - "Choose a prioritization technique that fits the decision and available evidence."
@@ -18,7 +18,7 @@ learningOutcomes:
   - "Facilitate a prioritization conversation and record the reasoning."
 practicalSkill: "Facilitate and document an evidence-based prioritization decision."
 heroImage: /images/en/prioritization_value_effort_matrix_en.png
-related: ["stakeholder-analysis","llms-for-business-analysts"]
+related: ["requirements-documents-and-models","agile-and-scrum-for-business-analysts","mvp-and-product-metrics"]
 draft: false
 ---
 

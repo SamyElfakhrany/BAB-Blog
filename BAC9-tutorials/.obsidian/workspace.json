@@ -181,8 +181,22 @@
       "bases:Create new base": false
     }
   },
-  "active": "876ce98673b0defa",
+  "active": "e6ad136bb977f595",
   "lastOpenFiles": [
+    "ar/technical/software-testing-and-uat.md",
+    "en/technical/software-testing-and-uat.md",
+    "ar/business/mvp-and-product-metrics.md",
+    "en/business/mvp-and-product-metrics.md",
+    "ar/business/user-stories-and-acceptance-criteria.md",
+    "en/business/user-stories-and-acceptance-criteria.md",
+    "ar/business/kanban-for-business-analysts.md",
+    "en/business/kanban-for-business-analysts.md",
+    "ar/business/sdlc-and-delivery-approaches.md",
+    "en/business/sdlc-and-delivery-approaches.md",
+    "ar/business/requirements-documents-and-models.md",
+    "en/business/requirements-documents-and-models.md",
+    "ar/business/agile-and-scrum-for-business-analysts.md",
+    "en/business/agile-and-scrum-for-business-analysts.md",
     "Untitled 1.base",
     "Untitled",
     "Untitled.base",
