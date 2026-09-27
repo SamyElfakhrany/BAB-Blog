@@ -8,8 +8,15 @@ category: ai
 tags: ["ai","llm","prompting","requirements"]
 difficulty: beginner
 published: 2026-09-24
-updated: 2026-09-24
+updated: 2026-09-27
 readTime: 13
+order: 1
+prerequisites: []
+learningOutcomes:
+  - "تختار مهام مفيدة ومسؤولة للنموذج اللغوي داخل شغل الـBA."
+  - "تكتب Prompt على شكل BA brief منظم فيه سياق وقيود واضحة."
+  - "تراجع مخرجات النموذج بحثًا عن الأدلة والفجوات والمخاطر والموافقات المطلوبة."
+practicalSkill: "تحديد نطاق تدفق عمل للـBA مدعوم بالـLLM وكتابة الـPrompt ومراجعة النتيجة."
 heroImage: /images/ar/llm_ba_workflow_ar.png
 related: ["ai-agents-for-business-analysts","stakeholder-analysis","version-control-for-business-analysts"]
 draft: false

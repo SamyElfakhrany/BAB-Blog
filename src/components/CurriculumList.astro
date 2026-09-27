@@ -1,0 +1,9 @@
+---
+import type { Language, Tutorial } from '../lib/content';
+import LessonRow from './LessonRow.astro';
+interface Props { entries: Tutorial[]; lang: Language; labelledby?: string; }
+const { entries, lang, labelledby } = Astro.props;
+---
+<div class="curriculum-list" role="list" aria-labelledby={labelledby}>
+  {entries.map((entry, index) => <LessonRow entry={entry} lang={lang} step={index + 1} />)}
+</div>

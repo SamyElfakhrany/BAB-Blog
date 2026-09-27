@@ -8,8 +8,15 @@ category: technical
 tags: ["cloud-computing","non-functional-requirements","resilience"]
 difficulty: beginner
 published: 2026-09-26
-updated: 2026-09-26
+updated: 2026-09-27
 readTime: 10
+order: 4
+prerequisites: ["software-architecture-for-business-analysts"]
+learningOutcomes:
+  - "Explain how cloud service choices change team responsibilities."
+  - "Turn vague scale, availability, and recovery expectations into testable requirements."
+  - "Ask practical questions about security, cost, monitoring, and ownership."
+practicalSkill: "Draft cloud and non-functional requirements that a delivery team can validate."
 heroImage: /images/en/cloud-shopping-flow-en.png
 related: ["apis-for-business-analysts","databases-for-business-analysts","version-control-for-business-analysts"]
 draft: false

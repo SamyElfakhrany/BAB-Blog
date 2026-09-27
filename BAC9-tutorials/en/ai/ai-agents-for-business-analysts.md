@@ -8,8 +8,15 @@ category: ai
 tags: ["ai","agents","automation","requirements","governance"]
 difficulty: beginner
 published: 2026-09-26
-updated: 2026-09-26
+updated: 2026-09-27
 readTime: 13
+order: 2
+prerequisites: ["llms-for-business-analysts"]
+learningOutcomes:
+  - "Distinguish an AI agent from a chatbot, workflow, or fixed automation."
+  - "Define an agent's tools, permissions, decisions, and approval boundaries."
+  - "Write acceptance scenarios and measures for a safe pilot."
+practicalSkill: "Create an Agent Brief with controls, acceptance scenarios, and pilot measures."
 heroImage: /images/en/ai-agent-return-flow.svg
 related: ["llms-for-business-analysts","apis-for-business-analysts","prioritization-techniques"]
 draft: false

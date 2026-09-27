@@ -5,7 +5,7 @@ const lang = getLanguage(Astro.params.lang || 'en');
 const strings = ui[lang];
 export function getStaticPaths() { return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }]; }
 ---
-<SiteLayout lang={lang} title={strings.navAbout} description={strings.homeIntro} canonicalPath={`/${lang}/about/`}>
+<SiteLayout lang={lang} title={strings.navAbout} description={strings.homeIntro} canonicalPath={`/${lang}/about/`} currentSection="about">
   <section class="simple-hero shell"><span class="eyebrow">BAC9</span><h1>{lang === 'en' ? 'Business analysis, explained for the work around it.' : 'تحليل الأعمال، مشروح من خلال العمل المحيط به.'}</h1><p>{strings.homeIntro}</p></section>
   <section class="shell about-copy"><div><span class="eyebrow">{lang === 'en' ? 'The approach' : 'المنهج'}</span><h2>{lang === 'en' ? 'Concepts become useful when they change the next conversation.' : 'تصبح المفاهيم مفيدة عندما تغيّر المحادثة التالية.'}</h2></div><div><p>{lang === 'en' ? 'BAC9 connects the human side of business analysis with the technical context where modern teams deliver change. The tutorials are short, practical, bilingual, and built around decisions a BA can actually make.' : 'يربط BAC9 الجانب الإنساني لتحليل الأعمال بالسياق التقني الذي تسلّم فيه الفرق الحديثة التغيير. الدروس قصيرة وعملية وثنائية اللغة ومبنية حول قرارات يستطيع محلل الأعمال اتخاذها فعلًا.'}</p><p>{lang === 'en' ? 'Use the case study, templates, and exercises as a starting point. Bring the method into your own project, then validate it with the people who own the outcome.' : 'استخدم دراسة الحالة والقوالب والتمارين كنقطة بداية. انقل الطريقة إلى مشروعك، ثم تحقق منها مع الأشخاص المسؤولين عن النتيجة.'}</p></div></section>
 </SiteLayout>

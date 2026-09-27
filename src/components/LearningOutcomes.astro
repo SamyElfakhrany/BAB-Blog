@@ -1,0 +1,13 @@
+---
+import type { Language } from '../lib/content';
+import { ui } from '../lib/content';
+interface Props { lang: Language; outcomes: string[]; practicalSkill: string; }
+const { lang, outcomes, practicalSkill } = Astro.props;
+const strings = ui[lang];
+---
+<section class="learning-outcomes" aria-labelledby="learning-outcomes-title">
+  <span class="eyebrow">{strings.practicalSkill}</span>
+  <h2 id="learning-outcomes-title">{strings.learningOutcomes}</h2>
+  <ul>{outcomes.map((outcome) => <li>{outcome}</li>)}</ul>
+  <p class="skill-callout"><strong>{strings.practicalSkill}:</strong> {practicalSkill}</p>
+</section>

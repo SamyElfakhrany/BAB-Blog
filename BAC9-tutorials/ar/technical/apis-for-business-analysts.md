@@ -8,8 +8,15 @@ category: technical
 tags: ["api","integration","requirements"]
 difficulty: beginner
 published: 2026-09-26
-updated: 2026-09-26
+updated: 2026-09-27
 readTime: 9
+order: 3
+prerequisites: ["databases-for-business-analysts"]
+learningOutcomes:
+  - "تشرح ليه النظام بيستخدم API وإيه اللي بيحدده اتفاق الواجهة."
+  - "تقرأ أمثلة للطلبات والردود والحالات ونتائج الأخطاء."
+  - "تسأل المطورين أسئلة مفيدة عن سلوك التكامل والاستثناءات."
+practicalSkill: "تحليل اتفاق API وتوثيق سلوك التكامل وحالات الفشل."
 heroImage: /images/ar/api-order-flow-ar.png
 related: ["databases-for-business-analysts","cloud-computing-for-business-analysts","version-control-for-business-analysts"]
 draft: false

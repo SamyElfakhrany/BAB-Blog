@@ -8,8 +8,15 @@ category: ai
 tags: ["ai","llm","prompting","requirements"]
 difficulty: beginner
 published: 2026-09-24
-updated: 2026-09-24
+updated: 2026-09-27
 readTime: 13
+order: 1
+prerequisites: []
+learningOutcomes:
+  - "Choose useful and responsible LLM tasks inside BA work."
+  - "Write a prompt as a structured BA brief with context and constraints."
+  - "Review an LLM output for evidence, gaps, risks, and approval needs."
+practicalSkill: "Scope, prompt, and review a responsible LLM-assisted BA workflow."
 heroImage: /images/en/llm_ba_workflow.png
 related: ["ai-agents-for-business-analysts","stakeholder-analysis","version-control-for-business-analysts"]
 draft: false

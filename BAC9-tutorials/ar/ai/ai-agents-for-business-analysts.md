@@ -8,8 +8,15 @@ category: ai
 tags: ["ai","agents","automation","requirements","governance"]
 difficulty: beginner
 published: 2026-09-26
-updated: 2026-09-26
+updated: 2026-09-27
 readTime: 13
+order: 2
+prerequisites: ["llms-for-business-analysts"]
+learningOutcomes:
+  - "تميّز بين AI Agent وChatbot وWorkflow وAutomation ثابتة."
+  - "تحدد أدوات الوكيل وصلاحياته وقراراته وحدود الموافقة."
+  - "تكتب سيناريوهات قبول ومقاييس لتجربة آمنة."
+practicalSkill: "إنشاء Agent Brief فيه الضوابط وسيناريوهات القبول ومقاييس التجربة."
 heroImage: /images/ar/ai-agent-return-flow_ar.svg
 related: ["llms-for-business-analysts","apis-for-business-analysts","prioritization-techniques"]
 draft: false

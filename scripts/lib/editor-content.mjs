@@ -8,7 +8,8 @@ export const DIFFICULTIES = new Set(['beginner', 'intermediate', 'advanced']);
 export const LANGUAGES = new Set(['en', 'ar']);
 export const REQUIRED_FIELDS = [
   'id', 'translationId', 'lang', 'title', 'description', 'category', 'tags',
-  'difficulty', 'published', 'updated', 'readTime', 'heroImage', 'related', 'draft'
+  'difficulty', 'published', 'updated', 'readTime', 'order', 'prerequisites',
+  'learningOutcomes', 'practicalSkill', 'heroImage', 'related', 'draft'
 ];
 
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -110,6 +111,10 @@ export function articleFromSource(source, fallback = {}) {
     published: asString(parsed.data.published ?? fallback.published),
     updated: asString(parsed.data.updated ?? fallback.updated),
     readTime: Number(parsed.data.readTime ?? fallback.readTime ?? 0),
+    order: Number(parsed.data.order ?? fallback.order ?? 0),
+    prerequisites: asStringArray(parsed.data.prerequisites ?? fallback.prerequisites),
+    learningOutcomes: asStringArray(parsed.data.learningOutcomes ?? fallback.learningOutcomes),
+    practicalSkill: asString(parsed.data.practicalSkill ?? fallback.practicalSkill),
     heroImage: asString(parsed.data.heroImage ?? fallback.heroImage),
     related: asStringArray(parsed.data.related ?? fallback.related),
     draft: Boolean(parsed.data.draft ?? fallback.draft ?? false),
@@ -142,6 +147,10 @@ export async function validateArticle(article, { projectRoot, knownIds = new Set
   if (!DIFFICULTIES.has(article.difficulty)) errors.push(`${article.id || 'article'}: invalid difficulty`);
   if (!Array.isArray(article.tags)) errors.push(`${article.id || 'article'}: tags must be an array`);
   if (!Array.isArray(article.related)) errors.push(`${article.id || 'article'}: related must be an array`);
+  if (!Number.isInteger(Number(article.order)) || Number(article.order) <= 0) errors.push(`${article.id || 'article'}: order must be a positive integer`);
+  if (!Array.isArray(article.prerequisites)) errors.push(`${article.id || 'article'}: prerequisites must be an array`);
+  if (!Array.isArray(article.learningOutcomes) || article.learningOutcomes.length !== 3 || article.learningOutcomes.some((outcome) => !String(outcome).trim())) errors.push(`${article.id || 'article'}: learningOutcomes must contain exactly three non-empty outcomes`);
+  if (!String(article.practicalSkill || '').trim()) errors.push(`${article.id || 'article'}: practicalSkill is required`);
   if (!dateIsValid(article.published)) errors.push(`${article.id || 'article'}: published must be YYYY-MM-DD`);
   if (!dateIsValid(article.updated)) errors.push(`${article.id || 'article'}: updated must be YYYY-MM-DD`);
   if (!Number.isInteger(Number(article.readTime)) || Number(article.readTime) <= 0) errors.push(`${article.id || 'article'}: readTime must be a positive integer`);
@@ -159,6 +168,10 @@ export async function validateArticle(article, { projectRoot, knownIds = new Set
     }
   }
   for (const related of article.related || []) if (!knownIds.has(related) && related !== article.id) errors.push(`${article.id || 'article'}: related tutorial does not exist: ${related}`);
+  for (const prerequisite of article.prerequisites || []) {
+    if (!knownIds.has(prerequisite)) errors.push(`${article.id || 'article'}: prerequisite tutorial does not exist: ${prerequisite}`);
+    if (prerequisite === article.translationId) errors.push(`${article.id || 'article'}: tutorial cannot require itself`);
+  }
   if (projectRoot && article.heroImage) {
     const relative = article.heroImage.replace(/^\//, '');
     if (!safeRelative(projectRoot, path.join('public', relative))) errors.push(`${article.id || 'article'}: unsafe hero image path`);
@@ -176,6 +189,13 @@ export async function validateDocument(document, options = {}) {
   if (document.translationId && document.translationId !== document.en.translationId) errors.push('Document translationId does not match the English article.');
   if (document.en.lang !== 'en') errors.push('The English document must have lang: en.');
   if (document.ar.lang !== 'ar') errors.push('The Arabic document must have lang: ar.');
+  for (const field of ['id', 'category', 'difficulty', 'order']) {
+    if (document.en[field] !== document.ar[field]) errors.push(`English and Arabic ${field} values must match.`);
+  }
+  for (const field of ['prerequisites', 'related']) {
+    if (JSON.stringify(document.en[field] || []) !== JSON.stringify(document.ar[field] || [])) errors.push(`English and Arabic ${field} values must match.`);
+  }
+  if ((document.en.learningOutcomes || []).length !== (document.ar.learningOutcomes || []).length) errors.push('English and Arabic learning outcome counts must match.');
   const ids = new Set(options.knownIds || []);
   ids.add(document.en.id); ids.add(document.ar.id);
   for (const article of [document.en, document.ar]) {
@@ -184,7 +204,6 @@ export async function validateDocument(document, options = {}) {
     const conflict = (options.existingArticles || []).find((existing) => existing.lang === article.lang && existing.id === article.id && existing.translationId !== document.translationId);
     if (conflict) errors.push(`${article.id}: id is already used by translation ${conflict.translationId}`);
   }
-  if (document.en.id === document.ar.id) errors.push('English and Arabic IDs must be unique per language.');
   return { errors, warnings };
 }
 

@@ -8,8 +8,15 @@ category: technical
 tags: ["devops","ci-cd","requirements","release","observability"]
 difficulty: beginner
 published: 2026-09-26
-updated: 2026-09-26
+updated: 2026-09-27
 readTime: 14
+order: 6
+prerequisites: ["cloud-computing-for-business-analysts", "version-control-for-business-analysts"]
+learningOutcomes:
+  - "تتبع المتطلب من تغيير الكود عبر البيئات لحد الإنتاج."
+  - "تحدد أدلة الإطلاق وتوقعات المراقبة والرجوع والتعامل مع الحوادث."
+  - "تربط إشارات الإنتاج بنتائج العمل وقرارات المتابعة."
+practicalSkill: "إعداد DevOps-ready Change Brief بأدلة الإطلاق والإنتاج."
 heroImage: /images/ar/devops-ba-feedback-loop_ar.svg
 related: ["software-architecture-for-business-analysts","version-control-for-business-analysts","cloud-computing-for-business-analysts","apis-for-business-analysts"]
 draft: false

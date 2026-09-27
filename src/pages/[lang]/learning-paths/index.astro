@@ -1,0 +1,68 @@
+---
+import { getCollection } from 'astro:content';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import CurriculumList from '../../../components/CurriculumList.astro';
+import LearningProgressData from '../../../components/LearningProgressData.astro';
+import ProgressBar from '../../../components/ProgressBar.astro';
+import { getEntryUrl, getLanguage, ui, withBase } from '../../../lib/content';
+import { getJourneyEntries, getPathEntries, getPathStats, pathDefinitions, pathOrder } from '../../../lib/curriculum';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }];
+}
+
+const lang = getLanguage(Astro.params.lang || 'en');
+const strings = ui[lang];
+const all = await getCollection('tutorials', ({ data }) => !data.draft);
+const journey = getJourneyEntries(all, lang);
+const totalMinutes = journey.reduce((total, entry) => total + entry.data.readTime, 0);
+---
+<SiteLayout lang={lang} title={strings.navPaths} description={lang === 'en' ? 'The complete beginner learning roadmap for Business Analysts.' : 'خريطة تعلّم كاملة للمبتدئين في تحليل الأعمال.'} canonicalPath={`/${lang}/learning-paths/`} currentSection="paths">
+  <section class="roadmap-hero shell">
+    <Breadcrumbs lang={lang} items={[{ label: strings.navLearn, href: `/${lang}/` }, { label: strings.navPaths }]} />
+    <div class="roadmap-hero-grid">
+      <div>
+        <span class="eyebrow">{lang === 'en' ? 'Your recommended journey' : 'رحلتك المقترحة'}</span>
+        <h1>{lang === 'en' ? 'From your first BA question to AI-enabled work.' : 'من أول سؤال للـBA لحد شغل مدعوم بالذكاء الاصطناعي.'}</h1>
+        <p>{lang === 'en' ? 'Follow all three stages in order, or open the lesson that solves today’s problem. Nothing is locked.' : 'امشِ في المراحل الثلاث بالترتيب، أو افتح الدرس اللي يحل مشكلة شغلك النهارده. مفيش درس مقفول.'}</p>
+        <a class="button button-primary" href={withBase(`/${lang}/business/who-is-a-business-analyst/`)}>{pathDefinitions.business.copy[lang].action}</a>
+      </div>
+      <aside class="roadmap-summary">
+        <div><strong>{journey.length}</strong><span>{strings.lessons}</span></div>
+        <div><strong>{totalMinutes}</strong><span>{strings.minutes}</span></div>
+        <ProgressBar lang={lang} />
+      </aside>
+    </div>
+  </section>
+
+  <section class="roadmap-stages" aria-label={strings.navPaths}>
+    {pathOrder.map((category) => {
+      const path = pathDefinitions[category];
+      const copy = path.copy[lang];
+      const entries = getPathEntries(journey, category, lang);
+      const stats = getPathStats(entries);
+      return (
+        <article class={`roadmap-stage roadmap-stage-${category}`}>
+          <div class="shell roadmap-stage-grid">
+            <div class="roadmap-stage-intro">
+              <span class="stage-number">{String(path.stage).padStart(2, '0')}</span>
+              <span class="eyebrow">{strings.stage} {path.stage}</span>
+              <h2 id={`stage-${category}`}>{copy.title}</h2>
+              <p>{copy.purpose}</p>
+              <div class="path-stats"><span>{stats.lessonCount} {strings.lessons}</span><span>{stats.totalMinutes} {strings.minutes}</span></div>
+              <p class="stage-prerequisite"><strong>{lang === 'en' ? 'Recommended:' : 'المقترح:'}</strong> {copy.prerequisite}</p>
+              <ProgressBar lang={lang} path={category} />
+              <div class="inline-actions">
+                <a class="button button-primary" data-path-action data-path={category} href={withBase(getEntryUrl(entries[0]))}>{strings.startPath}</a>
+                <a class="text-link" href={withBase(`/${lang}/${category}/`)}>{lang === 'en' ? 'View path details' : 'اعرض تفاصيل المسار'}</a>
+              </div>
+            </div>
+            <CurriculumList entries={entries} lang={lang} labelledby={`stage-${category}`} />
+          </div>
+        </article>
+      );
+    })}
+  </section>
+  <LearningProgressData entries={all} lang={lang} />
+</SiteLayout>

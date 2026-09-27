@@ -8,8 +8,15 @@ category: business
 tags: ["prioritization","requirements","product"]
 difficulty: beginner
 published: 2026-09-24
-updated: 2026-09-24
+updated: 2026-09-27
 readTime: 11
+order: 3
+prerequisites: ["stakeholder-analysis"]
+learningOutcomes:
+  - "تختار طريقة ترتيب الأولويات المناسبة للقرار والأدلة المتاحة."
+  - "تطبق MoSCoW ومصفوفة القيمة–المجهود وRICE وWSJF من غير إخفاء الافتراضات."
+  - "تدير نقاش الأولويات وتوثّق سبب القرار."
+practicalSkill: "إدارة وتوثيق قرار أولوية مبني على أدلة واضحة."
 heroImage: /images/ar/prioritization_value_effort_matrix_ar.png
 related: ["stakeholder-analysis","llms-for-business-analysts"]
 draft: false

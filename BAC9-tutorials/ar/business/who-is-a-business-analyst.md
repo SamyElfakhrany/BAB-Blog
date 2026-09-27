@@ -8,8 +8,15 @@ category: business
 tags: ["business-analysis","ba-role","project-lifecycle","agile","waterfall"]
 difficulty: beginner
 published: 2026-09-25
-updated: 2026-09-25
+updated: 2026-09-27
 readTime: 15
+order: 1
+prerequisites: []
+learningOutcomes:
+  - "تشرح قيمة دور محلل الأعمال خلال رحلة التغيير."
+  - "تميّز بين مسؤوليات محلل الأعمال ومدير المشروع ومالك المنتج."
+  - "تحوّل طلب حل جاهز إلى مشكلة واضحة وخطة عمل عملية للـBA."
+practicalSkill: "صياغة التغيير وتحديد شغل محلل الأعمال المطلوب لدعمه."
 heroImage: /images/ar/ba-project-lifecycle_ar.svg
 related: ["stakeholder-analysis","prioritization-techniques"]
 draft: false

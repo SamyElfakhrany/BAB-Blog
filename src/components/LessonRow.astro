@@ -1,0 +1,25 @@
+---
+import type { Language, Tutorial } from '../lib/content';
+import { getEntryUrl, ui, withBase } from '../lib/content';
+
+interface Props { entry: Tutorial; lang: Language; step: number; }
+const { entry, lang, step } = Astro.props;
+const strings = ui[lang];
+const prerequisites = entry.data.prerequisites.join(',');
+---
+<article class="lesson-row" data-lesson-id={entry.data.translationId} data-path={entry.data.category} data-prerequisites={prerequisites}>
+  <div class="lesson-step" aria-hidden="true">{String(step).padStart(2, '0')}</div>
+  <div class="lesson-copy">
+    <div class="lesson-meta">
+      <span>{entry.data.readTime} {strings.minRead}</span>
+      <span>{entry.data.difficulty === 'beginner' ? strings.beginner : entry.data.difficulty === 'intermediate' ? strings.intermediate : strings.advanced}</span>
+      <span class="lesson-state" data-lesson-state hidden></span>
+    </div>
+    <h3><a href={withBase(getEntryUrl(entry))}>{entry.data.title}</a></h3>
+    <p>{entry.data.practicalSkill}</p>
+    {entry.data.prerequisites.length > 0 && <small class="lesson-prerequisite" data-prerequisite-status>{strings.prerequisites}</small>}
+  </div>
+  <a class="lesson-action" href={withBase(getEntryUrl(entry))} aria-label={`${lang === 'en' ? 'Open' : 'افتح'} ${entry.data.title}`}>
+    <span>{lang === 'en' ? 'Open lesson' : 'افتح الدرس'}</span><span class="direction-icon" aria-hidden="true">→</span>
+  </a>
+</article>

@@ -8,8 +8,15 @@ category: technical
 tags: ["cloud-computing","non-functional-requirements","resilience"]
 difficulty: beginner
 published: 2026-09-26
-updated: 2026-09-26
+updated: 2026-09-27
 readTime: 10
+order: 4
+prerequisites: ["software-architecture-for-business-analysts"]
+learningOutcomes:
+  - "تشرح إزاي اختيار خدمة Cloud بيغيّر مسؤوليات الفريق."
+  - "تحوّل توقعات التوسع والإتاحة والتعافي لمتطلبات قابلة للاختبار."
+  - "تسأل أسئلة عملية عن الأمان والتكلفة والمراقبة والملكية."
+practicalSkill: "كتابة متطلبات Cloud ومتطلبات غير وظيفية يقدر الفريق يتحقق منها."
 heroImage: /images/ar/cloud-shopping-flow-ar.png
 related: ["apis-for-business-analysts","databases-for-business-analysts","version-control-for-business-analysts"]
 draft: false

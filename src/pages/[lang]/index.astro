@@ -1,9 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import TutorialCard from '../../components/TutorialCard.astro';
+import ContinueLearning from '../../components/ContinueLearning.astro';
+import CurriculumList from '../../components/CurriculumList.astro';
+import LearningPathCard from '../../components/LearningPathCard.astro';
+import LearningProgressData from '../../components/LearningProgressData.astro';
 import SearchBox from '../../components/SearchBox.astro';
-import { categoryDescriptions, categoryLabels, getLanguage, ui, withBase } from '../../lib/content';
+import { getLanguage, ui, withBase } from '../../lib/content';
+import { getJourneyEntries, getPathEntries, pathDefinitions, pathOrder } from '../../lib/curriculum';
 
 export async function getStaticPaths() {
   return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }];
@@ -11,46 +15,65 @@ export async function getStaticPaths() {
 
 const lang = getLanguage(Astro.params.lang || 'en');
 const strings = ui[lang];
-const all = (await getCollection('tutorials', ({ data }) => data.lang === lang && !data.draft)).sort((a, b) => a.data.published.valueOf() - b.data.published.valueOf());
-const featured = all.slice(-3).reverse();
+const all = await getCollection('tutorials', ({ data }) => !data.draft);
+const journey = getJourneyEntries(all, lang);
+const firstLesson = journey[0];
+const recommended = journey.slice(0, 3);
 ---
-<SiteLayout lang={lang} title={strings.siteLabel} description={strings.homeIntro}>
+<SiteLayout lang={lang} title={strings.siteLabel} description={strings.homeIntro} currentSection="start">
   <section class="home-hero shell">
     <div class="hero-copy">
-      <span class="eyebrow">Business Analysis Bootcamp · BAC9</span>
-      <h1>{lang === 'en' ? 'Build the BA muscle for real work.' : 'ابنِ مهارات محلل الأعمال للعمل الحقيقي.'}</h1>
-      <p>{strings.homeIntro}</p>
-      <div class="hero-actions"><a class="button button-primary" href={withBase(`/${lang}/business/`)}>{strings.featured} <span aria-hidden="true">↗</span></a><a class="button button-quiet" href={withBase(`/${lang}/case-study/`)}>{strings.navCaseStudy}</a></div>
+      <span class="eyebrow">BAC9 · {strings.siteLabel}</span>
+      <h1>{lang === 'en' ? 'Learn Business Analysis, step by step.' : 'اتعلّم تحليل الأعمال خطوة بخطوة.'}</h1>
+      <p>{lang === 'en'
+        ? 'Follow a practical journey through business foundations, technical fluency, and responsible AI—built for beginner Business Analysts.'
+        : 'امشِ في رحلة عملية من أساسيات تحليل الأعمال للفهم التقني والاستخدام المسؤول للذكاء الاصطناعي—مصممة للمبتدئين.'}</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href={withBase(`/${lang}/business/who-is-a-business-analyst/`)}>{pathDefinitions.business.copy[lang].action} <span class="direction-icon" aria-hidden="true">→</span></a>
+        <a class="button button-quiet" href={withBase(`/${lang}/learning-paths/`)}>{lang === 'en' ? 'Explore the learning roadmap' : 'استكشف خريطة التعلّم'}</a>
+      </div>
     </div>
-    <div class="hero-note">
-      <div class="note-number">01</div>
-      <p>{lang === 'en' ? 'One case study. Clear concepts. Useful artifacts.' : 'دراسة حالة واحدة. مفاهيم واضحة. مخرجات مفيدة.'}</p>
-      <div class="note-line"></div>
-      <span>{lang === 'en' ? 'Learn → apply → discuss' : 'تعلّم ← طبّق ← ناقش'}</span>
+    <div class="journey-summary" aria-label={lang === 'en' ? 'Learning journey summary' : 'ملخص رحلة التعلّم'}>
+      <strong>11</strong>
+      <span>{strings.lessons}</span>
+      <div></div>
+      <strong>{journey.reduce((total, entry) => total + entry.data.readTime, 0)}</strong>
+      <span>{strings.minutes}</span>
+      <p>{lang === 'en' ? 'One case study connects every stage.' : 'دراسة حالة واحدة بتربط كل المراحل.'}</p>
     </div>
   </section>
+
+  {firstLesson && <div class="shell continue-section"><ContinueLearning lang={lang} firstLesson={firstLesson} allEntries={all} /></div>}
 
   <section class="path-section shell" aria-labelledby="paths-title">
-    <div class="section-heading"><div><span class="eyebrow">{lang === 'en' ? 'Three paths' : 'ثلاثة مسارات'}</span><h2 id="paths-title">{lang === 'en' ? 'A connected way to learn.' : 'طريقة مترابطة للتعلّم.'}</h2></div><p>{strings.caseStudyIntro}</p></div>
-    <div class="path-grid">
-      {(['business', 'technical', 'ai'] as const).map((category, index) => (
-        <a class={`path-card path-${category}`} href={withBase(`/${lang}/${category}/`)}>
-          <span class="path-index">0{index + 1}</span><span class="path-kicker">{category === 'business' ? 'THINK' : category === 'technical' ? 'COLLABORATE' : 'MULTIPLY'}</span>
-          <h3>{categoryLabels[category][lang]}</h3><p>{categoryDescriptions[category][lang]}</p><span class="path-arrow" aria-hidden="true">↗</span>
-        </a>
-      ))}
+    <div class="section-heading">
+      <div><span class="eyebrow">{strings.navPaths}</span><h2 id="paths-title">{lang === 'en' ? 'One journey. Three connected stages.' : 'رحلة واحدة. ثلاث مراحل مترابطة.'}</h2></div>
+      <p>{lang === 'en' ? 'Start with the BA role, build confidence with software teams, then add AI responsibly.' : 'ابدأ بدور الـBA، وابنِ ثقتك مع فرق البرمجيات، وبعدها استخدم الـAI بمسؤولية.'}</p>
+    </div>
+    <div class="learning-path-grid">
+      {pathOrder.map((category) => <LearningPathCard category={category} entries={getPathEntries(journey, category, lang)} lang={lang} />)}
+    </div>
+    <div class="roadmap-link-row"><a class="button button-quiet" href={withBase(`/${lang}/learning-paths/`)}>{lang === 'en' ? 'See the complete roadmap' : 'شوف خريطة التعلّم كاملة'}</a></div>
+  </section>
+
+  <section class="how-section">
+    <div class="shell">
+      <div class="section-heading"><div><span class="eyebrow">{lang === 'en' ? 'How BAC9 works' : 'إزاي تتعلّم مع BAC9'}</span><h2>{lang === 'en' ? 'Turn each idea into something you can use.' : 'حوّل كل فكرة لحاجة تقدر تستخدمها.'}</h2></div></div>
+      <ol class="learning-loop">
+        <li><span>01</span><strong>{lang === 'en' ? 'Learn' : 'اتعلّم'}</strong><p>{lang === 'en' ? 'Understand the idea in plain language.' : 'افهم الفكرة بلغة بسيطة.'}</p></li>
+        <li><span>02</span><strong>{lang === 'en' ? 'See an example' : 'شوف مثال'}</strong><p>{lang === 'en' ? 'Follow the shared online-shopping case.' : 'تابع مثال التسوق الأونلاين المشترك.'}</p></li>
+        <li><span>03</span><strong>{lang === 'en' ? 'Apply it' : 'طبّقها'}</strong><p>{lang === 'en' ? 'Practice the BA questions and decisions.' : 'جرّب أسئلة وقرارات محلل الأعمال.'}</p></li>
+        <li><span>04</span><strong>{lang === 'en' ? 'Use the artifact' : 'استخدم المخرج'}</strong><p>{lang === 'en' ? 'Adapt a checklist or template to your work.' : 'عدّل Checklist أو Template يناسب شغلك.'}</p></li>
+      </ol>
+      <div class="inline-actions"><a class="text-link" href={withBase(`/${lang}/case-study/`)}>{strings.navCaseStudy}</a><a class="text-link" href={withBase(`/${lang}/templates/`)}>{strings.navTemplates}</a></div>
     </div>
   </section>
 
-  <section class="tutorial-section shell" aria-labelledby="featured-title">
-    <div class="section-heading"><div><span class="eyebrow">{strings.featured}</span><h2 id="featured-title">{lang === 'en' ? 'Start with a practical question.' : 'ابدأ بسؤال عملي.'}</h2></div><a class="text-link" href={withBase(`/${lang}/business/`)}>{strings.allTutorials} <span aria-hidden="true">↗</span></a></div>
-    <div class="tutorial-grid">{featured.map((entry) => <TutorialCard entry={entry} lang={lang} />)}</div>
-  </section>
-
-  <section class="case-study-band shell">
-    <div class="case-study-content"><span class="eyebrow">{strings.navCaseStudy}</span><h2>{lang === 'en' ? 'Follow one online-shopping app from idea to delivery.' : 'تابع تطبيق تسوق أونلاين من الفكرة إلى التسليم.'}</h2><p>{strings.caseStudyIntro}</p><a class="text-link" href={withBase(`/${lang}/case-study/`)}>{lang === 'en' ? 'Explore the case study' : 'استكشف دراسة الحالة'} <span aria-hidden="true">↗</span></a></div>
-    <div class="case-study-diagram"><div class="diagram-node">Customer need</div><span>→</span><div class="diagram-node diagram-node-accent">BA decision</div><span>→</span><div class="diagram-node">Team delivery</div></div>
+  <section class="curriculum-section shell" aria-labelledby="recommended-title">
+    <div class="section-heading"><div><span class="eyebrow">{lang === 'en' ? 'Recommended first lessons' : 'الدروس المقترحة للبداية'}</span><h2 id="recommended-title">{lang === 'en' ? 'Build your foundation in this order.' : 'ابنِ الأساس بالترتيب ده.'}</h2></div></div>
+    <CurriculumList entries={recommended} lang={lang} labelledby="recommended-title" />
   </section>
 
   <section class="search-section shell"><SearchBox lang={lang} /></section>
+  <LearningProgressData entries={all} lang={lang} />
 </SiteLayout>

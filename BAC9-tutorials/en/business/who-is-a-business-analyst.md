@@ -8,8 +8,15 @@ category: business
 tags: ["business-analysis","ba-role","project-lifecycle","agile","waterfall"]
 difficulty: beginner
 published: 2026-09-25
-updated: 2026-09-25
+updated: 2026-09-27
 readTime: 14
+order: 1
+prerequisites: []
+learningOutcomes:
+  - "Explain what a Business Analyst contributes throughout a change."
+  - "Distinguish the BA role from the Project Manager and Product Owner roles."
+  - "Turn a solution request into a problem statement and practical BA work plan."
+practicalSkill: "Frame a change and map the Business Analyst work needed to support it."
 heroImage: /images/en/ba-project-lifecycle.svg
 related: ["stakeholder-analysis","prioritization-techniques"]
 draft: false

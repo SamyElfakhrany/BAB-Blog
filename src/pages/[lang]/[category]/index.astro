@@ -1,8 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
-import TutorialCard from '../../../components/TutorialCard.astro';
-import { categoryDescriptions, categoryLabels, getLanguage, ui, withBase } from '../../../lib/content';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import CurriculumList from '../../../components/CurriculumList.astro';
+import LearningProgressData from '../../../components/LearningProgressData.astro';
+import ProgressBar from '../../../components/ProgressBar.astro';
+import { getEntryUrl, getLanguage, ui, withBase } from '../../../lib/content';
+import { getPathEntries, getPathStats, pathDefinitions } from '../../../lib/curriculum';
 
 export async function getStaticPaths() {
   return ['en', 'ar'].flatMap((lang) => ['business', 'technical', 'ai'].map((category) => ({ params: { lang, category } })));
@@ -11,11 +15,53 @@ export async function getStaticPaths() {
 const lang = getLanguage(Astro.params.lang || 'en');
 const category = (Astro.params.category || 'business') as 'business' | 'technical' | 'ai';
 const strings = ui[lang];
-const entries = (await getCollection('tutorials', ({ data }) => data.lang === lang && data.category === category && !data.draft)).sort((a, b) => a.data.published.valueOf() - b.data.published.valueOf());
+const all = await getCollection('tutorials', ({ data }) => !data.draft);
+const entries = getPathEntries(all, category, lang);
+const path = pathDefinitions[category];
+const copy = path.copy[lang];
+const stats = getPathStats(entries);
+const first = entries[0];
 ---
-<SiteLayout lang={lang} title={categoryLabels[category][lang]} description={categoryDescriptions[category][lang]} canonicalPath={`/${lang}/${category}/`}>
-  <section class={`category-hero category-hero-${category}`}>
-    <div class="shell category-hero-inner"><a class="back-link" href={withBase(`/${lang}/`)}>← {strings.backToLearn}</a><span class="eyebrow">{category === 'business' ? '01' : category === 'technical' ? '02' : '03'} / BAC9</span><h1>{categoryLabels[category][lang]}</h1><p>{categoryDescriptions[category][lang]}</p></div>
+<SiteLayout lang={lang} title={copy.title} description={copy.purpose} canonicalPath={`/${lang}/${category}/`} currentSection="paths">
+  <section class={`path-hero path-hero-${category}`}>
+    <div class="shell">
+      <Breadcrumbs lang={lang} items={[
+        { label: strings.navLearn, href: `/${lang}/` },
+        { label: strings.navPaths, href: `/${lang}/learning-paths/` },
+        { label: copy.title }
+      ]} />
+      <div class="path-hero-grid">
+        <div>
+          <span class="eyebrow">{strings.stage} {path.stage} · BAC9</span>
+          <h1>{copy.title}</h1>
+          <p>{copy.purpose}</p>
+          <div class="hero-actions">
+            {first && <a class="button button-primary button-light" data-path-action data-path={category} href={withBase(getEntryUrl(first))}>{strings.startPath}</a>}
+            <a class="button button-outline-light" href={withBase(`/${lang}/learning-paths/`)}>{strings.navPaths}</a>
+          </div>
+        </div>
+        <aside class="path-summary" aria-label={lang === 'en' ? 'Path summary' : 'ملخص المسار'}>
+          <div><strong>{stats.lessonCount}</strong><span>{strings.lessons}</span></div>
+          <div><strong>{stats.totalMinutes}</strong><span>{strings.minutes}</span></div>
+          <div><strong>{strings.beginner}</strong><span>{lang === 'en' ? 'difficulty' : 'المستوى'}</span></div>
+          <ProgressBar lang={lang} path={category} />
+        </aside>
+      </div>
+    </div>
   </section>
-  <section class="shell listing-section"><div class="listing-heading"><div><span class="eyebrow">{entries.length} {lang === 'en' ? 'tutorials' : 'دروس'}</span><h2>{lang === 'en' ? 'Choose your next practice.' : 'اختر تمرينك التالي.'}</h2></div><div class="language-pill">{lang === 'en' ? 'English' : 'العربية'} <span>·</span> <a href={withBase(`/${lang === 'en' ? 'ar' : 'en'}/${category}/`)}>{lang === 'en' ? 'switch language' : 'غيّر اللغة'}</a></div></div><div class="tutorial-grid">{entries.map((entry) => <TutorialCard entry={entry} lang={lang} />)}</div></section>
+
+  <section class="shell path-overview" aria-labelledby="path-outcome-title">
+    <div><span class="eyebrow">{lang === 'en' ? 'Who this is for' : 'المسار ده لمين؟'}</span><p>{copy.audience}</p></div>
+    <div><span class="eyebrow">{lang === 'en' ? 'What you will be able to do' : 'هتقدر تعمل إيه؟'}</span><h2 id="path-outcome-title">{copy.outcome}</h2></div>
+    <div><span class="eyebrow">{lang === 'en' ? 'Before you start' : 'قبل ما تبدأ'}</span><p>{copy.prerequisite}</p></div>
+  </section>
+
+  <section class="shell curriculum-section path-curriculum" aria-labelledby="curriculum-title">
+    <div class="section-heading">
+      <div><span class="eyebrow">{stats.lessonCount} {strings.lessons}</span><h2 id="curriculum-title">{lang === 'en' ? 'Follow the lessons in this order.' : 'امشِ في الدروس بالترتيب ده.'}</h2></div>
+      <p>{lang === 'en' ? 'Prerequisites are recommendations, not locks. Open any lesson whenever it helps your work.' : 'المتطلبات السابقة إرشادية مش قفل. افتح أي درس وقت ما يكون مفيد لشغلك.'}</p>
+    </div>
+    <CurriculumList entries={entries} lang={lang} labelledby="curriculum-title" />
+  </section>
+  <LearningProgressData entries={all} lang={lang} />
 </SiteLayout>

@@ -8,8 +8,15 @@ category: business
 tags: ["stakeholder-analysis","requirements","elicitation"]
 difficulty: beginner
 published: 2026-09-24
-updated: 2026-09-24
+updated: 2026-09-27
 readTime: 10
+order: 2
+prerequisites: ["who-is-a-business-analyst"]
+learningOutcomes:
+  - "Identify stakeholders who affect or are affected by a change."
+  - "Assess stakeholder power, interest, needs, and engagement risks."
+  - "Create a stakeholder register and a practical engagement plan."
+practicalSkill: "Build a stakeholder register and engagement plan for a change initiative."
 heroImage: /images/en/stakeholder_power_interest_matrix.png
 related: ["prioritization-techniques","version-control-for-business-analysts"]
 draft: false

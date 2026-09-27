@@ -18,6 +18,6 @@ const image = withBase(data.heroImage);
     <div class="card-meta"><span>{data.difficulty === 'beginner' ? strings.beginner : data.difficulty === 'intermediate' ? strings.intermediate : strings.advanced}</span><span>{data.readTime} {strings.minRead}</span></div>
     <h3><a href={withBase(getEntryUrl(entry))}>{title}</a></h3>
     {!compact && <p>{data.description}</p>}
-    <a class="text-link" href={withBase(getEntryUrl(entry))}>{strings.read} <span aria-hidden="true">↗</span></a>
+    <a class="text-link" href={withBase(getEntryUrl(entry))}>{strings.read} <span class="direction-icon" aria-hidden="true">→</span></a>
   </div>
 </article>

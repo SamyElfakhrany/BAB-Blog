@@ -8,8 +8,15 @@ category: technical
 tags: ["devops","ci-cd","requirements","release","observability"]
 difficulty: beginner
 published: 2026-09-26
-updated: 2026-09-26
+updated: 2026-09-27
 readTime: 14
+order: 6
+prerequisites: ["cloud-computing-for-business-analysts", "version-control-for-business-analysts"]
+learningOutcomes:
+  - "Trace a requirement from a code change through environments to production."
+  - "Define release evidence, monitoring, rollback, and incident expectations."
+  - "Connect production signals to business outcomes and follow-up decisions."
+practicalSkill: "Prepare a DevOps-ready Change Brief with release and production evidence."
 heroImage: /images/en/devops-ba-feedback-loop.svg
 related: ["software-architecture-for-business-analysts","version-control-for-business-analysts","cloud-computing-for-business-analysts","apis-for-business-analysts"]
 draft: false

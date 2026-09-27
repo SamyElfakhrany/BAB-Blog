@@ -1,0 +1,19 @@
+---
+import type { Category, Language } from '../lib/content';
+import { ui } from '../lib/content';
+
+interface Props {
+  lang: Language;
+  path?: Category;
+  compact?: boolean;
+}
+
+const { lang, path, compact = false } = Astro.props;
+const strings = ui[lang];
+const scope = path || 'journey';
+const label = path ? strings.pathProgress : strings.journeyProgress;
+---
+<div class:list={['progress-block', compact && 'progress-block--compact']} data-progress-scope={scope}>
+  <div class="progress-label"><span>{label}</span><span data-progress-text>0%</span></div>
+  <progress data-progress-bar max="100" value="0" aria-label={label}>0%</progress>
+</div>

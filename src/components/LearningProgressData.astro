@@ -1,0 +1,49 @@
+---
+import type { Language, Tutorial } from '../lib/content';
+import { getEntryUrl, ui, withBase } from '../lib/content';
+import { getJourneyEntries, getLessonPosition, pathDefinitions, pathOrder } from '../lib/curriculum';
+
+interface Props { entries: Tutorial[]; lang: Language; currentLessonId?: string; }
+const { entries, lang, currentLessonId } = Astro.props;
+const journey = getJourneyEntries(entries, lang);
+const strings = ui[lang];
+const data = {
+  currentLessonId: currentLessonId || null,
+  roadmapUrl: withBase(`/${lang}/learning-paths/`),
+  lessons: journey.map((entry) => {
+    const position = getLessonPosition(entry, entries);
+    return {
+      id: entry.data.translationId,
+      title: entry.data.title,
+      url: withBase(getEntryUrl(entry)),
+      path: entry.data.category,
+      pathTitle: pathDefinitions[entry.data.category].copy[lang].title,
+      step: position.step,
+      total: position.total,
+      prerequisites: entry.data.prerequisites
+    };
+  }),
+  paths: pathOrder.map((path) => ({ id: path, lessonIds: journey.filter((entry) => entry.data.category === path).map((entry) => entry.data.translationId) })),
+  strings: {
+    completed: strings.completed,
+    current: strings.currentLesson,
+    next: strings.nextLessonState,
+    markComplete: strings.markComplete,
+    markIncomplete: strings.markIncomplete,
+    continueLearning: lang === 'en' ? 'Continue learning' : 'كمّل التعلّم',
+    continueJourney: lang === 'en' ? 'Continue your learning journey' : 'كمّل رحلة تعلّمك',
+    startPath: strings.startPath,
+    continuePath: strings.continuePath,
+    journeyComplete: strings.journeyComplete,
+    reviewRoadmap: lang === 'en' ? 'Review the roadmap' : 'راجع خريطة التعلّم',
+    lesson: strings.lesson,
+    of: strings.of,
+    progressUnavailable: strings.progressUnavailable
+  }
+};
+const json = JSON.stringify(data).replace(/</g, '\\u003c');
+---
+<script id="bac9-learning-data" type="application/json" set:html={json}></script>
+<script>
+  import '../scripts/learning-progress-client';
+</script>

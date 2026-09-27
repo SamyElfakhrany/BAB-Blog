@@ -8,8 +8,15 @@ category: technical
 tags: ["software-architecture","systems-thinking","requirements","non-functional-requirements"]
 difficulty: beginner
 published: 2026-09-26
-updated: 2026-09-26
+updated: 2026-09-27
 readTime: 14
+order: 1
+prerequisites: []
+learningOutcomes:
+  - "تقرأ سياق النظام وتحدد الحدود والمكونات والاعتماديات."
+  - "تتبع رحلة عمل داخل الحل وتكشف أسئلة المسؤولية والملكية."
+  - "تناقش اختيارات المعمارية كمفاضلات مرتبطة بالعمل والجودة."
+practicalSkill: "إنشاء Architecture Discovery Brief يربط الاحتياج بقرارات الحل."
 heroImage: /images/ar/software-architecture-ba-map_ar.svg
 related: ["apis-for-business-analysts","databases-for-business-analysts","devops-for-business-analysts","cloud-computing-for-business-analysts"]
 draft: false

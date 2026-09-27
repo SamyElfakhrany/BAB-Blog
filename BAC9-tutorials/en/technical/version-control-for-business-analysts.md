@@ -8,8 +8,15 @@ category: technical
 tags: ["git","github","technical-literacy"]
 difficulty: beginner
 published: 2026-09-24
-updated: 2026-09-24
+updated: 2026-09-27
 readTime: 14
+order: 5
+prerequisites: []
+learningOutcomes:
+  - "Explain how repositories, commits, branches, and pull requests connect."
+  - "Read a pull-request change without needing to write code."
+  - "Review a software change against requirements and acceptance evidence."
+practicalSkill: "Review a pull request as a Business Analyst and ask focused change questions."
 heroImage: /images/en/git_branch_pull_request.png
 related: ["devops-for-business-analysts","stakeholder-analysis","llms-for-business-analysts"]
 draft: false

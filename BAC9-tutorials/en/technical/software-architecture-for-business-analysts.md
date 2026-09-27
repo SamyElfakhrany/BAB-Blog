@@ -8,8 +8,15 @@ category: technical
 tags: ["software-architecture","systems-thinking","requirements","non-functional-requirements"]
 difficulty: beginner
 published: 2026-09-26
-updated: 2026-09-26
+updated: 2026-09-27
 readTime: 14
+order: 1
+prerequisites: []
+learningOutcomes:
+  - "Read a system context and identify boundaries, components, and dependencies."
+  - "Trace a business journey through a solution and locate ownership questions."
+  - "Discuss architecture options as business and quality trade-offs."
+practicalSkill: "Create an Architecture Discovery Brief that connects needs to solution decisions."
 heroImage: /images/en/software-architecture-ba-map.svg
 related: ["apis-for-business-analysts","databases-for-business-analysts","devops-for-business-analysts","cloud-computing-for-business-analysts"]
 draft: false

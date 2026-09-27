@@ -8,8 +8,15 @@ category: technical
 tags: ["databases","data-modeling","sql"]
 difficulty: beginner
 published: 2026-09-26
-updated: 2026-09-26
+updated: 2026-09-27
 readTime: 10
+order: 2
+prerequisites: ["software-architecture-for-business-analysts"]
+learningOutcomes:
+  - "Explain how records, keys, and relationships support business behavior."
+  - "Read a small SQL query well enough to validate its business meaning."
+  - "Define data rules, ownership questions, and acceptance checks."
+practicalSkill: "Turn a business data need into clear data rules and validation questions."
 heroImage: /images/en/database-relationships-en.png
 related: ["apis-for-business-analysts","cloud-computing-for-business-analysts","version-control-for-business-analysts"]
 draft: false

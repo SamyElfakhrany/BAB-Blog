@@ -1,8 +1,15 @@
 ---
 import { getCollection, render } from 'astro:content';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import LearningOutcomes from '../../../components/LearningOutcomes.astro';
+import LearningProgressData from '../../../components/LearningProgressData.astro';
+import LessonNavigation from '../../../components/LessonNavigation.astro';
+import PrerequisiteNotice from '../../../components/PrerequisiteNotice.astro';
+import ProgressBar from '../../../components/ProgressBar.astro';
 import TutorialCard from '../../../components/TutorialCard.astro';
-import { categoryLabels, getLanguage, getEntryUrl, getSlug, ui, withBase } from '../../../lib/content';
+import { getLanguage, getEntryUrl, getSlug, ui, withBase } from '../../../lib/content';
+import { getAdjacentLessons, getLessonPosition, getTutorialByTranslationId, pathDefinitions } from '../../../lib/curriculum';
 
 export async function getStaticPaths() {
   const entries = await getCollection('tutorials', ({ data }) => !data.draft);
@@ -16,16 +23,110 @@ const { Content, headings } = await render(entry);
 const all = await getCollection('tutorials', ({ data }) => !data.draft);
 const related = all.filter((item) => item.data.lang === lang && entry.data.related.includes(item.data.id));
 const counterpart = all.find((item) => item.data.translationId === entry.data.translationId && item.data.lang !== lang);
-const languagePath = counterpart ? getEntryUrl(counterpart) : `/${lang}/`;
+const alternatePath = counterpart ? getEntryUrl(counterpart) : `/${lang === 'en' ? 'ar' : 'en'}/`;
+const path = pathDefinitions[entry.data.category];
+const pathCopy = path.copy[lang];
+const position = getLessonPosition(entry, all);
+const adjacent = getAdjacentLessons(entry, all);
+const prerequisites = entry.data.prerequisites.map((id) => getTutorialByTranslationId(all, id, lang)).filter(Boolean);
+const tocHeadings = headings.filter((heading) => heading.depth === 2);
+const tocLabel = (text: string) => text.replace(/^\s*\d+(?:\.\d+)*[.)،:]?\s*/, '');
 ---
-<SiteLayout lang={lang} title={entry.data.title} description={entry.data.description} canonicalPath={getEntryUrl(entry)} image={entry.data.heroImage}>
-  <article class="article-page shell">
-    <div class="article-topline"><a class="back-link" href={withBase(`/${lang}/${entry.data.category}/`)}>← {categoryLabels[entry.data.category][lang]}</a><a class="language-pill" href={withBase(languagePath)}>{strings.language} ↗</a></div>
-    <header class="article-header"><div class="article-labels"><span class={`category-chip category-${entry.data.category}`}>{categoryLabels[entry.data.category][lang]}</span><span>{entry.data.difficulty === 'beginner' ? strings.beginner : entry.data.difficulty === 'intermediate' ? strings.intermediate : strings.advanced}</span><span>{entry.data.readTime} {strings.minRead}</span></div><h1>{entry.data.title}</h1><p>{entry.data.description}</p><div class="article-date">{new Intl.DateTimeFormat(lang === 'ar' ? 'ar-EG' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' }).format(entry.data.updated)}</div></header>
-    <div class="article-grid">
-      <aside class="article-sidebar"><div class="toc"><span class="eyebrow">{lang === 'en' ? 'In this tutorial' : 'في هذا الدرس'}</span><ol>{headings.filter((heading) => heading.depth <= 2).map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol></div><div class="sidebar-image"><img src={withBase(entry.data.heroImage)} alt="" /></div></aside>
-      <div class="article-body prose"><Content /></div>
+<SiteLayout
+  lang={lang}
+  title={entry.data.title}
+  description={entry.data.description}
+  canonicalPath={getEntryUrl(entry)}
+  alternatePath={alternatePath}
+  image={entry.data.heroImage}
+  currentSection="paths"
+>
+  <article class="lesson-page shell" data-current-lesson={entry.data.translationId}>
+    <Breadcrumbs lang={lang} items={[
+      { label: strings.navPaths, href: `/${lang}/learning-paths/` },
+      { label: pathCopy.title, href: `/${lang}/${entry.data.category}/` },
+      { label: entry.data.title }
+    ]} />
+
+    <header class="lesson-header">
+      <div class="lesson-context">
+        <span class={`category-chip category-${entry.data.category}`}>{strings.stage} {path.stage} · {pathCopy.shortTitle}</span>
+        <span>{strings.lesson} {position.step} {strings.of} {position.total}</span>
+        <span>{entry.data.readTime} {strings.minRead}</span>
+        <span>{entry.data.difficulty === 'beginner' ? strings.beginner : entry.data.difficulty === 'intermediate' ? strings.intermediate : strings.advanced}</span>
+      </div>
+      <div class="lesson-header-grid">
+        <div><h1>{entry.data.title}</h1><p>{entry.data.description}</p></div>
+        <ProgressBar lang={lang} path={entry.data.category} />
+      </div>
+    </header>
+
+    <div class="lesson-layout">
+      <aside class="lesson-sidebar">
+        <details class="toc" open>
+          <summary>{lang === 'en' ? 'In this lesson' : 'محتويات الدرس'}</summary>
+          <ol>{tocHeadings.map((heading, index) => <li><span class="toc-number" aria-hidden="true">{index + 1}</span><a href={`#${heading.slug}`}>{tocLabel(heading.text)}</a></li>)}</ol>
+        </details>
+        <a class="sidebar-path-link" href={withBase(`/${lang}/${entry.data.category}/`)}>{strings.backToPath}</a>
+      </aside>
+      <div class="lesson-main">
+        <LearningOutcomes lang={lang} outcomes={entry.data.learningOutcomes} practicalSkill={entry.data.practicalSkill} />
+        <PrerequisiteNotice lang={lang} prerequisites={prerequisites as any} />
+        <div class="article-body prose"><Content /></div>
+        <section class="completion-panel" aria-labelledby="completion-title">
+          <div>
+            <span class="eyebrow">{lang === 'en' ? 'Lesson complete?' : 'خلصت الدرس؟'}</span>
+            <h2 id="completion-title">{lang === 'en' ? 'Save your progress on this device.' : 'احفظ تقدمك على الجهاز ده.'}</h2>
+            <p>{lang === 'en' ? 'You can change this later. No account or personal data is required.' : 'تقدر تغيّر العلامة بعدين، ومن غير حساب أو بيانات شخصية.'}</p>
+            <p class="storage-message" data-progress-unavailable hidden></p>
+          </div>
+          <button class="button button-primary" type="button" data-completion-toggle={entry.data.translationId} aria-pressed="false" hidden>{strings.markComplete}</button>
+        </section>
+        <LessonNavigation lang={lang} previous={adjacent.previous} next={adjacent.next} current={entry} />
+      </div>
     </div>
   </article>
-  {related.length > 0 && <section class="shell related-section"><div class="section-heading"><div><span class="eyebrow">{strings.related}</span><h2>{lang === 'en' ? 'Put the idea to work.' : 'حوّل الفكرة إلى ممارسة.'}</h2></div></div><div class="tutorial-grid">{related.map((item) => <TutorialCard entry={item} lang={lang} compact />)}</div></section>}
+
+  {related.length > 0 && (
+    <section class="shell related-section" aria-labelledby="related-title">
+      <div class="section-heading"><div><span class="eyebrow">{strings.optionalResources}</span><h2 id="related-title">{lang === 'en' ? 'Explore when it helps your work.' : 'استكشف وقت ما يكون مفيد لشغلك.'}</h2></div><p>{lang === 'en' ? 'These are optional resources, not the required next lesson.' : 'المصادر دي اختيارية، ومش هي الدرس المطلوب التالي.'}</p></div>
+      <div class="tutorial-grid">{related.map((item) => <TutorialCard entry={item} lang={lang} compact />)}</div>
+    </section>
+  )}
+  <LearningProgressData entries={all} lang={lang} currentLessonId={entry.data.translationId} />
+  <script>
+    const toc = document.querySelector<HTMLDetailsElement>('.toc');
+    const mobile = window.matchMedia('(max-width: 700px)');
+    if (toc && mobile.matches) toc.open = false;
+    const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc a')];
+    const targets = links.map((link) => document.getElementById(decodeURIComponent(link.hash.slice(1)))).filter(Boolean) as HTMLElement[];
+    if (targets.length) {
+      let scheduled = false;
+      const selectSection = () => {
+        const readingLine = Math.min(window.innerHeight * 0.28, 180);
+        let current = targets[0];
+        for (const target of targets) {
+          if (target.getBoundingClientRect().top <= readingLine) current = target;
+          else break;
+        }
+        if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) current = targets.at(-1) || current;
+        const currentIndex = targets.indexOf(current);
+        links.forEach((link, index) => {
+          const selected = index === currentIndex;
+          if (selected) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+          link.closest('li')?.classList.toggle('is-active', selected);
+        });
+        scheduled = false;
+      };
+      const scheduleSelection = () => {
+        if (scheduled) return;
+        scheduled = true;
+        window.requestAnimationFrame(selectSection);
+      };
+      window.addEventListener('scroll', scheduleSelection, { passive: true });
+      window.addEventListener('resize', scheduleSelection);
+      selectSection();
+    }
+  </script>
 </SiteLayout>

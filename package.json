@@ -8,6 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "check": "astro check",
+    "test:learning": "node --test scripts/learning-progress.test.mjs",
     "import:bac9": "node scripts/import-bac9.mjs",
     "validate:content": "node scripts/validate-content.mjs",
     "editor": "node scripts/editor-server.mjs"

@@ -1,13 +1,128 @@
 ---
-import { getLanguage, ui, withBase } from '../../../lib/content';
+import { categoryLabels, getEntryUrl, getLanguage, ui, withBase } from '../../../lib/content';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import { getCollection } from 'astro:content';
+import templateCatalog from '../../../data/template-catalog.json';
+import type { Category } from '../../../lib/content';
+
 const lang = getLanguage(Astro.params.lang || 'en');
 const strings = ui[lang];
-export function getStaticPaths() { return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }]; }
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }];
+}
+
 const entries = await getCollection('tutorials', ({ data }) => data.lang === lang && !data.draft);
+const entriesById = new Map(entries.map((entry) => [entry.data.translationId, entry]));
+const templates = templateCatalog.map((template) => ({
+  ...template,
+  copy: template[lang],
+  lesson: entriesById.get(template.id),
+}));
+
+const copy = lang === 'en'
+  ? {
+      title: 'Use the artifact, not just the idea.',
+      intro: 'Preview each practical BA template here, then download an editable Excel workbook. Every file includes English and Arabic versions.',
+      count: `${templates.length} practical templates`,
+      bilingual: 'English + Arabic in every workbook',
+      preview: 'Preview template',
+      hide: 'Hide preview',
+      download: 'Download Excel template',
+      lesson: 'Learn how to use it',
+      editable: 'Editable in Excel',
+      blankCell: 'Complete in Excel',
+      previewLabel: 'Template preview',
+    }
+  : {
+      title: 'استخدم المخرج، مش الفكرة بس.',
+      intro: 'عاين كل قالب عملي لمحلل الأعمال هنا، وبعدها حمّل نسخة Excel قابلة للتعديل. كل ملف فيه نسخة عربية وإنجليزية.',
+      count: `${templates.length} قالب عملي`,
+      bilingual: 'العربية والإنجليزية في كل ملف',
+      preview: 'اعرض القالب',
+      hide: 'اخفِ المعاينة',
+      download: 'حمّل قالب Excel',
+      lesson: 'تعلّم تستخدمه إزاي',
+      editable: 'قابل للتعديل في Excel',
+      blankCell: 'املأه في Excel',
+      previewLabel: 'معاينة القالب',
+    };
 ---
-<SiteLayout lang={lang} title={strings.navTemplates} description={lang === 'en' ? 'Reusable templates and exercises from BAC9 tutorials.' : 'قوالب وتمارين قابلة لإعادة الاستخدام من دروس BAC9.'} canonicalPath={`/${lang}/templates/`}>
-  <section class="simple-hero shell"><span class="eyebrow">BAC9 / {strings.navTemplates}</span><h1>{lang === 'en' ? 'Take the useful part with you.' : 'خذ الجزء المفيد معك.'}</h1><p>{lang === 'en' ? 'Every tutorial ends with an artifact you can adapt to a real conversation or project.' : 'ينتهي كل درس بمخرج يمكنك تكييفه مع محادثة أو مشروع حقيقي.'}</p></section>
-  <section class="shell resource-list">{entries.map((entry) => <a class="resource-row" href={withBase(`/${lang}/${entry.data.category}/${entry.data.id}/`)}><span class={`category-chip category-${entry.data.category}`}>{entry.data.category}</span><strong>{entry.data.title}</strong><span>↗</span></a>)}</section>
+<SiteLayout
+  lang={lang}
+  title={strings.navTemplates}
+  description={lang === 'en' ? 'Preview and download bilingual Excel templates from BAC9 tutorials.' : 'عاين وحمّل قوالب Excel ثنائية اللغة من دروس BAC9.'}
+  canonicalPath={`/${lang}/templates/`}
+  currentSection="templates"
+>
+  <section class="simple-hero template-hero shell">
+    <span class="eyebrow">BAC9 / {strings.navTemplates}</span>
+    <h1>{copy.title}</h1>
+    <p>{copy.intro}</p>
+    <div class="template-hero-meta" aria-label={lang === 'en' ? 'Template library details' : 'تفاصيل مكتبة القوالب'}>
+      <span>{copy.count}</span>
+      <span>{copy.bilingual}</span>
+      <span>.xlsx</span>
+    </div>
+  </section>
+
+  <section class="shell template-library" aria-label={strings.navTemplates}>
+    {templates.map((template, index) => (
+      <details class={`template-card category-${template.category}`} open={index === 0}>
+        <summary>
+          <span class="template-summary-copy">
+            <span class={`category-chip category-${template.category}`}>{categoryLabels[template.category as Category][lang]}</span>
+            <strong>{template.copy.title}</strong>
+            <span>{template.copy.description}</span>
+          </span>
+          <span class="template-summary-action">
+            <span class="template-show-label">{copy.preview}</span>
+            <span class="template-hide-label">{copy.hide}</span>
+            <span class="template-chevron" aria-hidden="true">⌄</span>
+          </span>
+        </summary>
+
+        <div class="template-card-body">
+          <div
+            class={`template-preview template-preview--${template.kind}`}
+            tabindex="0"
+            role="region"
+            aria-label={`${copy.previewLabel}: ${template.copy.title}`}
+          >
+            <table>
+              <thead>
+                <tr>{template.copy.headers.map((header) => <th scope="col">{header}</th>)}</tr>
+              </thead>
+              <tbody>
+                {template.kind === 'fields' ? (
+                  template.copy.items.map((item) => (
+                    <tr>
+                      <th scope="row">{item}</th>
+                      <td><span>{copy.blankCell}</span></td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>{template.copy.headers.map(() => <td><span>{copy.blankCell}</span></td>)}</tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="template-card-footer">
+            <span class="template-format"><span aria-hidden="true">✓</span> {copy.editable}</span>
+            <div class="template-actions">
+              {template.lesson && (
+                <a class="text-link" href={`${withBase(getEntryUrl(template.lesson))}#${template.lessonSection[lang]}`}>
+                  {copy.lesson} <span class="direction-icon" aria-hidden="true">→</span>
+                </a>
+              )}
+              <a class="button button-primary" href={withBase(template.download)} download>
+                {copy.download} <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </details>
+    ))}
+  </section>
 </SiteLayout>

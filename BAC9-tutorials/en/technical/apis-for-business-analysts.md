@@ -8,8 +8,15 @@ category: technical
 tags: ["api","integration","requirements"]
 difficulty: beginner
 published: 2026-09-26
-updated: 2026-09-26
+updated: 2026-09-27
 readTime: 9
+order: 3
+prerequisites: ["databases-for-business-analysts"]
+learningOutcomes:
+  - "Explain why a system uses an API and what an API contract defines."
+  - "Read example requests, responses, statuses, and error outcomes."
+  - "Ask developers relevant questions about integration behavior and exceptions."
+practicalSkill: "Analyze an API contract and document integration behavior and failures."
 heroImage: /images/en/api-order-flow-en.png
 related: ["databases-for-business-analysts","cloud-computing-for-business-analysts","version-control-for-business-analysts"]
 draft: false

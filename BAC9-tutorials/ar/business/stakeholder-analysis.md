@@ -8,8 +8,15 @@ category: business
 tags: ["stakeholder-analysis","requirements","elicitation"]
 difficulty: beginner
 published: 2026-09-24
-updated: 2026-09-24
+updated: 2026-09-27
 readTime: 10
+order: 2
+prerequisites: ["who-is-a-business-analyst"]
+learningOutcomes:
+  - "تحدد أصحاب المصلحة المؤثرين في التغيير أو المتأثرين به."
+  - "تحلل القوة والاهتمام والاحتياجات ومخاطر المشاركة."
+  - "تنشئ سجل أصحاب مصلحة وخطة تواصل عملية."
+practicalSkill: "بناء سجل أصحاب مصلحة وخطة مشاركة لمبادرة تغيير."
 heroImage: /images/ar/stakeholder_power_interest_matrix_ar.png
 related: ["prioritization-techniques","version-control-for-business-analysts"]
 draft: false

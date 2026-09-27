@@ -1,0 +1,18 @@
+---
+import type { Language, Tutorial } from '../lib/content';
+import { getEntryUrl, ui, withBase } from '../lib/content';
+interface Props { lang: Language; prerequisites: Tutorial[]; }
+const { lang, prerequisites } = Astro.props;
+const strings = ui[lang];
+---
+<aside class="prerequisite-notice" aria-label={strings.prerequisites}>
+  <span class="notice-icon" aria-hidden="true">✓</span>
+  <div>
+    <strong>{prerequisites.length ? strings.prerequisites : strings.noPrerequisites}</strong>
+    {prerequisites.length > 0 && (
+      <ul>
+        {prerequisites.map((entry) => <li><a href={withBase(getEntryUrl(entry))}>{entry.data.title}</a></li>)}
+      </ul>
+    )}
+  </div>
+</aside>

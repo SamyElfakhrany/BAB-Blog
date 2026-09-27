@@ -1,0 +1,28 @@
+---
+import type { Language, Tutorial } from '../lib/content';
+import { getEntryUrl, ui, withBase } from '../lib/content';
+interface Props { lang: Language; previous?: Tutorial; next?: Tutorial; current: Tutorial; }
+const { lang, previous, next, current } = Astro.props;
+const strings = ui[lang];
+---
+<nav class="lesson-navigation" aria-label={lang === 'en' ? 'Lesson navigation' : 'التنقل بين الدروس'}>
+  <div class="lesson-nav-grid">
+    {previous ? (
+      <a class="lesson-nav-link lesson-nav-previous" href={withBase(getEntryUrl(previous))}>
+        <span><span class="direction-icon direction-icon--back" aria-hidden="true">←</span> {strings.previousLesson}</span>
+        <strong>{previous.data.title}</strong>
+      </a>
+    ) : <div></div>}
+    {next ? (
+      <a class="lesson-nav-link lesson-nav-next" href={withBase(getEntryUrl(next))}>
+        <span>{strings.nextLesson} <span class="direction-icon" aria-hidden="true">→</span></span>
+        <strong>{next.data.title}</strong>
+      </a>
+    ) : (
+      <a class="lesson-nav-link lesson-nav-next" href={withBase(`/${lang}/learning-paths/`)}>
+        <span>{strings.journeyComplete}</span><strong>{lang === 'en' ? 'Review your learning roadmap' : 'راجع خريطة تعلّمك'}</strong>
+      </a>
+    )}
+  </div>
+  <a class="text-link back-to-path" href={withBase(`/${lang}/${current.data.category}/`)}>{strings.backToPath}</a>
+</nav>

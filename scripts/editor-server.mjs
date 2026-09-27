@@ -129,6 +129,10 @@ function buildSource(article) {
     published: article.published,
     updated: article.updated,
     readTime: Number(article.readTime),
+    order: Number(article.order),
+    prerequisites: article.prerequisites,
+    learningOutcomes: article.learningOutcomes,
+    practicalSkill: article.practicalSkill,
     heroImage: article.heroImage,
     related: article.related,
     draft: false

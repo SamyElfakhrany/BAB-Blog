@@ -1,0 +1,25 @@
+---
+import type { Category, Language, Tutorial } from '../lib/content';
+import { getEntryUrl, ui, withBase } from '../lib/content';
+import { getPathStats, pathDefinitions } from '../lib/curriculum';
+import ProgressBar from './ProgressBar.astro';
+
+interface Props { category: Category; entries: Tutorial[]; lang: Language; }
+const { category, entries, lang } = Astro.props;
+const path = pathDefinitions[category];
+const copy = path.copy[lang];
+const stats = getPathStats(entries);
+const strings = ui[lang];
+const first = entries[0];
+---
+<article class={`learning-path-card path-${category}`}>
+  <div class="path-card-topline"><span>{strings.stage} {path.stage}</span><span>{strings.beginner}</span></div>
+  <h3>{copy.title}</h3>
+  <p>{copy.purpose}</p>
+  <div class="path-stats"><span>{stats.lessonCount} {strings.lessons}</span><span>{stats.totalMinutes} {strings.minutes}</span></div>
+  <ProgressBar lang={lang} path={category} compact />
+  <div class="path-card-actions">
+    <a class="button button-primary" href={withBase(`/${lang}/${category}/`)}>{lang === 'en' ? 'View path' : 'اعرض المسار'}</a>
+    {first && <a class="text-link" data-path-action data-path={category} href={withBase(getEntryUrl(first))}>{strings.startPath}</a>}
+  </div>
+</article>

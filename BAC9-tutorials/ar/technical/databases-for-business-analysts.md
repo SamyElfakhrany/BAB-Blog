@@ -8,8 +8,15 @@ category: technical
 tags: ["databases","data-modeling","sql"]
 difficulty: beginner
 published: 2026-09-26
-updated: 2026-09-26
+updated: 2026-09-27
 readTime: 10
+order: 2
+prerequisites: ["software-architecture-for-business-analysts"]
+learningOutcomes:
+  - "تشرح إزاي السجلات والمفاتيح والعلاقات بتدعم سلوك العمل."
+  - "تقرأ استعلام SQL بسيط بالقدر اللي يساعدك تتحقق من معناه التجاري."
+  - "تحدد قواعد البيانات وأسئلة الملكية وشروط التحقق."
+practicalSkill: "تحويل احتياج البيانات إلى قواعد واضحة وأسئلة تحقق مفيدة."
 heroImage: /images/ar/database-relationships-ar.png
 related: ["apis-for-business-analysts","cloud-computing-for-business-analysts","version-control-for-business-analysts"]
 draft: false

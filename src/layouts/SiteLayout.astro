@@ -2,15 +2,22 @@
 import '../styles/global.css';
 import { getDirection, getLanguage, localizePath, ui, withBase } from '../lib/content';
 
+type Section = 'start' | 'paths' | 'case-study' | 'templates' | 'search' | 'about';
+
 interface Props {
   lang?: 'en' | 'ar';
   title?: string;
   description?: string;
   canonicalPath?: string;
+  alternatePath?: string;
   image?: string;
+  currentSection?: Section;
 }
 
-const { lang = 'en', title, description, canonicalPath = `/${lang}/`, image } = Astro.props;
+const {
+  lang = 'en', title, description, canonicalPath = `/${lang}/`, alternatePath: exactAlternatePath,
+  image, currentSection
+} = Astro.props;
 const language = getLanguage(lang);
 const strings = ui[language];
 const direction = getDirection(language);
@@ -18,7 +25,15 @@ const pageTitle = title ? `${title} · BAC9` : 'BAC9 · Business Analysis Bootca
 const pageDescription = description || strings.homeIntro;
 const canonical = new URL(withBase(canonicalPath), Astro.site || Astro.url).href;
 const alternateLang = language === 'en' ? 'ar' : 'en';
-const alternatePath = localizePath(canonicalPath, alternateLang);
+const alternatePath = exactAlternatePath || localizePath(canonicalPath, alternateLang);
+const navigation: Array<{ id: Section; label: string; href: string }> = [
+  { id: 'start', label: strings.navLearn, href: `/${language}/` },
+  { id: 'paths', label: strings.navPaths, href: `/${language}/learning-paths/` },
+  { id: 'case-study', label: strings.navCaseStudy, href: `/${language}/case-study/` },
+  { id: 'templates', label: strings.navTemplates, href: `/${language}/templates/` },
+  { id: 'search', label: strings.navSearch, href: `/${language}/search/` },
+  { id: 'about', label: strings.navAbout, href: `/${language}/about/` }
+];
 ---
 <!doctype html>
 <html lang={language} dir={direction}>
@@ -38,48 +53,49 @@ const alternatePath = localizePath(canonicalPath, alternateLang);
     {image && <meta property="og:image" content={new URL(withBase(image), Astro.site || Astro.url).href} />}
     <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
     <title>{pageTitle}</title>
+    <script is:inline>document.documentElement.classList.add('has-js');</script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">{strings.skipToContent}</a>
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="brand" href={withBase(`/${language}/`)} aria-label={`${strings.siteName} home`}>
+        <a class="brand" href={withBase(`/${language}/`)} aria-label={`${strings.siteName} ${strings.navLearn}`}>
           <span class="brand-mark">B9</span>
           <span class="brand-copy"><strong>{strings.siteName}</strong><small>{strings.siteLabel}</small></span>
         </a>
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href={withBase(`/${language}/`)}>{strings.navLearn}</a>
-          <a href={withBase(`/${language}/case-study/`)}>{strings.navCaseStudy}</a>
-          <a href={withBase(`/${language}/templates/`)}>{strings.navTemplates}</a>
-          <a href={withBase(`/${language}/about/`)}>{strings.navAbout}</a>
+        <nav class="main-nav" aria-label={strings.mainNavigation}>
+          {navigation.map((item) => <a href={withBase(item.href)} aria-current={currentSection === item.id ? 'page' : undefined}>{item.label}</a>)}
         </nav>
         <div class="header-actions">
-          <a class="language-switch" href={withBase(alternatePath)}>{strings.language}</a>
-          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+          <a class="language-switch" href={withBase(alternatePath)} hreflang={alternateLang}>{strings.language}</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label={strings.menu} data-open-label={strings.menu} data-close-label={strings.closeMenu}>{strings.menu}</button>
         </div>
       </div>
-      <nav id="mobile-nav" class="mobile-nav shell" aria-label="Mobile navigation">
-        <a href={withBase(`/${language}/`)}>{strings.navLearn}</a>
-        <a href={withBase(`/${language}/case-study/`)}>{strings.navCaseStudy}</a>
-        <a href={withBase(`/${language}/templates/`)}>{strings.navTemplates}</a>
-        <a href={withBase(`/${language}/about/`)}>{strings.navAbout}</a>
+      <nav id="mobile-nav" class="mobile-nav shell" aria-label={strings.mobileNavigation} hidden>
+        {navigation.map((item) => <a href={withBase(item.href)} aria-current={currentSection === item.id ? 'page' : undefined}>{item.label}</a>)}
       </nav>
     </header>
-    <main><slot /></main>
+    <main id="main-content"><slot /></main>
     <footer class="site-footer">
       <div class="shell footer-inner">
         <div><strong>BAC9</strong><span>{strings.siteLabel}</span></div>
         <p>{language === 'en' ? 'Practical analysis, technical fluency, responsible AI.' : 'تحليل عملي، وفهم تقني، وذكاء اصطناعي مسؤول.'}</p>
-        <a href={withBase(`/${language}/about/`)}>{strings.navAbout}</a>
+        <a href={withBase(`/${language}/learning-paths/`)}>{strings.navPaths}</a>
       </div>
     </footer>
     <script>
-      const toggle = document.querySelector('.menu-toggle');
-      const nav = document.querySelector('#mobile-nav');
-      toggle?.addEventListener('click', () => {
-        const open = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!open));
-        nav?.classList.toggle('is-open', !open);
-      });
+      const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+      const nav = document.querySelector<HTMLElement>('#mobile-nav');
+      const setOpen = (open: boolean) => {
+        if (!toggle || !nav) return;
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? toggle.dataset.closeLabel || '' : toggle.dataset.openLabel || '');
+        toggle.textContent = open ? toggle.dataset.closeLabel || '' : toggle.dataset.openLabel || '';
+        nav.hidden = !open;
+      };
+      toggle?.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+      nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+      document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { setOpen(false); toggle?.focus(); } });
     </script>
   </body>
 </html>

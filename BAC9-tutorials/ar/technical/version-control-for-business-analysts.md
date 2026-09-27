@@ -8,8 +8,15 @@ category: technical
 tags: ["git","github","technical-literacy"]
 difficulty: beginner
 published: 2026-09-24
-updated: 2026-09-24
+updated: 2026-09-27
 readTime: 14
+order: 5
+prerequisites: []
+learningOutcomes:
+  - "تشرح العلاقة بين Repository وCommit وBranch وPull Request."
+  - "تقرأ تغييرًا داخل Pull Request من غير ما تحتاج تكتب كود."
+  - "تراجع تغييرًا برمجيًا مقابل المتطلبات وأدلة القبول."
+practicalSkill: "مراجعة Pull Request كمحلل أعمال وطرح أسئلة مركزة عن التغيير."
 heroImage: /images/ar/git_branch_pull_request_ar.png
 related: ["devops-for-business-analysts","stakeholder-analysis","llms-for-business-analysts"]
 draft: false

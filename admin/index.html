@@ -54,7 +54,9 @@
             <label>Published date<input id="published" type="date" /></label>
             <label>Updated date<input id="updated" type="date" /></label>
             <label>Reading time (minutes)<input id="readTime" type="number" min="1" step="1" placeholder="10" /></label>
+            <label>Path order<input id="order" type="number" min="1" step="1" placeholder="1" /></label>
             <label class="wide">Tags <span class="hint">comma separated</span><input id="tags" placeholder="requirements, elicitation" /></label>
+            <label class="wide">Prerequisite tutorial IDs <span class="hint">comma separated</span><input id="prerequisites" placeholder="who-is-a-business-analyst" /></label>
             <label class="wide">Related tutorial IDs <span class="hint">comma separated</span><input id="related" placeholder="prioritization-techniques" /></label>
           </div>
         </div>
@@ -74,6 +76,8 @@
             <label>Hero image path<input id="heroImage" placeholder="/images/en/example.png" /></label>
             <label class="wide">Title<input id="title" placeholder="A clear tutorial title" /></label>
             <label class="wide">Description<textarea id="description" rows="2" placeholder="One sentence that explains the value of this tutorial."></textarea></label>
+            <label class="wide">Practical skill gained<input id="practicalSkill" placeholder="Create a stakeholder register and engagement plan." /></label>
+            <label class="wide">Learning outcomes <span class="hint">exactly three, one per line</span><textarea id="learningOutcomes" rows="4" placeholder="Identify…&#10;Compare…&#10;Create…"></textarea></label>
           </div>
           <div class="editor-grid">
             <div class="source-column"><div class="column-label">MARKDOWN SOURCE <span id="mdx-warning" class="warning-label"></span></div><textarea id="body" spellcheck="false" placeholder="# Start writing — use Markdown here."></textarea></div>

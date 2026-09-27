@@ -45,13 +45,57 @@ export async function validateContentRoot(root, projectRoot = process.cwd()) {
   }
   const translations = new Map();
   for (const article of articles) {
-    const languages = translations.get(article.translationId) || new Set();
-    if (article.lang) languages.add(article.lang);
-    translations.set(article.translationId, languages);
+    const pair = translations.get(article.translationId) || {};
+    if (article.lang) pair[article.lang] = article;
+    translations.set(article.translationId, pair);
   }
-  for (const [translationId, languages] of translations) {
-    if (!languages.has('en') || !languages.has('ar') || languages.size !== 2) errors.push(`${translationId}: must have en and ar translations`);
+  for (const [translationId, pair] of translations) {
+    if (!pair.en || !pair.ar || Object.keys(pair).length !== 2) {
+      errors.push(`${translationId}: must have en and ar translations`);
+      continue;
+    }
+    for (const field of ['id', 'category', 'difficulty', 'order']) {
+      if (pair.en[field] !== pair.ar[field]) errors.push(`${translationId}: English and Arabic ${field} values must match`);
+    }
+    for (const field of ['prerequisites', 'related']) {
+      if (JSON.stringify(pair.en[field] || []) !== JSON.stringify(pair.ar[field] || [])) errors.push(`${translationId}: English and Arabic ${field} values must match`);
+    }
+    if ((pair.en.learningOutcomes || []).length !== (pair.ar.learningOutcomes || []).length) errors.push(`${translationId}: English and Arabic learning outcome counts must match`);
   }
+
+  for (const lang of ['en', 'ar']) {
+    for (const category of ['business', 'technical', 'ai']) {
+      const ordered = articles.filter((article) => article.lang === lang && article.category === category).sort((a, b) => a.order - b.order);
+      ordered.forEach((article, index) => {
+        if (article.order !== index + 1) errors.push(`${lang}/${category}: curriculum orders must be unique and contiguous from 1 (found ${article.order} on ${article.id})`);
+      });
+    }
+  }
+
+  const categoryRank = new Map([['business', 0], ['technical', 1], ['ai', 2]]);
+  const englishById = new Map(articles.filter((article) => article.lang === 'en').map((article) => [article.translationId, article]));
+  const position = (article) => (categoryRank.get(article.category) * 1000) + article.order;
+  for (const article of englishById.values()) {
+    for (const prerequisiteId of article.prerequisites || []) {
+      const prerequisite = englishById.get(prerequisiteId);
+      if (prerequisite && position(prerequisite) >= position(article)) errors.push(`${article.id}: prerequisite ${prerequisiteId} must appear earlier in the recommended journey`);
+    }
+  }
+  const visiting = new Set();
+  const visited = new Set();
+  function visit(id, trail = []) {
+    if (visiting.has(id)) {
+      errors.push(`${id}: prerequisite cycle detected (${[...trail, id].join(' -> ')})`);
+      return;
+    }
+    if (visited.has(id)) return;
+    visiting.add(id);
+    const article = englishById.get(id);
+    for (const prerequisite of article?.prerequisites || []) if (englishById.has(prerequisite)) visit(prerequisite, [...trail, id]);
+    visiting.delete(id);
+    visited.add(id);
+  }
+  for (const id of englishById.keys()) visit(id);
   return { errors, warnings, files, articles };
 }
 

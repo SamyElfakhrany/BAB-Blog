@@ -15,6 +15,10 @@ const tutorials = defineCollection({
     published: z.coerce.date(),
     updated: z.coerce.date(),
     readTime: z.number().int().positive(),
+    order: z.number().int().positive(),
+    prerequisites: z.array(z.string()),
+    learningOutcomes: z.array(z.string()).length(3),
+    practicalSkill: z.string().min(1),
     heroImage: z.string(),
     related: z.array(z.string()),
     draft: z.boolean().default(false)
