@@ -31,7 +31,7 @@ const totalMinutes = journey.reduce((total, entry) => total + entry.data.readTim
       <aside class="roadmap-summary">
         <div><strong>{journey.length}</strong><span>{strings.lessons}</span></div>
         <div><strong>{totalMinutes}</strong><span>{strings.minutes}</span></div>
-        <ProgressBar lang={lang} />
+        <ProgressBar lang={lang} lessonIds={journey.map((entry) => entry.data.translationId)} />
       </aside>
     </div>
   </section>
@@ -52,7 +52,7 @@ const totalMinutes = journey.reduce((total, entry) => total + entry.data.readTim
               <p>{copy.purpose}</p>
               <div class="path-stats"><span>{stats.lessonCount} {strings.lessons}</span><span>{stats.totalMinutes} {strings.minutes}</span></div>
               <p class="stage-prerequisite"><strong>{lang === 'en' ? 'Recommended:' : 'المقترح:'}</strong> {copy.prerequisite}</p>
-              <ProgressBar lang={lang} path={category} />
+              <ProgressBar lang={lang} path={category} lessonIds={entries.map((entry) => entry.data.translationId)} />
               <div class="inline-actions">
                 <a class="button button-primary" data-path-action data-path={category} href={withBase(getEntryUrl(entries[0]))}>{strings.startPath}</a>
                 <a class="text-link" href={withBase(`/${lang}/${category}/`)}>{lang === 'en' ? 'View path details' : 'اعرض تفاصيل المسار'}</a>

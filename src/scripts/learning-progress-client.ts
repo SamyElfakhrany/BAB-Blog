@@ -30,6 +30,30 @@ if (dataNode?.textContent) {
     catch { storageAvailable = false; }
   };
 
+  const formatProgressCount = (template: string, count: number, total: number) => template
+    .replace('{count}', String(count))
+    .replace('{total}', String(total));
+
+  const renderProgressSegments = (container: HTMLElement, ids: string[], completed: Set<string>) => {
+    const renderedIds = [...container.querySelectorAll<HTMLElement>('[data-progress-segment]')]
+      .map((segment) => segment.dataset.progressSegment || '');
+    if (renderedIds.length !== ids.length || renderedIds.some((id, index) => id !== ids[index])) {
+      container.replaceChildren(...ids.map((id) => {
+        const segment = document.createElement('span');
+        segment.className = 'progress-segment';
+        segment.dataset.progressSegment = id;
+        const check = document.createElement('span');
+        check.textContent = '✓';
+        segment.append(check);
+        return segment;
+      }));
+    }
+    container.style.setProperty('--progress-segment-count', String(Math.max(ids.length, 1)));
+    container.querySelectorAll<HTMLElement>('[data-progress-segment]').forEach((segment) => {
+      segment.classList.toggle('is-complete', completed.has(segment.dataset.progressSegment || ''));
+    });
+  };
+
   if (data.currentLessonId && validIds.includes(data.currentLessonId)) {
     progress = { ...progress, lastOpenedId: data.currentLessonId };
     save();
@@ -38,11 +62,23 @@ if (dataNode?.textContent) {
   const updateProgressBlock = (block: HTMLElement) => {
     const scope = block.dataset.progressScope;
     const ids = scope === 'journey' ? validIds : data.paths.find((path) => path.id === scope)?.lessonIds || [];
+    block.classList.remove('progress-block--journey', ...data.paths.map((path) => `progress-block--${path.id}`));
+    block.classList.add(`progress-block--${scope || 'journey'}`);
     const value = completionFor(progress, ids);
+    const completed = new Set(progress.completedIds);
     const bar = block.querySelector<HTMLProgressElement>('[data-progress-bar]');
     const text = block.querySelector<HTMLElement>('[data-progress-text]');
-    if (bar) { bar.value = value.percent; bar.textContent = `${value.percent}%`; bar.setAttribute('aria-valuetext', `${value.count} of ${value.total}`); }
+    const count = block.querySelector<HTMLElement>('[data-progress-count]');
+    const segments = block.querySelector<HTMLElement>('[data-progress-segments]');
+    const template = value.total > 0 && value.count === value.total
+      ? block.dataset.progressCompleteTemplate || 'All {total} lessons complete'
+      : block.dataset.progressCountTemplate || '{count} of {total} lessons complete';
+    const countText = formatProgressCount(template, value.count, value.total);
+    if (bar) { bar.value = value.percent; bar.textContent = `${value.percent}%`; bar.setAttribute('aria-valuetext', countText); }
     if (text) text.textContent = `${value.percent}%`;
+    if (count) count.textContent = countText;
+    if (segments) renderProgressSegments(segments, ids, completed);
+    block.classList.toggle('is-complete', value.total > 0 && value.count === value.total);
   };
 
   const render = () => {

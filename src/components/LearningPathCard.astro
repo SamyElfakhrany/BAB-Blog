@@ -17,7 +17,7 @@ const first = entries[0];
   <h3>{copy.title}</h3>
   <p>{copy.purpose}</p>
   <div class="path-stats"><span>{stats.lessonCount} {strings.lessons}</span><span>{stats.totalMinutes} {strings.minutes}</span></div>
-  <ProgressBar lang={lang} path={category} compact />
+  <ProgressBar lang={lang} path={category} lessonIds={entries.map((entry) => entry.data.translationId)} compact />
   <div class="path-card-actions">
     <a class="button button-primary" href={withBase(`/${lang}/${category}/`)}>{lang === 'en' ? 'View path' : 'اعرض المسار'}</a>
     {first && <a class="text-link" data-path-action data-path={category} href={withBase(getEntryUrl(first))}>{strings.startPath}</a>}

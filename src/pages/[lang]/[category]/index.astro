@@ -44,7 +44,7 @@ const first = entries[0];
           <div><strong>{stats.lessonCount}</strong><span>{strings.lessons}</span></div>
           <div><strong>{stats.totalMinutes}</strong><span>{strings.minutes}</span></div>
           <div><strong>{strings.beginner}</strong><span>{lang === 'en' ? 'difficulty' : 'المستوى'}</span></div>
-          <ProgressBar lang={lang} path={category} />
+          <ProgressBar lang={lang} path={category} lessonIds={entries.map((entry) => entry.data.translationId)} />
         </aside>
       </div>
     </div>

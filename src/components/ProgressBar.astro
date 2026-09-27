@@ -4,16 +4,35 @@ import { ui } from '../lib/content';
 
 interface Props {
   lang: Language;
+  lessonIds: string[];
   path?: Category;
   compact?: boolean;
 }
 
-const { lang, path, compact = false } = Astro.props;
+const { lang, lessonIds, path, compact = false } = Astro.props;
 const strings = ui[lang];
 const scope = path || 'journey';
 const label = path ? strings.pathProgress : strings.journeyProgress;
+const initialCount = lang === 'en'
+  ? `0 of ${lessonIds.length} lessons complete`
+  : `الدروس المكتملة: 0 من ${lessonIds.length}`;
+const countTemplate = lang === 'en'
+  ? '{count} of {total} lessons complete'
+  : 'الدروس المكتملة: {count} من {total}';
+const completeTemplate = lang === 'en'
+  ? 'All {total} lessons complete'
+  : 'اكتملت كل الدروس وعددها {total}';
 ---
-<div class:list={['progress-block', compact && 'progress-block--compact']} data-progress-scope={scope}>
-  <div class="progress-label"><span>{label}</span><span data-progress-text>0%</span></div>
-  <progress data-progress-bar max="100" value="0" aria-label={label}>0%</progress>
+<div
+  class:list={['progress-block', `progress-block--${scope}`, compact && 'progress-block--compact']}
+  data-progress-scope={scope}
+  data-progress-count-template={countTemplate}
+  data-progress-complete-template={completeTemplate}
+>
+  <div class="progress-label"><span>{label}</span><strong data-progress-text>0%</strong></div>
+  <div class="progress-segments" data-progress-segments style={`--progress-segment-count:${Math.max(lessonIds.length, 1)}`} aria-hidden="true">
+    {lessonIds.map((id) => <span class="progress-segment" data-progress-segment={id}><span>✓</span></span>)}
+  </div>
+  <span class="progress-count" data-progress-count>{initialCount}</span>
+  <progress class="sr-only" data-progress-bar max="100" value="0" aria-label={label} aria-valuetext={initialCount}>0%</progress>
 </div>

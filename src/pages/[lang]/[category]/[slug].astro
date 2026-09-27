@@ -9,7 +9,7 @@ import PrerequisiteNotice from '../../../components/PrerequisiteNotice.astro';
 import ProgressBar from '../../../components/ProgressBar.astro';
 import TutorialCard from '../../../components/TutorialCard.astro';
 import { getLanguage, getEntryUrl, getSlug, ui, withBase } from '../../../lib/content';
-import { getAdjacentLessons, getLessonPosition, getTutorialByTranslationId, pathDefinitions } from '../../../lib/curriculum';
+import { getAdjacentLessons, getLessonPosition, getPathEntries, getTutorialByTranslationId, pathDefinitions } from '../../../lib/curriculum';
 
 export async function getStaticPaths() {
   const entries = await getCollection('tutorials', ({ data }) => !data.draft);
@@ -27,6 +27,7 @@ const alternatePath = counterpart ? getEntryUrl(counterpart) : `/${lang === 'en'
 const path = pathDefinitions[entry.data.category];
 const pathCopy = path.copy[lang];
 const position = getLessonPosition(entry, all);
+const pathLessonIds = getPathEntries(all, entry.data.category, lang).map((item) => item.data.translationId);
 const adjacent = getAdjacentLessons(entry, all);
 const prerequisites = entry.data.prerequisites.map((id) => getTutorialByTranslationId(all, id, lang)).filter(Boolean);
 const tocHeadings = headings.filter((heading) => heading.depth === 2);
@@ -57,7 +58,7 @@ const tocLabel = (text: string) => text.replace(/^\s*\d+(?:\.\d+)*[.)،:]?\s*/, 
       </div>
       <div class="lesson-header-grid">
         <div><h1>{entry.data.title}</h1><p>{entry.data.description}</p></div>
-        <ProgressBar lang={lang} path={entry.data.category} />
+        <ProgressBar lang={lang} path={entry.data.category} lessonIds={pathLessonIds} />
       </div>
     </header>
 

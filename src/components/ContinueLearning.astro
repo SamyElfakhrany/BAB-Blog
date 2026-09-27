@@ -1,12 +1,13 @@
 ---
 import type { Language, Tutorial } from '../lib/content';
 import { getEntryUrl, ui, withBase } from '../lib/content';
-import { getLessonPosition, pathDefinitions } from '../lib/curriculum';
+import { getLessonPosition, getPathEntries, pathDefinitions } from '../lib/curriculum';
 import ProgressBar from './ProgressBar.astro';
 interface Props { lang: Language; firstLesson: Tutorial; allEntries: Tutorial[]; }
 const { lang, firstLesson, allEntries } = Astro.props;
 const strings = ui[lang];
 const position = getLessonPosition(firstLesson, allEntries);
+const pathLessonIds = getPathEntries(allEntries, firstLesson.data.category, lang).map((entry) => entry.data.translationId);
 ---
 <section class="continue-panel" data-continue-panel aria-labelledby="continue-title">
   <div class="continue-copy">
@@ -15,7 +16,7 @@ const position = getLessonPosition(firstLesson, allEntries);
     <p data-continue-meta>{pathDefinitions[firstLesson.data.category].copy[lang].title} · {strings.lesson} {position.step} {strings.of} {position.total}</p>
   </div>
   <div class="continue-action">
-    <ProgressBar lang={lang} path={firstLesson.data.category} compact />
+    <ProgressBar lang={lang} path={firstLesson.data.category} lessonIds={pathLessonIds} compact />
     <a class="button button-primary" data-continue-link href={withBase(getEntryUrl(firstLesson))}>{lang === 'en' ? 'Start the first lesson' : 'ابدأ أول درس'}</a>
   </div>
 </section>
