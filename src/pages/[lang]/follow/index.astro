@@ -29,22 +29,15 @@ const copy = lang === 'en'
       title: 'Worth Following',
       description: 'A curated bilingual directory of people, podcasts, and communities that help beginner Business Analysts stay useful and current.',
       eyebrow: 'BAC9 / Your signal list',
-      intro: 'Follow fewer sources—and learn more from each one.',
-      lead: 'This list connects Business Analysis with product, software, design, and AI. Start small, notice the ideas that improve your questions, and bring one useful insight into your next project conversation.',
+      lead: 'A focused list of people, podcasts, and communities for fresh Business Analysts exploring BA, product, software, design, and AI.',
       people: 'People & channels',
       peopleIntro: 'Practitioners and educators who make useful ideas easier to understand and apply.',
       podcasts: 'Podcasts to hear',
       podcastsIntro: 'Longer conversations for commutes, walks, and deeper reflection.',
       communities: 'Communities to join',
       communitiesIntro: 'Places to meet peers, attend sessions, and learn through shared practice.',
-      resources: 'curated resources',
-      disciplines: 'connected disciplines',
       reviewed: 'Last reviewed: September 2026',
-      habitEyebrow: 'A simple beginner habit',
-      habitTitle: 'Two sources. Thirty days. One applied idea.',
-      habitText: 'Choose one Arabic source and one international source. Follow both for 30 days, save only the insights that matter to your work, then apply one idea in a meeting, requirement, model, or decision.',
       filtersTitle: 'Find the right signal',
-      filtersIntro: 'Filter the directory without losing the larger view.',
       filterType: 'Resource type',
       filterTopic: 'Topic',
       filterLanguage: 'Content language',
@@ -65,22 +58,15 @@ const copy = lang === 'en'
       title: 'ناس ومصادر تستحق المتابعة',
       description: 'دليل مختار بالعربي والإنجليزي لأشخاص وبودكاست ومجتمعات تساعد محلل الأعمال المبتدئ يفضل متابع ومفيد.',
       eyebrow: 'BAC9 / قائمة الإشارات المهمة',
-      intro: 'تابع مصادر أقل—واستفيد من كل مصدر أكتر.',
-      lead: 'القائمة دي بتربط تحليل الأعمال بالمنتجات والبرمجيات والتصميم والـAI. ابدأ بهدوء، ولاحظ الأفكار اللي بتحسّن أسئلتك، وخد فكرة مفيدة واحدة لمحادثة مشروعك الجاية.',
+      lead: 'قائمة مركّزة من الأشخاص والبودكاست والمجتمعات لمحللي الأعمال المبتدئين في تحليل الأعمال والمنتجات والبرمجيات والتصميم والـAI.',
       people: 'أشخاص وقنوات',
       peopleIntro: 'ممارسون ومعلّمون بيخلّوا الأفكار المفيدة أسهل في الفهم والتطبيق.',
       podcasts: 'بودكاست تسمعه',
       podcastsIntro: 'حوارات أطول للمشاوير والتمشية والتفكير بهدوء.',
       communities: 'مجتمعات تنضم لها',
       communitiesIntro: 'مساحات تقابل فيها ناس من المجال وتحضر جلسات وتتعلّم من الخبرات المشتركة.',
-      resources: 'مصدر مختار',
-      disciplines: 'مجالات مترابطة',
       reviewed: 'آخر مراجعة: سبتمبر 2026',
-      habitEyebrow: 'عادة بسيطة للمبتدئ',
-      habitTitle: 'مصدران. 30 يومًا. فكرة واحدة تطبّقها.',
-      habitText: 'اختار مصدرًا عربيًا ومصدرًا عالميًا. تابع الاثنين لمدة 30 يومًا، واحفظ الأفكار المرتبطة بشغلك فقط، وبعدها طبّق فكرة واحدة في اجتماع أو متطلب أو نموذج أو قرار.',
       filtersTitle: 'وصل للإشارة المناسبة',
-      filtersIntro: 'فلتر الدليل من غير ما تفقد الصورة الكبيرة.',
       filterType: 'نوع المصدر',
       filterTopic: 'المجال',
       filterLanguage: 'لغة المحتوى',
@@ -123,44 +109,18 @@ const languageFilters = [
   currentSection="follow"
 >
   <section class="follow-hero shell">
-    <div class="follow-hero-copy">
-      <span class="eyebrow">{copy.eyebrow}</span>
-      <h1>{copy.intro}</h1>
-      <p>{copy.lead}</p>
-      <a class="button button-primary" href="#follow-filters">
-        {copy.filtersTitle} <span class="direction-icon" aria-hidden="true">→</span>
-      </a>
-    </div>
-    <aside class="follow-signal-board" aria-label={copy.title}>
-      <div><strong>{resources.length}</strong><span>{copy.resources}</span></div>
-      <div><strong>{followTopicOrder.length}</strong><span>{copy.disciplines}</span></div>
-      <p>{copy.reviewed}</p>
-    </aside>
-  </section>
-
-  <section class="follow-habit shell" aria-labelledby="follow-habit-title">
-    <span class="follow-habit-number" aria-hidden="true">30</span>
-    <div>
-      <span class="eyebrow">{copy.habitEyebrow}</span>
-      <h2 id="follow-habit-title">{copy.habitTitle}</h2>
-      <p>{copy.habitText}</p>
-    </div>
+    <span class="eyebrow">{copy.eyebrow}</span>
+    <h1>{copy.title}</h1>
+    <p>{copy.lead}</p>
+    <span class="follow-reviewed">{copy.reviewed}</span>
   </section>
 
   <section
     id="follow-filters"
     class="follow-filter-panel shell"
     data-follow-filters
-    aria-labelledby="follow-filter-title"
+    aria-label={copy.filtersTitle}
   >
-    <div class="follow-filter-heading">
-      <div>
-        <span class="eyebrow">{copy.title}</span>
-        <h2 id="follow-filter-title">{copy.filtersTitle}</h2>
-      </div>
-      <p>{copy.filtersIntro}</p>
-    </div>
-
     <div class="follow-filter-groups">
       <div class="follow-filter-group" data-filter-group="kind">
         <p>{copy.filterType}</p>
@@ -251,6 +211,14 @@ const languageFilters = [
   </aside>
 
   <script>
+    document.querySelectorAll<HTMLImageElement>('[data-follow-image]').forEach((image) => {
+      image.addEventListener('error', () => {
+        image.hidden = true;
+        const fallback = image.nextElementSibling;
+        if (fallback instanceof HTMLElement) fallback.hidden = false;
+      }, { once: true });
+    });
+
     const filterRoot = document.querySelector<HTMLElement>('[data-follow-filters]');
     const directory = document.querySelector<HTMLElement>('[data-follow-directory]');
 

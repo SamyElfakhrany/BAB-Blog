@@ -1,5 +1,5 @@
 ---
-import type { Language } from '../lib/content';
+import { withBase, type Language } from '../lib/content';
 import { followTopicLabels, type FollowResource } from '../data/follow-directory';
 
 interface Props {
@@ -21,6 +21,7 @@ const languageLabel = resource.contentLanguages.length === 2
     ? (lang === 'en' ? 'Arabic content' : 'محتوى عربي')
     : (lang === 'en' ? 'English content' : 'محتوى English');
 const openLabel = lang === 'en' ? 'opens in a new tab' : 'يفتح في تبويب جديد';
+const image = withBase(resource.image.src);
 ---
 
 <article
@@ -30,16 +31,28 @@ const openLabel = lang === 'en' ? 'opens in a new tab' : 'يفتح في تبوي
   data-topics={resource.topics.join(' ')}
   data-languages={resource.contentLanguages.join(' ')}
 >
-  <div class="follow-card-topline">
-    <span class="follow-mark" aria-hidden="true">{resource.mark}</span>
-    <span class="follow-topic-label">{followTopicLabels[primaryTopic][lang]}</span>
+  <div class={`follow-card-visual is-${resource.image.presentation}`} aria-hidden="true">
+    <img
+      src={image}
+      alt=""
+      width="112"
+      height="112"
+      loading="lazy"
+      decoding="async"
+      data-follow-image
+      style={resource.image.objectPosition ? `object-position:${resource.image.objectPosition}` : undefined}
+    />
+    <span class="follow-mark" hidden>{resource.mark}</span>
   </div>
-  <div class="follow-card-copy">
-    <Heading>{resource.name}</Heading>
-    <p>{resource.description[lang]}</p>
-  </div>
-  <div class="follow-card-meta">
-    <span class="content-language">{languageLabel}</span>
+  <div class="follow-card-main">
+    <div class="follow-card-topline">
+      <span class="follow-topic-label">{followTopicLabels[primaryTopic][lang]}</span>
+      <span class="content-language">{languageLabel}</span>
+    </div>
+    <div class="follow-card-copy">
+      <Heading>{resource.name}</Heading>
+      <p>{resource.description[lang]}</p>
+    </div>
     <ul class="follow-tags" aria-label={lang === 'en' ? 'Topics' : 'الموضوعات'}>
       {resource.tags[lang].map((tag) => <li>{tag}</li>)}
     </ul>
