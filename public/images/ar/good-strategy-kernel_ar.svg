@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">نواة الاستراتيجية الجيدة</title>
+  <desc id="desc">التشخيص يحدد التحدي الحاسم، والسياسة الموجِّهة تحدد النهج، والأفعال المتماسكة تنفّذ هذا النهج.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e2234"/><stop offset="1" stop-color="#173b4d"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#06121c" flood-opacity=".28"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0l10 5-10 5z" fill="#f4b942"/></marker>
+  </defs>
+  <rect width="1200" height="700" rx="34" fill="url(#bg)"/>
+  <circle cx="1080" cy="85" r="150" fill="#f4b942" opacity=".06"/>
+  <circle cx="90" cy="650" r="210" fill="#7cc7c5" opacity=".05"/>
+  <g font-family="Arial, 'Noto Sans Arabic', sans-serif" direction="rtl">
+    <text x="600" y="92" text-anchor="middle" fill="#f7f2e8" font-size="42" font-weight="700">نواة الاستراتيجية الجيدة</text>
+    <text x="600" y="132" text-anchor="middle" fill="#c6d6dc" font-size="21">حُجّة مترابطة تبدأ بالتحدي وتنتهي بفعل منسّق</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="70" y="205" width="300" height="330" rx="24" fill="#f7f2e8"/>
+    <rect x="450" y="205" width="300" height="330" rx="24" fill="#f7f2e8"/>
+    <rect x="830" y="205" width="300" height="330" rx="24" fill="#f7f2e8"/>
+  </g>
+  <g font-family="Arial, 'Noto Sans Arabic', sans-serif" direction="rtl">
+    <circle cx="980" cy="276" r="38" fill="#f4b942"/><text x="980" y="289" text-anchor="middle" fill="#10283a" font-size="36" font-weight="700">١</text>
+    <text x="980" y="355" text-anchor="middle" fill="#10283a" font-size="31" font-weight="700">التشخيص</text>
+    <text x="980" y="404" text-anchor="middle" fill="#405663" font-size="21"><tspan x="980">بسّط الواقع وحدّد</tspan><tspan x="980" dy="31">التحدي الحاسم.</tspan></text>
+    <circle cx="600" cy="276" r="38" fill="#f4b942"/><text x="600" y="289" text-anchor="middle" fill="#10283a" font-size="36" font-weight="700">٢</text>
+    <text x="600" y="355" text-anchor="middle" fill="#10283a" font-size="31" font-weight="700">السياسة الموجِّهة</text>
+    <text x="600" y="404" text-anchor="middle" fill="#405663" font-size="21"><tspan x="600">اختر النهج العام</tspan><tspan x="600" dy="31">لتجاوز العقبة.</tspan></text>
+    <circle cx="220" cy="276" r="38" fill="#f4b942"/><text x="220" y="289" text-anchor="middle" fill="#10283a" font-size="36" font-weight="700">٣</text>
+    <text x="220" y="355" text-anchor="middle" fill="#10283a" font-size="31" font-weight="700">الأفعال المتماسكة</text>
+    <text x="220" y="404" text-anchor="middle" fill="#405663" font-size="21"><tspan x="220">نسّق خطوات قابلة للتنفيذ</tspan><tspan x="220" dy="31">بحيث يقوّي بعضها بعضًا.</tspan></text>
+  </g>
+  <path d="M820 370h-55" stroke="#f4b942" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M440 370h-55" stroke="#f4b942" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <rect x="250" y="584" width="700" height="62" rx="31" fill="#0a1b29" opacity=".82"/>
+  <text x="600" y="623" text-anchor="middle" fill="#f7f2e8" font-family="Arial, 'Noto Sans Arabic', sans-serif" font-size="23" font-weight="700" direction="rtl">التماسك يصنع القوة بتجميع الجهد حول التحدي.</text>
+</svg>

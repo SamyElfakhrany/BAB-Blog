@@ -3,7 +3,7 @@ import { access, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import YAML from 'yaml';
 
-export const CATEGORIES = new Set(['business', 'technical', 'ai']);
+export const CATEGORIES = new Set(['business', 'technical', 'product-design', 'ai']);
 export const DIFFICULTIES = new Set(['beginner', 'intermediate', 'advanced']);
 export const LANGUAGES = new Set(['en', 'ar']);
 export const REQUIRED_FIELDS = [

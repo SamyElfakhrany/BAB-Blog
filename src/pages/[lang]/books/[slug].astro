@@ -1,0 +1,156 @@
+---
+import { getCollection, render } from 'astro:content';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import TutorialCard from '../../../components/TutorialCard.astro';
+import { getBookSlug, getBookUrl, getLanguage, ui, withBase } from '../../../lib/content';
+
+export async function getStaticPaths() {
+  const books = await getCollection('books', ({ data }) => !data.draft);
+  return books.map((book) => ({
+    params: { lang: book.data.lang, slug: getBookSlug(book) },
+    props: { book }
+  }));
+}
+
+const { book } = Astro.props;
+const lang = getLanguage(book.data.lang);
+const strings = ui[lang];
+const { Content, headings } = await render(book);
+const books = await getCollection('books', ({ data }) => !data.draft);
+const tutorials = await getCollection('tutorials', ({ data }) => data.lang === lang && !data.draft);
+const related = tutorials.filter((entry) => book.data.relatedTutorials.includes(entry.data.translationId));
+const counterpart = books.find((entry) => entry.data.translationId === book.data.translationId && entry.data.lang !== lang);
+const alternatePath = counterpart ? getBookUrl(counterpart) : `/${lang === 'en' ? 'ar' : 'en'}/books/`;
+const tocHeadings = headings.filter((heading) => heading.depth === 2);
+const tocLabel = (text: string) => text.replace(/^\s*\d+(?:\.\d+)*[.)،:]?\s*/, '');
+const bookUrl = new URL(withBase(getBookUrl(book)), Astro.site || Astro.url).href;
+const coverUrl = new URL(withBase(book.data.coverImage), Astro.site || Astro.url).href;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Book',
+  name: book.data.title,
+  alternateName: book.data.subtitle,
+  author: book.data.authors.map((name: string) => ({ '@type': 'Person', name })),
+  publisher: { '@type': 'Organization', name: book.data.publisher },
+  datePublished: String(book.data.publicationYear),
+  isbn: book.data.isbn,
+  numberOfPages: book.data.pageCount,
+  inLanguage: book.data.originalLanguage,
+  image: coverUrl,
+  url: bookUrl
+};
+const label = {
+  authors: lang === 'en' ? (book.data.authors.length === 1 ? 'Author' : 'Authors') : (book.data.authors.length === 1 ? 'المؤلف' : 'المؤلفون'),
+  designer: lang === 'en' ? 'Designer' : 'التصميم',
+  publisher: lang === 'en' ? 'Publisher' : 'الناشر',
+  year: lang === 'en' ? 'Published' : 'سنة النشر',
+  isbn: 'ISBN',
+  pages: lang === 'en' ? 'Pages' : 'الصفحات',
+  language: lang === 'en' ? 'Original language' : 'اللغة الأصلية',
+  contents: lang === 'en' ? 'In this summary' : 'محتويات الملخص'
+};
+---
+<SiteLayout
+  lang={lang}
+  title={`${book.data.title}: ${strings.bookSummary}`}
+  description={book.data.description}
+  canonicalPath={getBookUrl(book)}
+  alternatePath={alternatePath}
+  image={book.data.coverImage}
+  ogType="book"
+  structuredData={structuredData}
+  currentSection="books"
+>
+  <article class="book-page shell">
+    <Breadcrumbs lang={lang} items={[
+      { label: strings.navBooks, href: `/${lang}/books/` },
+      { label: book.data.title }
+    ]} />
+
+    <header class="book-detail-hero">
+      <figure class="book-cover-panel">
+        <img src={withBase(book.data.coverImage)} alt={book.data.coverAlt} />
+        <figcaption>{book.data.coverKind === 'generated'
+          ? (lang === 'en' ? 'Original editorial artwork generated for this summary; not the publisher’s cover.' : 'عمل بصري تحريري أصلي مولّد لهذا الملخص، وليس غلاف الناشر.')
+          : (lang === 'en' ? 'Original front cover from the supplied book.' : 'الغلاف الأمامي الأصلي من الكتاب المرفق.')}</figcaption>
+      </figure>
+      <div class="book-detail-copy">
+        <span class="book-type">{strings.bookSummary}</span>
+        <h1>{book.data.title}</h1>
+        <p class="book-detail-subtitle">{book.data.subtitle}</p>
+        <p class="book-detail-description">{book.data.description}</p>
+        <div class="book-topics" aria-label={lang === 'en' ? 'Book topics' : 'موضوعات الكتاب'}>
+          {book.data.topics.map((topic: string) => <span>{topic}</span>)}
+        </div>
+        <dl class="book-facts">
+          <div><dt>{label.authors}</dt><dd>{book.data.authors.join(' · ')}</dd></div>
+          {book.data.designer && <div><dt>{label.designer}</dt><dd>{book.data.designer}</dd></div>}
+          <div><dt>{label.publisher}</dt><dd>{book.data.publisher}</dd></div>
+          <div><dt>{label.year}</dt><dd>{book.data.publicationYear}</dd></div>
+          <div><dt>{label.isbn}</dt><dd dir="ltr">{book.data.isbn}</dd></div>
+          <div><dt>{label.pages}</dt><dd>{book.data.pageCount}</dd></div>
+          <div><dt>{label.language}</dt><dd>{lang === 'en' ? book.data.originalLanguage : 'الإنجليزية'}</dd></div>
+          <div><dt>{lang === 'en' ? 'Summary length' : 'مدة قراءة الملخص'}</dt><dd>{book.data.readTime} {strings.minRead}</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <div class="book-reading-layout">
+      <aside class="book-sidebar">
+        <details class="toc" open>
+          <summary>{label.contents}</summary>
+          <ol>{tocHeadings.map((heading, index) => <li><span class="toc-number" aria-hidden="true">{index + 1}</span><a href={`#${heading.slug}`}>{tocLabel(heading.text)}</a></li>)}</ol>
+        </details>
+        <a class="sidebar-path-link" href={withBase(`/${lang}/books/`)}>{lang === 'en' ? 'Back to all books' : 'العودة لكل الكتب'}</a>
+      </aside>
+      <div class="article-body prose book-summary-body"><Content /></div>
+    </div>
+  </article>
+
+  {related.length > 0 && (
+    <section class="shell related-section" aria-labelledby="related-title">
+      <div class="section-heading">
+        <div><span class="eyebrow">{strings.optionalResources}</span><h2 id="related-title">{lang === 'en' ? 'Continue with related BAC9 lessons.' : 'كمّل مع دروس BAC9 المرتبطة.'}</h2></div>
+        <p>{lang === 'en' ? 'These lessons connect the book’s frameworks to practical Business Analysis work.' : 'الدروس دي بتربط أطر الكتاب بشغل تحليل الأعمال العملي.'}</p>
+      </div>
+      <div class="tutorial-grid">{related.map((entry) => <TutorialCard entry={entry} lang={lang} compact />)}</div>
+    </section>
+  )}
+
+  <script>
+    const toc = document.querySelector<HTMLDetailsElement>('.book-sidebar .toc');
+    const mobile = window.matchMedia('(max-width: 700px)');
+    if (toc && mobile.matches) toc.open = false;
+    const links = [...document.querySelectorAll<HTMLAnchorElement>('.book-sidebar .toc a')];
+    const targets = links.map((link) => document.getElementById(decodeURIComponent(link.hash.slice(1)))).filter(Boolean) as HTMLElement[];
+    if (targets.length) {
+      let scheduled = false;
+      const selectSection = () => {
+        const readingLine = Math.min(window.innerHeight * 0.28, 180);
+        let current = targets[0];
+        for (const target of targets) {
+          if (target.getBoundingClientRect().top <= readingLine) current = target;
+          else break;
+        }
+        if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) current = targets.at(-1) || current;
+        const currentIndex = targets.indexOf(current);
+        links.forEach((link, index) => {
+          const selected = index === currentIndex;
+          if (selected) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+          link.closest('li')?.classList.toggle('is-active', selected);
+        });
+        scheduled = false;
+      };
+      const scheduleSelection = () => {
+        if (scheduled) return;
+        scheduled = true;
+        window.requestAnimationFrame(selectSection);
+      };
+      window.addEventListener('scroll', scheduleSelection, { passive: true });
+      window.addEventListener('resize', scheduleSelection);
+      selectSection();
+    }
+  </script>
+</SiteLayout>

@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import { getDirection, getLanguage, localizePath, ui, withBase } from '../lib/content';
 
-type Section = 'start' | 'paths' | 'case-study' | 'templates' | 'follow' | 'search' | 'about';
+type Section = 'start' | 'paths' | 'books' | 'case-study' | 'templates' | 'follow' | 'search' | 'about';
 
 interface Props {
   lang?: 'en' | 'ar';
@@ -11,12 +11,14 @@ interface Props {
   canonicalPath?: string;
   alternatePath?: string;
   image?: string;
+  ogType?: 'website' | 'book';
+  structuredData?: Record<string, unknown>;
   currentSection?: Section;
 }
 
 const {
   lang = 'en', title, description, canonicalPath = `/${lang}/`, alternatePath: exactAlternatePath,
-  image, currentSection
+  image, ogType = 'website', structuredData, currentSection
 } = Astro.props;
 const language = getLanguage(lang);
 const strings = ui[language];
@@ -29,11 +31,10 @@ const alternatePath = exactAlternatePath || localizePath(canonicalPath, alternat
 const navigation: Array<{ id: Section; label: string; href: string }> = [
   { id: 'start', label: strings.navLearn, href: `/${language}/` },
   { id: 'paths', label: strings.navPaths, href: `/${language}/learning-paths/` },
+  { id: 'books', label: strings.navBooks, href: `/${language}/books/` },
   { id: 'case-study', label: strings.navCaseStudy, href: `/${language}/case-study/` },
   { id: 'templates', label: strings.navTemplates, href: `/${language}/templates/` },
-  { id: 'follow', label: strings.navFollow, href: `/${language}/follow/` },
-  { id: 'search', label: strings.navSearch, href: `/${language}/search/` },
-  { id: 'about', label: strings.navAbout, href: `/${language}/about/` }
+  { id: 'follow', label: strings.navFollow, href: `/${language}/follow/` }
 ];
 ---
 <!doctype html>
@@ -49,9 +50,10 @@ const navigation: Array<{ id: Section; label: string; href: string }> = [
     <link rel="alternate" hreflang="x-default" href={new URL(withBase('/en/'), Astro.site || Astro.url).href} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
     {image && <meta property="og:image" content={new URL(withBase(image), Astro.site || Astro.url).href} />}
+    {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
     <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
     <title>{pageTitle}</title>
     <script is:inline>document.documentElement.classList.add('has-js');</script>
@@ -80,7 +82,7 @@ const navigation: Array<{ id: Section; label: string; href: string }> = [
     <footer class="site-footer">
       <div class="shell footer-inner">
         <div><strong>BAC9</strong><span>{strings.siteLabel}</span></div>
-        <p>{language === 'en' ? 'Practical analysis, technical fluency, responsible AI.' : 'تحليل عملي، وفهم تقني، وذكاء اصطناعي مسؤول.'}</p>
+        <p>{language === 'en' ? 'Practical analysis, technical fluency, product design, responsible AI.' : 'تحليل عملي، وفهم تقني، وتصميم منتجات، وذكاء اصطناعي مسؤول.'}</p>
         <a href={withBase(`/${language}/learning-paths/`)}>{strings.navPaths}</a>
       </div>
     </footer>

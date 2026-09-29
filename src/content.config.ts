@@ -9,7 +9,7 @@ const tutorials = defineCollection({
     lang: z.enum(['en', 'ar']),
     title: z.string(),
     description: z.string(),
-    category: z.enum(['business', 'technical', 'ai']),
+    category: z.enum(['business', 'technical', 'product-design', 'ai']),
     tags: z.array(z.string()),
     difficulty: z.enum(['beginner', 'intermediate', 'advanced']),
     published: z.coerce.date(),
@@ -25,4 +25,33 @@ const tutorials = defineCollection({
   })
 });
 
-export const collections = { tutorials };
+const books = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './BAC9-books' }),
+  schema: z.object({
+    id: z.string(),
+    translationId: z.string(),
+    lang: z.enum(['en', 'ar']),
+    title: z.string(),
+    subtitle: z.string(),
+    description: z.string(),
+    coverAlt: z.string(),
+    authors: z.array(z.string()).min(1),
+    designer: z.string().optional(),
+    publisher: z.string(),
+    publicationYear: z.number().int().positive(),
+    isbn: z.string(),
+    pageCount: z.number().int().positive(),
+    originalLanguage: z.string(),
+    topics: z.array(z.string()).min(1),
+    published: z.coerce.date(),
+    updated: z.coerce.date(),
+    readTime: z.number().int().positive(),
+    order: z.number().int().positive(),
+    coverImage: z.string(),
+    coverKind: z.enum(['original', 'generated']).default('original'),
+    relatedTutorials: z.array(z.string()),
+    draft: z.boolean().default(false)
+  })
+});
+
+export const collections = { tutorials, books };

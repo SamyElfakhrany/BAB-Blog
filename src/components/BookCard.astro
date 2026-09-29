@@ -1,0 +1,26 @@
+---
+import type { Book, Language } from '../lib/content';
+import { getBookUrl, ui, withBase } from '../lib/content';
+
+interface Props { entry: Book; lang: Language; featured?: boolean; }
+const { entry, lang, featured = false } = Astro.props;
+const strings = ui[lang];
+const data = entry.data;
+const url = withBase(getBookUrl(entry));
+---
+<article class:list={['book-card', featured && 'book-card--featured']}>
+  <a class="book-card-cover" href={url} aria-label={`${strings.readSummary}: ${data.title}`}>
+    <img src={withBase(data.coverImage)} alt={data.coverAlt} loading="lazy" />
+  </a>
+  <div class="book-card-content">
+    <span class="book-type">{strings.bookSummary}</span>
+    <h3><a href={url}>{data.title}</a></h3>
+    <p class="book-subtitle">{data.subtitle}</p>
+    <p class="book-byline">{data.authors.join(' · ')} · {data.publicationYear}</p>
+    <p>{data.description}</p>
+    <div class="book-card-footer">
+      <span>{data.readTime} {strings.minRead}</span>
+      <a class="text-link" href={url}>{strings.readSummary} <span class="direction-icon" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</article>

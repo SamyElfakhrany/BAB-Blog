@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import BookCard from '../../../components/BookCard.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { getLanguage, ui } from '../../../lib/content';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }];
+}
+
+const lang = getLanguage(Astro.params.lang || 'en');
+const strings = ui[lang];
+const books = (await getCollection('books', ({ data }) => data.lang === lang && !data.draft))
+  .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
+const title = lang === 'en' ? 'Books for Business Analysts' : 'كتب لمحللي الأعمال';
+const description = lang === 'en'
+  ? 'Detailed, source-grounded book summaries with practical frameworks, original exercises, and visual references.'
+  : 'ملخصات كتب تفصيلية مبنية على المصدر، ومعها الأطر العملية والتمارين الأصلية والمراجع البصرية.';
+---
+<SiteLayout lang={lang} title={title} description={description} canonicalPath={`/${lang}/books/`} currentSection="books">
+  <section class="books-hero shell">
+    <Breadcrumbs lang={lang} items={[
+      { label: strings.navLearn, href: `/${lang}/` },
+      { label: strings.navBooks }
+    ]} />
+    <div class="books-hero-copy">
+      <span class="eyebrow">BAC9 / {strings.navBooks}</span>
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <p class="books-source-note">{lang === 'en'
+        ? 'Each summary clearly separates material from the book from BAC9 explanatory visuals. These summaries do not replace the original books.'
+        : 'كل ملخص بيفصل بوضوح بين مادة الكتاب والرسومات التوضيحية من BAC9. الملخصات مش بديل عن الكتب الأصلية.'}</p>
+    </div>
+  </section>
+
+  <section class="books-library shell" aria-labelledby="books-library-title">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">{books.length} {lang === 'en' ? (books.length === 1 ? 'book' : 'books') : 'كتاب'}</span>
+        <h2 id="books-library-title">{lang === 'en' ? 'Read a detailed summary.' : 'اقرأ ملخصًا تفصيليًا.'}</h2>
+      </div>
+      <p>{lang === 'en'
+        ? 'Open a book for its bibliographic information, original cover, detailed sections, figures, and source exercises.'
+        : 'افتح الكتاب علشان تشوف بياناته وغلافه الأصلي والأقسام التفصيلية والرسومات وتمارين المصدر.'}</p>
+    </div>
+    <div class="book-grid">
+      {books.map((book) => <BookCard entry={book} lang={lang} />)}
+    </div>
+  </section>
+</SiteLayout>

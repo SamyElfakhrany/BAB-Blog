@@ -23,7 +23,7 @@ export function getStaticPaths() { return [{ params: { lang: 'en' } }, { params:
       const records = await fetch(endpoint).then((response) => response.json());
       const normalized = query.toLocaleLowerCase(lang === 'ar' ? 'ar' : 'en');
       const matches = records.filter((record) => record.lang === lang && record.search.toLocaleLowerCase(lang === 'ar' ? 'ar' : 'en').includes(normalized)).sort((a, b) => a.pathOrder - b.pathOrder || a.order - b.order);
-      status.textContent = matches.length ? `${matches.length} ${lang === 'en' ? 'result(s)' : 'نتيجة'}` : (lang === 'en' ? 'No tutorials match that search.' : 'لا توجد دروس تطابق هذا البحث.');
+      status.textContent = matches.length ? `${matches.length} ${lang === 'en' ? 'result(s)' : 'نتيجة'}` : (lang === 'en' ? 'No content matches that search.' : 'لا يوجد محتوى يطابق هذا البحث.');
       list.innerHTML = matches.map((record) => `<a class="search-result" href="${record.url}"><span class="eyebrow">${record.categoryLabel}</span><strong>${record.title}</strong><p>${record.description}</p></a>`).join('');
     };
     run();

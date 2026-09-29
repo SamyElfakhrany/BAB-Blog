@@ -9,11 +9,11 @@ import { getEntryUrl, getLanguage, ui, withBase } from '../../../lib/content';
 import { getPathEntries, getPathStats, pathDefinitions } from '../../../lib/curriculum';
 
 export async function getStaticPaths() {
-  return ['en', 'ar'].flatMap((lang) => ['business', 'technical', 'ai'].map((category) => ({ params: { lang, category } })));
+  return ['en', 'ar'].flatMap((lang) => ['business', 'technical', 'product-design', 'ai'].map((category) => ({ params: { lang, category } })));
 }
 
 const lang = getLanguage(Astro.params.lang || 'en');
-const category = (Astro.params.category || 'business') as 'business' | 'technical' | 'ai';
+const category = (Astro.params.category || 'business') as 'business' | 'technical' | 'product-design' | 'ai';
 const strings = ui[lang];
 const all = await getCollection('tutorials', ({ data }) => !data.draft);
 const entries = getPathEntries(all, category, lang);

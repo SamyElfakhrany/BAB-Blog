@@ -1,12 +1,14 @@
 import type { CollectionEntry } from 'astro:content';
 
 export type Tutorial = CollectionEntry<'tutorials'>;
+export type Book = CollectionEntry<'books'>;
 export type Language = 'en' | 'ar';
-export type Category = 'business' | 'technical' | 'ai';
+export type Category = 'business' | 'technical' | 'product-design' | 'ai';
 
 export const categoryLabels: Record<Category, Record<Language, string>> = {
   business: { en: 'Business Analysis Foundations', ar: 'أساسيات تحليل الأعمال' },
   technical: { en: 'Technical Fluency for BAs', ar: 'الفهم التقني لمحللي الأعمال' },
+  'product-design': { en: 'Product Design Fundamentals', ar: 'أساسيات تصميم المنتجات' },
   ai: { en: 'AI for Business Analysts', ar: 'الذكاء الاصطناعي لمحللي الأعمال' }
 };
 
@@ -18,6 +20,10 @@ export const categoryDescriptions: Record<Category, Record<Language, string>> = 
   technical: {
     en: 'Technical literacy for collaborating with software teams and understanding delivery.',
     ar: 'المعرفة التقنية اللازمة للتعاون مع فرق البرمجيات وفهم عملية التسليم.'
+  },
+  'product-design': {
+    en: 'Practical UX and product-design literacy for reviewing journeys, interfaces, evidence, and handoffs.',
+    ar: 'فهم عملي لتجربة المستخدم وتصميم المنتجات علشان تراجع الرحلات والواجهات والأدلة والتسليم.'
   },
   ai: {
     en: 'Practical, responsible ways to use AI inside business analysis work.',
@@ -31,6 +37,7 @@ export const ui = {
     siteLabel: 'Business Analysis Bootcamp',
     navLearn: 'Start Here',
     navPaths: 'Learning Paths',
+    navBooks: 'Books',
     navCaseStudy: 'Case study',
     navTemplates: 'Templates',
     navFollow: 'Follow',
@@ -41,11 +48,13 @@ export const ui = {
     menu: 'Menu',
     closeMenu: 'Close menu',
     skipToContent: 'Skip to content',
-    search: 'Search tutorials',
+    search: 'Search BAC9',
     searchPlaceholder: 'Search concepts, tools, and techniques…',
     featured: 'Start learning',
     allTutorials: 'All tutorials',
     read: 'Read tutorial',
+    readSummary: 'Read summary',
+    bookSummary: 'Book summary',
     minRead: 'min read',
     minutes: 'minutes',
     lessons: 'lessons',
@@ -80,7 +89,7 @@ export const ui = {
     language: 'العربية',
     homeIntro: 'A practical learning lab for business analysts who want to think clearly, collaborate with technical teams, and work responsibly with AI.',
     caseStudyIntro: 'Every tutorial uses one familiar online-shopping app so the ideas connect from one lesson to the next.',
-    noResults: 'No tutorials match that search.',
+    noResults: 'No content matches that search.',
     backToLearn: 'Back to learning'
   },
   ar: {
@@ -88,6 +97,7 @@ export const ui = {
     siteLabel: 'معسكر تحليل الأعمال',
     navLearn: 'ابدأ هنا',
     navPaths: 'مسارات التعلّم',
+    navBooks: 'الكتب',
     navCaseStudy: 'دراسة الحالة',
     navTemplates: 'قوالب',
     navFollow: 'تابع',
@@ -98,11 +108,13 @@ export const ui = {
     menu: 'القائمة',
     closeMenu: 'إغلاق القائمة',
     skipToContent: 'انتقل إلى المحتوى',
-    search: 'ابحث في الدروس',
+    search: 'ابحث في BAC9',
     searchPlaceholder: 'ابحث عن مفاهيم وأدوات وتقنيات…',
     featured: 'ابدأ التعلّم',
     allTutorials: 'كل الدروس',
     read: 'اقرأ الدرس',
+    readSummary: 'اقرأ الملخص',
+    bookSummary: 'ملخص كتاب',
     minRead: 'دقيقة قراءة',
     minutes: 'دقيقة',
     lessons: 'دروس',
@@ -137,7 +149,7 @@ export const ui = {
     language: 'English',
     homeIntro: 'مساحة تعلّم عملية لمحللي الأعمال الذين يريدون التفكير بوضوح والتعاون مع الفرق التقنية واستخدام الذكاء الاصطناعي بمسؤولية.',
     caseStudyIntro: 'تستخدم كل الدروس تطبيق تسوق أونلاين مألوفًا حتى تتصل الأفكار من درس إلى آخر.',
-    noResults: 'لا توجد دروس تطابق هذا البحث.',
+    noResults: 'لا يوجد محتوى يطابق هذا البحث.',
     backToLearn: 'العودة إلى التعلّم'
   }
 } as const;
@@ -165,6 +177,14 @@ export function getLangFromEntry(entry: Tutorial): Language {
 
 export function getEntryUrl(entry: Tutorial) {
   return `/${entry.data.lang}/${entry.data.category}/${getSlug(entry)}/`;
+}
+
+export function getBookSlug(entry: Book) {
+  return entry.id.split('/').at(-1) || entry.data.id;
+}
+
+export function getBookUrl(entry: Book) {
+  return `/${entry.data.lang}/books/${getBookSlug(entry)}/`;
 }
 
 export function localizePath(pathname: string, lang: Language) {

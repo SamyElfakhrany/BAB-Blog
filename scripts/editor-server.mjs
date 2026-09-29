@@ -107,7 +107,7 @@ async function knownIds() {
 }
 
 function articlePath(article) {
-  if (!article || !isSafeId(article.id) || !['en', 'ar'].includes(article.lang) || !['business', 'technical', 'ai'].includes(article.category)) {
+  if (!article || !isSafeId(article.id) || !['en', 'ar'].includes(article.lang) || !['business', 'technical', 'product-design', 'ai'].includes(article.category)) {
     throw new Error('Unsafe article path.');
   }
   const file = path.resolve(contentRoot, article.lang, article.category, `${article.id}.md`);

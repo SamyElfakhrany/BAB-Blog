@@ -6,6 +6,7 @@ import CurriculumList from '../../components/CurriculumList.astro';
 import LearningPathCard from '../../components/LearningPathCard.astro';
 import LearningProgressData from '../../components/LearningProgressData.astro';
 import SearchBox from '../../components/SearchBox.astro';
+import BookCard from '../../components/BookCard.astro';
 import { getLanguage, ui, withBase } from '../../lib/content';
 import { getJourneyEntries, getPathEntries, pathDefinitions, pathOrder } from '../../lib/curriculum';
 
@@ -16,6 +17,8 @@ export async function getStaticPaths() {
 const lang = getLanguage(Astro.params.lang || 'en');
 const strings = ui[lang];
 const all = await getCollection('tutorials', ({ data }) => !data.draft);
+const books = (await getCollection('books', ({ data }) => data.lang === lang && !data.draft))
+  .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
 const journey = getJourneyEntries(all, lang);
 const firstLesson = journey[0];
 const recommended = journey.slice(0, 3);
@@ -26,15 +29,15 @@ const recommended = journey.slice(0, 3);
       <span class="eyebrow">BAC9 · {strings.siteLabel}</span>
       <h1>{lang === 'en' ? 'Learn Business Analysis, step by step.' : 'اتعلّم تحليل الأعمال خطوة بخطوة.'}</h1>
       <p>{lang === 'en'
-        ? 'Follow a practical journey through business foundations, technical fluency, and responsible AI—built for beginner Business Analysts.'
-        : 'امشِ في رحلة عملية من أساسيات تحليل الأعمال للفهم التقني والاستخدام المسؤول للذكاء الاصطناعي—مصممة للمبتدئين.'}</p>
+        ? 'Follow a practical journey through business foundations, technical fluency, product design, and responsible AI—built for beginner Business Analysts.'
+        : 'امشِ في رحلة عملية من أساسيات تحليل الأعمال للفهم التقني وتصميم المنتجات والاستخدام المسؤول للذكاء الاصطناعي—مصممة للمبتدئين.'}</p>
       <div class="hero-actions">
         <a class="button button-primary" href={withBase(`/${lang}/business/who-is-a-business-analyst/`)}>{pathDefinitions.business.copy[lang].action} <span class="direction-icon" aria-hidden="true">→</span></a>
         <a class="button button-quiet" href={withBase(`/${lang}/learning-paths/`)}>{lang === 'en' ? 'Explore the learning roadmap' : 'استكشف خريطة التعلّم'}</a>
       </div>
     </div>
     <div class="journey-summary" aria-label={lang === 'en' ? 'Learning journey summary' : 'ملخص رحلة التعلّم'}>
-      <strong>11</strong>
+      <strong>{journey.length}</strong>
       <span>{strings.lessons}</span>
       <div></div>
       <strong>{journey.reduce((total, entry) => total + entry.data.readTime, 0)}</strong>
@@ -47,14 +50,25 @@ const recommended = journey.slice(0, 3);
 
   <section class="path-section shell" aria-labelledby="paths-title">
     <div class="section-heading">
-      <div><span class="eyebrow">{strings.navPaths}</span><h2 id="paths-title">{lang === 'en' ? 'One journey. Three connected stages.' : 'رحلة واحدة. ثلاث مراحل مترابطة.'}</h2></div>
-      <p>{lang === 'en' ? 'Start with the BA role, build confidence with software teams, then add AI responsibly.' : 'ابدأ بدور الـBA، وابنِ ثقتك مع فرق البرمجيات، وبعدها استخدم الـAI بمسؤولية.'}</p>
+      <div><span class="eyebrow">{strings.navPaths}</span><h2 id="paths-title">{lang === 'en' ? 'One journey. Four connected stages.' : 'رحلة واحدة. أربع مراحل مترابطة.'}</h2></div>
+      <p>{lang === 'en' ? 'Start with the BA role, build technical confidence, learn to review product experiences, then add AI responsibly.' : 'ابدأ بدور الـBA، وابنِ فهمك التقني، واتعلّم تراجع تجربة المنتج، وبعدها استخدم الـAI بمسؤولية.'}</p>
     </div>
     <div class="learning-path-grid">
       {pathOrder.map((category) => <LearningPathCard category={category} entries={getPathEntries(journey, category, lang)} lang={lang} />)}
     </div>
     <div class="roadmap-link-row"><a class="button button-quiet" href={withBase(`/${lang}/learning-paths/`)}>{lang === 'en' ? 'See the complete roadmap' : 'شوف خريطة التعلّم كاملة'}</a></div>
   </section>
+
+  {books.length > 0 && (
+    <section class="featured-books-section shell" aria-labelledby="featured-books-title">
+      <div class="section-heading">
+        <div><span class="eyebrow">{strings.navBooks}</span><h2 id="featured-books-title">{lang === 'en' ? 'Go deeper with a source-grounded book summary.' : 'اتعمّق مع ملخص كتاب مبني على المصدر.'}</h2></div>
+        <p>{lang === 'en' ? 'Read the book information, original exercises, visual references, and detailed section-by-section summary.' : 'اقرأ بيانات الكتاب وتمارينه الأصلية ومراجعه البصرية وملخصه التفصيلي قسمًا بقسم.'}</p>
+      </div>
+      <div class="featured-book-list">{books.slice(0, 1).map((book) => <BookCard entry={book} lang={lang} featured />)}</div>
+      <div class="roadmap-link-row"><a class="button button-quiet" href={withBase(`/${lang}/books/`)}>{lang === 'en' ? 'Explore all books' : 'استكشف كل الكتب'}</a></div>
+    </section>
+  )}
 
   <section class="how-section">
     <div class="shell">

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">خريطة كتاب ابتكار نموذج العمل التجاري</title>
+  <desc id="desc">خريطة مبنية على المصدر تربط أقسام لوحة النموذج والأنماط والتصميم والاستراتيجية بمراحل تصميم نموذج العمل الخمس.</desc>
+  <rect width="1200" height="630" fill="#fffaf2"/>
+  <rect x="44" y="42" width="1112" height="546" rx="28" fill="#ffffff" stroke="#20242a" stroke-width="4"/>
+  <text x="1118" y="98" text-anchor="end" direction="rtl" fill="#20242a" font-family="Tahoma, Arial, sans-serif" font-size="38" font-weight="700">ابتكار نموذج العمل التجاري</text>
+  <text x="1118" y="132" text-anchor="end" direction="rtl" fill="#5b6470" font-family="Tahoma, Arial, sans-serif" font-size="20">خريطة مبنية بالكامل على محتوى الكتاب</text>
+  <g font-family="Tahoma, Arial, sans-serif" font-weight="700" text-anchor="middle" direction="rtl">
+    <rect x="82" y="174" width="220" height="92" rx="16" fill="#94aad6"/><text x="192" y="230" font-size="25" fill="#20242a">الاستراتيجية</text>
+    <rect x="354" y="174" width="220" height="92" rx="16" fill="#7fc7c4"/><text x="464" y="230" font-size="25" fill="#20242a">التصميم</text>
+    <rect x="626" y="174" width="220" height="92" rx="16" fill="#ff8e63"/><text x="736" y="230" font-size="25" fill="#20242a">الأنماط</text>
+    <rect x="898" y="174" width="220" height="92" rx="16" fill="#ffd86b"/><text x="1008" y="230" font-size="25" fill="#20242a">اللوحة</text>
+  </g>
+  <path d="M192 286v42h816v-42M464 286v42M736 286v42" fill="none" stroke="#20242a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M600 328v48" fill="none" stroke="#20242a" stroke-width="5"/>
+  <path d="M585 359l15 18 15-18" fill="none" stroke="#20242a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="410" text-anchor="middle" direction="rtl" fill="#20242a" font-family="Tahoma, Arial, sans-serif" font-size="25" font-weight="700">عملية تصميم نموذج العمل</text>
+  <g font-family="Tahoma, Arial, sans-serif" font-size="19" font-weight="700" text-anchor="middle" direction="rtl" fill="#20242a">
+    <circle cx="158" cy="492" r="61" fill="#f4f1e8" stroke="#20242a" stroke-width="3"/><text x="158" y="498">الإدارة</text>
+    <circle cx="379" cy="492" r="61" fill="#f4f1e8" stroke="#20242a" stroke-width="3"/><text x="379" y="498">التنفيذ</text>
+    <circle cx="600" cy="492" r="61" fill="#f4f1e8" stroke="#20242a" stroke-width="3"/><text x="600" y="498">التصميم</text>
+    <circle cx="821" cy="492" r="61" fill="#f4f1e8" stroke="#20242a" stroke-width="3"/><text x="821" y="498">الفهم</text>
+    <circle cx="1042" cy="492" r="61" fill="#f4f1e8" stroke="#20242a" stroke-width="3"/><text x="1042" y="498">الحشد</text>
+  </g>
+  <g fill="none" stroke="#20242a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M978 492h-88"/><path d="M905 480l-15 12 15 12"/>
+    <path d="M757 492h-88"/><path d="M684 480l-15 12 15 12"/>
+    <path d="M536 492h-88"/><path d="M463 480l-15 12 15 12"/>
+    <path d="M315 492h-88"/><path d="M242 480l-15 12 15 12"/>
+  </g>
+  <text x="600" y="572" text-anchor="middle" direction="rtl" fill="#5b6470" font-family="Tahoma, Arial, sans-serif" font-size="17">مبنية فقط على فهرس الكتاب وعرض العملية: الصفحات المطبوعة 8–9 و248–259</text>
+</svg>

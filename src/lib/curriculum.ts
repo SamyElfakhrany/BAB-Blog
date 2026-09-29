@@ -1,6 +1,6 @@
 import type { Category, Language, Tutorial } from './content';
 
-export const pathOrder: Category[] = ['business', 'technical', 'ai'];
+export const pathOrder: Category[] = ['business', 'technical', 'product-design', 'ai'];
 
 export interface LocalizedPathDefinition {
   title: string;
@@ -15,7 +15,7 @@ export interface LocalizedPathDefinition {
 export interface PathDefinition {
   id: Category;
   stage: number;
-  accent: 'orange' | 'blue' | 'mint';
+  accent: 'orange' | 'blue' | 'violet' | 'mint';
   prerequisitePaths: Category[];
   copy: Record<Language, LocalizedPathDefinition>;
 }
@@ -73,11 +73,37 @@ export const pathDefinitions: Record<Category, PathDefinition> = {
       }
     }
   },
+  'product-design': {
+    id: 'product-design',
+    stage: 3,
+    accent: 'violet',
+    prerequisitePaths: ['business', 'technical'],
+    copy: {
+      en: {
+        title: 'Product Design Fundamentals',
+        shortTitle: 'Product Design',
+        purpose: 'Learn to turn user evidence into clear journeys, review interfaces constructively, specify every state, and validate design outcomes.',
+        audience: 'Business Analysts and Product Owners who collaborate with UX, product-design, and engineering teams.',
+        outcome: 'Plan lightweight UX research, critique designs with evidence, review prototypes and handoffs, and connect usability to product measures.',
+        prerequisite: 'Business Analysis Foundations and Technical Fluency are recommended, but every lesson remains open.',
+        action: 'Build product-design fluency'
+      },
+      ar: {
+        title: 'أساسيات تصميم المنتجات',
+        shortTitle: 'تصميم المنتجات',
+        purpose: 'اتعلّم تحوّل دليل المستخدم لرحلات واضحة، وتراجع الواجهات بشكل بنّاء، وتحدد كل الحالات، وتتحقق من نتائج التصميم.',
+        audience: 'لمحللي الأعمال والـProduct Owners اللي بيتعاونوا مع فرق UX وتصميم المنتجات والهندسة.',
+        outcome: 'خطط UX Research بسيط، وراجع التصميم بالدليل، وافهم الـPrototypes والـHandoff، واربط سهولة الاستخدام بمقاييس المنتج.',
+        prerequisite: 'يُفضّل إنهاء مساري أساسيات تحليل الأعمال والفهم التقني، لكن كل الدروس متاحة.',
+        action: 'طوّر فهمك لتصميم المنتجات'
+      }
+    }
+  },
   ai: {
     id: 'ai',
-    stage: 3,
+    stage: 4,
     accent: 'mint',
-    prerequisitePaths: ['business', 'technical'],
+    prerequisitePaths: ['business', 'technical', 'product-design'],
     copy: {
       en: {
         title: 'AI for Business Analysts',
@@ -85,7 +111,7 @@ export const pathDefinitions: Record<Category, PathDefinition> = {
         purpose: 'Use language models and AI agents responsibly inside practical Business Analysis workflows.',
         audience: 'BAs ready to use AI while keeping evidence, review, and human approval visible.',
         outcome: 'Design useful AI-assisted workflows with clear boundaries, checks, and measures.',
-        prerequisite: 'Foundations and Technical Fluency are recommended before this stage.',
+        prerequisite: 'Foundations, Technical Fluency, and Product Design Fundamentals are recommended before this stage.',
         action: 'Learn AI-enabled BA work'
       },
       ar: {
@@ -94,7 +120,7 @@ export const pathDefinitions: Record<Category, PathDefinition> = {
         purpose: 'استخدم النماذج اللغوية ووكلاء الذكاء الاصطناعي بمسؤولية داخل شغل تحليل الأعمال.',
         audience: 'لمحللي الأعمال المستعدين لاستخدام الـAI مع الحفاظ على الأدلة والمراجعة والموافقة البشرية.',
         outcome: 'صمّم تدفقات عمل مفيدة ومدعومة بالـAI بحدود وضوابط ومقاييس واضحة.',
-        prerequisite: 'يُفضّل إنهاء مساري الأساسيات والفهم التقني قبل المرحلة دي.',
+        prerequisite: 'يُفضّل إنهاء مسارات الأساسيات والفهم التقني وتصميم المنتجات قبل المرحلة دي.',
         action: 'اتعلّم تحليل الأعمال المدعوم بالـAI'
       }
     }
