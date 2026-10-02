@@ -21,7 +21,6 @@ const books = (await getCollection('books', ({ data }) => data.lang === lang && 
   .sort((a, b) => a.data.order - b.data.order || a.data.title.localeCompare(b.data.title));
 const journey = getJourneyEntries(all, lang);
 const firstLesson = journey[0];
-const recommended = journey.slice(0, 3);
 ---
 <SiteLayout lang={lang} title={strings.siteLabel} description={strings.homeIntro} currentSection="start">
   <section class="home-hero shell">
@@ -83,9 +82,15 @@ const recommended = journey.slice(0, 3);
     </div>
   </section>
 
-  <section class="curriculum-section shell" aria-labelledby="recommended-title">
-    <div class="section-heading"><div><span class="eyebrow">{lang === 'en' ? 'Recommended first lessons' : 'الدروس المقترحة للبداية'}</span><h2 id="recommended-title">{lang === 'en' ? 'Build your foundation in this order.' : 'ابنِ الأساس بالترتيب ده.'}</h2></div></div>
-    <CurriculumList entries={recommended} lang={lang} labelledby="recommended-title" />
+  <section class="curriculum-section shell" aria-labelledby="all-lessons-title">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">{journey.length} {strings.lessons}</span>
+        <h2 id="all-lessons-title">{lang === 'en' ? 'Explore every lesson in learning order.' : 'استكشف كل الدروس بترتيب التعلّم.'}</h2>
+      </div>
+      <p>{lang === 'en' ? 'The complete BAC9 curriculum is listed here, from Business Analysis foundations through responsible AI.' : 'منهج BAC9 كامل موجود هنا، من أساسيات تحليل الأعمال لحد الاستخدام المسؤول للذكاء الاصطناعي.'}</p>
+    </div>
+    <CurriculumList entries={journey} lang={lang} labelledby="all-lessons-title" />
   </section>
 
   <section class="search-section shell"><SearchBox lang={lang} /></section>
