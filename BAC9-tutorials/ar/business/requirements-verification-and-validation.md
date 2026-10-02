@@ -18,7 +18,7 @@ learningOutcomes:
   - "تخطط مراجعة V&V مشتركة وتسجل الأدلة والقرارات والمسؤوليات والخطوات التالية."
 practicalSkill: "إدارة مراجعة V&V للمتطلبات وإنتاج مصفوفة قرار مبنية على الدليل."
 heroImage: /images/ar/requirements-vv-loop_ar.svg
-related: ["requirements-documents-and-models","user-stories-and-acceptance-criteria","software-testing-and-uat"]
+related: ["requirements-documents-and-models","user-stories-and-acceptance-criteria","software-testing-and-uat","progressive-elaboration-of-requirements","how-to-write-a-brd"]
 draft: false
 ---
 

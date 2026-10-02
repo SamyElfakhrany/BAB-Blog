@@ -18,7 +18,7 @@ learningOutcomes:
   - "تجهز حزمة متطلبات مختصرة فيها النطاق والقواعد والاستثناءات والتتبع."
 practicalSkill: "تجميع حزمة متطلبات جاهزة للمراجعة بأقل مجموعة مفيدة من النصوص والنماذج."
 heroImage: /images/ar/requirements-artifact-map_ar.svg
-related: ["stakeholder-analysis","prioritization-techniques","user-stories-and-acceptance-criteria","requirements-verification-and-validation"]
+related: ["stakeholder-analysis","prioritization-techniques","user-stories-and-acceptance-criteria","requirements-verification-and-validation","progressive-elaboration-of-requirements","how-to-write-a-brd"]
 draft: false
 ---
 

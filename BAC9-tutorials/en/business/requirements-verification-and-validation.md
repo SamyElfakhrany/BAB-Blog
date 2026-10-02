@@ -18,7 +18,7 @@ learningOutcomes:
   - "Plan a collaborative V&V review and record evidence, decisions, owners, and follow-up actions."
 practicalSkill: "Run a requirements V&V review and produce an evidence-based decision matrix."
 heroImage: /images/en/requirements-vv-loop.svg
-related: ["requirements-documents-and-models","user-stories-and-acceptance-criteria","software-testing-and-uat"]
+related: ["requirements-documents-and-models","user-stories-and-acceptance-criteria","software-testing-and-uat","progressive-elaboration-of-requirements","how-to-write-a-brd"]
 draft: false
 ---
 

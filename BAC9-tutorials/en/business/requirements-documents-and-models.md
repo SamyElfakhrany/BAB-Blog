@@ -18,7 +18,7 @@ learningOutcomes:
   - "Build a concise requirements pack with scope, rules, exceptions, and traceability."
 practicalSkill: "Assemble a review-ready requirements pack using the smallest useful combination of text and models."
 heroImage: /images/en/requirements-artifact-map.svg
-related: ["stakeholder-analysis","prioritization-techniques","user-stories-and-acceptance-criteria","requirements-verification-and-validation"]
+related: ["stakeholder-analysis","prioritization-techniques","user-stories-and-acceptance-criteria","requirements-verification-and-validation","progressive-elaboration-of-requirements","how-to-write-a-brd"]
 draft: false
 ---
 
