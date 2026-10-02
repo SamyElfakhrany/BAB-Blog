@@ -18,7 +18,7 @@ learningOutcomes:
   - "تكتب Acceptance Criteria واضحة بـGiven/When/Then وتقسم القصة الكبيرة."
 practicalSkill: "تجهيز قصة صغيرة بأمثلة قبول قابلة للاختبار للنجاح والفشل."
 heroImage: /images/ar/user-story-example-map_ar.svg
-related: ["agile-and-scrum-for-business-analysts","kanban-for-business-analysts","software-testing-and-uat","requirements-verification-and-validation"]
+related: ["agile-and-scrum-for-business-analysts","kanban-for-business-analysts","software-testing-and-uat","requirements-verification-and-validation","cure-framework-for-backlog-refinement"]
 draft: false
 ---
 

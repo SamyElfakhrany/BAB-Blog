@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">إطار CURE لتنقيح الـBacklog</title>
+  <desc id="desc">تتم مراجعة التعقيد وعدم اليقين والمخاطر والمجهود بشكل منفصل قبل اختيار التوضيح أو الاستكشاف أو التقسيم أو تقليل المخاطر أو التقدير.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#17324d"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#17324d" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="1200" height="675" fill="#f7f4ed"/>
+  <text x="600" y="58" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="30" font-weight="700" fill="#102a43">استخدم أربع زوايا قبل اختيار رقم</text>
+  <rect x="285" y="82" width="630" height="52" rx="14" fill="#17324d"/>
+  <text x="600" y="115" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">عنصر الـBacklog · إلغاء الإرجاع بعد حجز شركة الشحن</text>
+
+  <g filter="url(#shadow)">
+    <rect x="65" y="180" width="245" height="235" rx="22" fill="#e5f6f3" stroke="#2a9d8f" stroke-width="3"/>
+    <rect x="340" y="180" width="245" height="235" rx="22" fill="#fde9e3" stroke="#c45c36" stroke-width="3"/>
+    <rect x="615" y="180" width="245" height="235" rx="22" fill="#e8f1fb" stroke="#3973ac" stroke-width="3"/>
+    <rect x="890" y="180" width="245" height="235" rx="22" fill="#fff1cf" stroke="#f2b134" stroke-width="3"/>
+  </g>
+
+  <circle cx="188" cy="225" r="30" fill="#2a9d8f"/><text x="188" y="236" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">E</text>
+  <text x="188" y="282" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="22" font-weight="700" fill="#102a43">المجهود</text>
+  <text x="188" y="320" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" fill="#225e58">تحليل · تنفيذ · اختبار</text>
+  <text x="188" y="347" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" fill="#225e58">إطلاق · تنسيق</text>
+  <text x="188" y="387" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="15" font-weight="700" fill="#12675e">أنهي شغل مطلوب؟</text>
+
+  <circle cx="463" cy="225" r="30" fill="#c45c36"/><text x="463" y="236" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">R</text>
+  <text x="463" y="282" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="22" font-weight="700" fill="#102a43">المخاطر</text>
+  <text x="463" y="320" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" fill="#7f341f">الأثر · الاحتمال</text>
+  <text x="463" y="347" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" fill="#7f341f">سهولة التراجع · الكشف</text>
+  <text x="463" y="387" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="15" font-weight="700" fill="#a33f22">ماذا لو حصل خطأ؟</text>
+
+  <circle cx="738" cy="225" r="30" fill="#3973ac"/><text x="738" y="236" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">U</text>
+  <text x="738" y="282" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="22" font-weight="700" fill="#102a43">عدم اليقين</text>
+  <text x="738" y="320" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" fill="#294f75">مجهول · افتراضات</text>
+  <text x="738" y="347" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" fill="#294f75">نقص دليل · تجربة جديدة</text>
+  <text x="738" y="387" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="15" font-weight="700" fill="#245f96">إيه اللي لازم نتعلمه؟</text>
+
+  <circle cx="1013" cy="225" r="30" fill="#f2b134"/><text x="1013" y="236" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#102a43">C</text>
+  <text x="1013" y="282" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="22" font-weight="700" fill="#102a43">التعقيد</text>
+  <text x="1013" y="320" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" fill="#5d4a1f">تفاعلات · قواعد · مسارات</text>
+  <text x="1013" y="347" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" fill="#5d4a1f">حالات · اعتماديات</text>
+  <text x="1013" y="387" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="15" font-weight="700" fill="#77520a">إيه اللي لازم يشتغل معًا؟</text>
+
+  <path d="M188 425V468H470" fill="none" stroke="#17324d" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M463 425V468H515" fill="none" stroke="#17324d" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M738 425V468H685" fill="none" stroke="#17324d" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1013 425V468H730" fill="none" stroke="#17324d" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="265" y="485" width="670" height="125" rx="24" fill="#17324d"/>
+  <text x="600" y="528" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="17" font-weight="700" fill="#f7c948">قرار الـRefinement</text>
+  <text x="600" y="565" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">وضّح · استكشف · قسّم · قلّل المخاطر · قدّر</text>
+  <text x="600" y="592" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="15" fill="#d9e2ec">سجّل السبب والدليل والمالك والمراجعة التالية، مش رقمًا فقط.</text>
+</svg>

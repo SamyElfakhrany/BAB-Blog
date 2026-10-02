@@ -8,7 +8,7 @@ category: business
 tags: ["agile","scrum","backlog","requirements"]
 difficulty: beginner
 published: 2026-09-27
-updated: 2026-09-27
+updated: 2026-10-02
 readTime: 14
 order: 6
 prerequisites: ["prioritization-techniques"]
@@ -18,7 +18,7 @@ learningOutcomes:
   - "Prepare a backlog item with evidence, business rules, exceptions, and acceptance examples."
 practicalSkill: "Turn a product need into a refinement-ready backlog item and support evidence-based adaptation."
 heroImage: /images/en/agile-scrum-feedback-loop.svg
-related: ["sdlc-and-delivery-approaches","kanban-for-business-analysts","user-stories-and-acceptance-criteria"]
+related: ["sdlc-and-delivery-approaches","kanban-for-business-analysts","user-stories-and-acceptance-criteria","cure-framework-for-backlog-refinement"]
 draft: false
 ---
 

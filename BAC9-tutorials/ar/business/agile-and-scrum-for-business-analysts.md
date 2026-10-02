@@ -8,7 +8,7 @@ category: business
 tags: ["agile","scrum","backlog","requirements"]
 difficulty: beginner
 published: 2026-09-27
-updated: 2026-09-27
+updated: 2026-10-02
 readTime: 15
 order: 6
 prerequisites: ["prioritization-techniques"]
@@ -18,7 +18,7 @@ learningOutcomes:
   - "تجهّز عنصر Backlog فيه دليل وقواعد عمل واستثناءات وأمثلة قبول."
 practicalSkill: "تحويل احتياج منتج إلى عنصر جاهز لنقاش Refinement ودعم التكيّف المبني على دليل."
 heroImage: /images/ar/agile-scrum-feedback-loop_ar.svg
-related: ["sdlc-and-delivery-approaches","kanban-for-business-analysts","user-stories-and-acceptance-criteria"]
+related: ["sdlc-and-delivery-approaches","kanban-for-business-analysts","user-stories-and-acceptance-criteria","cure-framework-for-backlog-refinement"]
 draft: false
 ---
 

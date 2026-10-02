@@ -8,7 +8,7 @@ category: business
 tags: ["kanban","flow","wip","cycle-time"]
 difficulty: beginner
 published: 2026-09-27
-updated: 2026-09-27
+updated: 2026-10-02
 readTime: 13
 order: 7
 prerequisites: ["agile-and-scrum-for-business-analysts"]
@@ -18,7 +18,7 @@ learningOutcomes:
   - "تستخدم دليل التدفق لتحسين تعاون الـBA من غير التلاعب بالمقاييس."
 practicalSkill: "إنشاء ومراجعة Kanban Workflow بسياسات واضحة ومقاييس تدفق مفيدة."
 heroImage: /images/ar/kanban-flow-map_ar.svg
-related: ["agile-and-scrum-for-business-analysts","sdlc-and-delivery-approaches","user-stories-and-acceptance-criteria"]
+related: ["agile-and-scrum-for-business-analysts","sdlc-and-delivery-approaches","user-stories-and-acceptance-criteria","cure-framework-for-backlog-refinement"]
 draft: false
 ---
 

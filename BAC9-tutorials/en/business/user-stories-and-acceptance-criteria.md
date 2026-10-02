@@ -18,7 +18,7 @@ learningOutcomes:
   - "Write clear Given/When/Then acceptance criteria and split an oversized story."
 practicalSkill: "Prepare a small story with testable success and failure acceptance examples."
 heroImage: /images/en/user-story-example-map.svg
-related: ["agile-and-scrum-for-business-analysts","kanban-for-business-analysts","software-testing-and-uat","requirements-verification-and-validation"]
+related: ["agile-and-scrum-for-business-analysts","kanban-for-business-analysts","software-testing-and-uat","requirements-verification-and-validation","cure-framework-for-backlog-refinement"]
 draft: false
 ---
 

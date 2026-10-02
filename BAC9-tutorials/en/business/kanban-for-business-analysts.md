@@ -8,7 +8,7 @@ category: business
 tags: ["kanban","flow","wip","cycle-time"]
 difficulty: beginner
 published: 2026-09-27
-updated: 2026-09-27
+updated: 2026-10-02
 readTime: 12
 order: 7
 prerequisites: ["agile-and-scrum-for-business-analysts"]
@@ -18,7 +18,7 @@ learningOutcomes:
   - "Use flow evidence to improve BA collaboration without gaming metrics."
 practicalSkill: "Create and review a Kanban workflow with explicit policies and useful flow measures."
 heroImage: /images/en/kanban-flow-map.svg
-related: ["agile-and-scrum-for-business-analysts","sdlc-and-delivery-approaches","user-stories-and-acceptance-criteria"]
+related: ["agile-and-scrum-for-business-analysts","sdlc-and-delivery-approaches","user-stories-and-acceptance-criteria","cure-framework-for-backlog-refinement"]
 draft: false
 ---
 
