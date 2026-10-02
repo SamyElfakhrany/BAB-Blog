@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">دورة التحقق والتصديق على المتطلبات</title>
+  <desc id="desc">تتحرك مسودة المتطلب من التحقق من الجودة إلى التصديق على القيمة ثم القرار مع الأدلة وحلقات إعادة العمل.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#17324d"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#17324d" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="1200" height="675" fill="#f7f4ed"/>
+  <text x="600" y="64" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="30" font-weight="700" fill="#102a43">مراجعتان قبل ما يكون المتطلب جاهزًا</text>
+  <text x="600" y="98" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="17" fill="#486581">الجودة تسأل «هل اتعرّف صح؟» والقيمة تسأل «هل ده الشيء الصح؟»</text>
+
+  <g filter="url(#shadow)">
+    <rect x="65" y="190" width="210" height="180" rx="22" fill="#ffffff" stroke="#7d8fa1" stroke-width="2"/>
+    <rect x="335" y="160" width="230" height="240" rx="22" fill="#e5f6f3" stroke="#2a9d8f" stroke-width="3"/>
+    <rect x="625" y="160" width="230" height="240" rx="22" fill="#fff1cf" stroke="#f2b134" stroke-width="3"/>
+    <rect x="915" y="190" width="220" height="180" rx="22" fill="#ffffff" stroke="#bcccdc" stroke-width="2"/>
+  </g>
+
+  <circle cx="170" cy="230" r="26" fill="#17324d"/><text x="170" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">٤</text>
+  <text x="170" y="285" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="24" font-weight="700" fill="#102a43">اتخذ القرار</text>
+  <text x="170" y="319" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" fill="#486581">جاهز · مشروط</text>
+  <text x="170" y="343" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" fill="#486581">إعادة عمل · منتظر</text>
+
+  <circle cx="450" cy="205" r="26" fill="#2a9d8f"/><text x="450" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">٣</text>
+  <text x="450" y="260" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="23" font-weight="700" fill="#102a43">صدّق على القيمة</text>
+  <text x="450" y="297" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="17" font-weight="700" fill="#12675e">هل ده الاحتياج الصح؟</text>
+  <text x="450" y="330" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="15" fill="#225e58">متوافق · مفيد · مبني على دليل</text>
+  <text x="450" y="354" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="15" fill="#225e58">آمن · واقعي · يستحق التنفيذ</text>
+
+  <circle cx="740" cy="205" r="26" fill="#f2b134"/><text x="740" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#102a43">٢</text>
+  <text x="740" y="260" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="23" font-weight="700" fill="#102a43">تحقق من الجودة</text>
+  <text x="740" y="297" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="17" font-weight="700" fill="#77520a">هل يصلح للاستخدام؟</text>
+  <text x="740" y="330" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="15" fill="#5d4a1f">واضح · مكتمل · متسق</text>
+  <text x="740" y="354" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="15" fill="#5d4a1f">قابل للتنفيذ والاختبار · متتبع</text>
+
+  <circle cx="1025" cy="230" r="26" fill="#eaf0f5"/><text x="1025" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#17324d">١</text>
+  <text x="1025" y="285" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="24" font-weight="700" fill="#102a43">المسودة</text>
+  <text x="1025" y="319" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" fill="#486581">احتياج أو قاعدة أو قصة</text>
+  <text x="1025" y="343" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" fill="#486581">أو نموذج أو قرار</text>
+
+  <path d="M915 280H865" fill="none" stroke="#17324d" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M625 280H575" fill="none" stroke="#17324d" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M335 280H285" fill="none" stroke="#17324d" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <path d="M450 420C450 510 740 510 740 420" fill="none" stroke="#c45c36" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
+  <text x="595" y="493" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="15" font-weight="700" fill="#a33f22">دليل جديد أو تعارض يرجّع المتطلب لإعادة العمل</text>
+
+  <rect x="160" y="545" width="880" height="72" rx="18" fill="#17324d"/>
+  <text x="600" y="576" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" font-weight="700" fill="#f7c948">الأدلة موجودة طوال الرحلة</text>
+  <text x="600" y="602" text-anchor="middle" direction="rtl" unicode-bidi="embed" font-family="Tahoma, Arial, sans-serif" font-size="16" fill="#ffffff">أهداف · سياسات · أمثلة · نماذج · رأي المستخدم · بيانات · مخاطر · سجل القرار</text>
+</svg>

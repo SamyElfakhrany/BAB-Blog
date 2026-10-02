@@ -8,7 +8,7 @@ category: technical
 tags: ["testing","uat","defects","regression-testing"]
 difficulty: beginner
 published: 2026-09-27
-updated: 2026-09-27
+updated: 2026-10-02
 readTime: 14
 order: 7
 prerequisites: ["devops-for-business-analysts","user-stories-and-acceptance-criteria"]
@@ -18,7 +18,7 @@ learningOutcomes:
   - "تكتب وتفرز Defect Report مفيدًا وتحدد خطر الـRegression."
 practicalSkill: "بناء خطة UAT وفرز عيوب مبنية على مخاطر التغيير."
 heroImage: /images/ar/testing-quality-layers_ar.svg
-related: ["user-stories-and-acceptance-criteria","devops-for-business-analysts","apis-for-business-analysts"]
+related: ["user-stories-and-acceptance-criteria","requirements-verification-and-validation","devops-for-business-analysts","apis-for-business-analysts"]
 draft: false
 ---
 

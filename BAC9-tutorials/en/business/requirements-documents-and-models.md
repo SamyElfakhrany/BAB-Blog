@@ -8,7 +8,7 @@ category: business
 tags: ["requirements","brd","prd","process-modeling","wireframes"]
 difficulty: beginner
 published: 2026-09-27
-updated: 2026-09-27
+updated: 2026-10-02
 readTime: 13
 order: 3
 prerequisites: ["stakeholder-analysis"]
@@ -18,7 +18,7 @@ learningOutcomes:
   - "Build a concise requirements pack with scope, rules, exceptions, and traceability."
 practicalSkill: "Assemble a review-ready requirements pack using the smallest useful combination of text and models."
 heroImage: /images/en/requirements-artifact-map.svg
-related: ["stakeholder-analysis","prioritization-techniques","user-stories-and-acceptance-criteria"]
+related: ["stakeholder-analysis","prioritization-techniques","user-stories-and-acceptance-criteria","requirements-verification-and-validation"]
 draft: false
 ---
 

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Requirements verification and validation loop</title>
+  <desc id="desc">A draft requirement moves through quality verification and value validation to a decision, supported by evidence and connected by rework loops.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#17324d"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#17324d" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="1200" height="675" fill="#f7f4ed"/>
+  <text x="600" y="64" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#102a43">Two checks before a requirement is ready</text>
+  <text x="600" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#486581">Quality answers “defined correctly”; value answers “the right thing to define.”</text>
+
+  <g filter="url(#shadow)">
+    <rect x="65" y="190" width="220" height="180" rx="22" fill="#ffffff" stroke="#bcccdc" stroke-width="2"/>
+    <rect x="345" y="160" width="230" height="240" rx="22" fill="#fff1cf" stroke="#f2b134" stroke-width="3"/>
+    <rect x="635" y="160" width="230" height="240" rx="22" fill="#e5f6f3" stroke="#2a9d8f" stroke-width="3"/>
+    <rect x="925" y="190" width="210" height="180" rx="22" fill="#ffffff" stroke="#7d8fa1" stroke-width="2"/>
+  </g>
+
+  <circle cx="175" cy="230" r="26" fill="#eaf0f5"/><text x="175" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#17324d">1</text>
+  <text x="175" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#102a43">Draft</text>
+  <text x="175" y="319" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#486581">Need, rule, story,</text>
+  <text x="175" y="343" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#486581">model, or decision</text>
+
+  <circle cx="460" cy="205" r="26" fill="#f2b134"/><text x="460" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#102a43">2</text>
+  <text x="460" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#102a43">VERIFY QUALITY</text>
+  <text x="460" y="297" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#77520a">Is it usable?</text>
+  <text x="460" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#5d4a1f">Clear · complete · consistent</text>
+  <text x="460" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#5d4a1f">feasible · testable · traced</text>
+
+  <circle cx="750" cy="205" r="26" fill="#2a9d8f"/><text x="750" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">3</text>
+  <text x="750" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#102a43">VALIDATE VALUE</text>
+  <text x="750" y="297" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#12675e">Is it the right need?</text>
+  <text x="750" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#225e58">Aligned · useful · evidence-based</text>
+  <text x="750" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#225e58">safe · realistic · worth doing</text>
+
+  <circle cx="1030" cy="230" r="26" fill="#17324d"/><text x="1030" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">4</text>
+  <text x="1030" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#102a43">Decide</text>
+  <text x="1030" y="319" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#486581">Ready · conditional</text>
+  <text x="1030" y="343" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#486581">rework · pending</text>
+
+  <path d="M285 280H335" fill="none" stroke="#17324d" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M575 280H625" fill="none" stroke="#17324d" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M865 280H915" fill="none" stroke="#17324d" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <path d="M750 420C750 510 460 510 460 420" fill="none" stroke="#c45c36" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
+  <text x="605" y="493" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#a33f22">New evidence or a conflict sends the requirement back for rework</text>
+
+  <rect x="160" y="545" width="880" height="72" rx="18" fill="#17324d"/>
+  <text x="600" y="576" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#f7c948">EVIDENCE THROUGHOUT</text>
+  <text x="600" y="602" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Objectives · policies · examples · models · user feedback · data · risks · decision record</text>
+</svg>

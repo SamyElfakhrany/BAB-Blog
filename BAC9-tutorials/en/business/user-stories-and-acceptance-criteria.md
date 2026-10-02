@@ -8,7 +8,7 @@ category: business
 tags: ["user-stories","acceptance-criteria","gherkin","backlog"]
 difficulty: beginner
 published: 2026-09-27
-updated: 2026-09-27
+updated: 2026-10-02
 readTime: 12
 order: 8
 prerequisites: ["agile-and-scrum-for-business-analysts","requirements-documents-and-models"]
@@ -18,7 +18,7 @@ learningOutcomes:
   - "Write clear Given/When/Then acceptance criteria and split an oversized story."
 practicalSkill: "Prepare a small story with testable success and failure acceptance examples."
 heroImage: /images/en/user-story-example-map.svg
-related: ["agile-and-scrum-for-business-analysts","kanban-for-business-analysts","software-testing-and-uat"]
+related: ["agile-and-scrum-for-business-analysts","kanban-for-business-analysts","software-testing-and-uat","requirements-verification-and-validation"]
 draft: false
 ---
 

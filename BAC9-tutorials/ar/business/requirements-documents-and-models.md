@@ -8,7 +8,7 @@ category: business
 tags: ["requirements","brd","prd","process-modeling","wireframes"]
 difficulty: beginner
 published: 2026-09-27
-updated: 2026-09-27
+updated: 2026-10-02
 readTime: 14
 order: 3
 prerequisites: ["stakeholder-analysis"]
@@ -18,7 +18,7 @@ learningOutcomes:
   - "تجهز حزمة متطلبات مختصرة فيها النطاق والقواعد والاستثناءات والتتبع."
 practicalSkill: "تجميع حزمة متطلبات جاهزة للمراجعة بأقل مجموعة مفيدة من النصوص والنماذج."
 heroImage: /images/ar/requirements-artifact-map_ar.svg
-related: ["stakeholder-analysis","prioritization-techniques","user-stories-and-acceptance-criteria"]
+related: ["stakeholder-analysis","prioritization-techniques","user-stories-and-acceptance-criteria","requirements-verification-and-validation"]
 draft: false
 ---
 
