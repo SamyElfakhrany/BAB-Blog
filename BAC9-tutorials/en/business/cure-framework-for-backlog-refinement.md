@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-10-02
 updated: 2026-10-02
 readTime: 13
-order: 11
+order: 12
 prerequisites: ["agile-and-scrum-for-business-analysts","user-stories-and-acceptance-criteria"]
 learningOutcomes:
   - "Distinguish Complexity, Uncertainty, Risk, and Effort during backlog refinement."

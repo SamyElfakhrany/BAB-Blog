@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-09-27
 updated: 2026-09-27
 readTime: 12
-order: 9
+order: 10
 prerequisites: ["prioritization-techniques","user-stories-and-acceptance-criteria"]
 learningOutcomes:
   - "Distinguish an MVP from a low-quality first release or a fixed feature list."

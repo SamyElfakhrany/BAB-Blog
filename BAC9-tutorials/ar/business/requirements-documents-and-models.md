@@ -10,15 +10,15 @@ difficulty: beginner
 published: 2026-09-27
 updated: 2026-10-02
 readTime: 14
-order: 3
-prerequisites: ["stakeholder-analysis"]
+order: 4
+prerequisites: ["stakeholder-analysis","requirements-elicitation-and-workshop-facilitation"]
 learningOutcomes:
   - "تختار أداة المتطلبات المناسبة للقرار والجمهور."
   - "تمثل احتياجًا واحدًا بتدفق عملية وحالة استخدام وWireframe بسيط."
   - "تجهز حزمة متطلبات مختصرة فيها النطاق والقواعد والاستثناءات والتتبع."
 practicalSkill: "تجميع حزمة متطلبات جاهزة للمراجعة بأقل مجموعة مفيدة من النصوص والنماذج."
 heroImage: /images/ar/requirements-artifact-map_ar.svg
-related: ["stakeholder-analysis","prioritization-techniques","user-stories-and-acceptance-criteria","requirements-verification-and-validation","progressive-elaboration-of-requirements","how-to-write-a-brd"]
+related: ["stakeholder-analysis","requirements-elicitation-and-workshop-facilitation","prioritization-techniques","user-stories-and-acceptance-criteria","requirements-verification-and-validation","progressive-elaboration-of-requirements","how-to-write-a-brd"]
 draft: false
 ---
 

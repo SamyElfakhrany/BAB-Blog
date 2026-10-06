@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-10-02
 updated: 2026-10-02
 readTime: 14
-order: 10
+order: 11
 prerequisites: ["requirements-documents-and-models","user-stories-and-acceptance-criteria"]
 learningOutcomes:
   - "Distinguish requirements verification from requirements validation and from solution testing."

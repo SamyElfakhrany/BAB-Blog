@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-09-27
 updated: 2026-10-02
 readTime: 15
-order: 6
+order: 7
 prerequisites: ["prioritization-techniques"]
 learningOutcomes:
   - "تشرح الفرق بين عقلية Agile وإطار العمل Scrum."

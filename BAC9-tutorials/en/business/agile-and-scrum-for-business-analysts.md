@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-09-27
 updated: 2026-10-02
 readTime: 14
-order: 6
+order: 7
 prerequisites: ["prioritization-techniques"]
 learningOutcomes:
   - "Explain the difference between an Agile mindset and the Scrum framework."

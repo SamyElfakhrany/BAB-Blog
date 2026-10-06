@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-09-27
 updated: 2026-10-02
 readTime: 13
-order: 7
+order: 8
 prerequisites: ["agile-and-scrum-for-business-analysts"]
 learningOutcomes:
   - "تشرح إظهار الـWorkflow وحدود الشغل الجاري والسياسات الواضحة."

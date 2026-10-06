@@ -1,0 +1,43 @@
+---
+import type { ToolEntry } from '../data/tools-directory';
+import { toolCategoryLabels } from '../data/tools-directory';
+import type { Language } from '../lib/content';
+import { withBase } from '../lib/content';
+
+interface Props {
+  tool: ToolEntry;
+  lang: Language;
+}
+
+const { tool, lang } = Astro.props;
+const searchText = [tool.name, tool.description[lang], ...tool.tags[lang], tool.successorNote?.[lang] || '']
+  .join(' ')
+  .toLocaleLowerCase(lang === 'ar' ? 'ar' : 'en');
+---
+
+<article
+  id={`tool-${tool.id}`}
+  class={`tool-card category-${tool.category}`}
+  data-tool-card
+  data-category={tool.category}
+  data-search={searchText}
+>
+  <div class="tool-card-heading">
+    <div class="tool-logo-wrap">
+      <img src={withBase(tool.logo.src)} alt="" width="56" height="56" loading="lazy" data-tool-logo />
+      <span class="tool-logo-fallback" hidden aria-hidden="true">{tool.mark}</span>
+    </div>
+    <div>
+      <span class="tool-category-label">{toolCategoryLabels[tool.category][lang]}</span>
+      <h3>{tool.name}</h3>
+    </div>
+  </div>
+  <p class="tool-description">{tool.description[lang]}</p>
+  {tool.successorNote && <p class="tool-successor-note">{tool.successorNote[lang]}</p>}
+  <ul class="tool-tags" aria-label={lang === 'en' ? `${tool.name} use cases` : `استخدامات ${tool.name}`}>
+    {tool.tags[lang].map((tag) => <li>{tag}</li>)}
+  </ul>
+  <a class="tool-visit-link" href={tool.url} target="_blank" rel="noopener noreferrer">
+    {lang === 'en' ? 'Visit official site' : 'افتح الموقع الرسمي'} <span aria-hidden="true">↗</span>
+  </a>
+</article>

@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-09-27
 updated: 2026-09-27
 readTime: 11
-order: 5
+order: 6
 prerequisites: ["requirements-documents-and-models","prioritization-techniques"]
 learningOutcomes:
   - "Explain the SDLC separately from a delivery methodology."

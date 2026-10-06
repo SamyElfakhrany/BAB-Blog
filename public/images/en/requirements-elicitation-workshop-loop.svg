@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Requirements elicitation workshop loop</title>
+  <desc id="desc">A five-step flow from prepare to explore, converge, confirm, and follow up, supported by evidence, people, scope, decisions, questions, and actions.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#17324d" flood-opacity="0.14"/></filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#244968"/></marker>
+  </defs>
+  <rect width="1200" height="720" fill="#f7f3ea"/>
+  <text x="600" y="58" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#17324d">A useful workshop turns uncertainty into confirmed next steps</text>
+  <text x="600" y="91" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#567083">Evidence enters the conversation; decisions, questions, and actions leave it</text>
+
+  <g filter="url(#shadow)">
+    <rect x="44" y="158" width="198" height="246" rx="22" fill="#fff1cc" stroke="#e3ad2f" stroke-width="3"/>
+    <circle cx="143" cy="158" r="25" fill="#e3ad2f"/><text x="143" y="166" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#17324d">1</text>
+    <text x="143" y="216" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" fill="#17324d">Prepare</text>
+    <text x="143" y="258" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">Decision · scope</text>
+    <text x="143" y="286" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">People · evidence</text>
+    <text x="143" y="314" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">Agenda · access</text>
+    <rect x="72" y="344" width="142" height="36" rx="18" fill="#fffaf0"/><text x="143" y="367" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#8a5c00">What must change?</text>
+
+    <rect x="272" y="158" width="198" height="246" rx="22" fill="#e3effc" stroke="#4c86b8" stroke-width="3"/>
+    <circle cx="371" cy="158" r="25" fill="#4c86b8"/><text x="371" y="166" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">2</text>
+    <text x="371" y="216" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" fill="#17324d">Explore</text>
+    <text x="371" y="258" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">Facts · needs</text>
+    <text x="371" y="286" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">Examples · concerns</text>
+    <text x="371" y="314" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">Silent input</text>
+    <rect x="300" y="344" width="142" height="36" rx="18" fill="#f5f9fe"/><text x="371" y="367" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#2c6596">What do we know?</text>
+
+    <rect x="500" y="158" width="198" height="246" rx="22" fill="#f1e7fa" stroke="#8a66a6" stroke-width="3"/>
+    <circle cx="599" cy="158" r="25" fill="#8a66a6"/><text x="599" y="166" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">3</text>
+    <text x="599" y="216" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" fill="#17324d">Converge</text>
+    <text x="599" y="258" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">Group · test</text>
+    <text x="599" y="286" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">Resolve · assign</text>
+    <text x="599" y="314" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">Keep conflicts visible</text>
+    <rect x="528" y="344" width="142" height="36" rx="18" fill="#fbf7fe"/><text x="599" y="367" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#6e4a8a">What is decided?</text>
+
+    <rect x="728" y="158" width="198" height="246" rx="22" fill="#fde7df" stroke="#c76738" stroke-width="3"/>
+    <circle cx="827" cy="158" r="25" fill="#c76738"/><text x="827" y="166" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">4</text>
+    <text x="827" y="216" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" fill="#17324d">Confirm</text>
+    <text x="827" y="258" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">Accurate · complete</text>
+    <text x="827" y="286" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">Conflict · correction</text>
+    <text x="827" y="314" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">Not the same as approval</text>
+    <rect x="756" y="344" width="142" height="36" rx="18" fill="#fff8f4"/><text x="827" y="367" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#a44722">Did we hear right?</text>
+
+    <rect x="956" y="158" width="200" height="246" rx="22" fill="#e2f4ee" stroke="#3a9b83" stroke-width="3"/>
+    <circle cx="1056" cy="158" r="25" fill="#3a9b83"/><text x="1056" y="166" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">5</text>
+    <text x="1056" y="216" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" fill="#17324d">Follow up</text>
+    <text x="1056" y="258" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">Requirements · models</text>
+    <text x="1056" y="286" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">Actions · traceability</text>
+    <text x="1056" y="314" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4b6478">More elicitation</text>
+    <rect x="985" y="344" width="142" height="36" rx="18" fill="#f4fbf8"/><text x="1056" y="367" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#23745f">What happens next?</text>
+  </g>
+
+  <g stroke="#244968" stroke-width="5" marker-end="url(#arrow)">
+    <path d="M242 278 H260"/><path d="M470 278 H488"/><path d="M698 278 H716"/><path d="M926 278 H944"/>
+  </g>
+
+  <rect x="94" y="474" width="1012" height="80" rx="24" fill="#173b59" filter="url(#shadow)"/>
+  <text x="164" y="506" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#f4bf45">INPUTS</text>
+  <text x="164" y="532" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#fff">Evidence · affected people · decision boundary · known constraints</text>
+  <rect x="94" y="578" width="1012" height="80" rx="24" fill="#fff" stroke="#cfc6b7" stroke-width="2"/>
+  <text x="164" y="610" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#956000">OUTPUTS</text>
+  <text x="164" y="636" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#17324d">Confirmed notes · decisions · conflicts · open questions · owned actions</text>
+</svg>

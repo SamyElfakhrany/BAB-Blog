@@ -18,7 +18,7 @@ learningOutcomes:
   - "تنشئ سجل أصحاب مصلحة وخطة تواصل عملية."
 practicalSkill: "بناء سجل أصحاب مصلحة وخطة مشاركة لمبادرة تغيير."
 heroImage: /images/ar/stakeholder_power_interest_matrix_ar.png
-related: ["prioritization-techniques","version-control-for-business-analysts"]
+related: ["requirements-elicitation-and-workshop-facilitation","prioritization-techniques","version-control-for-business-analysts"]
 draft: false
 ---
 

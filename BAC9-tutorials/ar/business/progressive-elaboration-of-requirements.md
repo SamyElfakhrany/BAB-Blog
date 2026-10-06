@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-10-02
 updated: 2026-10-02
 readTime: 15
-order: 12
+order: 13
 prerequisites: ["requirements-documents-and-models","user-stories-and-acceptance-criteria","requirements-verification-and-validation"]
 learningOutcomes:
   - "تميز التفصيل التدريجي عن التغيير غير المنضبط وإعادة العمل والتأجيل المقصود."

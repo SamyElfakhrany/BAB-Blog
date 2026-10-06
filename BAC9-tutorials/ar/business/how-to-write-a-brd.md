@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-10-02
 updated: 2026-10-02
 readTime: 16
-order: 13
+order: 14
 prerequisites: ["stakeholder-analysis","requirements-documents-and-models","prioritization-techniques","progressive-elaboration-of-requirements"]
 learningOutcomes:
   - "تخطط الـBRD حوالين القرار والجمهور والدليل والحوكمة."
@@ -18,7 +18,7 @@ learningOutcomes:
   - "تراجع وتتبع وتعتمد وتحدّث الـBRD من غير ما تحولها لتصميم حل تفصيلي."
 practicalSkill: "إنتاج BRD مختصرة وجاهزة للمراجعة مع ملخص متطلبات قابل للتتبع لمبادرة تغيير."
 heroImage: /images/ar/brd-decision-blueprint_ar.svg
-related: ["stakeholder-analysis","requirements-documents-and-models","requirements-verification-and-validation","progressive-elaboration-of-requirements"]
+related: ["stakeholder-analysis","requirements-elicitation-and-workshop-facilitation","requirements-documents-and-models","requirements-verification-and-validation","progressive-elaboration-of-requirements"]
 draft: false
 ---
 

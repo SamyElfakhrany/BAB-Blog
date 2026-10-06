@@ -18,7 +18,7 @@ learningOutcomes:
   - "Create a stakeholder register and a practical engagement plan."
 practicalSkill: "Build a stakeholder register and engagement plan for a change initiative."
 heroImage: /images/en/stakeholder_power_interest_matrix.png
-related: ["prioritization-techniques","version-control-for-business-analysts"]
+related: ["requirements-elicitation-and-workshop-facilitation","prioritization-techniques","version-control-for-business-analysts"]
 draft: false
 ---
 

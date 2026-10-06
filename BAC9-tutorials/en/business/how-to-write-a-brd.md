@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-10-02
 updated: 2026-10-02
 readTime: 15
-order: 13
+order: 14
 prerequisites: ["stakeholder-analysis","requirements-documents-and-models","prioritization-techniques","progressive-elaboration-of-requirements"]
 learningOutcomes:
   - "Plan a BRD around its decision, audience, evidence, and governance."
@@ -18,7 +18,7 @@ learningOutcomes:
   - "Review, trace, approve, and maintain a BRD without turning it into a detailed solution design."
 practicalSkill: "Produce a concise, review-ready BRD and a traceable requirements summary for a change initiative."
 heroImage: /images/en/brd-decision-blueprint.svg
-related: ["stakeholder-analysis","requirements-documents-and-models","requirements-verification-and-validation","progressive-elaboration-of-requirements"]
+related: ["stakeholder-analysis","requirements-elicitation-and-workshop-facilitation","requirements-documents-and-models","requirements-verification-and-validation","progressive-elaboration-of-requirements"]
 draft: false
 ---
 

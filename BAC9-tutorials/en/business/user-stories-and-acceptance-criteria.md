@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-09-27
 updated: 2026-10-02
 readTime: 12
-order: 8
+order: 9
 prerequisites: ["agile-and-scrum-for-business-analysts","requirements-documents-and-models"]
 learningOutcomes:
   - "Write a user story that connects a user need to value without prescribing design."

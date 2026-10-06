@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-09-27
 updated: 2026-10-02
 readTime: 12
-order: 7
+order: 8
 prerequisites: ["agile-and-scrum-for-business-analysts"]
 learningOutcomes:
   - "Explain workflow visualization, work-in-progress limits, and explicit policies."

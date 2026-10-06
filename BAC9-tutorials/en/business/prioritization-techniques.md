@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-09-24
 updated: 2026-09-27
 readTime: 11
-order: 4
+order: 5
 prerequisites: ["stakeholder-analysis"]
 learningOutcomes:
   - "Choose a prioritization technique that fits the decision and available evidence."

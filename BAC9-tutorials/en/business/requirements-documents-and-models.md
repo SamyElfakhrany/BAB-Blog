@@ -10,15 +10,15 @@ difficulty: beginner
 published: 2026-09-27
 updated: 2026-10-02
 readTime: 13
-order: 3
-prerequisites: ["stakeholder-analysis"]
+order: 4
+prerequisites: ["stakeholder-analysis","requirements-elicitation-and-workshop-facilitation"]
 learningOutcomes:
   - "Select a requirements artifact based on the decision and audience."
   - "Model a process, use case, and low-fidelity wireframe around one business need."
   - "Build a concise requirements pack with scope, rules, exceptions, and traceability."
 practicalSkill: "Assemble a review-ready requirements pack using the smallest useful combination of text and models."
 heroImage: /images/en/requirements-artifact-map.svg
-related: ["stakeholder-analysis","prioritization-techniques","user-stories-and-acceptance-criteria","requirements-verification-and-validation","progressive-elaboration-of-requirements","how-to-write-a-brd"]
+related: ["stakeholder-analysis","requirements-elicitation-and-workshop-facilitation","prioritization-techniques","user-stories-and-acceptance-criteria","requirements-verification-and-validation","progressive-elaboration-of-requirements","how-to-write-a-brd"]
 draft: false
 ---
 

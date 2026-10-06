@@ -1,6 +1,7 @@
 import { getCollection } from 'astro:content';
 import { categoryLabels, getBookSlug, getBookUrl, getEntryUrl, getSlug, withBase } from '../lib/content';
 import { pathIndex } from '../lib/curriculum';
+import { toolCategoryLabels, tools } from '../data/tools-directory';
 
 export async function GET() {
   const [entries, books] = await Promise.all([
@@ -33,6 +34,19 @@ export async function GET() {
     url: withBase(getBookUrl(entry)),
     search: [entry.data.title, entry.data.subtitle, entry.data.description, entry.data.authors.join(' '), entry.data.topics.join(' '), entry.body || '', getBookSlug(entry)].join(' ')
   }));
-  const records = [...tutorialRecords, ...bookRecords];
+  const toolRecords = tools.flatMap((tool) => (['en', 'ar'] as const).map((lang) => ({
+    id: `${tool.id}-${lang}`,
+    lang,
+    title: tool.name,
+    description: tool.description[lang],
+    contentType: 'tool',
+    category: 'tools',
+    pathOrder: 5,
+    order: tool.order,
+    categoryLabel: `${lang === 'en' ? 'Tools' : 'أدوات'} · ${toolCategoryLabels[tool.category][lang]}`,
+    url: withBase(`/${lang}/tools/#tool-${tool.id}`),
+    search: [tool.name, tool.description[lang], tool.tags[lang].join(' '), tool.successorNote?.[lang] || ''].join(' ')
+  })));
+  const records = [...tutorialRecords, ...bookRecords, ...toolRecords];
   return new Response(JSON.stringify(records), { headers: { 'Content-Type': 'application/json; charset=utf-8' } });
 }

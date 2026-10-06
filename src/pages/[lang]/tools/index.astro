@@ -1,0 +1,194 @@
+---
+import ToolCard from '../../../components/ToolCard.astro';
+import {
+  toolCategoryDescriptions,
+  toolCategoryLabels,
+  toolCategoryOrder,
+  tools
+} from '../../../data/tools-directory';
+import { getLanguage } from '../../../lib/content';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }];
+}
+
+const lang = getLanguage(Astro.params.lang || 'en');
+const orderedTools = [...tools].sort((a, b) => a.order - b.order);
+const groups = toolCategoryOrder.map((category) => ({
+  category,
+  tools: orderedTools.filter((tool) => tool.category === category)
+}));
+
+const copy = lang === 'en'
+  ? {
+      title: 'Tools for Business Analysts',
+      description: 'A curated directory of practical tools for research, requirements, workshops, prototyping, automation, meetings, and delivery.',
+      eyebrow: 'BAC9 / Practical toolbox',
+      lead: 'Choose tools by the job you need to do—not by hype. Start with the problem, protect sensitive information, and keep a human responsible for the result.',
+      reviewed: 'Last reviewed: October 2026',
+      searchLabel: 'Search the tools directory',
+      searchPlaceholder: 'Search by tool or use case…',
+      categoryLabel: 'Filter by category',
+      all: 'All tools',
+      results: '{count} tools shown',
+      reset: 'Reset',
+      emptyTitle: 'No tools match this search.',
+      emptyText: 'Try another term or reset the category filter.',
+      noteTitle: 'A useful shortlist, not a ranking.',
+      noteText: 'Inclusion is not an endorsement. Features, policies, and availability can change, so verify the official product information and your organization’s data rules before using a tool.'
+    }
+  : {
+      title: 'أدوات لمحللي الأعمال',
+      description: 'دليل مختار لأدوات عملية للبحث والمتطلبات وورش العمل والنماذج الأولية والأتمتة والاجتماعات والتنفيذ.',
+      eyebrow: 'BAC9 / صندوق أدوات عملي',
+      lead: 'اختار الأداة حسب الشغل المطلوب، مش حسب الضجة. ابدأ بالمشكلة، واحمِ المعلومات الحساسة، وخلي إنسان مسؤولًا عن النتيجة.',
+      reviewed: 'آخر مراجعة: أكتوبر 2026',
+      searchLabel: 'ابحث في دليل الأدوات',
+      searchPlaceholder: 'ابحث باسم الأداة أو الاستخدام…',
+      categoryLabel: 'فلتر حسب الفئة',
+      all: 'كل الأدوات',
+      results: 'عرض {count} أداة',
+      reset: 'إلغاء البحث والفلاتر',
+      emptyTitle: 'مفيش أدوات مطابقة للبحث ده.',
+      emptyText: 'جرّب كلمة تانية أو الغِ فلتر الفئة.',
+      noteTitle: 'قائمة مفيدة، مش ترتيب للأفضل.',
+      noteText: 'وجود الأداة في الدليل مش تزكية. الخصائص والسياسات والإتاحة ممكن تتغير، فراجع معلومات المنتج الرسمية وقواعد حماية البيانات في مؤسستك قبل الاستخدام.'
+    };
+---
+
+<SiteLayout
+  lang={lang}
+  title={copy.title}
+  description={copy.description}
+  canonicalPath={`/${lang}/tools/`}
+  currentSection="tools"
+>
+  <section class="tools-hero shell">
+    <span class="eyebrow">{copy.eyebrow}</span>
+    <h1>{copy.title}</h1>
+    <p>{copy.lead}</p>
+    <span class="tools-reviewed">{copy.reviewed}</span>
+  </section>
+
+  <section class="tools-controls shell" data-tools-controls hidden aria-label={copy.searchLabel}>
+    <div class="tools-search-field">
+      <label for="tools-search">{copy.searchLabel}</label>
+      <input id="tools-search" type="search" placeholder={copy.searchPlaceholder} autocomplete="off" data-tool-search />
+    </div>
+    <div class="tools-filter-group">
+      <p>{copy.categoryLabel}</p>
+      <div class="tools-filter-options">
+        <button type="button" data-category-filter="all" aria-pressed="true">{copy.all}</button>
+        {toolCategoryOrder.map((category) => (
+          <button type="button" data-category-filter={category} aria-pressed="false">{toolCategoryLabels[category][lang]}</button>
+        ))}
+      </div>
+    </div>
+    <div class="tools-filter-status">
+      <p role="status" aria-live="polite" data-tools-status data-template={copy.results}>
+        {copy.results.replace('{count}', String(orderedTools.length))}
+      </p>
+      <button type="button" class="tools-reset" data-tools-reset disabled>{copy.reset}</button>
+    </div>
+  </section>
+
+  <div class="tools-directory shell" data-tools-directory>
+    {groups.map(({ category, tools: categoryTools }, groupIndex) => (
+      <section class={`tools-category category-${category}`} data-tools-category aria-labelledby={`tools-category-${category}`}>
+        <div class="tools-category-heading">
+          <div>
+            <span class="eyebrow">{String(groupIndex + 1).padStart(2, '0')}</span>
+            <h2 id={`tools-category-${category}`}>{toolCategoryLabels[category][lang]}</h2>
+          </div>
+          <p>{toolCategoryDescriptions[category][lang]}</p>
+        </div>
+        <div class="tools-grid">
+          {categoryTools.map((tool) => <ToolCard tool={tool} lang={lang} />)}
+        </div>
+      </section>
+    ))}
+
+    <section class="tools-empty" data-tools-empty hidden aria-live="polite">
+      <strong>{copy.emptyTitle}</strong>
+      <p>{copy.emptyText}</p>
+      <button type="button" class="button button-quiet" data-tools-empty-reset>{copy.reset}</button>
+    </section>
+  </div>
+
+  <aside class="tools-editorial-note shell">
+    <span aria-hidden="true">i</span>
+    <div><strong>{copy.noteTitle}</strong><p>{copy.noteText}</p></div>
+  </aside>
+
+  <script>
+    document.querySelectorAll<HTMLImageElement>('[data-tool-logo]').forEach((image) => {
+      image.addEventListener('error', () => {
+        image.hidden = true;
+        const fallback = image.nextElementSibling;
+        if (fallback instanceof HTMLElement) fallback.hidden = false;
+      }, { once: true });
+    });
+
+    const controls = document.querySelector<HTMLElement>('[data-tools-controls]');
+    const directory = document.querySelector<HTMLElement>('[data-tools-directory]');
+
+    if (controls && directory) {
+      controls.hidden = false;
+      let selectedCategory = 'all';
+      const input = controls.querySelector<HTMLInputElement>('[data-tool-search]');
+      const cards = Array.from(directory.querySelectorAll<HTMLElement>('[data-tool-card]'));
+      const groups = Array.from(directory.querySelectorAll<HTMLElement>('[data-tools-category]'));
+      const status = controls.querySelector<HTMLElement>('[data-tools-status]');
+      const reset = controls.querySelector<HTMLButtonElement>('[data-tools-reset]');
+      const empty = directory.querySelector<HTMLElement>('[data-tools-empty]');
+      const emptyReset = directory.querySelector<HTMLButtonElement>('[data-tools-empty-reset]');
+
+      const normalize = (value: string) => value.trim().toLocaleLowerCase(document.documentElement.lang === 'ar' ? 'ar' : 'en');
+
+      const applyFilters = () => {
+        const query = normalize(input?.value || '');
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const categoryMatch = selectedCategory === 'all' || card.dataset.category === selectedCategory;
+          const searchMatch = !query || (card.dataset.search || '').includes(query);
+          const visible = categoryMatch && searchMatch;
+          card.hidden = !visible;
+          if (visible) visibleCount += 1;
+        });
+
+        groups.forEach((group) => {
+          group.hidden = !group.querySelector('[data-tool-card]:not([hidden])');
+        });
+
+        if (status) status.textContent = (status.dataset.template || '{count}').replace('{count}', String(visibleCount));
+        if (reset) reset.disabled = selectedCategory === 'all' && !query;
+        if (empty) empty.hidden = visibleCount !== 0;
+      };
+
+      const resetFilters = () => {
+        selectedCategory = 'all';
+        if (input) input.value = '';
+        controls.querySelectorAll<HTMLButtonElement>('[data-category-filter]').forEach((button) => {
+          button.setAttribute('aria-pressed', String(button.dataset.categoryFilter === 'all'));
+        });
+        applyFilters();
+        input?.focus();
+      };
+
+      input?.addEventListener('input', applyFilters);
+      controls.querySelectorAll<HTMLButtonElement>('[data-category-filter]').forEach((button) => {
+        button.addEventListener('click', () => {
+          selectedCategory = button.dataset.categoryFilter || 'all';
+          controls.querySelectorAll<HTMLButtonElement>('[data-category-filter]').forEach((option) => {
+            option.setAttribute('aria-pressed', String(option === button));
+          });
+          applyFilters();
+        });
+      });
+      reset?.addEventListener('click', resetFilters);
+      emptyReset?.addEventListener('click', resetFilters);
+    }
+  </script>
+</SiteLayout>

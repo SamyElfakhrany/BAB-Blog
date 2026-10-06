@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">دورة استخلاص المتطلبات وتيسير ورشة العمل</title>
+  <desc id="desc">تدفق من خمس خطوات يبدأ بالتجهيز ثم الاستكشاف والتقارب والتأكيد والمتابعة، وتدعمه الأدلة والأشخاص والنطاق وينتج قرارات وأسئلة وإجراءات.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#17324d" flood-opacity="0.14"/></filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#244968"/></marker>
+  </defs>
+  <rect width="1200" height="720" fill="#f7f3ea"/>
+  <text x="600" y="58" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="30" font-weight="700" fill="#17324d">الـWorkshop المفيدة بتحوّل الغموض لخطوات تالية مؤكدة</text>
+  <text x="600" y="91" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="17" fill="#567083">الدليل يدخل المحادثة؛ والقرارات والأسئلة والإجراءات تخرج منها</text>
+
+  <g filter="url(#shadow)">
+    <rect x="956" y="158" width="200" height="246" rx="22" fill="#fff1cc" stroke="#e3ad2f" stroke-width="3"/>
+    <circle cx="1056" cy="158" r="25" fill="#e3ad2f"/><text x="1056" y="166" text-anchor="middle" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="20" font-weight="700" fill="#17324d">١</text>
+    <text x="1056" y="216" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="23" font-weight="700" fill="#17324d">جهّز</text>
+    <text x="1056" y="258" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">قرار · نطاق</text>
+    <text x="1056" y="286" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">أشخاص · دليل</text>
+    <text x="1056" y="314" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">أجندة · إتاحة</text>
+    <rect x="985" y="344" width="142" height="36" rx="18" fill="#fffaf0"/><text x="1056" y="367" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="14" font-weight="700" fill="#8a5c00">إيه المطلوب يتغير؟</text>
+
+    <rect x="728" y="158" width="198" height="246" rx="22" fill="#e3effc" stroke="#4c86b8" stroke-width="3"/>
+    <circle cx="827" cy="158" r="25" fill="#4c86b8"/><text x="827" y="166" text-anchor="middle" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">٢</text>
+    <text x="827" y="216" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="23" font-weight="700" fill="#17324d">استكشف</text>
+    <text x="827" y="258" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">حقائق · احتياجات</text>
+    <text x="827" y="286" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">أمثلة · مخاوف</text>
+    <text x="827" y="314" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">كتابة صامتة</text>
+    <rect x="756" y="344" width="142" height="36" rx="18" fill="#f5f9fe"/><text x="827" y="367" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="14" font-weight="700" fill="#2c6596">إيه اللي نعرفه؟</text>
+
+    <rect x="500" y="158" width="198" height="246" rx="22" fill="#f1e7fa" stroke="#8a66a6" stroke-width="3"/>
+    <circle cx="599" cy="158" r="25" fill="#8a66a6"/><text x="599" y="166" text-anchor="middle" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">٣</text>
+    <text x="599" y="216" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="23" font-weight="700" fill="#17324d">قرّب</text>
+    <text x="599" y="258" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">جمّع · اختبر</text>
+    <text x="599" y="286" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">احسم · عيّن مسؤولًا</text>
+    <text x="599" y="314" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">خلي التعارض ظاهرًا</text>
+    <rect x="528" y="344" width="142" height="36" rx="18" fill="#fbf7fe"/><text x="599" y="367" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="14" font-weight="700" fill="#6e4a8a">إيه اللي اتقرر؟</text>
+
+    <rect x="272" y="158" width="198" height="246" rx="22" fill="#fde7df" stroke="#c76738" stroke-width="3"/>
+    <circle cx="371" cy="158" r="25" fill="#c76738"/><text x="371" y="166" text-anchor="middle" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">٤</text>
+    <text x="371" y="216" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="23" font-weight="700" fill="#17324d">أكّد</text>
+    <text x="371" y="258" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">دقيق · كامل</text>
+    <text x="371" y="286" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">تعارض · تصحيح</text>
+    <text x="371" y="314" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">مش هو الاعتماد</text>
+    <rect x="300" y="344" width="142" height="36" rx="18" fill="#fff8f4"/><text x="371" y="367" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="14" font-weight="700" fill="#a44722">فهمنا صح؟</text>
+
+    <rect x="44" y="158" width="198" height="246" rx="22" fill="#e2f4ee" stroke="#3a9b83" stroke-width="3"/>
+    <circle cx="143" cy="158" r="25" fill="#3a9b83"/><text x="143" y="166" text-anchor="middle" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">٥</text>
+    <text x="143" y="216" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="23" font-weight="700" fill="#17324d">تابع</text>
+    <text x="143" y="258" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">متطلبات · نماذج</text>
+    <text x="143" y="286" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">إجراءات · تتبع</text>
+    <text x="143" y="314" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" fill="#4b6478">استخلاص إضافي</text>
+    <rect x="72" y="344" width="142" height="36" rx="18" fill="#f4fbf8"/><text x="143" y="367" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="14" font-weight="700" fill="#23745f">إيه الخطوة الجاية؟</text>
+  </g>
+
+  <g stroke="#244968" stroke-width="5" marker-end="url(#arrow)">
+    <path d="M956 278 H938"/><path d="M728 278 H710"/><path d="M500 278 H482"/><path d="M272 278 H254"/>
+  </g>
+
+  <rect x="94" y="474" width="1012" height="80" rx="24" fill="#173b59" filter="url(#shadow)"/>
+  <text x="600" y="506" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" font-weight="700" fill="#f4bf45">المدخلات</text>
+  <text x="600" y="532" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="18" fill="#fff">دليل · أشخاص متأثرون · حدود القرار · قيود معروفة</text>
+  <rect x="94" y="578" width="1012" height="80" rx="24" fill="#fff" stroke="#cfc6b7" stroke-width="2"/>
+  <text x="600" y="610" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="15" font-weight="700" fill="#956000">المخرجات</text>
+  <text x="600" y="636" text-anchor="middle" direction="rtl" unicode-bidi="plaintext" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="18" fill="#17324d">ملاحظات مؤكدة · قرارات · تعارضات · أسئلة مفتوحة · إجراءات بمسؤولين</text>
+</svg>

@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-09-27
 updated: 2026-09-27
 readTime: 12
-order: 5
+order: 6
 prerequisites: ["requirements-documents-and-models","prioritization-techniques"]
 learningOutcomes:
   - "تشرح دورة حياة البرمجيات بشكل منفصل عن منهجية التسليم."
