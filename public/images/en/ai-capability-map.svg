@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">AI capability map for an online-store return journey</title>
+  <desc id="desc">A business need flows through five possible capabilities: apply a rule, classify, predict, generate, or act through an agent. Evidence and human oversight surround every option.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#103f3c"/>
+      <stop offset="1" stop-color="#0b2531"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#020617" flood-opacity=".28"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L12 6L0 12Z" fill="#67e8c8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" rx="28" fill="url(#bg)"/>
+  <text x="70" y="68" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">Choose the capability after you understand the need</text>
+  <text x="70" y="105" fill="#a7f3d0" font-family="Arial, sans-serif" font-size="19">“Use AI” is not a requirement. Each capability produces a different output and needs different controls.</text>
+
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <rect x="70" y="155" width="1060" height="92" rx="20" fill="#f8fafc"/>
+    <text x="105" y="188" fill="#0f766e" font-size="15" font-weight="700">BUSINESS NEED</text>
+    <text x="105" y="220" fill="#0f172a" font-size="24" font-weight="700">Route return requests faster without hiding uncertain or high-impact cases.</text>
+  </g>
+  <path d="M600 250V292" stroke="#67e8c8" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <rect x="45" y="315" width="205" height="145" rx="18" fill="#ecfdf5" stroke="#5eead4" stroke-width="2"/>
+    <text x="147" y="349" text-anchor="middle" fill="#0f766e" font-size="15" font-weight="700">FIXED LOGIC</text>
+    <text x="147" y="382" text-anchor="middle" fill="#0f172a" font-size="22" font-weight="700">Apply a rule</text>
+    <text x="147" y="412" text-anchor="middle" fill="#334155" font-size="16">“Over 30 days?”</text>
+    <text x="147" y="439" text-anchor="middle" fill="#64748b" font-size="14">Predictable automation</text>
+
+    <rect x="272" y="315" width="205" height="145" rx="18" fill="#ccfbf1" stroke="#5eead4" stroke-width="2"/>
+    <text x="374" y="349" text-anchor="middle" fill="#0f766e" font-size="15" font-weight="700">MACHINE LEARNING</text>
+    <text x="374" y="382" text-anchor="middle" fill="#0f172a" font-size="22" font-weight="700">Classify</text>
+    <text x="374" y="412" text-anchor="middle" fill="#334155" font-size="16">“Reason: damaged”</text>
+    <text x="374" y="439" text-anchor="middle" fill="#64748b" font-size="14">Label + confidence</text>
+
+    <rect x="499" y="315" width="205" height="145" rx="18" fill="#ccfbf1" stroke="#5eead4" stroke-width="2"/>
+    <text x="601" y="349" text-anchor="middle" fill="#0f766e" font-size="15" font-weight="700">MACHINE LEARNING</text>
+    <text x="601" y="382" text-anchor="middle" fill="#0f172a" font-size="22" font-weight="700">Predict</text>
+    <text x="601" y="412" text-anchor="middle" fill="#334155" font-size="16">“Escalation: 72%”</text>
+    <text x="601" y="439" text-anchor="middle" fill="#64748b" font-size="14">Score, not certainty</text>
+
+    <rect x="726" y="315" width="205" height="145" rx="18" fill="#99f6e4" stroke="#5eead4" stroke-width="2"/>
+    <text x="828" y="349" text-anchor="middle" fill="#115e59" font-size="15" font-weight="700">GENERATIVE AI</text>
+    <text x="828" y="382" text-anchor="middle" fill="#0f172a" font-size="22" font-weight="700">Generate</text>
+    <text x="828" y="412" text-anchor="middle" fill="#334155" font-size="16">Draft a response</text>
+    <text x="828" y="439" text-anchor="middle" fill="#64748b" font-size="14">Content needs review</text>
+
+    <rect x="953" y="315" width="205" height="145" rx="18" fill="#5eead4" stroke="#2dd4bf" stroke-width="2"/>
+    <text x="1055" y="349" text-anchor="middle" fill="#134e4a" font-size="15" font-weight="700">AI AGENT</text>
+    <text x="1055" y="382" text-anchor="middle" fill="#0f172a" font-size="22" font-weight="700">Act</text>
+    <text x="1055" y="412" text-anchor="middle" fill="#334155" font-size="16">Create a draft case</text>
+    <text x="1055" y="439" text-anchor="middle" fill="#134e4a" font-size="14">Tools + permissions</text>
+  </g>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="70" y="515" width="1060" height="98" rx="22" fill="#172f3b" stroke="#67e8c8" stroke-width="2"/>
+    <text x="600" y="551" text-anchor="middle" fill="#67e8c8" font-size="16" font-weight="700">BA GUARDRAILS ACROSS EVERY OPTION</text>
+    <text x="600" y="584" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="700">Evidence · boundaries · affected users · human decision · measure · fallback</text>
+  </g>
+  <text x="70" y="647" fill="#94a3b8" font-family="Arial, sans-serif" font-size="15">Illustrative map — the team must confirm the actual need, data, risks, and authority before selecting a solution.</text>
+</svg>

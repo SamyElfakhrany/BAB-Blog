@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">خريطة قدرات الذكاء الاصطناعي لرحلة إرجاع طلب في متجر إلكتروني</title>
+  <desc id="desc">احتياج العمل يقود إلى خمس قدرات محتملة: تطبيق قاعدة، أو تصنيف، أو توقّع، أو توليد محتوى، أو تنفيذ إجراء من خلال وكيل. الأدلة والمراجعة البشرية مطلوبة حول كل اختيار.</desc>
+  <defs>
+    <linearGradient id="bg" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#103f3c"/>
+      <stop offset="1" stop-color="#0b2531"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#020617" flood-opacity=".28"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L12 6L0 12Z" fill="#67e8c8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" rx="28" fill="url(#bg)"/>
+  <g font-family="Tahoma, Arial, sans-serif" direction="rtl">
+    <text x="600" y="68" text-anchor="middle" fill="#f8fafc" font-size="34" font-weight="700">اختار القدرة بعد ما تفهم الاحتياج</text>
+    <text x="600" y="105" text-anchor="middle" fill="#a7f3d0" font-size="19">«استخدم AI» مش متطلب؛ كل قدرة لها ناتج مختلف وضوابط مختلفة.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="70" y="155" width="1060" height="92" rx="20" fill="#f8fafc"/>
+      <text x="600" y="188" text-anchor="middle" fill="#0f766e" font-size="15" font-weight="700">احتياج العمل</text>
+      <text x="600" y="220" text-anchor="middle" fill="#0f172a" font-size="24" font-weight="700">وجّه طلبات الإرجاع أسرع من غير ما تخفي الحالات غير المؤكدة أو عالية التأثير.</text>
+    </g>
+    <path d="M600 250V292" stroke="#67e8c8" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <g filter="url(#shadow)">
+      <rect x="45" y="315" width="205" height="145" rx="18" fill="#5eead4" stroke="#2dd4bf" stroke-width="2"/>
+      <text x="147" y="349" text-anchor="middle" fill="#134e4a" font-size="15" font-weight="700">وكيل ذكي</text>
+      <text x="147" y="382" text-anchor="middle" fill="#0f172a" font-size="22" font-weight="700">ينفّذ</text>
+      <text x="147" y="412" text-anchor="middle" fill="#334155" font-size="16">ينشئ حالة مبدئية</text>
+      <text x="147" y="439" text-anchor="middle" fill="#134e4a" font-size="14">أدوات وصلاحيات</text>
+
+      <rect x="272" y="315" width="205" height="145" rx="18" fill="#99f6e4" stroke="#5eead4" stroke-width="2"/>
+      <text x="374" y="349" text-anchor="middle" fill="#115e59" font-size="15" font-weight="700">ذكاء اصطناعي توليدي</text>
+      <text x="374" y="382" text-anchor="middle" fill="#0f172a" font-size="22" font-weight="700">يولّد</text>
+      <text x="374" y="412" text-anchor="middle" fill="#334155" font-size="16">يكتب مسودة رد</text>
+      <text x="374" y="439" text-anchor="middle" fill="#64748b" font-size="14">المحتوى يحتاج مراجعة</text>
+
+      <rect x="499" y="315" width="205" height="145" rx="18" fill="#ccfbf1" stroke="#5eead4" stroke-width="2"/>
+      <text x="601" y="349" text-anchor="middle" fill="#0f766e" font-size="15" font-weight="700">تعلّم آلي</text>
+      <text x="601" y="382" text-anchor="middle" fill="#0f172a" font-size="22" font-weight="700">يتوقّع</text>
+      <text x="601" y="412" text-anchor="middle" fill="#334155" font-size="16">الاحتمال مرتفع نسبيًا</text>
+      <text x="601" y="439" text-anchor="middle" fill="#64748b" font-size="14">درجة وليست يقينًا</text>
+
+      <rect x="726" y="315" width="205" height="145" rx="18" fill="#ccfbf1" stroke="#5eead4" stroke-width="2"/>
+      <text x="828" y="349" text-anchor="middle" fill="#0f766e" font-size="15" font-weight="700">تعلّم آلي</text>
+      <text x="828" y="382" text-anchor="middle" fill="#0f172a" font-size="22" font-weight="700">يصنّف</text>
+      <text x="828" y="412" text-anchor="middle" fill="#334155" font-size="16">السبب: تالف</text>
+      <text x="828" y="439" text-anchor="middle" fill="#64748b" font-size="14">فئة ودرجة ثقة</text>
+
+      <rect x="953" y="315" width="205" height="145" rx="18" fill="#ecfdf5" stroke="#5eead4" stroke-width="2"/>
+      <text x="1055" y="349" text-anchor="middle" fill="#0f766e" font-size="15" font-weight="700">منطق ثابت</text>
+      <text x="1055" y="382" text-anchor="middle" fill="#0f172a" font-size="22" font-weight="700">يطبّق قاعدة</text>
+      <text x="1055" y="412" text-anchor="middle" fill="#334155" font-size="16">عدّى 30 يوم؟</text>
+      <text x="1055" y="439" text-anchor="middle" fill="#64748b" font-size="14">أتمتة متوقعة</text>
+    </g>
+
+    <rect x="70" y="515" width="1060" height="98" rx="22" fill="#172f3b" stroke="#67e8c8" stroke-width="2"/>
+    <text x="600" y="551" text-anchor="middle" fill="#67e8c8" font-size="16" font-weight="700">ضوابط الـBA مع كل اختيار</text>
+    <text x="600" y="584" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="700">دليل · حدود · مستخدمون متأثرون · قرار بشري · مقياس · بديل آمن</text>
+    <text x="600" y="647" text-anchor="middle" fill="#94a3b8" font-size="15">الخريطة للتعليم؛ لازم الفريق يؤكد الاحتياج والبيانات والمخاطر والصلاحيات قبل اختيار الحل.</text>
+  </g>
+</svg>

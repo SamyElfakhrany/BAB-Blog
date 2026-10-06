@@ -10,8 +10,8 @@ difficulty: beginner
 published: 2026-09-24
 updated: 2026-09-27
 readTime: 13
-order: 1
-prerequisites: []
+order: 3
+prerequisites: ["ai-fundamentals-for-business-analysts"]
 learningOutcomes:
   - "Choose useful and responsible LLM tasks inside BA work."
   - "Write a prompt as a structured BA brief with context and constraints."

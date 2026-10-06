@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-09-26
 updated: 2026-09-27
 readTime: 13
-order: 2
+order: 4
 prerequisites: ["llms-for-business-analysts"]
 learningOutcomes:
   - "تميّز بين AI Agent وChatbot وWorkflow وAutomation ثابتة."

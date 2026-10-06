@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence-first funnel for selecting an AI opportunity</title>
+  <desc id="desc">An AI idea passes through four gates: need and evidence, capability fit, feasibility and data, and impact and risk. Weak ideas are parked while a bounded and measurable idea becomes a pilot candidate.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123f3c"/>
+      <stop offset="1" stop-color="#0a2532"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#020617" flood-opacity=".28"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0L12 6L0 12Z" fill="#67e8c8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="675" rx="28" fill="url(#bg)"/>
+  <g font-family="Arial, sans-serif">
+    <text x="70" y="68" fill="#f8fafc" font-size="34" font-weight="700">Turn an AI idea into an evidence-backed decision</text>
+    <text x="70" y="105" fill="#a7f3d0" font-size="19">Every gate can produce a question, an experiment, a smaller scope—or a responsible stop.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="55" y="170" width="245" height="190" rx="22" fill="#ecfdf5" stroke="#5eead4" stroke-width="2"/>
+      <circle cx="98" cy="211" r="22" fill="#0f766e"/>
+      <text x="98" y="219" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">1</text>
+      <text x="126" y="206" fill="#0f766e" font-size="15" font-weight="700">NEED + EVIDENCE</text>
+      <text x="82" y="254" fill="#0f172a" font-size="23" font-weight="700">Is the problem real?</text>
+      <text x="82" y="291" fill="#334155" font-size="16">Baseline · users · decisions</text>
+      <text x="82" y="321" fill="#334155" font-size="16">Cost of the current state</text>
+      <text x="82" y="346" fill="#64748b" font-size="14">Name assumptions explicitly</text>
+
+      <rect x="337" y="170" width="245" height="190" rx="22" fill="#ccfbf1" stroke="#5eead4" stroke-width="2"/>
+      <circle cx="380" cy="211" r="22" fill="#0f766e"/>
+      <text x="380" y="219" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">2</text>
+      <text x="408" y="206" fill="#0f766e" font-size="15" font-weight="700">CAPABILITY FIT</text>
+      <text x="364" y="254" fill="#0f172a" font-size="23" font-weight="700">Does AI add value?</text>
+      <text x="364" y="291" fill="#334155" font-size="16">Rules · process · AI options</text>
+      <text x="364" y="321" fill="#334155" font-size="16">Output linked to a decision</text>
+      <text x="364" y="346" fill="#64748b" font-size="14">Prefer the simplest fit</text>
+
+      <rect x="619" y="170" width="245" height="190" rx="22" fill="#99f6e4" stroke="#5eead4" stroke-width="2"/>
+      <circle cx="662" cy="211" r="22" fill="#115e59"/>
+      <text x="662" y="219" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">3</text>
+      <text x="690" y="206" fill="#115e59" font-size="15" font-weight="700">FEASIBILITY + DATA</text>
+      <text x="646" y="254" fill="#0f172a" font-size="23" font-weight="700">Can we test it?</text>
+      <text x="646" y="291" fill="#334155" font-size="16">Permitted data · integration</text>
+      <text x="646" y="321" fill="#334155" font-size="16">Owner · skills · constraints</text>
+      <text x="646" y="346" fill="#64748b" font-size="14">Find the next evidence</text>
+
+      <rect x="901" y="170" width="245" height="190" rx="22" fill="#5eead4" stroke="#2dd4bf" stroke-width="2"/>
+      <circle cx="944" cy="211" r="22" fill="#134e4a"/>
+      <text x="944" y="219" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">4</text>
+      <text x="972" y="206" fill="#134e4a" font-size="15" font-weight="700">IMPACT + RISK</text>
+      <text x="928" y="254" fill="#0f172a" font-size="23" font-weight="700">Should we proceed?</text>
+      <text x="928" y="291" fill="#334155" font-size="16">Benefits · harms · misuse</text>
+      <text x="928" y="321" fill="#334155" font-size="16">Oversight · fallback · limits</text>
+      <text x="928" y="346" fill="#134e4a" font-size="14">Make go / no-go visible</text>
+    </g>
+
+    <g fill="none" stroke="#67e8c8" stroke-width="4" marker-end="url(#arrow)">
+      <path d="M300 265H327"/>
+      <path d="M582 265H609"/>
+      <path d="M864 265H891"/>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="90" y="440" width="440" height="130" rx="24" fill="#3f2631" stroke="#fb7185" stroke-width="2"/>
+      <text x="310" y="479" text-anchor="middle" fill="#fda4af" font-size="16" font-weight="700">PARK, REDESIGN, OR STOP</text>
+      <text x="310" y="516" text-anchor="middle" fill="#f8fafc" font-size="23" font-weight="700">Critical evidence or control is missing</text>
+      <text x="310" y="548" text-anchor="middle" fill="#fecdd3" font-size="15">Record why—and what could change the decision.</text>
+
+      <rect x="670" y="440" width="440" height="130" rx="24" fill="#143d39" stroke="#67e8c8" stroke-width="2"/>
+      <text x="890" y="479" text-anchor="middle" fill="#67e8c8" font-size="16" font-weight="700">BOUNDED PILOT CANDIDATE</text>
+      <text x="890" y="516" text-anchor="middle" fill="#f8fafc" font-size="23" font-weight="700">Measurable · reviewable · reversible</text>
+      <text x="890" y="548" text-anchor="middle" fill="#a7f3d0" font-size="15">Proceed to detailed data, requirements, and evaluation work.</text>
+    </g>
+    <text x="600" y="635" text-anchor="middle" fill="#94a3b8" font-size="15">Illustrative funnel — ratings and thresholds must be agreed for the organization and use case.</text>
+  </g>
+</svg>
