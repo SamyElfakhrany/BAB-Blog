@@ -7,14 +7,16 @@ import { toolCategoryOrder, tools } from '../src/data/tools-directory.ts';
 const projectRoot = fileURLToPath(new URL('../', import.meta.url));
 const requestedTools = [
   'futurepedia', 'poe', 'bubble', 'webflow', 'wix-studio', 'adalo', 'softr', 'flutterflow',
-  'zapier', 'glide', 'notion-ai', 'chatgpt-images', 'resemble-ai', 'otter', 'visily', 'uizard'
+  'zapier', 'glide', 'notion-ai', 'chatgpt-images', 'resemble-ai', 'otter', 'visily', 'uizard',
+  'microsoft-copilot', 'glean', 'elicit', 'airtable', 'dovetail', 'whimsical', 'napkin-ai',
+  'maze', 'lovable', 'bolt', 'v0', 'n8n', 'granola', 'gamma', 'scribe'
 ];
 
-test('catalog contains 30 unique, ordered tools in known categories', () => {
-  assert.equal(tools.length, 30);
+test('catalog contains 45 unique, ordered tools in known categories', () => {
+  assert.equal(tools.length, 45);
   assert.equal(new Set(tools.map((tool) => tool.id)).size, tools.length);
   assert.equal(new Set(tools.map((tool) => tool.order)).size, tools.length);
-  assert.deepEqual(tools.map((tool) => tool.order), Array.from({ length: 30 }, (_, index) => index + 1));
+  assert.deepEqual(tools.map((tool) => tool.order), Array.from({ length: 45 }, (_, index) => index + 1));
   tools.forEach((tool) => assert.ok(toolCategoryOrder.includes(tool.category), `${tool.id} has an invalid category`));
   requestedTools.forEach((id) => assert.ok(tools.some((tool) => tool.id === id), `${id} is missing`));
 });

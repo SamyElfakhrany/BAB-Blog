@@ -344,5 +344,140 @@ export const tools: ToolEntry[] = [
       ar: 'أنشئ محتوى صوتيًا للـDemos والـPrototypes وتجارب التواصل اللي تحتاج صوتًا منطوقًا.'
     },
     tags: { en: ['Voice generation', 'Prototype audio', 'Demos'], ar: ['توليد صوت', 'صوت للـPrototype', 'Demos'] }
+  },
+  {
+    id: 'microsoft-copilot', order: 31, name: 'Microsoft Copilot', mark: 'MC', url: 'https://www.microsoft.com/en-us/microsoft-copilot/', category: 'ai-research',
+    logo: { src: '/images/tools/microsoft-copilot.png', sourcePage: 'https://www.microsoft.com/en-us/microsoft-copilot/' },
+    description: {
+      en: 'Work with business documents, spreadsheets, presentations, meetings, and organizational context across Microsoft tools.',
+      ar: 'اشتغل على مستندات البيزنس والجداول والعروض والاجتماعات وسياق المؤسسة داخل أدوات Microsoft.'
+    },
+    tags: { en: ['Microsoft 365', 'Work context', 'Drafting'], ar: ['Microsoft 365', 'سياق العمل', 'صياغة المحتوى'] }
+  },
+  {
+    id: 'glean', order: 32, name: 'Glean', mark: 'GN', url: 'https://www.glean.com/', category: 'ai-research',
+    logo: { src: '/images/tools/glean.png', sourcePage: 'https://www.glean.com/' },
+    description: {
+      en: 'Search connected company knowledge and find source-backed answers across documents, apps, and team information.',
+      ar: 'ابحث في معرفة الشركة المترابطة ووصل لإجابات بمصادر من المستندات والتطبيقات ومعلومات الفرق.'
+    },
+    tags: { en: ['Enterprise search', 'Knowledge discovery', 'Source retrieval'], ar: ['بحث مؤسسي', 'اكتشاف المعرفة', 'استرجاع المصادر'] }
+  },
+  {
+    id: 'elicit', order: 33, name: 'Elicit', mark: 'EL', url: 'https://elicit.com/', category: 'ai-research',
+    logo: { src: '/images/tools/elicit.png', sourcePage: 'https://elicit.com/' },
+    description: {
+      en: 'Find and compare research papers when an analysis needs stronger evidence or a structured literature review.',
+      ar: 'ابحث عن الأوراق البحثية وقارنها لما التحليل يحتاج أدلة أقوى أو مراجعة منظمة للمصادر.'
+    },
+    tags: { en: ['Evidence research', 'Literature review', 'Source comparison'], ar: ['بحث الأدلة', 'مراجعة المصادر', 'مقارنة الأبحاث'] }
+  },
+  {
+    id: 'airtable', order: 34, name: 'Airtable', mark: 'AT', url: 'https://www.airtable.com/', category: 'documentation-delivery',
+    logo: { src: '/images/tools/airtable.png', sourcePage: 'https://www.airtable.com/' },
+    description: {
+      en: 'Organize research, feedback, requirements, and delivery work in flexible connected tables and lightweight applications.',
+      ar: 'نظّم الأبحاث والـFeedback والمتطلبات وشغل التنفيذ في جداول مترابطة وتطبيقات خفيفة ومرنة.'
+    },
+    tags: { en: ['Structured data', 'Workflows', 'Roadmaps'], ar: ['بيانات منظمة', 'Workflows', 'Roadmaps'] }
+  },
+  {
+    id: 'dovetail', order: 35, name: 'Dovetail', mark: 'DV', url: 'https://dovetail.com/', category: 'documentation-delivery',
+    logo: { src: '/images/tools/dovetail.png', sourcePage: 'https://dovetail.com/' },
+    description: {
+      en: 'Centralize interviews and customer feedback, then tag evidence and synthesize recurring themes into insights.',
+      ar: 'اجمع المقابلات وFeedback العملاء، ثم صنّف الأدلة واستخلص الموضوعات المتكررة في صورة Insights.'
+    },
+    tags: { en: ['Customer research', 'Feedback analysis', 'Insight repository'], ar: ['بحث العملاء', 'تحليل Feedback', 'مستودع Insights'] }
+  },
+  {
+    id: 'whimsical', order: 36, name: 'Whimsical', mark: 'WH', url: 'https://whimsical.com/', category: 'workshops-diagrams',
+    logo: { src: '/images/tools/whimsical.png', sourcePage: 'https://whimsical.com/' },
+    description: {
+      en: 'Create fast flowcharts, mind maps, wireframes, and collaborative boards for workshops and process discussions.',
+      ar: 'أنشئ بسرعة Flowcharts وMind maps وWireframes ولوحات مشتركة للورش ومناقشات العمليات.'
+    },
+    tags: { en: ['Flowcharts', 'Wireframes', 'Collaborative boards'], ar: ['Flowcharts', 'Wireframes', 'لوحات مشتركة'] }
+  },
+  {
+    id: 'napkin-ai', order: 37, name: 'Napkin AI', mark: 'NP', url: 'https://www.napkin.ai/', category: 'workshops-diagrams',
+    logo: { src: '/images/tools/napkin-ai.png', sourcePage: 'https://www.napkin.ai/' },
+    description: {
+      en: 'Turn written concepts into editable diagrams and visuals for explaining processes, comparisons, and recommendations.',
+      ar: 'حوّل الأفكار المكتوبة لرسومات قابلة للتعديل لشرح العمليات والمقارنات والتوصيات.'
+    },
+    tags: { en: ['Text to visual', 'Process diagrams', 'Presentations'], ar: ['تحويل النص لرسومات', 'رسومات العمليات', 'عروض تقديمية'] }
+  },
+  {
+    id: 'maze', order: 38, name: 'Maze', mark: 'MZ', url: 'https://maze.co/', category: 'prototyping-no-code',
+    logo: { src: '/images/tools/maze.png', sourcePage: 'https://maze.co/' },
+    description: {
+      en: 'Test prototypes and concepts with users, capture usability evidence, and identify where an experience needs improvement.',
+      ar: 'اختبر الـPrototypes والأفكار مع المستخدمين واجمع أدلة الاستخدام وحدد نقاط التحسين في التجربة.'
+    },
+    tags: { en: ['Usability testing', 'Prototype validation', 'User evidence'], ar: ['اختبار الاستخدام', 'التحقق من Prototype', 'أدلة المستخدمين'] }
+  },
+  {
+    id: 'lovable', order: 39, name: 'Lovable', mark: 'LO', url: 'https://lovable.dev/', category: 'prototyping-no-code',
+    logo: { src: '/images/tools/lovable.png', sourcePage: 'https://lovable.dev/' },
+    description: {
+      en: 'Describe an application in plain language and build a working prototype for testing a workflow or product idea.',
+      ar: 'اوصف التطبيق بلغة بسيطة وابنِ Prototype شغال لاختبار Workflow أو فكرة منتج.'
+    },
+    tags: { en: ['AI app building', 'Working prototypes', 'Idea validation'], ar: ['بناء تطبيقات بالـAI', 'Prototypes شغالة', 'اختبار الأفكار'] }
+  },
+  {
+    id: 'bolt', order: 40, name: 'Bolt', mark: 'BO', url: 'https://bolt.new/', category: 'prototyping-no-code',
+    logo: { src: '/images/tools/bolt.png', sourcePage: 'https://bolt.new/' },
+    description: {
+      en: 'Build and iterate on web applications through conversation when a requirement is easier to validate as a working demo.',
+      ar: 'ابنِ وطوّر تطبيقات ويب بالمحادثة لما يكون اختبار المتطلب أسهل من خلال Demo شغال.'
+    },
+    tags: { en: ['AI app building', 'Web prototypes', 'Rapid iteration'], ar: ['بناء تطبيقات بالـAI', 'Web prototypes', 'تطوير سريع'] }
+  },
+  {
+    id: 'v0', order: 41, name: 'v0', mark: 'V0', url: 'https://v0.app/', category: 'prototyping-no-code',
+    logo: { src: '/images/tools/v0.png', sourcePage: 'https://v0.app/' },
+    description: {
+      en: 'Generate interfaces and working application flows from prompts to make solution ideas concrete for stakeholder review.',
+      ar: 'أنشئ واجهات وتدفقات تطبيق شغالة من الـPrompts علشان تعرض أفكار الحل بشكل ملموس على أصحاب المصلحة.'
+    },
+    tags: { en: ['Interface generation', 'App prototypes', 'Stakeholder review'], ar: ['توليد واجهات', 'App prototypes', 'مراجعة أصحاب المصلحة'] }
+  },
+  {
+    id: 'n8n', order: 42, name: 'n8n', mark: 'N8', url: 'https://n8n.io/', category: 'automation',
+    logo: { src: '/images/tools/n8n.png', sourcePage: 'https://n8n.io/' },
+    description: {
+      en: 'Design visual automations with deeper control when analysis workflows need custom logic, data movement, or AI steps.',
+      ar: 'صمّم Automations بصرية بتحكم أعمق لما Workflow التحليل يحتاج منطق مخصص أو نقل بيانات أو خطوات AI.'
+    },
+    tags: { en: ['Visual automation', 'Custom workflows', 'AI integrations'], ar: ['أتمتة بصرية', 'Workflows مخصصة', 'AI integrations'] }
+  },
+  {
+    id: 'granola', order: 43, name: 'Granola', mark: 'GR', url: 'https://www.granola.ai/', category: 'meetings-communication',
+    logo: { src: '/images/tools/granola.png', sourcePage: 'https://www.granola.ai/' },
+    description: {
+      en: 'Turn stakeholder conversations and your own notes into structured meeting records that are easier to review and share.',
+      ar: 'حوّل محادثات أصحاب المصلحة وملاحظاتك لسجلات اجتماعات منظمة وأسهل في المراجعة والمشاركة.'
+    },
+    tags: { en: ['AI meeting notes', 'Stakeholder interviews', 'Summaries'], ar: ['ملاحظات اجتماعات بالـAI', 'مقابلات أصحاب المصلحة', 'ملخصات'] }
+  },
+  {
+    id: 'gamma', order: 44, name: 'Gamma', mark: 'GA', url: 'https://gamma.app/', category: 'meetings-communication',
+    logo: { src: '/images/tools/gamma.png', sourcePage: 'https://gamma.app/' },
+    description: {
+      en: 'Turn findings and recommendations into polished presentations, documents, and simple web pages for different audiences.',
+      ar: 'حوّل النتائج والتوصيات لعروض ومستندات وصفحات ويب مرتبة تناسب جماهير مختلفة.'
+    },
+    tags: { en: ['Presentations', 'Visual storytelling', 'Executive communication'], ar: ['عروض تقديمية', 'سرد بصري', 'تواصل تنفيذي'] }
+  },
+  {
+    id: 'scribe', order: 45, name: 'Scribe', mark: 'SC', url: 'https://scribe.com/', category: 'meetings-communication',
+    logo: { src: '/images/tools/scribe.png', sourcePage: 'https://scribe.com/' },
+    description: {
+      en: 'Capture a process as you perform it and turn the steps into a visual guide for handoffs, training, and SOPs.',
+      ar: 'سجّل العملية أثناء تنفيذها وحوّل الخطوات لدليل بصري للتسليم والتدريب وإجراءات العمل.'
+    },
+    tags: { en: ['Process capture', 'Step-by-step guides', 'SOPs'], ar: ['تسجيل العمليات', 'أدلة خطوة بخطوة', 'إجراءات العمل'] }
   }
 ];
