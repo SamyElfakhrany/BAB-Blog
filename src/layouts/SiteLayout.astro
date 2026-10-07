@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import BrandMark from '../components/BrandMark.astro';
+import { brand } from '../lib/brand';
 import { getDirection, getLanguage, localizePath, ui, withBase } from '../lib/content';
 
 type Section = 'start' | 'paths' | 'books' | 'case-study' | 'templates' | 'tools' | 'follow' | 'search' | 'about';
@@ -23,11 +25,12 @@ const {
 const language = getLanguage(lang);
 const strings = ui[language];
 const direction = getDirection(language);
-const pageTitle = title ? `${title} · BAC9` : 'BAC9 · Business Analysis Bootcamp';
+const pageTitle = title ? `${title} · ${brand.displayName}` : `${brand.displayName} · ${brand.expansion.en}`;
 const pageDescription = description || strings.homeIntro;
 const canonical = new URL(withBase(canonicalPath), Astro.site || Astro.url).href;
 const alternateLang = language === 'en' ? 'ar' : 'en';
 const alternatePath = exactAlternatePath || localizePath(canonicalPath, alternateLang);
+const socialImage = image || brand.assets.socialCard;
 const navigation: Array<{ id: Section; label: string; href: string }> = [
   { id: 'start', label: strings.navLearn, href: `/${language}/` },
   { id: 'paths', label: strings.navPaths, href: `/${language}/learning-paths/` },
@@ -53,9 +56,18 @@ const navigation: Array<{ id: Section; label: string; href: string }> = [
     <meta property="og:description" content={pageDescription} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
-    {image && <meta property="og:image" content={new URL(withBase(image), Astro.site || Astro.url).href} />}
+    <meta property="og:image" content={new URL(withBase(socialImage), Astro.site || Astro.url).href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${brand.displayName} — ${brand.tagline[language]}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={new URL(withBase(socialImage), Astro.site || Astro.url).href} />
     {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
     <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+    <link rel="icon" type="image/png" sizes="32x32" href={withBase('/brand/favicon-32x32.png')} />
+    <link rel="apple-touch-icon" sizes="180x180" href={withBase('/brand/apple-touch-icon.png')} />
     <title>{pageTitle}</title>
     <script is:inline>document.documentElement.classList.add('has-js');</script>
   </head>
@@ -64,8 +76,7 @@ const navigation: Array<{ id: Section; label: string; href: string }> = [
     <header class="site-header">
       <div class="shell header-inner">
         <a class="brand" href={withBase(`/${language}/`)} aria-label={`${strings.siteName} ${strings.navLearn}`}>
-          <span class="brand-mark">B9</span>
-          <span class="brand-copy"><strong>{strings.siteName}</strong><small>{strings.siteLabel}</small></span>
+          <BrandMark lang={language} />
         </a>
         <nav class="main-nav" aria-label={strings.mainNavigation}>
           {navigation.map((item) => <a href={withBase(item.href)} aria-current={currentSection === item.id ? 'page' : undefined}>{item.label}</a>)}
@@ -82,8 +93,8 @@ const navigation: Array<{ id: Section; label: string; href: string }> = [
     <main id="main-content"><slot /></main>
     <footer class="site-footer">
       <div class="shell footer-inner">
-        <div><strong>BAC9</strong><span>{strings.siteLabel}</span></div>
-        <p>{language === 'en' ? 'Practical analysis, technical fluency, product design, responsible AI.' : 'تحليل عملي، وفهم تقني، وتصميم منتجات، وذكاء اصطناعي مسؤول.'}</p>
+        <BrandMark lang={language} inverse />
+        <p>{brand.supportingLine[language]}</p>
         <a href={withBase(`/${language}/learning-paths/`)}>{strings.navPaths}</a>
       </div>
     </footer>

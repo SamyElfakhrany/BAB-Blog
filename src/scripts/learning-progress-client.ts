@@ -1,4 +1,4 @@
-import { STORAGE_KEY, completionFor, getContinueLessonId, parseProgress, toggleCompletion } from '../lib/learning-progress.mjs';
+import { STORAGE_KEY, completionFor, getContinueLessonId, loadProgress, parseProgress, toggleCompletion } from '../lib/learning-progress.mjs';
 
 interface LessonData { id: string; title: string; url: string; path: string; pathTitle: string; step: number; total: number; prerequisites: string[]; }
 interface PageData {
@@ -9,7 +9,7 @@ interface PageData {
   strings: Record<string, string>;
 }
 
-const dataNode = document.querySelector<HTMLScriptElement>('#bac9-learning-data');
+const dataNode = document.querySelector<HTMLScriptElement>('#bab-learning-data');
 if (dataNode?.textContent) {
   const data = JSON.parse(dataNode.textContent) as PageData;
   const validIds = data.lessons.map((lesson) => lesson.id);
@@ -22,7 +22,7 @@ if (dataNode?.textContent) {
   } catch {
     storageAvailable = false;
   }
-  let progress = storageAvailable ? parseProgress(localStorage.getItem(STORAGE_KEY), validIds) : parseProgress(null, validIds);
+  let progress = storageAvailable ? loadProgress(localStorage, validIds).progress : parseProgress(null, validIds);
 
   const save = () => {
     if (!storageAvailable) return;

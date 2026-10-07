@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import BookCard from '../../../components/BookCard.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { brand } from '../../../lib/brand';
 import { getLanguage, ui } from '../../../lib/content';
 
 export function getStaticPaths() {
@@ -25,12 +26,12 @@ const description = lang === 'en'
       { label: strings.navBooks }
     ]} />
     <div class="books-hero-copy">
-      <span class="eyebrow">BAC9 / {strings.navBooks}</span>
+      <span class="eyebrow">{brand.displayName} / {strings.navBooks}</span>
       <h1>{title}</h1>
       <p>{description}</p>
       <p class="books-source-note">{lang === 'en'
-        ? 'Each summary clearly separates material from the book from BAC9 explanatory visuals. These summaries do not replace the original books.'
-        : 'كل ملخص بيفصل بوضوح بين مادة الكتاب والرسومات التوضيحية من BAC9. الملخصات مش بديل عن الكتب الأصلية.'}</p>
+        ? `Each summary clearly separates material from the book from ${brand.localizedName.en} explanatory visuals. These summaries do not replace the original books.`
+        : `كل ملخص بيفصل بوضوح بين مادة الكتاب والرسومات التوضيحية من ${brand.localizedName.ar}. الملخصات مش بديل عن الكتب الأصلية.`}</p>
     </div>
   </section>
 

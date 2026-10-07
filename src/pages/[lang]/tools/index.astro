@@ -6,6 +6,7 @@ import {
   toolCategoryOrder,
   tools
 } from '../../../data/tools-directory';
+import { brand } from '../../../lib/brand';
 import { getLanguage } from '../../../lib/content';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 
@@ -24,7 +25,7 @@ const copy = lang === 'en'
   ? {
       title: 'Tools for Business Analysts',
       description: 'A curated directory of practical tools for research, requirements, workshops, prototyping, automation, meetings, and delivery.',
-      eyebrow: 'BAC9 / Practical toolbox',
+      eyebrow: `${brand.localizedName.en} / Practical toolbox`,
       lead: 'Choose tools by the job you need to do—not by hype. Start with the problem, protect sensitive information, and keep a human responsible for the result.',
       reviewed: 'Last reviewed: October 2026',
       searchLabel: 'Search the tools directory',
@@ -41,7 +42,7 @@ const copy = lang === 'en'
   : {
       title: 'أدوات لمحللي الأعمال',
       description: 'دليل مختار لأدوات عملية للبحث والمتطلبات وورش العمل والنماذج الأولية والأتمتة والاجتماعات والتنفيذ.',
-      eyebrow: 'BAC9 / صندوق أدوات عملي',
+      eyebrow: `${brand.localizedName.ar} / صندوق أدوات عملي`,
       lead: 'اختار الأداة حسب الشغل المطلوب، مش حسب الضجة. ابدأ بالمشكلة، واحمِ المعلومات الحساسة، وخلي إنسان مسؤولًا عن النتيجة.',
       reviewed: 'آخر مراجعة: أكتوبر 2026',
       searchLabel: 'ابحث في دليل الأدوات',

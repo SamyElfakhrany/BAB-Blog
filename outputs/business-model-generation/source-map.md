@@ -11,8 +11,8 @@
 
 ## Published summaries
 
-- English: `BAC9-books/en/business-model-generation.md`
-- Arabic: `BAC9-books/ar/business-model-generation.md`
+- English: `BAB-books/en/business-model-generation.md`
+- Arabic: `BAB-books/ar/business-model-generation.md`
 
 ## Section map
 

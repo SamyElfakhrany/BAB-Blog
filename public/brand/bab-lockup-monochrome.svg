@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 128" role="img" aria-labelledby="title">
+  <title id="title">BAB and باب monochrome logo</title>
+  <rect x="16" y="16" width="96" height="96" rx="24" fill="#102A43"/>
+  <path d="M40 90V61c0-17 9-27 24-27s24 10 24 27v29M51 78V68c0-7 5-12 12-12h3c7 0 12-5 12-12M36 90h56" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="138" y="78" fill="#102A43" font-family="Manrope, Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="3">BAB</text>
+  <path d="M270 38v52" stroke="#102A43" stroke-width="3"/>
+  <text x="298" y="78" fill="#102A43" font-family="Noto Kufi Arabic, Arial, sans-serif" font-size="52" font-weight="700">باب</text>
+  <text x="140" y="105" fill="#102A43" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="1.4">BUSINESS ANALYST BRAIN</text>
+</svg>

@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { brand } from '../../../lib/brand';
 import { getLanguage, ui, withBase } from '../../../lib/content';
 const lang = getLanguage(Astro.params.lang || 'en');
 const strings = ui[lang];
@@ -8,7 +9,7 @@ const endpoint = withBase('/search-index.json');
 export function getStaticPaths() { return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }]; }
 ---
 <SiteLayout lang={lang} title={strings.search} description={strings.searchPlaceholder} canonicalPath={`/${lang}/search/`} currentSection="search">
-  <section class="simple-hero shell search-hero"><span class="eyebrow">BAC9 / {strings.search}</span><h1>{lang === 'en' ? 'Find the next useful idea.' : 'اعثر على الفكرة المفيدة التالية.'}</h1><form class="search-form search-form-large" action="" method="get"><label class="sr-only" for="q">{strings.searchPlaceholder}</label><input id="q" name="q" type="search" value={query} placeholder={strings.searchPlaceholder} autofocus /><button type="submit">{lang === 'en' ? 'Search' : 'بحث'}</button></form></section>
+  <section class="simple-hero shell search-hero"><span class="eyebrow">{brand.displayName} / {strings.search}</span><h1>{lang === 'en' ? 'Find the next useful idea.' : 'اعثر على الفكرة المفيدة التالية.'}</h1><form class="search-form search-form-large" action="" method="get"><label class="sr-only" for="q">{strings.searchPlaceholder}</label><input id="q" name="q" type="search" value={query} placeholder={strings.searchPlaceholder} autofocus /><button type="submit">{lang === 'en' ? 'Search' : 'بحث'}</button></form></section>
   <section class="shell search-results" data-search-root data-lang={lang} data-query={query} data-endpoint={endpoint}><p class="search-status">{query ? (lang === 'en' ? 'Searching…' : 'جارٍ البحث…') : (lang === 'en' ? 'Start with a concept, tool, or technique.' : 'ابدأ بمفهوم أو أداة أو تقنية.')}</p><div class="search-result-list"></div></section>
   <script define:vars={{ endpoint, lang }}>
     // @ts-nocheck

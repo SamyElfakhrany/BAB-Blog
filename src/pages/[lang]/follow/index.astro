@@ -7,6 +7,7 @@ import {
   type FollowResourceKind,
   type FollowTopic
 } from '../../../data/follow-directory';
+import { brand } from '../../../lib/brand';
 import { getLanguage } from '../../../lib/content';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 
@@ -28,7 +29,7 @@ const copy = lang === 'en'
   ? {
       title: 'Worth Following',
       description: 'A curated bilingual directory of people, podcasts, and communities that help beginner Business Analysts stay useful and current.',
-      eyebrow: 'BAC9 / Your signal list',
+      eyebrow: `${brand.localizedName.en} / Your signal list`,
       lead: 'A focused list of people, podcasts, and communities for fresh Business Analysts exploring BA, product, software, design, and AI.',
       people: 'People & channels',
       peopleIntro: 'Practitioners and educators who make useful ideas easier to understand and apply.',
@@ -57,7 +58,7 @@ const copy = lang === 'en'
   : {
       title: 'ناس ومصادر تستحق المتابعة',
       description: 'دليل مختار بالعربي والإنجليزي لأشخاص وبودكاست ومجتمعات تساعد محلل الأعمال المبتدئ يفضل متابع ومفيد.',
-      eyebrow: 'BAC9 / قائمة الإشارات المهمة',
+      eyebrow: `${brand.localizedName.ar} / قائمة الإشارات المهمة`,
       lead: 'قائمة مركّزة من الأشخاص والبودكاست والمجتمعات لمحللي الأعمال المبتدئين في تحليل الأعمال والمنتجات والبرمجيات والتصميم والـAI.',
       people: 'أشخاص وقنوات',
       peopleIntro: 'ممارسون ومعلّمون بيخلّوا الأفكار المفيدة أسهل في الفهم والتطبيق.',

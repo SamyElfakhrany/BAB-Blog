@@ -203,9 +203,9 @@ export async function validateBooksRoot(root, projectRoot = process.cwd(), tutor
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
   const projectRoot = process.cwd();
-  const tutorials = await validateContentRoot(path.join(projectRoot, 'BAC9-tutorials'), projectRoot);
+  const tutorials = await validateContentRoot(path.join(projectRoot, 'BAB-tutorials'), projectRoot);
   const tutorialIds = new Set(tutorials.articles.map((article) => article.translationId));
-  const books = await validateBooksRoot(path.join(projectRoot, 'BAC9-books'), projectRoot, tutorialIds);
+  const books = await validateBooksRoot(path.join(projectRoot, 'BAB-books'), projectRoot, tutorialIds);
   const errors = [...tutorials.errors, ...books.errors];
   if (errors.length) {
     console.error(errors.join('\n'));

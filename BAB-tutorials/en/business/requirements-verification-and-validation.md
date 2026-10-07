@@ -33,7 +33,7 @@ The International Institute of Business Analysis (IIBA) describes verification a
 
 ![A requirements draft moves through quality verification and value validation before a decision, with evidence and rework loops](../../../public/images/en/requirements-vv-loop.svg)
 
-This tutorial continues the illustrative BAC9 online-shop scenario. The shop wants customers to start eligible returns without contacting support. The policy, roles, numbers, and rules below are teaching assumptions, not universal retail rules.
+This tutorial continues the illustrative BAB online-shop scenario. The shop wants customers to start eligible returns without contacting support. The policy, roles, numbers, and rules below are teaching assumptions, not universal retail rules.
 
 ## 1. Name the object you are checking
 

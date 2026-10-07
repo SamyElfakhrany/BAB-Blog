@@ -1,5 +1,6 @@
 // @ts-nocheck
-export const STORAGE_KEY = 'bac9.learningProgress.v1';
+export const STORAGE_KEY = 'bab.learningProgress.v1';
+export const LEGACY_STORAGE_KEY = 'bac9.learningProgress.v1';
 
 export function emptyProgress() {
   return { version: 1, lastOpenedId: null, completedIds: [] };
@@ -24,6 +25,15 @@ export function parseProgress(raw, validIds) {
   } catch {
     return emptyProgress();
   }
+}
+
+export function loadProgress(storage, validIds) {
+  const current = storage.getItem(STORAGE_KEY);
+  if (current) return { progress: parseProgress(current, validIds), migrated: false };
+  const legacy = storage.getItem(LEGACY_STORAGE_KEY);
+  const progress = parseProgress(legacy, validIds);
+  if (legacy) storage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  return { progress, migrated: Boolean(legacy) };
 }
 
 export function toggleCompletion(progress, id, completed) {

@@ -130,4 +130,4 @@ for (const template of catalog) {
 }
 
 await fs.writeFile(path.join(outputDir, 'manifest.json'), JSON.stringify(manifest, null, 2));
-console.log(`Created ${manifest.length} bilingual BAC9 template workbooks.`);
+console.log(`Created ${manifest.length} bilingual BAB template workbooks.`);

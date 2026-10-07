@@ -1,5 +1,6 @@
 ---
+import { brand } from '../lib/brand';
 const destination = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/en/`;
 ---
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8" /><meta http-equiv="refresh" content={`0;url=${destination}`} /><meta name="robots" content="noindex" /><title>Redirecting to BAC9</title></head><body><a href={destination}>Continue to BAC9</a></body></html>
+<html lang="en"><head><meta charset="utf-8" /><meta http-equiv="refresh" content={`0;url=${destination}`} /><meta name="robots" content="noindex" /><title>Redirecting to {brand.displayName}</title></head><body><a href={destination}>Continue to {brand.displayName}</a></body></html>

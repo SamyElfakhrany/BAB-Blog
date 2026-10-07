@@ -4,6 +4,7 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 import { getCollection } from 'astro:content';
 import templateCatalog from '../../../data/template-catalog.json';
 import type { Category } from '../../../lib/content';
+import { brand } from '../../../lib/brand';
 
 const lang = getLanguage(Astro.params.lang || 'en');
 const strings = ui[lang];
@@ -51,12 +52,12 @@ const copy = lang === 'en'
 <SiteLayout
   lang={lang}
   title={strings.navTemplates}
-  description={lang === 'en' ? 'Preview and download bilingual Excel templates from BAC9 tutorials.' : 'عاين وحمّل قوالب Excel ثنائية اللغة من دروس BAC9.'}
+  description={lang === 'en' ? `Preview and download bilingual Excel templates from ${brand.localizedName.en} tutorials.` : `عاين وحمّل قوالب Excel ثنائية اللغة من دروس ${brand.localizedName.ar}.`}
   canonicalPath={`/${lang}/templates/`}
   currentSection="templates"
 >
   <section class="simple-hero template-hero shell">
-    <span class="eyebrow">BAC9 / {strings.navTemplates}</span>
+    <span class="eyebrow">{brand.displayName} / {strings.navTemplates}</span>
     <h1>{copy.title}</h1>
     <p>{copy.intro}</p>
     <div class="template-hero-meta" aria-label={lang === 'en' ? 'Template library details' : 'تفاصيل مكتبة القوالب'}>

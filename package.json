@@ -1,5 +1,5 @@
 {
-  "name": "bac9-blog",
+  "name": "bab-blog",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -10,7 +10,9 @@
     "check": "astro check",
     "test:learning": "node --test scripts/learning-progress.test.mjs",
     "test:tools": "node --test scripts/tools-directory.test.mjs",
-    "import:bac9": "node scripts/import-bac9.mjs",
+    "test:editor": "node --test scripts/draft-storage.test.mjs",
+    "test": "npm run test:learning && npm run test:tools && npm run test:editor",
+    "import:bab": "node scripts/import-bab.mjs",
     "validate:content": "node scripts/validate-content.mjs",
     "editor": "node scripts/editor-server.mjs"
   },

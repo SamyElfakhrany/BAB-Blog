@@ -1,10 +1,14 @@
+// @ts-nocheck
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   completionFor,
   emptyProgress,
   getContinueLessonId,
+  LEGACY_STORAGE_KEY,
+  loadProgress,
   parseProgress,
+  STORAGE_KEY,
   sanitizeProgress,
   toggleCompletion
 } from '../src/lib/learning-progress.mjs';
@@ -73,4 +77,30 @@ test('uses conceptual IDs independent of language URLs', () => {
   const progress = sanitizeProgress({ version: 1, lastOpenedId: 'role', completedIds: ['role'] }, journey);
   assert.equal(progress.lastOpenedId, 'role');
   assert.deepEqual(progress.completedIds, ['role']);
+});
+
+test('migrates valid legacy progress without deleting the old value', () => {
+  const values = new Map([[LEGACY_STORAGE_KEY, JSON.stringify({ version: 1, lastOpenedId: 'stakeholders', completedIds: ['role', 'old'] })]]);
+  const storage = {
+    getItem: (key) => values.get(key) || null,
+    setItem: (key, value) => values.set(key, value)
+  };
+  const result = loadProgress(storage, journey);
+  assert.equal(result.migrated, true);
+  assert.deepEqual(result.progress, { version: 1, lastOpenedId: 'stakeholders', completedIds: ['role'] });
+  assert.equal(values.has(LEGACY_STORAGE_KEY), true);
+  assert.deepEqual(JSON.parse(values.get(STORAGE_KEY)), result.progress);
+});
+
+test('prefers current BAB progress when both storage keys exist', () => {
+  const values = new Map([
+    [LEGACY_STORAGE_KEY, JSON.stringify({ version: 1, lastOpenedId: 'role', completedIds: ['role'] })],
+    [STORAGE_KEY, JSON.stringify({ version: 1, lastOpenedId: 'priorities', completedIds: ['role', 'stakeholders'] })]
+  ]);
+  const result = loadProgress({
+    getItem: (key) => values.get(key) || null,
+    setItem: (key, value) => values.set(key, value)
+  }, journey);
+  assert.equal(result.migrated, false);
+  assert.equal(result.progress.lastOpenedId, 'priorities');
 });

@@ -1,4 +1,6 @@
-# BAC9 Blog
+# BAB | باب
+
+**Business Analyst Brain** is a bilingual practical learning blog for new and aspiring Business Analysts. In Arabic, **باب** means “door”: the brand combines the analyst's way of thinking with an open door to practical knowledge.
 
 ## Local tutorial editor
 
@@ -10,7 +12,7 @@ npm run editor
 
 Open `http://localhost:4322`. The server binds to `127.0.0.1` only and serves the interface from `admin/`; the public GitHub Pages build does not include an admin route.
 
-The editor supports bilingual English/Arabic tutorials, Markdown and MDX imports, safe Markdown preview, local private drafts, validation, and publishing. Drafts are written to `.bac9-drafts/` and are ignored by Git. Publishing requires both language versions, validates the content, runs `npm run validate:content`, `npm run check`, and `npm run build`, then commits only the affected tutorial files and pushes `origin/main`.
+The editor supports bilingual English/Arabic tutorials, Markdown and MDX imports, safe Markdown preview, local private drafts, validation, and publishing. New drafts are written to `.bab-drafts/`; legacy `.bac9-drafts/` content remains readable during the migration. Both directories are ignored by Git. Publishing requires both language versions, validates the content, runs `npm run validate:content`, `npm run check`, and `npm run build`, then commits only the affected tutorial files and pushes `origin/main`.
 
 If a build fails, the previous content files are restored and no commit is created. If the push fails after the commit succeeds, the editor keeps the local commit and provides a retry action.
 

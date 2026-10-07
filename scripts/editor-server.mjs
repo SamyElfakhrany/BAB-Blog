@@ -13,14 +13,14 @@ import {
   serializeFrontmatter,
   validateDocument
 } from './lib/editor-content.mjs';
+import { draftFilePath, listCompatibleDraftIds, readCompatibleDraft } from './lib/draft-storage.mjs';
 
 const execFileAsync = promisify(execFile);
 const projectRoot = path.resolve(process.cwd());
 const adminRoot = path.join(projectRoot, 'admin');
-const contentRoot = path.join(projectRoot, 'BAC9-tutorials');
-const draftsRoot = path.join(projectRoot, '.bac9-drafts');
+const contentRoot = path.join(projectRoot, 'BAB-tutorials');
 const token = randomBytes(24).toString('hex');
-const port = Number(process.env.BAC9_EDITOR_PORT || 4322);
+const port = Number(process.env.BAB_EDITOR_PORT || process.env.BAC9_EDITOR_PORT || 4322);
 
 function isSafeId(value) {
   return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value || '');
@@ -90,16 +90,12 @@ async function currentDocument(translationId) {
 
 function draftFile(translationId) {
   if (!isSafeId(translationId)) throw new Error('Invalid translation ID.');
-  return path.join(draftsRoot, translationId, 'document.json');
+  return draftFilePath(projectRoot, translationId);
 }
 
 async function readDraft(translationId) {
-  try {
-    return JSON.parse(await readFile(draftFile(translationId), 'utf8'));
-  } catch (error) {
-    if (error.code === 'ENOENT') return null;
-    throw error;
-  }
+  if (!isSafeId(translationId)) throw new Error('Invalid translation ID.');
+  return readCompatibleDraft(projectRoot, translationId);
 }
 
 async function knownIds() {
@@ -232,7 +228,8 @@ const server = createServer(async (req, res) => {
   try {
     const url = new URL(req.url, `http://127.0.0.1:${port}`);
     if (url.pathname.startsWith('/api/')) {
-      if (req.headers['x-bac9-token'] !== token) return fail(res, 401, 'Invalid local editor token.');
+      const requestToken = req.headers['x-bab-token'] || req.headers['x-bac9-token'];
+      if (requestToken !== token) return fail(res, 401, 'Invalid local editor token.');
       if (req.method === 'GET' && url.pathname === '/api/articles') {
         const articles = await findArticles();
         const map = new Map();
@@ -249,11 +246,10 @@ const server = createServer(async (req, res) => {
         return document ? json(res, 200, { ok: true, document }) : fail(res, 404, 'Article not found.');
       }
       if (req.method === 'GET' && url.pathname === '/api/drafts') {
-        const entries = await (await import('node:fs/promises')).readdir(draftsRoot, { withFileTypes: true }).catch(() => []);
         const drafts = [];
-        for (const entry of entries.filter((item) => item.isDirectory())) {
-          const document = await readDraft(entry.name);
-          if (document) drafts.push({ translationId: entry.name, updatedAt: document.updatedAt, title: document.en?.title || document.ar?.title || 'Untitled' });
+        for (const translationId of await listCompatibleDraftIds(projectRoot)) {
+          const document = await readDraft(translationId);
+          if (document) drafts.push({ translationId, updatedAt: document.updatedAt, title: document.en?.title || document.ar?.title || 'Untitled' });
         }
         return json(res, 200, { ok: true, drafts });
       }
@@ -299,7 +295,7 @@ const server = createServer(async (req, res) => {
     const file = path.resolve(adminRoot, requested);
     if (!file.startsWith(`${adminRoot}${path.sep}`)) return fail(res, 404, 'Not found.');
     let body = await readFile(file);
-    if (file.endsWith('index.html')) body = body.toString('utf8').replaceAll('__BAC9_EDITOR_TOKEN__', token);
+    if (file.endsWith('index.html')) body = body.toString('utf8').replaceAll('__BAB_EDITOR_TOKEN__', token).replaceAll('__BAC9_EDITOR_TOKEN__', token);
     res.writeHead(200, { 'content-type': contentType(file), 'cache-control': 'no-store' });
     res.end(body);
   } catch (error) {
@@ -308,6 +304,6 @@ const server = createServer(async (req, res) => {
 });
 
 server.listen(port, '127.0.0.1', () => {
-  console.log(`BAC9 editor running at http://127.0.0.1:${port}`);
+  console.log(`BAB editor running at http://127.0.0.1:${port}`);
   console.log('This server is local-only; it does not add an admin page to the public Astro site.');
 });

@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import TutorialCard from '../../../components/TutorialCard.astro';
+import { brand } from '../../../lib/brand';
 import { getBookSlug, getBookUrl, getLanguage, ui, withBase } from '../../../lib/content';
 
 export async function getStaticPaths() {
@@ -111,7 +112,7 @@ const label = {
   {related.length > 0 && (
     <section class="shell related-section" aria-labelledby="related-title">
       <div class="section-heading">
-        <div><span class="eyebrow">{strings.optionalResources}</span><h2 id="related-title">{lang === 'en' ? 'Continue with related BAC9 lessons.' : 'كمّل مع دروس BAC9 المرتبطة.'}</h2></div>
+        <div><span class="eyebrow">{strings.optionalResources}</span><h2 id="related-title">{lang === 'en' ? `Continue with related ${brand.localizedName.en} lessons.` : `كمّل مع دروس ${brand.localizedName.ar} المرتبطة.`}</h2></div>
         <p>{lang === 'en' ? 'These lessons connect the book’s frameworks to practical Business Analysis work.' : 'الدروس دي بتربط أطر الكتاب بشغل تحليل الأعمال العملي.'}</p>
       </div>
       <div class="tutorial-grid">{related.map((entry) => <TutorialCard entry={entry} lang={lang} compact />)}</div>

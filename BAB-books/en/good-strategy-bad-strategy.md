@@ -27,7 +27,7 @@ Richard P. Rumelt’s *Good Strategy/Bad Strategy: The Difference and Why It Mat
 
 ![The three connected elements in Rumelt’s kernel of good strategy](../../public/images/en/good-strategy-kernel.svg)
 
-*BAC9 explanatory diagram generated only from the three elements Rumelt defines in Chapter 5: diagnosis, guiding policy, and coherent actions. It is not a figure from the book.*
+*BAB explanatory diagram generated only from the three elements Rumelt defines in Chapter 5: diagnosis, guiding policy, and coherent actions. It is not a figure from the book.*
 
 ## 1. Strategy begins with a consequential challenge
 

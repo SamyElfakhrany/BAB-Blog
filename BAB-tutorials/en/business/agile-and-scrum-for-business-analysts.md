@@ -38,7 +38,7 @@ For a **Business Analyst (BA)**, the practical change is important: analysis doe
 
 ## 2. Running example: improve online returns
 
-Our teaching example is the same online-shopping product used across BAC9. Customer-service data suggests that many shoppers contact support because they cannot start an eligible return themselves. The company wants to test a self-service return journey.
+Our teaching example is the same online-shopping product used across BAB. Customer-service data suggests that many shoppers contact support because they cannot start an eligible return themselves. The company wants to test a self-service return journey.
 
 The following people, rules, dates, and targets are **illustrative assumptions**, not facts about a real retailer:
 
@@ -165,7 +165,7 @@ In the returns example, an unknown courier contract may make a story relatively 
 
 ![Illustration of a cross-functional Scrum Team collaborating around a task board](../../../public/images/en/agile-scrum-team-collaboration.png)
 
-*Original AI-generated teaching illustration for BAC9. It represents collaboration, not a prescribed room layout, board design, meeting, or team composition.*
+*Original AI-generated teaching illustration for BAB. It represents collaboration, not a prescribed room layout, board design, meeting, or team composition.*
 
 A useful BA rhythm for the returns example looks like this:
 

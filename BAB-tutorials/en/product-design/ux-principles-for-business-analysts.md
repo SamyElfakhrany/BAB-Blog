@@ -26,7 +26,7 @@ draft: false
 
 User experience (UX) is the whole experience a person has while trying to reach a goal—not just how a screen looks. A Business Analyst (BA) does not need to become a visual designer, but does need a reliable way to ask whether a proposed experience is understandable, efficient, recoverable, and inclusive.
 
-This lesson uses an illustrative change to the BAC9 online shop: customers should be able to return one eligible item without contacting support. We will replace “I like it” feedback with observations the team can investigate and validate.
+This lesson uses an illustrative change to the BAB online shop: customers should be able to return one eligible item without contacting support. We will replace “I like it” feedback with observations the team can investigate and validate.
 
 ![A review loop from user goal through heuristic, risk, change, and validation](../../../public/images/en/ux-principles-review-loop.svg)
 

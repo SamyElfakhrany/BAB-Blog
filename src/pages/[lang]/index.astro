@@ -7,6 +7,7 @@ import LearningPathCard from '../../components/LearningPathCard.astro';
 import LearningProgressData from '../../components/LearningProgressData.astro';
 import SearchBox from '../../components/SearchBox.astro';
 import BookCard from '../../components/BookCard.astro';
+import { brand } from '../../lib/brand';
 import { getLanguage, ui, withBase } from '../../lib/content';
 import { getJourneyEntries, getPathEntries, pathDefinitions, pathOrder } from '../../lib/curriculum';
 
@@ -25,11 +26,11 @@ const firstLesson = journey[0];
 <SiteLayout lang={lang} title={strings.siteLabel} description={strings.homeIntro} currentSection="start">
   <section class="home-hero shell">
     <div class="hero-copy">
-      <span class="eyebrow">BAC9 · {strings.siteLabel}</span>
-      <h1>{lang === 'en' ? 'Learn Business Analysis, step by step.' : 'اتعلّم تحليل الأعمال خطوة بخطوة.'}</h1>
+      <span class="eyebrow">{brand.displayName} · {strings.siteLabel}</span>
+      <h1>{brand.tagline[lang]}</h1>
       <p>{lang === 'en'
-        ? 'Follow a practical journey through business foundations, technical fluency, product design, and responsible AI—built for beginner Business Analysts.'
-        : 'امشِ في رحلة عملية من أساسيات تحليل الأعمال للفهم التقني وتصميم المنتجات والاستخدام المسؤول للذكاء الاصطناعي—مصممة للمبتدئين.'}</p>
+        ? 'Learn Business Analysis step by step through business foundations, technical fluency, product design, and responsible AI.'
+        : 'اتعلّم تحليل الأعمال خطوة بخطوة من خلال الأساسيات والفهم التقني وتصميم المنتجات والاستخدام المسؤول للذكاء الاصطناعي.'}</p>
       <div class="hero-actions">
         <a class="button button-primary" href={withBase(`/${lang}/business/who-is-a-business-analyst/`)}>{pathDefinitions.business.copy[lang].action} <span class="direction-icon" aria-hidden="true">→</span></a>
         <a class="button button-quiet" href={withBase(`/${lang}/learning-paths/`)}>{lang === 'en' ? 'Explore the learning roadmap' : 'استكشف خريطة التعلّم'}</a>
@@ -71,7 +72,7 @@ const firstLesson = journey[0];
 
   <section class="how-section">
     <div class="shell">
-      <div class="section-heading"><div><span class="eyebrow">{lang === 'en' ? 'How BAC9 works' : 'إزاي تتعلّم مع BAC9'}</span><h2>{lang === 'en' ? 'Turn each idea into something you can use.' : 'حوّل كل فكرة لحاجة تقدر تستخدمها.'}</h2></div></div>
+      <div class="section-heading"><div><span class="eyebrow">{lang === 'en' ? `How ${brand.localizedName.en} works` : `إزاي تتعلّم مع ${brand.localizedName.ar}`}</span><h2>{lang === 'en' ? 'Turn each idea into something you can use.' : 'حوّل كل فكرة لحاجة تقدر تستخدمها.'}</h2></div></div>
       <ol class="learning-loop">
         <li><span>01</span><strong>{lang === 'en' ? 'Learn' : 'اتعلّم'}</strong><p>{lang === 'en' ? 'Understand the idea in plain language.' : 'افهم الفكرة بلغة بسيطة.'}</p></li>
         <li><span>02</span><strong>{lang === 'en' ? 'See an example' : 'شوف مثال'}</strong><p>{lang === 'en' ? 'Follow the shared online-shopping case.' : 'تابع مثال التسوق الأونلاين المشترك.'}</p></li>
@@ -88,7 +89,7 @@ const firstLesson = journey[0];
         <span class="eyebrow">{journey.length} {strings.lessons}</span>
         <h2 id="all-lessons-title">{lang === 'en' ? 'Explore every lesson in learning order.' : 'استكشف كل الدروس بترتيب التعلّم.'}</h2>
       </div>
-      <p>{lang === 'en' ? 'The complete BAC9 curriculum is listed here, from Business Analysis foundations through responsible AI.' : 'منهج BAC9 كامل موجود هنا، من أساسيات تحليل الأعمال لحد الاستخدام المسؤول للذكاء الاصطناعي.'}</p>
+      <p>{lang === 'en' ? `The complete ${brand.localizedName.en} curriculum is listed here, from Business Analysis foundations through responsible AI.` : `منهج ${brand.localizedName.ar} كامل موجود هنا، من أساسيات تحليل الأعمال لحد الاستخدام المسؤول للذكاء الاصطناعي.`}</p>
     </div>
     <CurriculumList entries={journey} lang={lang} labelledby="all-lessons-title" />
   </section>

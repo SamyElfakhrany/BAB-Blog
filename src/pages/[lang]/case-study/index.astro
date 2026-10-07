@@ -1,4 +1,5 @@
 ---
+import { brand } from '../../../lib/brand';
 import { getLanguage, ui, withBase } from '../../../lib/content';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 const lang = getLanguage(Astro.params.lang || 'en');
@@ -6,6 +7,6 @@ const strings = ui[lang];
 export function getStaticPaths() { return [{ params: { lang: 'en' } }, { params: { lang: 'ar' } }]; }
 ---
 <SiteLayout lang={lang} title={strings.navCaseStudy} description={strings.caseStudyIntro} canonicalPath={`/${lang}/case-study/`} currentSection="case-study">
-  <section class="simple-hero shell"><span class="eyebrow">BAC9 / {strings.navCaseStudy}</span><h1>{lang === 'en' ? 'The online-shopping app is our shared classroom.' : 'تطبيق التسوق الأونلاين هو فصلنا المشترك.'}</h1><p>{strings.caseStudyIntro}</p></section>
+  <section class="simple-hero shell"><span class="eyebrow">{brand.displayName} / {strings.navCaseStudy}</span><h1>{lang === 'en' ? 'The online-shopping app is our shared classroom.' : 'تطبيق التسوق الأونلاين هو فصلنا المشترك.'}</h1><p>{strings.caseStudyIntro}</p></section>
   <section class="shell case-study-page"><div class="case-study-map"><div class="map-step"><span>01</span><strong>{lang === 'en' ? 'Understand the change' : 'افهم التغيير'}</strong><p>{lang === 'en' ? 'Who is affected? What outcome matters?' : 'من سيتأثر؟ وما النتيجة المهمة؟'}</p></div><div class="map-connector"></div><div class="map-step map-step-accent"><span>02</span><strong>{lang === 'en' ? 'Make the decision visible' : 'اجعل القرار واضحًا'}</strong><p>{lang === 'en' ? 'Prioritize the work and document the reasoning.' : 'رتّب العمل ووثّق سبب القرار.'}</p></div><div class="map-connector"></div><div class="map-step"><span>03</span><strong>{lang === 'en' ? 'Collaborate on delivery' : 'تعاون في التسليم'}</strong><p>{lang === 'en' ? 'Read the change, ask the right question, validate the result.' : 'اقرأ التغيير، اسأل السؤال المناسب، وتحقق من النتيجة.'}</p></div></div><div class="case-study-copy"><h2>{lang === 'en' ? 'A single story, many BA skills.' : 'قصة واحدة، ومهارات كثيرة لمحلل الأعمال.'}</h2><p>{lang === 'en' ? 'Customers browse products, add items to a cart, pay, and track delivery. Behind that journey are stakeholders, requirements, priorities, policies, code changes, and opportunities to use AI carefully.' : 'العملاء يتصفحون المنتجات ويضيفونها إلى السلة ويدفعون ويتابعون التوصيل. وراء هذه الرحلة أصحاب مصلحة ومتطلبات وأولويات وسياسات وتغييرات في الكود وفرص لاستخدام الذكاء الاصطناعي بحذر.'}</p><a class="text-link" href={withBase(`/${lang}/business/who-is-a-business-analyst/`)}>{strings.featured} <span class="direction-icon" aria-hidden="true">→</span></a></div></section>
 </SiteLayout>

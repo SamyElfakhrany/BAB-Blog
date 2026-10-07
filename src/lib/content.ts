@@ -1,4 +1,5 @@
 import type { CollectionEntry } from 'astro:content';
+import { brand } from './brand';
 
 export type Tutorial = CollectionEntry<'tutorials'>;
 export type Book = CollectionEntry<'books'>;
@@ -33,8 +34,8 @@ export const categoryDescriptions: Record<Category, Record<Language, string>> = 
 
 export const ui = {
   en: {
-    siteName: 'BAC9',
-    siteLabel: 'Business Analysis Bootcamp',
+    siteName: brand.localizedName.en,
+    siteLabel: brand.expansion.en,
     navLearn: 'Start Here',
     navPaths: 'Learning Paths',
     navBooks: 'Books',
@@ -49,7 +50,7 @@ export const ui = {
     menu: 'Menu',
     closeMenu: 'Close menu',
     skipToContent: 'Skip to content',
-    search: 'Search BAC9',
+    search: `Search ${brand.localizedName.en}`,
     searchPlaceholder: 'Search concepts, tools, and techniques…',
     featured: 'Start learning',
     allTutorials: 'All tutorials',
@@ -86,16 +87,16 @@ export const ui = {
     pathProgress: 'Path progress',
     journeyProgress: 'Journey progress',
     progressUnavailable: 'Progress saving is unavailable in this browser. You can still use every lesson.',
-    journeyComplete: 'You completed the BAC9 learning journey.',
+    journeyComplete: `You completed the ${brand.localizedName.en} learning journey.`,
     language: 'العربية',
-    homeIntro: 'A practical learning lab for business analysts who want to think clearly, collaborate with technical teams, and work responsibly with AI.',
+    homeIntro: brand.description.en,
     caseStudyIntro: 'Every tutorial uses one familiar online-shopping app so the ideas connect from one lesson to the next.',
     noResults: 'No content matches that search.',
     backToLearn: 'Back to learning'
   },
   ar: {
-    siteName: 'BAC9',
-    siteLabel: 'معسكر تحليل الأعمال',
+    siteName: brand.localizedName.ar,
+    siteLabel: brand.expansion.ar,
     navLearn: 'ابدأ هنا',
     navPaths: 'مسارات التعلّم',
     navBooks: 'الكتب',
@@ -104,13 +105,13 @@ export const ui = {
     navTools: 'أدوات',
     navFollow: 'تابع',
     navSearch: 'بحث',
-    navAbout: 'عن BAC9',
+    navAbout: `عن ${brand.localizedName.ar}`,
     mainNavigation: 'التنقل الرئيسي',
     mobileNavigation: 'قائمة التنقل للموبايل',
     menu: 'القائمة',
     closeMenu: 'إغلاق القائمة',
     skipToContent: 'انتقل إلى المحتوى',
-    search: 'ابحث في BAC9',
+    search: `ابحث في ${brand.localizedName.ar}`,
     searchPlaceholder: 'ابحث عن مفاهيم وأدوات وتقنيات…',
     featured: 'ابدأ التعلّم',
     allTutorials: 'كل الدروس',
@@ -147,9 +148,9 @@ export const ui = {
     pathProgress: 'تقدم المسار',
     journeyProgress: 'تقدم رحلة التعلّم',
     progressUnavailable: 'حفظ التقدم غير متاح في المتصفح ده، لكن كل الدروس ما زالت متاحة.',
-    journeyComplete: 'أكملت رحلة تعلّم BAC9.',
+    journeyComplete: `أكملت رحلة تعلّم ${brand.localizedName.ar}.`,
     language: 'English',
-    homeIntro: 'مساحة تعلّم عملية لمحللي الأعمال الذين يريدون التفكير بوضوح والتعاون مع الفرق التقنية واستخدام الذكاء الاصطناعي بمسؤولية.',
+    homeIntro: brand.description.ar,
     caseStudyIntro: 'تستخدم كل الدروس تطبيق تسوق أونلاين مألوفًا حتى تتصل الأفكار من درس إلى آخر.',
     noResults: 'لا يوجد محتوى يطابق هذا البحث.',
     backToLearn: 'العودة إلى التعلّم'

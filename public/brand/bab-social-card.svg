@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">BAB and باب social card</title>
+  <desc id="desc">Business Analyst Brain. Think like a Business Analyst.</desc>
+  <rect width="1200" height="630" fill="#F7F9FB"/>
+  <path d="M0 0h1200v18H0z" fill="#F7C948"/>
+  <circle cx="1090" cy="90" r="180" fill="#7DD3A8" opacity=".22"/>
+  <circle cx="1020" cy="570" r="260" fill="#77A6D3" opacity=".16"/>
+  <rect x="92" y="90" width="160" height="160" rx="40" fill="#102A43"/>
+  <path d="M132 213v-48c0-28 15-45 40-45s40 17 40 45v48" fill="none" stroke="#F7C948" stroke-width="13" stroke-linecap="round"/>
+  <path d="M150 193v-17c0-12 9-20 20-20h5c12 0 20-9 20-20" fill="none" stroke="#7DD3A8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#7DD3A8"><circle cx="150" cy="193" r="7"/><circle cx="172" cy="156" r="7"/><circle cx="195" cy="136" r="7"/></g>
+  <path d="M125 213h94" fill="none" stroke="#F7F9FB" stroke-width="8" stroke-linecap="round"/>
+  <text x="300" y="190" fill="#102A43" font-family="Manrope, Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="5">BAB</text>
+  <path d="M515 112v95" stroke="#D9E2EC" stroke-width="4"/>
+  <text x="562" y="190" fill="#102A43" font-family="Noto Kufi Arabic, Arial, sans-serif" font-size="86" font-weight="700">باب</text>
+  <text x="96" y="335" fill="#102A43" font-family="Manrope, Arial, sans-serif" font-size="62" font-weight="800">Think like a Business Analyst.</text>
+  <text x="98" y="395" fill="#486581" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="500">Your door to practical Business Analysis.</text>
+  <text x="1098" y="535" text-anchor="end" fill="#102A43" font-family="Noto Kufi Arabic, Arial, sans-serif" font-size="34" font-weight="700">بابك لتعلّم تحليل الأعمال بشكل عملي.</text>
+  <text x="98" y="548" fill="#486581" font-family="DM Mono, monospace" font-size="21" font-weight="500" letter-spacing="2">BUSINESS ANALYST BRAIN</text>
+</svg>

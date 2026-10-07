@@ -5,6 +5,7 @@ import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import CurriculumList from '../../../components/CurriculumList.astro';
 import LearningProgressData from '../../../components/LearningProgressData.astro';
 import ProgressBar from '../../../components/ProgressBar.astro';
+import { brand } from '../../../lib/brand';
 import { getEntryUrl, getLanguage, ui, withBase } from '../../../lib/content';
 import { getPathEntries, getPathStats, pathDefinitions } from '../../../lib/curriculum';
 
@@ -32,7 +33,7 @@ const first = entries[0];
       ]} />
       <div class="path-hero-grid">
         <div>
-          <span class="eyebrow">{strings.stage} {path.stage} · BAC9</span>
+          <span class="eyebrow">{strings.stage} {path.stage} · {brand.localizedName[lang]}</span>
           <h1>{copy.title}</h1>
           <p>{copy.purpose}</p>
           <div class="hero-actions">
