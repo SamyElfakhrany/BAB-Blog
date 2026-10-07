@@ -58,26 +58,27 @@ const navigation: Array<{ id: Section; label: string; href: string }> = [
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL(withBase(socialImage), Astro.site || Astro.url).href} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    {!image && <meta property="og:image:width" content="1440" />}
+    {!image && <meta property="og:image:height" content="700" />}
     <meta property="og:image:alt" content={`${brand.displayName} — ${brand.tagline[language]}`} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
     <meta name="twitter:image" content={new URL(withBase(socialImage), Astro.site || Astro.url).href} />
     {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
-    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
-    <link rel="icon" type="image/png" sizes="32x32" href={withBase('/brand/favicon-32x32.png')} />
-    <link rel="apple-touch-icon" sizes="180x180" href={withBase('/brand/apple-touch-icon.png')} />
+    <link rel="icon" type="image/svg+xml" href={withBase(brand.assets.favicon)} />
+    <link rel="icon" href={withBase(brand.assets.faviconIco)} sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href={withBase(brand.assets.favicon32)} />
+    <link rel="apple-touch-icon" sizes="180x180" href={withBase(brand.assets.appleTouchIcon)} />
     <title>{pageTitle}</title>
     <script is:inline>document.documentElement.classList.add('has-js');</script>
   </head>
-  <body>
+  <body style={`--bab-hero-dark:url("${withBase(brand.assets.heroDark)}");--bab-pattern:url("${withBase(brand.assets.pattern)}")`}>
     <a class="skip-link" href="#main-content">{strings.skipToContent}</a>
     <header class="site-header">
       <div class="shell header-inner">
         <a class="brand" href={withBase(`/${language}/`)} aria-label={`${strings.siteName} ${strings.navLearn}`}>
-          <BrandMark lang={language} />
+          <BrandMark variant="compact" tone="color" responsive />
         </a>
         <nav class="main-nav" aria-label={strings.mainNavigation}>
           {navigation.map((item) => <a href={withBase(item.href)} aria-current={currentSection === item.id ? 'page' : undefined}>{item.label}</a>)}
@@ -94,8 +95,9 @@ const navigation: Array<{ id: Section; label: string; href: string }> = [
     <main id="main-content"><slot /></main>
     <footer class="site-footer">
       <div class="shell footer-inner">
-        <BrandMark lang={language} inverse />
+        <BrandMark variant="full" tone="reverse" responsive />
         <div class="footer-copy">
+          {language === 'ar' && <p class="footer-tagline">{brand.tagline.en} · {brand.taglineTranslation.ar}</p>}
           <p>{brand.supportingLine[language]}</p>
           <p class="footer-copyright">
             © {copyrightYear} <a href={brand.author.url} target="_blank" rel="me noopener noreferrer">{brand.author.name}</a>. {brand.copyright[language]}

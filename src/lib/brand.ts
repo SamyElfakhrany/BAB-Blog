@@ -2,22 +2,25 @@ export type BrandLanguage = 'en' | 'ar';
 
 export const brand = {
   id: 'bab',
-  displayName: 'BAB | باب',
+  displayName: 'BAB',
   localizedName: {
     en: 'BAB',
-    ar: 'باب'
+    ar: 'BAB'
   },
   expansion: {
     en: 'Business Analyst Brain',
     ar: 'عقل محلل الأعمال'
   },
   tagline: {
-    en: 'Think like a Business Analyst.',
-    ar: 'فكّر كمحلل أعمال.'
+    en: 'Gate for Every Business Brain',
+    ar: 'Gate for Every Business Brain'
+  },
+  taglineTranslation: {
+    ar: 'بوابة لكل عقل في عالم الأعمال'
   },
   supportingLine: {
-    en: 'Your door to practical Business Analysis.',
-    ar: 'بابك لتعلّم تحليل الأعمال بشكل عملي.'
+    en: 'An open doorway to Business Analysis knowledge, tools, people, and learning resources.',
+    ar: 'باب مفتوح لمعرفة تحليل الأعمال وأدواته وأشخاصه ومصادر تعلّمه.'
   },
   description: {
     en: 'A practical bilingual learning lab that helps new and aspiring Business Analysts think clearly, collaborate with technical teams, and work responsibly with AI.',
@@ -32,14 +35,20 @@ export const brand = {
     ar: 'جميع الحقوق محفوظة.'
   },
   assets: {
-    mark: '/brand/bab-mark.svg',
-    markInverse: '/brand/bab-mark-inverse.svg',
-    horizontalLockup: '/brand/bab-lockup-horizontal.svg',
-    stackedLockup: '/brand/bab-lockup-stacked.svg',
-    englishWordmark: '/brand/bab-wordmark-en.svg',
-    arabicWordmark: '/brand/bab-wordmark-ar.svg',
-    monochromeLockup: '/brand/bab-lockup-monochrome.svg',
-    socialCard: '/brand/bab-social-card.png'
+    compactColor: '/assets/bab/logos/bab-compact-color.svg',
+    compactReverse: '/assets/bab/logos/bab-compact-reverse.svg',
+    fullColor: '/assets/bab/logos/bab-full-color.svg',
+    fullReverse: '/assets/bab/logos/bab-full-reverse.svg',
+    symbolColor: '/assets/bab/logos/bab-symbol-color.svg',
+    symbolReverse: '/assets/bab/logos/bab-symbol-reverse.svg',
+    heroDark: '/assets/bab/graphics/door-hero-dark.svg',
+    heroLight: '/assets/bab/graphics/door-hero-light.svg',
+    pattern: '/assets/bab/graphics/door-pattern.svg',
+    socialCard: '/assets/bab/graphics/door-hero-light.svg',
+    favicon: '/assets/bab/icons/favicon.svg',
+    faviconIco: '/assets/bab/icons/favicon.ico',
+    favicon32: '/assets/bab/icons/favicon-32.png',
+    appleTouchIcon: '/assets/bab/icons/apple-touch-icon.png'
   },
   colors: {
     navy: '#102A43',

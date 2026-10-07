@@ -1,39 +1,33 @@
 ---
-import type { Language } from '../lib/content';
 import { brand } from '../lib/brand';
+import { withBase } from '../lib/content';
 
 interface Props {
-  lang?: Language;
-  compact?: boolean;
-  inverse?: boolean;
-  showExpansion?: boolean;
+  variant?: 'compact' | 'full' | 'symbol';
+  tone?: 'color' | 'reverse';
+  responsive?: boolean;
+  class?: string;
 }
 
-const { lang = 'en', compact = false, inverse = false, showExpansion = true } = Astro.props;
+const {
+  variant = 'compact',
+  tone = 'color',
+  responsive = false,
+  class: className
+} = Astro.props;
+
+const sources = {
+  compact: tone === 'reverse' ? brand.assets.compactReverse : brand.assets.compactColor,
+  full: tone === 'reverse' ? brand.assets.fullReverse : brand.assets.fullColor,
+  symbol: tone === 'reverse' ? brand.assets.symbolReverse : brand.assets.symbolColor
+};
+const alt = `${brand.displayName} — ${brand.expansion.en}`;
 ---
-<span
-  class:list={['brand-identity', { 'brand-identity--compact': compact, 'brand-identity--inverse': inverse }]}
-  role="img"
-  aria-label={`${brand.displayName}, ${brand.expansion.en}`}
->
-  <svg class="brand-symbol" viewBox="0 0 96 96" aria-hidden="true">
-    <rect class="brand-symbol__tile" width="96" height="96" rx="24" />
-    <path class="brand-symbol__door" d="M24 74V45c0-17 9-27 24-27s24 10 24 27v29" />
-    <path class="brand-symbol__thought" d="M35 62V52c0-7 5-12 12-12h3c7 0 12-5 12-12" />
-    <circle class="brand-symbol__node" cx="35" cy="62" r="4" />
-    <circle class="brand-symbol__node" cx="48" cy="40" r="4" />
-    <circle class="brand-symbol__node" cx="62" cy="28" r="4" />
-    <path class="brand-symbol__threshold" d="M20 74h56" />
-  </svg>
-  {!compact && (
-    <span class="brand-wordmark" aria-hidden="true">
-      <span class="brand-wordmark__names">
-        <strong>BAB</strong>
-        <span class="brand-wordmark__divider"></span>
-        <strong lang="ar" dir="rtl">باب</strong>
-      </span>
-      {showExpansion && <small>{brand.expansion[lang]}</small>}
-    </span>
-  )}
+<span class:list={['brand-identity', `brand-identity--${variant}`, `brand-identity--${tone}`, className]}>
+  <picture>
+    {responsive && variant === 'compact' && <source media="(max-width: 420px)" srcset={withBase(sources.symbol)} />}
+    {responsive && variant === 'full' && <source media="(max-width: 359px)" srcset={withBase(sources.compact)} />}
+    <img class:list={['brand-logo', `brand-logo--${variant}`]} src={withBase(sources[variant])} alt={alt} />
+  </picture>
 </span>
 

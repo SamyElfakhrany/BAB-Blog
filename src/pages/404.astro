@@ -3,4 +3,4 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import { brand } from '../lib/brand';
 import { withBase } from '../lib/content';
 ---
-<SiteLayout title="Page not found" description={`This ${brand.localizedName.en} page could not be found.`}><section class="simple-hero shell"><span class="eyebrow">404 / {brand.displayName}</span><h1>That page is not in the workbook.</h1><p>The link may have moved, but the next useful idea is still here.</p><a class="button button-primary" href={withBase('/en/')}>Back to {brand.localizedName.en}</a></section></SiteLayout>
+<SiteLayout title="Page not found" description={`This ${brand.localizedName.en} page could not be found.`}><section class="simple-hero shell"><span class="eyebrow">404 / {brand.displayName}</span><h1>This doorway does not lead to a page.</h1><p>The link may have moved, but the next useful idea is still open.</p><a class="button button-primary" href={withBase('/en/')}>Back to {brand.localizedName.en}</a></section></SiteLayout>

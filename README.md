@@ -1,6 +1,6 @@
-# BAB | باب
+# BAB — Business Analyst Brain
 
-**Business Analyst Brain** is a bilingual practical learning blog for new and aspiring Business Analysts. In Arabic, **باب** means “door”: the brand combines the analyst's way of thinking with an open door to practical knowledge.
+**Business Analyst Brain** is a bilingual practical learning blog for new and aspiring Business Analysts. Its brand promise is **Gate for Every Business Brain**: an open doorway to practical knowledge, tools, people, books, and learning resources.
 
 ## Local tutorial editor
 

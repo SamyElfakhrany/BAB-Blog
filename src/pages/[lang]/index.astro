@@ -23,11 +23,12 @@ const books = (await getCollection('books', ({ data }) => data.lang === lang && 
 const journey = getJourneyEntries(all, lang);
 const firstLesson = journey[0];
 ---
-<SiteLayout lang={lang} title={strings.siteLabel} description={strings.homeIntro} currentSection="start">
+<SiteLayout lang={lang} description={strings.homeIntro} currentSection="start">
   <section class="home-hero shell">
     <div class="hero-copy">
       <span class="eyebrow">{brand.displayName} · {strings.siteLabel}</span>
       <h1>{brand.tagline[lang]}</h1>
+      {lang === 'ar' && <p class="hero-tagline-translation">{brand.taglineTranslation.ar}</p>}
       <p>{lang === 'en'
         ? 'Learn Business Analysis step by step through business foundations, technical fluency, product design, and responsible AI.'
         : 'اتعلّم تحليل الأعمال خطوة بخطوة من خلال الأساسيات والفهم التقني وتصميم المنتجات والاستخدام المسؤول للذكاء الاصطناعي.'}</p>
