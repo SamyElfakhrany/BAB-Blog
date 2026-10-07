@@ -8,7 +8,7 @@ category: business
 tags: ["agile","scrum","backlog","requirements"]
 difficulty: beginner
 published: 2026-09-27
-updated: 2026-10-02
+updated: 2026-10-07
 readTime: 15
 order: 7
 prerequisites: ["prioritization-techniques"]
@@ -165,7 +165,7 @@ And يتم تسجيل المشكلة للمتابعة التشغيلية
 
 ![رسم توضيحي لفريق Scrum متعدد المهارات بيتعاون قدام لوحة مهام](../../../public/images/ar/agile-scrum-team-collaboration_ar.png)
 
-*رسم تعليمي أصلي مولّد بالذكاء الاصطناعي لباب. بيمثل التعاون، ومش بيفرض شكل غرفة أو Board أو اجتماع أو تكوين فريق محدد.*
+*التعاون المستمر بيربط الـDiscovery والتنفيذ والتحقق بدل ما يحوّل التحليل لتسليم مستند مرة واحدة.*
 
 إيقاع عملي مفيد للـBA في مثال الإرجاع:
 

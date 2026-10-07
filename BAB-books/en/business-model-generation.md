@@ -15,7 +15,7 @@ pageCount: 288
 originalLanguage: "English"
 topics: ["Business Model Canvas", "Business model innovation", "Strategy", "Design thinking"]
 published: 2026-09-28
-updated: 2026-09-29
+updated: 2026-10-07
 readTime: 28
 order: 1
 coverImage: /images/books/business-model-generation-cover.webp
@@ -27,7 +27,7 @@ draft: false
 
 ![A map connecting the book's Canvas, patterns, design, and strategy sections to its five-phase process](../../public/images/en/business-model-generation-book-map.svg)
 
-*AI-generated explanatory visual based solely on the book's contents and process overview (printed pp. 8–9 and 248–259; PDF pp. 14–15 and 254–265). Generation brief: show the four main bodies of material feeding the book's five named process phases; introduce no additional framework.*
+*The book connects its four main bodies of material—Canvas, patterns, design, and strategy—to a five-phase process for developing and managing a business model. [Printed pp. 8–9 and 248–259; PDF pp. 14–15 and 254–265]*
 
 ## 1. The book's central argument and structure
 

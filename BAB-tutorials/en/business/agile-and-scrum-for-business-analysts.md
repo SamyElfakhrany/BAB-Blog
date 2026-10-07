@@ -8,7 +8,7 @@ category: business
 tags: ["agile","scrum","backlog","requirements"]
 difficulty: beginner
 published: 2026-09-27
-updated: 2026-10-02
+updated: 2026-10-07
 readTime: 14
 order: 7
 prerequisites: ["prioritization-techniques"]
@@ -165,7 +165,7 @@ In the returns example, an unknown courier contract may make a story relatively 
 
 ![Illustration of a cross-functional Scrum Team collaborating around a task board](../../../public/images/en/agile-scrum-team-collaboration.png)
 
-*Original AI-generated teaching illustration for BAB. It represents collaboration, not a prescribed room layout, board design, meeting, or team composition.*
+*Continuous collaboration keeps discovery, delivery, and validation connected instead of turning analysis into a one-time handoff.*
 
 A useful BA rhythm for the returns example looks like this:
 

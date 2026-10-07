@@ -26,14 +26,6 @@ draft: false
 
 Eric Ries presents the Lean Startup as a management discipline for creating new products and services under extreme uncertainty. Its purpose is not to make teams produce more efficiently before they know what customers need; it is to help them learn, with evidence and as quickly as possible, how to build a sustainable business. The method joins vision with experimentation, measurement, and repeated strategic adjustment. [Introduction, PDF pp. 11–21]
 
-## Source information
-
-- **Author:** Eric Ries.
-- **Edition:** First edition, published in the United States by Crown Business in 2011.
-- **Source:** *The Lean Startup - Erick Ries.pdf*, 296 PDF pages.
-- **Reference method:** Every citation below uses the PDF page number. The source’s printed chapter pages differ from the PDF sequence because the file includes front matter.
-- **Extraction notes:** All chapters were readable. A few ligatures and punctuation marks were imperfect in text extraction, so headings, figures, and uncertain characters were checked against rendered pages. No substantive section was unreadable. [Copyright and contents, PDF pp. 7–10]
-
 ## Book overview
 
 The method rests on five principles. Entrepreneurs can exist in any sector or organization; entrepreneurship is a form of management; startup progress is validated learning; the core activity is the Build-Measure-Learn feedback loop; and innovators need innovation accounting to measure progress, set milestones, and prioritize work. Ries rejects both detailed prediction based on a stable past and unmanaged “just do it” chaos because startups have neither stable history nor certainty about their customers and products. [Introduction, PDF pp. 17–20]
@@ -183,19 +175,3 @@ The epilogue rejects rigid doctrine. Scientific thinking does not mean formula o
 ### Chapter 14: Join the Movement
 
 The final chapter points readers toward local communities, customer-development resources, lean product-development works, and related writing. Its role is not to add another technique but to frame Lean Startup as a developing practice that improves through participation, teaching, and continued testing rather than through fixed orthodoxy. [Chapter 14, PDF pp. 274–279]
-
-## Exercises from the book
-
-The supplied first-edition PDF contains questions inside cases and recommended practices, but it does **not** provide a formal exercise, review-question, activity, or answer-key section. In accordance with the source-only rule, no new exercises or answers have been added. [Contents and Chapters 1–14, PDF pp. 9–10, 24–279]
-
-## Visuals index
-
-- `the-lean-startup-cover.webp` — **From the book:** original front cover, extracted without changing its factual content. [PDF p. 1]
-- `the-lean-startup-build-measure-learn.webp` — **From the book:** Build-Measure-Learn feedback loop. [PDF p. 81]
-- `the-lean-startup-kanban.webp` — **From the book:** kanban diagram with work-in-progress limits. [PDF p. 138]
-- `the-lean-startup-compounding-growth.webp` — **From the book:** six-month compounding-growth comparison. [PDF p. 214]
-- **AI-generated visuals:** None. The book already provides relevant explanatory figures, so no generated image was necessary.
-
-## Source limitations
-
-The PDF’s text layer occasionally substitutes incorrect characters for ligatures and punctuation. Those extraction defects were resolved by checking rendered pages; they do not indicate missing source content. The summary covers the introduction and all fourteen numbered chapters. Endnotes, disclosures, acknowledgments, and the author biography were inspected for source control but are not summarized as conceptual chapters. [PDF pp. 280–296]

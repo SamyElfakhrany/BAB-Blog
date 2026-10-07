@@ -14,7 +14,7 @@ pageCount: 336
 originalLanguage: "English"
 topics: ["Strategy", "Strategic diagnosis", "Competitive advantage", "Organizational change"]
 published: 2026-09-29
-updated: 2026-09-29
+updated: 2026-10-07
 readTime: 34
 order: 2
 coverImage: /images/books/good-strategy-bad-strategy-cover.webp
@@ -27,7 +27,7 @@ Richard P. Rumelt’s *Good Strategy/Bad Strategy: The Difference and Why It Mat
 
 ![The three connected elements in Rumelt’s kernel of good strategy](../../public/images/en/good-strategy-kernel.svg)
 
-*BAB explanatory diagram generated only from the three elements Rumelt defines in Chapter 5: diagnosis, guiding policy, and coherent actions. It is not a figure from the book.*
+*The kernel turns a diagnosis of the challenge into a guiding policy, then coordinates coherent actions that carry the policy into practice. [Chapter 5]*
 
 ## 1. Strategy begins with a consequential challenge
 
