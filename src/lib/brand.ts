@@ -23,6 +23,14 @@ export const brand = {
     en: 'A practical bilingual learning lab that helps new and aspiring Business Analysts think clearly, collaborate with technical teams, and work responsibly with AI.',
     ar: 'مساحة تعلّم عملية وثنائية اللغة تساعد محللي الأعمال الجدد والطموحين على التفكير بوضوح والتعاون مع الفرق التقنية واستخدام الذكاء الاصطناعي بمسؤولية.'
   },
+  author: {
+    name: 'Samy Elfakhrany',
+    url: 'https://www.linkedin.com/in/samy-elfakhrany/'
+  },
+  copyright: {
+    en: 'All rights reserved.',
+    ar: 'جميع الحقوق محفوظة.'
+  },
   assets: {
     mark: '/brand/bab-mark.svg',
     markInverse: '/brand/bab-mark-inverse.svg',

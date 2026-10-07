@@ -31,6 +31,7 @@ const canonical = new URL(withBase(canonicalPath), Astro.site || Astro.url).href
 const alternateLang = language === 'en' ? 'ar' : 'en';
 const alternatePath = exactAlternatePath || localizePath(canonicalPath, alternateLang);
 const socialImage = image || brand.assets.socialCard;
+const copyrightYear = new Date().getFullYear();
 const navigation: Array<{ id: Section; label: string; href: string }> = [
   { id: 'start', label: strings.navLearn, href: `/${language}/` },
   { id: 'paths', label: strings.navPaths, href: `/${language}/learning-paths/` },
@@ -94,7 +95,12 @@ const navigation: Array<{ id: Section; label: string; href: string }> = [
     <footer class="site-footer">
       <div class="shell footer-inner">
         <BrandMark lang={language} inverse />
-        <p>{brand.supportingLine[language]}</p>
+        <div class="footer-copy">
+          <p>{brand.supportingLine[language]}</p>
+          <p class="footer-copyright">
+            © {copyrightYear} <a href={brand.author.url} target="_blank" rel="me noopener noreferrer">{brand.author.name}</a>. {brand.copyright[language]}
+          </p>
+        </div>
         <a href={withBase(`/${language}/learning-paths/`)}>{strings.navPaths}</a>
       </div>
     </footer>
