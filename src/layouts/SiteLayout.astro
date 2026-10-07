@@ -79,6 +79,7 @@ const navigation: Array<{ id: Section; label: string; href: string }> = [
       <div class="shell header-inner">
         <a class="brand" href={withBase(`/${language}/`)} aria-label={`${strings.siteName} ${strings.navLearn}`}>
           <BrandMark variant="compact" tone="color" responsive />
+          <span class="brand-name" aria-hidden="true">{brand.displayName}</span>
         </a>
         <nav class="main-nav" aria-label={strings.mainNavigation}>
           {navigation.map((item) => <a href={withBase(item.href)} aria-current={currentSection === item.id ? 'page' : undefined}>{item.label}</a>)}
