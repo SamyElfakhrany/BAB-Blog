@@ -24,26 +24,20 @@ const journey = getJourneyEntries(all, lang);
 const firstLesson = journey[0];
 ---
 <SiteLayout lang={lang} description={strings.homeIntro} currentSection="start">
-  <section class="home-hero shell">
-    <div class="hero-copy">
-      <span class="eyebrow">{brand.displayName} · {strings.siteLabel}</span>
-      <h1>{brand.tagline[lang]}</h1>
-      {lang === 'ar' && <p class="hero-tagline-translation">{brand.taglineTranslation.ar}</p>}
-      <p>{lang === 'en'
-        ? 'Learn Business Analysis step by step through business foundations, technical fluency, product design, and responsible AI.'
-        : 'اتعلّم تحليل الأعمال خطوة بخطوة من خلال الأساسيات والفهم التقني وتصميم المنتجات والاستخدام المسؤول للذكاء الاصطناعي.'}</p>
-      <div class="hero-actions">
-        <a class="button button-primary" href={withBase(`/${lang}/business/who-is-a-business-analyst/`)}>{pathDefinitions.business.copy[lang].action} <span class="direction-icon" aria-hidden="true">→</span></a>
-        <a class="button button-quiet" href={withBase(`/${lang}/learning-paths/`)}>{lang === 'en' ? 'Explore the learning roadmap' : 'استكشف خريطة التعلّم'}</a>
+  <section class="home-hero">
+    <div class="home-hero-inner shell">
+      <div class="hero-copy">
+        <span class="eyebrow">{brand.displayName} · {strings.siteLabel}</span>
+        <h1>{brand.tagline[lang]}</h1>
+        {lang === 'ar' && <p class="hero-tagline-translation">{brand.taglineTranslation.ar}</p>}
+        <p>{lang === 'en'
+          ? 'Learn Business Analysis step by step through business foundations, technical fluency, product design, and responsible AI.'
+          : 'اتعلّم تحليل الأعمال خطوة بخطوة من خلال الأساسيات والفهم التقني وتصميم المنتجات والاستخدام المسؤول للذكاء الاصطناعي.'}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href={withBase(`/${lang}/business/who-is-a-business-analyst/`)}>{pathDefinitions.business.copy[lang].action} <span class="direction-icon" aria-hidden="true">→</span></a>
+          <a class="button button-quiet" href={withBase(`/${lang}/learning-paths/`)}>{lang === 'en' ? 'Explore the learning roadmap' : 'استكشف خريطة التعلّم'}</a>
+        </div>
       </div>
-    </div>
-    <div class="journey-summary" aria-label={lang === 'en' ? 'Learning journey summary' : 'ملخص رحلة التعلّم'}>
-      <strong>{journey.length}</strong>
-      <span>{strings.lessons}</span>
-      <div></div>
-      <strong>{journey.reduce((total, entry) => total + entry.data.readTime, 0)}</strong>
-      <span>{strings.minutes}</span>
-      <p>{lang === 'en' ? 'One case study connects every stage.' : 'دراسة حالة واحدة بتربط كل المراحل.'}</p>
     </div>
   </section>
 
