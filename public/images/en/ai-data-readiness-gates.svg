@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Six gates for assessing AI data readiness</title>
+  <desc id="desc">A flow from purpose and provenance through quality, coverage, permission, and evaluation to a readiness decision.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0d2b45" flood-opacity="0.10"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#63809a"/></marker>
+  </defs>
+  <rect width="1200" height="680" rx="28" fill="#f4f8fb"/>
+  <text x="70" y="72" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#0d2b45">Data readiness is a decision, not a cleanup score</text>
+  <text x="70" y="108" font-family="Arial, sans-serif" font-size="18" fill="#526b82">Move only when the evidence fits the intended AI use and operating context.</text>
+
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <rect x="70" y="160" width="300" height="130" rx="18" fill="#ffffff" stroke="#b8d0e3"/>
+    <circle cx="108" cy="198" r="18" fill="#0d2b45"/><text x="108" y="204" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">1</text>
+    <text x="140" y="204" font-size="21" font-weight="700" fill="#0d2b45">Purpose</text>
+    <text x="100" y="242" font-size="16" fill="#526b82">Which decision, population,</text><text x="100" y="266" font-size="16" fill="#526b82">scope, and outcome?</text>
+
+    <rect x="450" y="160" width="300" height="130" rx="18" fill="#ffffff" stroke="#b8d0e3"/>
+    <circle cx="488" cy="198" r="18" fill="#0d2b45"/><text x="488" y="204" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">2</text>
+    <text x="520" y="204" font-size="21" font-weight="700" fill="#0d2b45">Provenance</text>
+    <text x="480" y="242" font-size="16" fill="#526b82">Where did each field come from,</text><text x="480" y="266" font-size="16" fill="#526b82">and how was it transformed?</text>
+
+    <rect x="830" y="160" width="300" height="130" rx="18" fill="#ffffff" stroke="#b8d0e3"/>
+    <circle cx="868" cy="198" r="18" fill="#0d2b45"/><text x="868" y="204" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">3</text>
+    <text x="900" y="204" font-size="21" font-weight="700" fill="#0d2b45">Quality</text>
+    <text x="860" y="242" font-size="16" fill="#526b82">Are values complete, valid,</text><text x="860" y="266" font-size="16" fill="#526b82">consistent, unique, and timely?</text>
+
+    <rect x="830" y="350" width="300" height="130" rx="18" fill="#ffffff" stroke="#b8d0e3"/>
+    <circle cx="868" cy="388" r="18" fill="#0d2b45"/><text x="868" y="394" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">4</text>
+    <text x="900" y="394" font-size="21" font-weight="700" fill="#0d2b45">Coverage</text>
+    <text x="860" y="432" font-size="16" fill="#526b82">Does the sample represent real</text><text x="860" y="456" font-size="16" fill="#526b82">users, cases, and exceptions?</text>
+
+    <rect x="450" y="350" width="300" height="130" rx="18" fill="#ffffff" stroke="#b8d0e3"/>
+    <circle cx="488" cy="388" r="18" fill="#0d2b45"/><text x="488" y="394" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">5</text>
+    <text x="520" y="394" font-size="21" font-weight="700" fill="#0d2b45">Permission</text>
+    <text x="480" y="432" font-size="16" fill="#526b82">Is this use allowed, necessary,</text><text x="480" y="456" font-size="16" fill="#526b82">protected, and owned?</text>
+
+    <rect x="70" y="350" width="300" height="130" rx="18" fill="#ffffff" stroke="#b8d0e3"/>
+    <circle cx="108" cy="388" r="18" fill="#0d2b45"/><text x="108" y="394" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">6</text>
+    <text x="140" y="394" font-size="21" font-weight="700" fill="#0d2b45">Evaluation</text>
+    <text x="100" y="432" font-size="16" fill="#526b82">Can we separate, test, monitor,</text><text x="100" y="456" font-size="16" fill="#526b82">and reproduce the evidence?</text>
+  </g>
+
+  <path d="M370 225 H438" stroke="#63809a" stroke-width="3" marker-end="url(#arrow)"/><path d="M750 225 H818" stroke="#63809a" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M980 290 V338" stroke="#63809a" stroke-width="3" marker-end="url(#arrow)"/><path d="M830 415 H762" stroke="#63809a" stroke-width="3" marker-end="url(#arrow)"/><path d="M450 415 H382" stroke="#63809a" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="70" y="545" width="1060" height="82" rx="20" fill="#0d2b45"/>
+    <text x="106" y="578" font-size="17" font-weight="700" fill="#7de2c2">READINESS DECISION</text>
+    <text x="106" y="607" font-size="22" font-weight="700" fill="#ffffff">Proceed  •  Repair  •  Narrow scope  •  Collect evidence  •  Stop</text>
+  </g>
+</svg>

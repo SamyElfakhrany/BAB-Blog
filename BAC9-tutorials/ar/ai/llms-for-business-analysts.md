@@ -10,8 +10,8 @@ difficulty: beginner
 published: 2026-09-24
 updated: 2026-09-27
 readTime: 13
-order: 3
-prerequisites: ["ai-fundamentals-for-business-analysts"]
+order: 5
+prerequisites: ["responsible-ai-risk-and-governance"]
 learningOutcomes:
   - "تختار مهام مفيدة ومسؤولة للنموذج اللغوي داخل شغل الـBA."
   - "تكتب Prompt على شكل BA brief منظم فيه سياق وقيود واضحة."
