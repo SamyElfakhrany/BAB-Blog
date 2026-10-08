@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-10-07
 updated: 2026-10-07
 readTime: 18
-order: 4
+order: 5
 prerequisites: ["data-readiness-for-ai-projects"]
 learningOutcomes:
   - "ترسم أصحاب المصلحة والمنافع والأضرار وسوء الاستخدام وحقوق القرار والمساءلة لاستخدام AI."

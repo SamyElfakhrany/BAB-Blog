@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Data literacy decision path</title>
+  <desc id="desc">A six-step flow from business decision through definition, data, measurement, segmentation, and evidence to a responsible recommendation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071a33"/>
+      <stop offset="1" stop-color="#123d5a"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#001326" flood-opacity="0.28"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#77d7cf"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="1090" cy="80" r="150" fill="#2dd4bf" opacity="0.08"/>
+  <circle cx="120" cy="590" r="190" fill="#38bdf8" opacity="0.07"/>
+
+  <text x="70" y="72" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">From a data claim to a defensible decision</text>
+  <text x="70" y="108" fill="#b8d8e8" font-family="Arial, sans-serif" font-size="20">A Business Analyst tests meaning before recommending action or AI.</text>
+
+  <g fill="none" stroke="#77d7cf" stroke-width="5" marker-end="url(#arrow)" opacity="0.9">
+    <path d="M245 235 H284"/>
+    <path d="M440 235 H479"/>
+    <path d="M635 235 H674"/>
+    <path d="M830 235 H869"/>
+    <path d="M1025 235 H1064"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" filter="url(#shadow)">
+    <g transform="translate(70 150)">
+      <rect width="175" height="170" rx="18" fill="#ffffff"/>
+      <circle cx="34" cy="34" r="19" fill="#0f766e"/>
+      <text x="34" y="41" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">1</text>
+      <text x="18" y="78" fill="#0b2942" font-size="21" font-weight="700">Decision</text>
+      <text x="18" y="108" fill="#3e5b70" font-size="15">Who decides what?</text>
+      <text x="18" y="132" fill="#3e5b70" font-size="15">What outcome matters?</text>
+    </g>
+    <g transform="translate(265 150)">
+      <rect width="175" height="170" rx="18" fill="#e8fbf8"/>
+      <circle cx="34" cy="34" r="19" fill="#0f766e"/>
+      <text x="34" y="41" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">2</text>
+      <text x="18" y="78" fill="#0b2942" font-size="21" font-weight="700">Definition</text>
+      <text x="18" y="108" fill="#3e5b70" font-size="15">Unit, population,</text>
+      <text x="18" y="132" fill="#3e5b70" font-size="15">period, denominator</text>
+    </g>
+    <g transform="translate(460 150)">
+      <rect width="175" height="170" rx="18" fill="#ffffff"/>
+      <circle cx="34" cy="34" r="19" fill="#0f766e"/>
+      <text x="34" y="41" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">3</text>
+      <text x="18" y="78" fill="#0b2942" font-size="21" font-weight="700">Data</text>
+      <text x="18" y="108" fill="#3e5b70" font-size="15">Source, lineage,</text>
+      <text x="18" y="132" fill="#3e5b70" font-size="15">type, quality, sample</text>
+    </g>
+    <g transform="translate(655 150)">
+      <rect width="175" height="170" rx="18" fill="#e8fbf8"/>
+      <circle cx="34" cy="34" r="19" fill="#0f766e"/>
+      <text x="34" y="41" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">4</text>
+      <text x="18" y="78" fill="#0b2942" font-size="21" font-weight="700">Measure</text>
+      <text x="18" y="108" fill="#3e5b70" font-size="15">Count, rate, median,</text>
+      <text x="18" y="132" fill="#3e5b70" font-size="15">spread, uncertainty</text>
+    </g>
+    <g transform="translate(850 150)">
+      <rect width="175" height="170" rx="18" fill="#ffffff"/>
+      <circle cx="34" cy="34" r="19" fill="#0f766e"/>
+      <text x="34" y="41" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">5</text>
+      <text x="18" y="78" fill="#0b2942" font-size="21" font-weight="700">Segment</text>
+      <text x="18" y="108" fill="#3e5b70" font-size="15">Compare groups;</text>
+      <text x="18" y="132" fill="#3e5b70" font-size="15">test other explanations</text>
+    </g>
+    <g transform="translate(1045 150)">
+      <rect width="105" height="170" rx="18" fill="#fbbf24"/>
+      <circle cx="34" cy="34" r="19" fill="#7c4a03"/>
+      <text x="34" y="41" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">6</text>
+      <text x="14" y="78" fill="#3f2b05" font-size="18" font-weight="700">Decide</text>
+      <text x="14" y="106" fill="#5e430c" font-size="13">Evidence</text>
+      <text x="14" y="128" fill="#5e430c" font-size="13">+ limits</text>
+      <text x="14" y="150" fill="#5e430c" font-size="13">+ action</text>
+    </g>
+  </g>
+
+  <g transform="translate(70 370)" font-family="Arial, sans-serif">
+    <rect width="1080" height="170" rx="22" fill="#09243d" stroke="#315b73" stroke-width="2"/>
+    <text x="32" y="44" fill="#77d7cf" font-size="19" font-weight="700">RUNNING CHECK</text>
+    <text x="32" y="82" fill="#ffffff" font-size="27" font-weight="700">“Returns increased 25%”</text>
+    <text x="32" y="119" fill="#c7deea" font-size="18">800 → 1,000 requests, but eligible orders rose 10,000 → 12,500.</text>
+    <text x="32" y="148" fill="#fbbf24" font-size="20" font-weight="700">Count rose. Observed rate stayed 8%. Investigate workload; do not invent a cause.</text>
+  </g>
+  <text x="600" y="594" text-anchor="middle" fill="#9fc3d5" font-family="Arial, sans-serif" font-size="16">Question the number • preserve the context • communicate the limits</text>
+</svg>

@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-10-07
 updated: 2026-10-07
 readTime: 19
-order: 7
+order: 8
 prerequisites: ["ai-agents-for-business-analysts"]
 learningOutcomes:
   - "تنظم متطلبات AI حول نتائج العمل والمستخدمين والنطاق والقرارات والبيانات وسلوك سير العمل."

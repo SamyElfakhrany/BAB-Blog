@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">مسار الثقافة البيانية لدعم القرار</title>
+  <desc id="desc">مسار من ست خطوات يبدأ بقرار العمل ويمر بالتعريف والبيانات والقياس والتقسيم والدليل حتى يصل لتوصية مسؤولة.</desc>
+  <defs>
+    <linearGradient id="bg" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#071a33"/>
+      <stop offset="1" stop-color="#123d5a"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#001326" flood-opacity="0.28"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="3" refY="5" orient="auto">
+      <path d="M10,0 L0,5 L10,10 z" fill="#77d7cf"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="110" cy="80" r="150" fill="#2dd4bf" opacity="0.08"/>
+  <circle cx="1080" cy="590" r="190" fill="#38bdf8" opacity="0.07"/>
+
+  <text x="600" y="72" text-anchor="middle" direction="rtl" fill="#ffffff" font-family="Tahoma, Arial, sans-serif" font-size="34" font-weight="700">من ادعاء بالبيانات لقرار يمكن الدفاع عنه</text>
+  <text x="600" y="108" text-anchor="middle" direction="rtl" fill="#b8d8e8" font-family="Tahoma, Arial, sans-serif" font-size="20">محلل الأعمال بيختبر المعنى قبل ما يوصي بتصرف أو حل ذكاء اصطناعي.</text>
+
+  <g fill="none" stroke="#77d7cf" stroke-width="5" marker-end="url(#arrow)" opacity="0.9">
+    <path d="M955 235 H916"/>
+    <path d="M760 235 H721"/>
+    <path d="M565 235 H526"/>
+    <path d="M370 235 H331"/>
+    <path d="M175 235 H136"/>
+  </g>
+
+  <g font-family="Tahoma, Arial, sans-serif" filter="url(#shadow)" direction="rtl">
+    <g transform="translate(955 150)">
+      <rect width="175" height="170" rx="18" fill="#ffffff"/>
+      <circle cx="141" cy="34" r="19" fill="#0f766e"/>
+      <text x="141" y="41" text-anchor="middle" direction="ltr" fill="#fff" font-size="20" font-weight="700">١</text>
+      <text x="87.5" y="78" text-anchor="middle" fill="#0b2942" font-size="21" font-weight="700">القرار</text>
+      <text x="87.5" y="108" text-anchor="middle" fill="#3e5b70" font-size="15">مين يقرر إيه؟</text>
+      <text x="87.5" y="132" text-anchor="middle" fill="#3e5b70" font-size="15">وأنهي نتيجة مهمة؟</text>
+    </g>
+    <g transform="translate(760 150)">
+      <rect width="175" height="170" rx="18" fill="#e8fbf8"/>
+      <circle cx="141" cy="34" r="19" fill="#0f766e"/>
+      <text x="141" y="41" text-anchor="middle" direction="ltr" fill="#fff" font-size="20" font-weight="700">٢</text>
+      <text x="87.5" y="78" text-anchor="middle" fill="#0b2942" font-size="21" font-weight="700">التعريف</text>
+      <text x="87.5" y="108" text-anchor="middle" fill="#3e5b70" font-size="15">الوحدة والمجتمع</text>
+      <text x="87.5" y="132" text-anchor="middle" fill="#3e5b70" font-size="15">والفترة والمقام</text>
+    </g>
+    <g transform="translate(565 150)">
+      <rect width="175" height="170" rx="18" fill="#ffffff"/>
+      <circle cx="141" cy="34" r="19" fill="#0f766e"/>
+      <text x="141" y="41" text-anchor="middle" direction="ltr" fill="#fff" font-size="20" font-weight="700">٣</text>
+      <text x="87.5" y="78" text-anchor="middle" fill="#0b2942" font-size="21" font-weight="700">البيانات</text>
+      <text x="87.5" y="108" text-anchor="middle" fill="#3e5b70" font-size="15">المصدر والمسار</text>
+      <text x="87.5" y="132" text-anchor="middle" fill="#3e5b70" font-size="15">والنوع والجودة والعينة</text>
+    </g>
+    <g transform="translate(370 150)">
+      <rect width="175" height="170" rx="18" fill="#e8fbf8"/>
+      <circle cx="141" cy="34" r="19" fill="#0f766e"/>
+      <text x="141" y="41" text-anchor="middle" direction="ltr" fill="#fff" font-size="20" font-weight="700">٤</text>
+      <text x="87.5" y="78" text-anchor="middle" fill="#0b2942" font-size="21" font-weight="700">القياس</text>
+      <text x="87.5" y="108" text-anchor="middle" fill="#3e5b70" font-size="15">عدد ومعدل ووسيط</text>
+      <text x="87.5" y="132" text-anchor="middle" fill="#3e5b70" font-size="15">وانتشار وعدم يقين</text>
+    </g>
+    <g transform="translate(175 150)">
+      <rect width="175" height="170" rx="18" fill="#ffffff"/>
+      <circle cx="141" cy="34" r="19" fill="#0f766e"/>
+      <text x="141" y="41" text-anchor="middle" direction="ltr" fill="#fff" font-size="20" font-weight="700">٥</text>
+      <text x="87.5" y="78" text-anchor="middle" fill="#0b2942" font-size="21" font-weight="700">التقسيم</text>
+      <text x="87.5" y="108" text-anchor="middle" fill="#3e5b70" font-size="15">قارن المجموعات</text>
+      <text x="87.5" y="132" text-anchor="middle" fill="#3e5b70" font-size="15">واختبر تفسيرات تانية</text>
+    </g>
+    <g transform="translate(50 150)">
+      <rect width="105" height="170" rx="18" fill="#fbbf24"/>
+      <circle cx="71" cy="34" r="19" fill="#7c4a03"/>
+      <text x="71" y="41" text-anchor="middle" direction="ltr" fill="#fff" font-size="20" font-weight="700">٦</text>
+      <text x="52.5" y="78" text-anchor="middle" fill="#3f2b05" font-size="18" font-weight="700">قرّر</text>
+      <text x="52.5" y="106" text-anchor="middle" fill="#5e430c" font-size="13">دليل</text>
+      <text x="52.5" y="128" text-anchor="middle" fill="#5e430c" font-size="13">+ قيود</text>
+      <text x="52.5" y="150" text-anchor="middle" fill="#5e430c" font-size="13">+ تصرف</text>
+    </g>
+  </g>
+
+  <g transform="translate(70 370)" font-family="Tahoma, Arial, sans-serif" direction="rtl">
+    <rect width="1080" height="170" rx="22" fill="#09243d" stroke="#315b73" stroke-width="2"/>
+    <text x="540" y="44" text-anchor="middle" fill="#77d7cf" font-size="19" font-weight="700">اختبار المثال</text>
+    <text x="540" y="82" text-anchor="middle" fill="#ffffff" font-size="27" font-weight="700">«طلبات الإرجاع زادت ٢٥٪»</text>
+    <text x="540" y="119" text-anchor="middle" fill="#c7deea" font-size="18">الطلبات زادت من ٨٠٠ لـ١٠٠٠، والـOrders المؤهلة زادت من ١٠٬٠٠٠ لـ١٢٬٥٠٠.</text>
+    <text x="540" y="148" text-anchor="middle" fill="#fbbf24" font-size="20" font-weight="700">العدد زاد، والمعدل المرصود فضل ٨٪. ابحث ضغط الشغل، وما تخترعش سبب.</text>
+  </g>
+  <text x="600" y="594" text-anchor="middle" direction="rtl" fill="#9fc3d5" font-family="Tahoma, Arial, sans-serif" font-size="16">اسأل عن الرقم • حافظ على السياق • وضّح القيود</text>
+</svg>

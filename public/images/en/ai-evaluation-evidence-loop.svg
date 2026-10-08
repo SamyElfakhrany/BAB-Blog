@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">AI evaluation evidence loop</title>
+  <desc id="desc">A six-step loop from the decision question through cases, measures, execution, analysis, and release or monitoring decisions.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071426"/><stop offset="1" stop-color="#173554"/></linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#020617" flood-opacity=".36"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#5eead4"/></marker>
+  </defs>
+  <rect width="1200" height="720" rx="34" fill="url(#bg)"/>
+  <circle cx="1050" cy="80" r="180" fill="#2563eb" opacity=".09"/><circle cx="100" cy="660" r="210" fill="#14b8a6" opacity=".07"/>
+  <text x="600" y="66" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle">AI evaluation evidence loop</text>
+  <text x="600" y="101" fill="#b9ccdf" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">An eval is a repeatable decision process—not a single score.</text>
+
+  <g fill="none" stroke="#5eead4" stroke-width="4" opacity=".8" marker-end="url(#arrow)">
+    <path d="M392 211 C455 165 525 152 557 151"/>
+    <path d="M745 157 C815 178 865 213 891 247"/>
+    <path d="M948 365 C944 425 912 469 876 495"/>
+    <path d="M751 555 C681 584 601 591 545 578"/>
+    <path d="M354 546 C288 514 253 470 241 426"/>
+    <path d="M241 286 C260 241 300 207 334 191"/>
+  </g>
+
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <g transform="translate(118 134)">
+      <rect width="285" height="145" rx="22" fill="#102a43" stroke="#38bdf8" stroke-width="2"/>
+      <circle cx="35" cy="35" r="21" fill="#0ea5e9"/><text x="35" y="42" fill="white" font-size="19" font-weight="700" text-anchor="middle">1</text>
+      <text x="68" y="41" fill="#f8fafc" font-size="21" font-weight="700">Decision question</text>
+      <text x="22" y="82" fill="#cbd5e1" font-size="16"><tspan x="22">What must we learn, for which</tspan><tspan x="22" dy="24">use, risk and release decision?</tspan></text>
+      <text x="22" y="128" fill="#7dd3fc" font-size="13">Requirement • risk • owner</text>
+    </g>
+    <g transform="translate(458 118)">
+      <rect width="285" height="145" rx="22" fill="#102a43" stroke="#2dd4bf" stroke-width="2"/>
+      <circle cx="35" cy="35" r="21" fill="#14b8a6"/><text x="35" y="42" fill="white" font-size="19" font-weight="700" text-anchor="middle">2</text>
+      <text x="68" y="41" fill="#f8fafc" font-size="21" font-weight="700">Cases &amp; references</text>
+      <text x="22" y="82" fill="#cbd5e1" font-size="16"><tspan x="22">Representative, boundary and</tspan><tspan x="22" dy="24">high-impact cases with labels.</tspan></text>
+      <text x="22" y="128" fill="#5eead4" font-size="13">Population • slices • lineage</text>
+    </g>
+    <g transform="translate(798 220)">
+      <rect width="285" height="145" rx="22" fill="#102a43" stroke="#a78bfa" stroke-width="2"/>
+      <circle cx="35" cy="35" r="21" fill="#7c3aed"/><text x="35" y="42" fill="white" font-size="19" font-weight="700" text-anchor="middle">3</text>
+      <text x="68" y="41" fill="#f8fafc" font-size="21" font-weight="700">Measures &amp; rubric</text>
+      <text x="22" y="82" fill="#cbd5e1" font-size="16"><tspan x="22">Metrics, human criteria, limits</tspan><tspan x="22" dy="24">and repeat-run rules.</tspan></text>
+      <text x="22" y="128" fill="#c4b5fd" font-size="13">Quality • safety • workflow</text>
+    </g>
+    <g transform="translate(740 475)">
+      <rect width="285" height="145" rx="22" fill="#102a43" stroke="#f59e0b" stroke-width="2"/>
+      <circle cx="35" cy="35" r="21" fill="#d97706"/><text x="35" y="42" fill="white" font-size="19" font-weight="700" text-anchor="middle">4</text>
+      <text x="68" y="41" fill="#f8fafc" font-size="21" font-weight="700">Run &amp; record</text>
+      <text x="22" y="82" fill="#cbd5e1" font-size="16"><tspan x="22">Freeze configuration, execute,</tspan><tspan x="22" dy="24">score and preserve evidence.</tspan></text>
+      <text x="22" y="128" fill="#fcd34d" font-size="13">Version • result • limitations</text>
+    </g>
+    <g transform="translate(400 505)">
+      <rect width="285" height="145" rx="22" fill="#102a43" stroke="#f472b6" stroke-width="2"/>
+      <circle cx="35" cy="35" r="21" fill="#db2777"/><text x="35" y="42" fill="white" font-size="19" font-weight="700" text-anchor="middle">5</text>
+      <text x="68" y="41" fill="#f8fafc" font-size="21" font-weight="700">Analyze failures</text>
+      <text x="22" y="82" fill="#cbd5e1" font-size="16"><tspan x="22">Inspect error types, slices,</tspan><tspan x="22" dy="24">severity and root causes.</tspan></text>
+      <text x="22" y="128" fill="#f9a8d4" font-size="13">Patterns • gaps • uncertainty</text>
+    </g>
+    <g transform="translate(60 382)">
+      <rect width="285" height="145" rx="22" fill="#102a43" stroke="#4ade80" stroke-width="2"/>
+      <circle cx="35" cy="35" r="21" fill="#16a34a"/><text x="35" y="42" fill="white" font-size="19" font-weight="700" text-anchor="middle">6</text>
+      <text x="68" y="41" fill="#f8fafc" font-size="21" font-weight="700">Decide &amp; monitor</text>
+      <text x="22" y="82" fill="#cbd5e1" font-size="16"><tspan x="22">Go, change, narrow, pause or</tspan><tspan x="22" dy="24">stop—then watch live evidence.</tspan></text>
+      <text x="22" y="128" fill="#86efac" font-size="13">Gate • trigger • next eval</text>
+    </g>
+  </g>
+
+  <circle cx="600" cy="362" r="113" fill="url(#core)" filter="url(#shadow)"/>
+  <circle cx="600" cy="362" r="92" fill="#0b1f36" opacity=".72"/>
+  <text x="600" y="338" fill="#f8fafc" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Decision-ready</text>
+  <text x="600" y="371" fill="#f8fafc" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle">evidence</text>
+  <text x="600" y="404" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Repeat when context changes</text>
+
+  <rect x="120" y="672" width="960" height="30" rx="15" fill="#0f766e" opacity=".38"/>
+  <text x="600" y="693" fill="#d5fffa" font-family="Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">The BA keeps the purpose, assumptions, evidence, ownership and decision traceable.</text>
+</svg>

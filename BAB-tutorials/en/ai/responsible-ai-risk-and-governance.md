@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-10-07
 updated: 2026-10-07
 readTime: 17
-order: 4
+order: 5
 prerequisites: ["data-readiness-for-ai-projects"]
 learningOutcomes:
   - "Map an AI use case's stakeholders, benefits, harms, misuse, decision rights, and accountability."

@@ -10,8 +10,8 @@ difficulty: beginner
 published: 2026-10-06
 updated: 2026-10-06
 readTime: 16
-order: 3
-prerequisites: ["finding-and-prioritizing-ai-opportunities"]
+order: 4
+prerequisites: ["data-literacy-for-business-analysts"]
 learningOutcomes:
   - "Translate an AI opportunity into specific data needs, sources, fields, labels, and quality rules."
   - "Assess provenance, quality, coverage, permissions, and evaluation risks using evidence."

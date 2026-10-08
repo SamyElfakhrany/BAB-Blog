@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-10-07
 updated: 2026-10-07
 readTime: 18
-order: 7
+order: 8
 prerequisites: ["ai-agents-for-business-analysts"]
 learningOutcomes:
   - "Structure AI requirements around business outcomes, users, scope, decisions, data, and workflow behavior."

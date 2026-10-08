@@ -10,8 +10,8 @@ difficulty: beginner
 published: 2026-10-06
 updated: 2026-10-06
 readTime: 17
-order: 3
-prerequisites: ["finding-and-prioritizing-ai-opportunities"]
+order: 4
+prerequisites: ["data-literacy-for-business-analysts"]
 learningOutcomes:
   - "تحوّل فرصة AI لاحتياجات بيانات محددة: مصادر وحقول وLabels وقواعد جودة."
   - "تقيّم المصدر والجودة والتغطية والصلاحيات ومخاطر التقييم باستخدام دليل."

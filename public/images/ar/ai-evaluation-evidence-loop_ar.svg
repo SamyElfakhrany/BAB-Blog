@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">دائرة أدلة تقييم أنظمة الذكاء الاصطناعي</title>
+  <desc id="desc">ست خطوات من سؤال القرار إلى الحالات والمقاييس والتنفيذ والتحليل وقرار الإطلاق أو المراقبة.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071426"/><stop offset="1" stop-color="#173554"/></linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#2563eb"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#020617" flood-opacity=".36"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#5eead4"/></marker>
+  </defs>
+  <rect width="1200" height="720" rx="34" fill="url(#bg)"/><circle cx="1050" cy="80" r="180" fill="#2563eb" opacity=".09"/><circle cx="100" cy="660" r="210" fill="#14b8a6" opacity=".07"/>
+  <text x="600" y="66" fill="#f8fafc" font-family="Arial, Tahoma, sans-serif" font-size="34" font-weight="700" text-anchor="middle" direction="rtl">دائرة أدلة تقييم أنظمة الذكاء الاصطناعي</text>
+  <text x="600" y="101" fill="#b9ccdf" font-family="Arial, Tahoma, sans-serif" font-size="18" text-anchor="middle" direction="rtl">الـEval عملية قرار قابلة للتكرار، مش مجرد رقم واحد.</text>
+
+  <g fill="none" stroke="#5eead4" stroke-width="4" opacity=".8" marker-end="url(#arrow)">
+    <path d="M808 211 C745 165 675 152 643 151"/><path d="M455 157 C385 178 335 213 309 247"/><path d="M252 365 C256 425 288 469 324 495"/><path d="M449 555 C519 584 599 591 655 578"/><path d="M846 546 C912 514 947 470 959 426"/><path d="M959 286 C940 241 900 207 866 191"/>
+  </g>
+
+  <g filter="url(#shadow)" font-family="Arial, Tahoma, sans-serif">
+    <g transform="translate(797 134)">
+      <rect width="285" height="145" rx="22" fill="#102a43" stroke="#38bdf8" stroke-width="2"/><circle cx="250" cy="35" r="21" fill="#0ea5e9"/><text x="250" y="42" fill="white" font-size="19" font-weight="700" text-anchor="middle">١</text>
+      <text x="130" y="41" fill="#f8fafc" font-size="21" font-weight="700" text-anchor="middle" direction="rtl">سؤال القرار</text>
+      <text x="142" y="82" fill="#cbd5e1" font-size="16" text-anchor="middle" direction="rtl"><tspan x="142">ماذا نريد أن نتعلم، ولأي استخدام</tspan><tspan x="142" dy="24">وخطر وقرار إطلاق؟</tspan></text>
+      <text x="142" y="128" fill="#7dd3fc" font-size="13" text-anchor="middle" direction="rtl">متطلب • خطر • مسؤول</text>
+    </g>
+    <g transform="translate(457 118)">
+      <rect width="285" height="145" rx="22" fill="#102a43" stroke="#2dd4bf" stroke-width="2"/><circle cx="250" cy="35" r="21" fill="#14b8a6"/><text x="250" y="42" fill="white" font-size="19" font-weight="700" text-anchor="middle">٢</text>
+      <text x="130" y="41" fill="#f8fafc" font-size="21" font-weight="700" text-anchor="middle" direction="rtl">الحالات والإجابات المرجعية</text>
+      <text x="142" y="82" fill="#cbd5e1" font-size="16" text-anchor="middle" direction="rtl"><tspan x="142">حالات ممثلة وحدية وعالية التأثير</tspan><tspan x="142" dy="24">مع Labels أو إجابات معتمدة.</tspan></text>
+      <text x="142" y="128" fill="#5eead4" font-size="13" text-anchor="middle" direction="rtl">المجموعة • التقسيمات • المصدر</text>
+    </g>
+    <g transform="translate(117 220)">
+      <rect width="285" height="145" rx="22" fill="#102a43" stroke="#a78bfa" stroke-width="2"/><circle cx="250" cy="35" r="21" fill="#7c3aed"/><text x="250" y="42" fill="white" font-size="19" font-weight="700" text-anchor="middle">٣</text>
+      <text x="130" y="41" fill="#f8fafc" font-size="21" font-weight="700" text-anchor="middle" direction="rtl">المقاييس والـRubric</text>
+      <text x="142" y="82" fill="#cbd5e1" font-size="16" text-anchor="middle" direction="rtl"><tspan x="142">Metrics ومعايير بشرية وحدود</tspan><tspan x="142" dy="24">وقواعد تكرار التشغيل.</tspan></text>
+      <text x="142" y="128" fill="#c4b5fd" font-size="13" text-anchor="middle" direction="rtl">الجودة • الأمان • سير العمل</text>
+    </g>
+    <g transform="translate(175 475)">
+      <rect width="285" height="145" rx="22" fill="#102a43" stroke="#f59e0b" stroke-width="2"/><circle cx="250" cy="35" r="21" fill="#d97706"/><text x="250" y="42" fill="white" font-size="19" font-weight="700" text-anchor="middle">٤</text>
+      <text x="130" y="41" fill="#f8fafc" font-size="21" font-weight="700" text-anchor="middle" direction="rtl">التشغيل والتسجيل</text>
+      <text x="142" y="82" fill="#cbd5e1" font-size="16" text-anchor="middle" direction="rtl"><tspan x="142">ثبّت الإعداد وشغّل وقِس</tspan><tspan x="142" dy="24">واحفظ الدليل.</tspan></text>
+      <text x="142" y="128" fill="#fcd34d" font-size="13" text-anchor="middle" direction="rtl">النسخة • النتيجة • القيود</text>
+    </g>
+    <g transform="translate(515 505)">
+      <rect width="285" height="145" rx="22" fill="#102a43" stroke="#f472b6" stroke-width="2"/><circle cx="250" cy="35" r="21" fill="#db2777"/><text x="250" y="42" fill="white" font-size="19" font-weight="700" text-anchor="middle">٥</text>
+      <text x="130" y="41" fill="#f8fafc" font-size="21" font-weight="700" text-anchor="middle" direction="rtl">تحليل الفشل</text>
+      <text x="142" y="82" fill="#cbd5e1" font-size="16" text-anchor="middle" direction="rtl"><tspan x="142">افحص أنواع الخطأ والتقسيمات</tspan><tspan x="142" dy="24">والشدة والأسباب الجذرية.</tspan></text>
+      <text x="142" y="128" fill="#f9a8d4" font-size="13" text-anchor="middle" direction="rtl">أنماط • فجوات • عدم يقين</text>
+    </g>
+    <g transform="translate(855 382)">
+      <rect width="285" height="145" rx="22" fill="#102a43" stroke="#4ade80" stroke-width="2"/><circle cx="250" cy="35" r="21" fill="#16a34a"/><text x="250" y="42" fill="white" font-size="19" font-weight="700" text-anchor="middle">٦</text>
+      <text x="130" y="41" fill="#f8fafc" font-size="21" font-weight="700" text-anchor="middle" direction="rtl">القرار والمراقبة</text>
+      <text x="142" y="82" fill="#cbd5e1" font-size="16" text-anchor="middle" direction="rtl"><tspan x="142">أطلق أو عدّل أو ضيّق أو أوقف،</tspan><tspan x="142" dy="24">ثم راقب الدليل الحقيقي.</tspan></text>
+      <text x="142" y="128" fill="#86efac" font-size="13" text-anchor="middle" direction="rtl">بوابة • Trigger • تقييم قادم</text>
+    </g>
+  </g>
+
+  <circle cx="600" cy="362" r="113" fill="url(#core)" filter="url(#shadow)"/><circle cx="600" cy="362" r="92" fill="#0b1f36" opacity=".72"/>
+  <text x="600" y="348" fill="#f8fafc" font-family="Arial, Tahoma, sans-serif" font-size="24" font-weight="700" text-anchor="middle" direction="rtl">دليل جاهز</text>
+  <text x="600" y="381" fill="#f8fafc" font-family="Arial, Tahoma, sans-serif" font-size="24" font-weight="700" text-anchor="middle" direction="rtl">لدعم القرار</text>
+  <text x="600" y="414" fill="#bfdbfe" font-family="Arial, Tahoma, sans-serif" font-size="14" text-anchor="middle" direction="rtl">كرّر لما السياق يتغير</text>
+
+  <rect x="120" y="672" width="960" height="30" rx="15" fill="#0f766e" opacity=".38"/>
+  <text x="600" y="693" fill="#d5fffa" font-family="Arial, Tahoma, sans-serif" font-size="14" font-weight="700" text-anchor="middle" direction="rtl">الـBA يحافظ على تتبع الغرض والافتراضات والدليل والمسؤولية والقرار.</text>
+</svg>

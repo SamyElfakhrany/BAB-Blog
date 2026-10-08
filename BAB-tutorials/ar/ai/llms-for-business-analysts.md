@@ -10,7 +10,7 @@ difficulty: beginner
 published: 2026-09-24
 updated: 2026-09-27
 readTime: 13
-order: 5
+order: 6
 prerequisites: ["responsible-ai-risk-and-governance"]
 learningOutcomes:
   - "تختار مهام مفيدة ومسؤولة للنموذج اللغوي داخل شغل الـBA."
